@@ -8,7 +8,12 @@
     "eslint": "eslint *.js ",
     "SassLint": "sass-lint -v *.scss"
   },
-"repository": {
+  "pre-commit":[
+    "eslint",
+    "SassLint"
+  ],
+
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/anna-kuzii/sport-news.git"
   },
