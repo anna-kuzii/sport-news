@@ -12,7 +12,7 @@ mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true }).then(
 
 app.get('/', (req, res) => {
   res.send('Hello');
-});
+})
 
 const PORT = process.env.PORT || 5000;
 
