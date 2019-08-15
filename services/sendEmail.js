@@ -33,7 +33,7 @@ exports.sendEmail = (user) => {
             '</tbody>' +
             '</table>'
     };
-    // TODO
+    // TODO remove console.log
     transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
             console.log(error);
