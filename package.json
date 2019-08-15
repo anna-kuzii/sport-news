@@ -5,13 +5,10 @@
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js",
-    "eslint": "eslint *.js ",
-    "SassLint": "sass-lint -v *.scss"
+    "eslint": "node_modules/.bin/eslint client/src/*.{js,jsx} ",
+    "SassLint": "node_modules/.bin/sass-lint -v client/src/*.scss",
+    "precommit": "lint-staged"
   },
-  "pre-commit": [
-    "eslint",
-    "SassLint"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/anna-kuzii/sport-news.git"
@@ -40,6 +37,18 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "husky": "^3.0.3",
     "sass-lint": "^1.13.1"
+  },
+  "lint-staged": {
+    "*.{js,jsx}":[
+      "node_modules/.bin/eslint client/src",
+      "node_modules/.bin/eslint  "
+    ],
+    "*.{scss}":[
+      "node_modules/.bin/sass-lint -v client/src/*.scss",
+      "git add"
+    ]
   }
+
 }
