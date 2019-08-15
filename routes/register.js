@@ -1,8 +1,7 @@
 const express = require('express');
 
 const router = express.Router();
-const bcrypt = require('bcryptjs');
-
+const encrypt = require('./encrypt');
 
 const User = require('../db/models/User');
 
@@ -30,24 +29,17 @@ router.post('/register', (req, res) => {
     email,
     password,
   });
-
-  bcrypt.genSalt(10, (err, salt) => {
-    bcrypt.hash(newUser.password, salt, (err1, hash) => {
-      if (err1) {
-        console.log(err1);
-      }
-      newUser.password = hash;
-      newUser.save((error) => {
-        if (error) {
-          console.log(error);
-          return error;
-        }
-        // TODO:redirect to login
-        res.redirect('./login');
-        // that return for lint ,becouse arrow function expected a return
-        return false;
-      });
-    });
+  newUser.password = encrypt.encrypt(newUser);
+  newUser.save((error) => {
+    if (error) {
+      // TODO create a callback to frontend
+      console.log(error);
+      return error;
+    }
+    // TODO:redirect to login
+    res.redirect('./login');
+    // that return for lint ,becouse arrow function expected a return
+    return false;
   });
   return false;
 });

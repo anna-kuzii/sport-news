@@ -16,6 +16,7 @@ app.listen(PORT, () => {
   console.log(`Server is running on PORT ${PORT}`);
 });
 
+
 // Route Files
 const register = require('./routes/register');
 
