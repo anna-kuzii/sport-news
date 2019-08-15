@@ -11,9 +11,9 @@ exports.sendEmail = (user) => {
     });
 
     var mailOptions = {
-        from: '777rouch777@gmail.com',
+        from: USER_EMAIL,
         to: user,
-        subject: 'Sending Email using Node.js',
+        subject: 'Subscription in Sport News',
         html: '<table  style="background:#f9f9fb;width: 100%;padding: 10%;color:#000000;font-family: Open Sans ;font-weight: 600;;">' +
             '<thead>' +
             '</thead>' +
