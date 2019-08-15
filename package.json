@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "sport news site",
   "main": "server.js",
-  "lint-staged":{
-    "*.{js,jsx}":"node_modules/.bin/eslint",
-    "*.scss":"node_modules/.bin/sass-lint"
+  "lint-staged": {
+    "*.{js,jsx}": "node_modules/.bin/eslint",
+    "*.scss": "node_modules/.bin/sass-lint"
   },
   "scripts": {
     "dev": "nodemon server.js",

@@ -1,0 +1,266 @@
+.container-fluid {
+  position: relative;
+  height: 1024px;
+  background: $white;
+}
+
+.bg-img {
+  position: absolute;
+  width: 640px;
+  height: 1024px;
+  left: 0px;
+  top: 0px;
+  background: url('../../img/signup-bg.jpg');
+}
+
+.row-fluid {
+  width: 100%;
+  height: 83px;
+  margin: 0;
+
+  .LogoInSignUp {
+    position: absolute;
+    width: 253px;
+    height: 83px;
+    left: 0px;
+    top: 0px;
+    text-align: center;
+    background: $alizarin-сrimson;
+
+    h1 {
+      font-family: Open Sans, serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.5rem;
+      line-height: 83px;
+      color: $rose-white;
+    }
+  }
+
+  .LogIn {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 350px;
+    height: 83px;
+    right: 0;
+    top: 0;
+    text-align: center;
+
+    h3 {
+      font-family: Open Sans, serif;
+      margin: 0;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 83px;
+      color: $shuttle-gray;
+    }
+
+    .btn {
+      display: inline-block;
+      width: 130px;
+      height: 32px;
+      border-radius: 0;
+      cursor: pointer;
+      border: 1px solid $alizarin-сrimson;
+      box-sizing: border-box;
+      background-color: $white;
+      font-family: Open Sans, serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+      text-align: center;
+      text-transform: capitalize;
+      color: $alizarin-сrimson;
+
+      &:hover {
+        color: $white;
+        background: $alizarin-сrimson;
+      }
+
+      &:active {
+        color: $white;
+        background: $alizarin-сrimson;
+      }
+    }
+
+    .login {
+      margin: 0 55px 0 30px;
+    }
+  }
+}
+
+.ca-form {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  height: 941px;
+  right: 0px;
+  bottom: 0px;
+
+  .ca-elements {
+    width: 400px;
+    height: 440px;
+
+    ::placeholder {
+      font-family: Open Sans, serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+      color: $shuttle-gray;
+    }
+
+    h2 {
+      font-family: Open Sans, serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 40px;
+      left: 0;
+      color: $black;
+    }
+
+    h5 {
+      width: 180px;
+      float: left;
+      font-family: Roboto, serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $river-bed;
+    }
+
+    br {
+      display: block;
+      content: "";
+      margin-top: 10px;
+    }
+
+    .fb-icon {
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      margin: 0 6px 10px;
+      background: url("../../img/facebook-icon.svg") no-repeat;
+
+      &:hover {
+        background: url("../../img/facebook-icon-hover.svg") no-repeat;
+      }
+    }
+
+    .gplus-icon {
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      margin: 0 6px 10px;
+      background: url("../../img/gplus-icon.svg") no-repeat;
+
+      &:hover {
+        background: url("../../img/gplus-icon-hover.svg") no-repeat;
+      }
+    }
+
+    p {
+      font-family: Open Sans, serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+      color: $river-bed;
+    }
+
+    .first-name {
+      float: left;
+      height: 80px;
+
+      input {
+        width: 180px;
+        height: 40px;
+        margin-right: 40px;
+        border: 1px solid $mischka;
+        box-sizing: border-box;
+        padding-left: 15px;
+        outline: 0;
+      }
+    }
+
+    .last-name {
+      float: left;
+      height: 80px;
+
+      input {
+        width: 180px;
+        height: 40px;
+        border: 1px solid $mischka;
+        box-sizing: border-box;
+        padding-left: 15px;
+        outline: 0;
+      }
+    }
+
+    .email-div {
+      width: 100%;
+
+      h5 {
+        width: 100%;
+      }
+
+      input {
+        width: 100%;
+        height: 40px;
+        border: 1px solid $mischka;
+        box-sizing: border-box;
+        padding-left: 15px;
+        outline: 0;
+      }
+
+      br {
+        display: block;
+        content: "";
+        margin-top: 20px;
+      }
+    }
+
+    .btn-primary {
+      display: inline-block;
+      width: 400px;
+      height: 42px;
+      text-transform: capitalize;
+      border-radius: 0;
+      cursor: pointer;
+      border: 1px solid $alizarin-сrimson;
+      box-sizing: border-box;
+      background-color: $alizarin-сrimson;
+      color: $white;
+
+      &:hover {
+        background: $alizarin-сrimson;
+      }
+
+      &:active {
+        background: $monza;
+      }
+    }
+
+    .sign-up {
+      font-family: Roboto, serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $white;
+    }
+
+  }
+}
