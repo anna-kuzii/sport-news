@@ -21,8 +21,6 @@ const UserSchema = new Schema({
     type: String,
     required: true,
   },
-  twitter: String,
-  google: String,
   date: {
     type: Date,
     default: Date.now,
