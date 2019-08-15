@@ -1,14 +1,9 @@
 const express = require('express');
-const mongoose = require('mongoose');
+
 require('dotenv').config();
 
 const app = express();
 
-
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true }).then(
-  () => (console.log('Database is connected')),
-  (err) => (console.log(`Can not connect to the database${err}`)),
-);
 
 app.get('/', (req, res) => {
   res.send('Hello');
