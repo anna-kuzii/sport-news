@@ -14,7 +14,7 @@ exports.sendEmail = (user) => {
         from: process.env.USER_EMAIL,
         to: user,
         subject: 'Subscription in Sport News',
-        html: '<table  style="background:#f9f9fb;width: 100%;padding: 10%;color:#000000;font-family: Open Sans ;font-weight: 600;;">' +
+        html: '<table  style="background:#f9f9fb;width: 100%;padding: 10%;color:#000000;font-family: Open Sans ;font-weight: 600;">' +
             '<thead>' +
             '</thead>' +
             '<tbody style="font-size: 24px" >' +
