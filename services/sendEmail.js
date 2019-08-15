@@ -20,13 +20,13 @@ exports.sendEmail = (user) => {
                 </thead>
                 <tbody style="font-size: 24px">
                     <tr>
-                        <td style="color:#000000;font-style:normal;font-family: Open Sans;text-align:center;font-weight:600;">
+                        <td style="color:#000000;font-style:normal;font-family: Open Sans,sans-serif;text-align:center;font-weight:600;">
                             <p style="margin:50px 0 50px">Hello! You have successfully registered to Sport News <br> March 21, 2019</p>
                         </td>
                     </tr>
                     <table style="background:#f9f9fb;width: 100%;padding: 0 45px 50px;">
                         <tr style="background: #ffffff;height: 180px">
-                            <td style="text-align: center;font-family: Open Sans;font-weight: 600;">
+                            <td style="text-align: center;font-family: Open Sans, sans-serif;font-weight: 600;">
                                 <img src="cid:unique@cid" style="margin-top: 45px"/>
                                 <p style="color: #D72130;font-size: 22px;margin: 20px 0 20px;line-height: 28px;">Sport News</p>
                                 <p style="color: #596377;font-size: 12px;margin-bottom: 40px; line-height: 16px;">Now you will reccive the latest news in
