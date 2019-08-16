@@ -11,7 +11,7 @@ exports.sendEmail = (user) => {
     });
 
     var mailOptions = {
-        from: process.env.USER_EMAIL,
+        from: '"Sport News" <process.env.USER_EMAIL>',
         to: user,
         subject: 'Subscription in Sport News',
         html: `<table style="background:#f9f9fb;width: 100%;padding: 0 20%;">
