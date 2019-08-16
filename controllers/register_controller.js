@@ -3,11 +3,10 @@ const User = require('../db/models/User');
 
 const encrypt = require('./encrypt');
 
-exports.register_controller = (req, res) => {
-  const firstName = req.body.first_name;
-  const lastName = req.body.last_name;
-  const { email } = req.body;
-  const { password } = req.body;
+exports.registerController = (req, res) => {
+  const {
+    first_name: firstName, last_name: lastName, email, password,
+  } = req.body;
 
   // TODO: VALIDATION
   encrypt.hashPassword(password)
@@ -19,11 +18,9 @@ exports.register_controller = (req, res) => {
         email,
         password: result,
       });
-      console.log(newUser);
-      newUser.save()
-        .then(() => (res.status(200).send('new user registered')))
-        .catch((error) => (res.send(error)));
-    });
+      return newUser.save();
+    }).then(() => res.status(200).send('new user registered'))
+    .catch((error) => res.send(error));
 
   return false;
 };
