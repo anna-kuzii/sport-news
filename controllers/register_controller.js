@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const User = require('../db/models/User');
+
 const encrypt = require('./encrypt');
 
 exports.register_controller = (req, res) => {
@@ -10,15 +11,15 @@ exports.register_controller = (req, res) => {
 
   // TODO: VALIDATION
   encrypt.hashPassword(password)
-    .then(() => {
+    .then((result) => {
       const newUser = new User({
         _id: new mongoose.Types.ObjectId().toHexString(),
         first_name: firstName,
         last_name: lastName,
         email,
-        password: encrypt.hashPassword(password),
+        password: result,
       });
-
+      console.log(newUser);
       newUser.save()
         .then(() => (res.status(200).send('new user registered')))
         .catch((error) => (res.send(error)));
