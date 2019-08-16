@@ -5,9 +5,15 @@ const encrypt = require('./encrypt');
 
 const User = require('../db/models/User');
 
-router.post('/register', (req, res) => {
-  const { firstName } = req.body.first_name;
-  const { lastName } = req.body.last_name;
+router.get('/', (req, res) => {
+  // TODO: render a register form
+  res.send('it is a register block');
+});
+
+
+router.post('/send', (req, res) => {
+  const firstName = req.body.first_name;
+  const lastName = req.body.last_name;
   const { email } = req.body;
   const { password } = req.body;
 
