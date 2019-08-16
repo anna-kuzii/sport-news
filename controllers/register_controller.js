@@ -9,7 +9,7 @@ exports.registerController = (req, res) => {
   } = req.body;
 
   // TODO: VALIDATION
-  encrypt.hashPassword(password)
+return encrypt.hashPassword(password)
     .then((result) => {
       const newUser = new User({
         _id: new mongoose.Types.ObjectId().toHexString(),
@@ -21,6 +21,4 @@ exports.registerController = (req, res) => {
       return newUser.save();
     }).then(() => res.status(200).send('new user registered'))
     .catch((error) => res.send(error));
-
-  return false;
 };
