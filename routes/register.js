@@ -36,16 +36,10 @@ router.post('/send', (req, res) => {
     password,
   });
   newUser.password = encrypt.encrypt(newUser);
-  newUser.save((error) => new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (error) {
-        // TODO create a callback to frontend
-        reject(new Error(error));
-      }
-      // TODO:redirect to login
-      res.redirect('./login');
-    });
-  }));
+  newUser.save().than(
+    (error) => (new Error(error)),
+    () => (res.redirect('./login')),
+  );
   return false;
 });
 
