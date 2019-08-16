@@ -36,7 +36,7 @@ router.post('/send', (req, res) => {
     password,
   });
   newUser.password = encrypt.encrypt(newUser);
-  newUser.save().than(
+  newUser.save().then(
     (error) => (new Error(error)),
     () => (res.redirect('./login')),
   );
