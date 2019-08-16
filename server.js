@@ -9,7 +9,6 @@ const dbConnect = require('./db/connect');
 dbConnect.connect();
 
 app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(bodyParser.json());
 app.use(express.json());
 
 // TODO: change that part ,please:)
