@@ -18,7 +18,7 @@
   height: 83px;
   margin: 0;
 
-  .LogoInSignUp {
+  .logo-in-sign-up {
     position: absolute;
     top: 0;
     left: 0;
@@ -28,16 +28,17 @@
     background: $crimson;
 
     h1 {
+      margin: 29px 0;
       font-family: Open Sans, serif;
       font-size: 1.5rem;
       font-style: normal;
       font-weight: 600;
-      line-height: 83px;
+      line-height: 25px;
       color: $rose-white;
     }
   }
 
-  .LogIn {
+  .log-in {
     position: absolute;
     top: 0;
     right: 0;
@@ -49,12 +50,12 @@
     text-align: center;
 
     h3 {
-      margin: 0;
+      margin: 29px 0;
       font-family: Open Sans, serif;
       font-size: 12px;
       font-style: normal;
       font-weight: 600;
-      line-height: 83px;
+      line-height: 25px;
       color: $shuttle-gray;
     }
 
@@ -93,7 +94,7 @@
   }
 }
 
-.ca-form {
+.create-account-form {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -103,7 +104,7 @@
   width: 800px;
   height: 941px;
 
-  .ca-elements {
+  .create-account-elements {
     width: 400px;
     height: 440px;
 
@@ -127,8 +128,7 @@
     }
 
     h5 {
-      float: left;
-      width: 180px;
+      width: 50%;
       font-family: Roboto, serif;
       font-size: 10px;
       font-style: normal;
@@ -178,36 +178,38 @@
       color: $river-bed;
     }
 
-    .first-name {
-      float: left;
-      height: 80px;
+    .first-last-name {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 110%;
+      height: 11px;
+
+      h5 {
+        margin: 0;
+      }
+    }
+
+    .user-info {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      height: 60px;
 
       input {
         width: 180px;
         height: 40px;
         padding-left: 15px;
-        margin-right: 40px;
         border: 1px solid $mischka;
         outline: 0;
         box-sizing: border-box;
       }
     }
 
-    .last-name {
-      float: left;
-      height: 80px;
-
-      input {
-        width: 180px;
-        height: 40px;
-        padding-left: 15px;
-        border: 1px solid $mischka;
-        outline: 0;
-        box-sizing: border-box;
-      }
-    }
-
-    .email-div {
+    .email-wrapper {
       width: 100%;
 
       h5 {
@@ -261,6 +263,5 @@
       color: $white;
       text-transform: uppercase;
     }
-
   }
 }
