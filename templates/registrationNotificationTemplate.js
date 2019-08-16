@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-exports.sendNotif = (user) => {
+exports.sendRegNotification = (user) => {
     const mailOptions = {
         from: '"Sport News" <process.env.USER_EMAIL>',
         to: user,
