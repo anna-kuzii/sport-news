@@ -30,17 +30,16 @@ router.post('/register', (req, res) => {
     password,
   });
   newUser.password = encrypt.encrypt(newUser);
-  newUser.save((error) => {
-    if (error) {
-      // TODO create a callback to frontend
-      console.log(error);
-      return error;
-    }
-    // TODO:redirect to login
-    res.redirect('./login');
-    // that return for lint ,becouse arrow function expected a return
-    return false;
-  });
+  newUser.save((error) => new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (error) {
+        // TODO create a callback to frontend
+        reject(new Error(error));
+      }
+      // TODO:redirect to login
+      res.redirect('./login');
+    });
+  }));
   return false;
 });
 
