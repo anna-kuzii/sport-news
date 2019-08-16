@@ -1,8 +1,8 @@
-const nodemailer = require('nodemailer');
+const nodemailer = require('nodemailer-promise');
 require('dotenv').config();
 
-exports.sendEmail = (mailOptions) => {
-    var transporter = nodemailer.createTransport({
+exports.sendEmail = (message) => {
+    var sendEmail = nodemailer.config({
         service: 'gmail',
         auth: {
             user: process.env.USER_EMAIL,
@@ -10,11 +10,7 @@ exports.sendEmail = (mailOptions) => {
         }
     });
     // TODO remove console.log
-    transporter.sendMail(mailOptions, function (error, info) {
-        if (error) {
-            console.log(error);
-        } else {
-            console.log(`Email sent: ${info.response}`);
-        }
-    });
+    sendEmail(message)
+        .then(function(info){console.log(info)})
+        .catch(function(err){console.log('got error'); console.log(err)});
 };
