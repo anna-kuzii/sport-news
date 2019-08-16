@@ -6,10 +6,10 @@
 
 .bg-img {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 640px;
   height: 1024px;
-  left: 0px;
-  top: 0px;
   background: url('../../img/signup-bg.jpg');
 }
 
@@ -20,18 +20,18 @@
 
   .LogoInSignUp {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 253px;
     height: 83px;
-    left: 0px;
-    top: 0px;
     text-align: center;
-    background: $alizarin-сrimson;
+    background: $crimson;
 
     h1 {
       font-family: Open Sans, serif;
+      font-size: 1.5rem;
       font-style: normal;
       font-weight: 600;
-      font-size: 1.5rem;
       line-height: 83px;
       color: $rose-white;
     }
@@ -39,21 +39,21 @@
 
   .LogIn {
     position: absolute;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 350px;
-    height: 83px;
-    right: 0;
     top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 375px;
+    height: 83px;
     text-align: center;
 
     h3 {
-      font-family: Open Sans, serif;
       margin: 0;
+      font-family: Open Sans, serif;
+      font-size: 12px;
       font-style: normal;
       font-weight: 600;
-      font-size: 12px;
       line-height: 83px;
       color: $shuttle-gray;
     }
@@ -62,28 +62,28 @@
       display: inline-block;
       width: 130px;
       height: 32px;
-      border-radius: 0;
-      cursor: pointer;
-      border: 1px solid $alizarin-сrimson;
-      box-sizing: border-box;
-      background-color: $white;
       font-family: Open Sans, serif;
+      font-size: 12px;
       font-style: normal;
       font-weight: 600;
-      font-size: 12px;
       line-height: 16px;
+      color: $crimson;
       text-align: center;
       text-transform: capitalize;
-      color: $alizarin-сrimson;
+      cursor: pointer;
+      background-color: $white;
+      border: 1px solid $crimson;
+      border-radius: 0;
+      box-sizing: border-box;
 
       &:hover {
         color: $white;
-        background: $alizarin-сrimson;
+        background: $crimson;
       }
 
       &:active {
         color: $white;
-        background: $alizarin-сrimson;
+        background: $crimson;
       }
     }
 
@@ -95,13 +95,13 @@
 
 .ca-form {
   position: absolute;
+  right: 0;
+  bottom: 0;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 800px;
   height: 941px;
-  right: 0px;
-  bottom: 0px;
 
   .ca-elements {
     width: 400px;
@@ -109,71 +109,71 @@
 
     ::placeholder {
       font-family: Open Sans, serif;
+      font-size: 12px;
       font-style: normal;
       font-weight: 600;
-      font-size: 12px;
       line-height: 16px;
       color: $shuttle-gray;
     }
 
     h2 {
+      left: 0;
       font-family: Open Sans, serif;
+      font-size: 24px;
       font-style: normal;
       font-weight: 600;
-      font-size: 24px;
       line-height: 40px;
-      left: 0;
       color: $black;
     }
 
     h5 {
-      width: 180px;
       float: left;
+      width: 180px;
       font-family: Roboto, serif;
+      font-size: 10px;
       font-style: normal;
       font-weight: 500;
-      font-size: 10px;
       line-height: 11px;
       letter-spacing: 1px;
-      text-transform: uppercase;
       color: $river-bed;
+      text-transform: uppercase;
     }
 
     br {
       display: block;
-      content: "";
       margin-top: 10px;
+      content: '';
     }
 
     .fb-icon {
       width: 35px;
       height: 35px;
-      cursor: pointer;
       margin: 0 6px 10px;
-      background: url("../../img/facebook-icon.svg") no-repeat;
+      cursor: pointer;
+      background: url('../../img/facebook-icon.svg') no-repeat;
 
       &:hover {
-        background: url("../../img/facebook-icon-hover.svg") no-repeat;
+        background: url('../../img/facebook-icon-hover.svg') no-repeat;
       }
     }
 
     .gplus-icon {
       width: 35px;
       height: 35px;
-      cursor: pointer;
       margin: 0 6px 10px;
-      background: url("../../img/gplus-icon.svg") no-repeat;
+      cursor: pointer;
+      background: url('../../img/gplus-icon.svg') no-repeat;
 
       &:hover {
-        background: url("../../img/gplus-icon-hover.svg") no-repeat;
+        background: url('../../img/gplus-icon-hover.svg') no-repeat;
       }
     }
 
     p {
       font-family: Open Sans, serif;
+      font-size: 12px;
       font-style: normal;
       font-weight: 600;
-      font-size: 12px;
       line-height: 16px;
       color: $river-bed;
     }
@@ -185,11 +185,11 @@
       input {
         width: 180px;
         height: 40px;
+        padding-left: 15px;
         margin-right: 40px;
         border: 1px solid $mischka;
-        box-sizing: border-box;
-        padding-left: 15px;
         outline: 0;
+        box-sizing: border-box;
       }
     }
 
@@ -200,10 +200,10 @@
       input {
         width: 180px;
         height: 40px;
-        border: 1px solid $mischka;
-        box-sizing: border-box;
         padding-left: 15px;
+        border: 1px solid $mischka;
         outline: 0;
+        box-sizing: border-box;
       }
     }
 
@@ -217,16 +217,16 @@
       input {
         width: 100%;
         height: 40px;
-        border: 1px solid $mischka;
-        box-sizing: border-box;
         padding-left: 15px;
+        border: 1px solid $mischka;
         outline: 0;
+        box-sizing: border-box;
       }
 
       br {
         display: block;
-        content: "";
         margin-top: 20px;
+        content: '';
       }
     }
 
@@ -234,16 +234,16 @@
       display: inline-block;
       width: 400px;
       height: 42px;
-      text-transform: capitalize;
-      border-radius: 0;
-      cursor: pointer;
-      border: 1px solid $alizarin-сrimson;
-      box-sizing: border-box;
-      background-color: $alizarin-сrimson;
       color: $white;
+      text-transform: capitalize;
+      cursor: pointer;
+      background-color: $crimson;
+      border: 1px solid $crimson;
+      border-radius: 0;
+      box-sizing: border-box;
 
       &:hover {
-        background: $alizarin-сrimson;
+        background: $crimson;
       }
 
       &:active {
@@ -253,13 +253,13 @@
 
     .sign-up {
       font-family: Roboto, serif;
+      font-size: 12px;
       font-style: normal;
       font-weight: bold;
-      font-size: 12px;
       line-height: 14px;
       letter-spacing: 1px;
-      text-transform: uppercase;
       color: $white;
+      text-transform: uppercase;
     }
 
   }
