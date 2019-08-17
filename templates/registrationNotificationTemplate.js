@@ -1,23 +1,11 @@
-const nodemailer = require("nodemailer");
 require('dotenv').config();
 
-exports.sendEmail = (user) => {
-    var transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: process.env.USER_EMAIL,
-            pass: process.env.USER_PASS,
-        }
-    });
-
-    var mailOptions = {
+exports.sendRegNotification = (user) => {
+    const mailOptions = {
         from: '"Sport News" <process.env.USER_EMAIL>',
         to: user,
         subject: 'Subscription in Sport News',
         html: `<table style="background:#f9f9fb;width: 100%;padding: 0 20%;">
-                <thead>
-                    
-                </thead>
                 <tbody style="font-size: 24px">
                     <tr>
                         <td style="color:#000000;font-style:normal;font-family: Open Sans,sans-serif;text-align:center;font-weight:600;">
@@ -42,12 +30,5 @@ exports.sendEmail = (user) => {
             cid: 'unique@cid'
         }]
     };
-    // TODO remove console.log
-    transporter.sendMail(mailOptions, function (error, info) {
-        if (error) {
-            console.log(error);
-        } else {
-            console.log(`Email sent: ${  info.response}`);
-        }
-    });
+    return mailOptions;
 };
