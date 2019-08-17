@@ -2,7 +2,7 @@ const nodemailer = require('nodemailer-promise');
 require('dotenv').config();
 
 exports.sendEmail = (message) => {
-    var sendEmail = nodemailer.config({
+    const sendEmail = nodemailer.config({
         service: 'gmail',
         auth: {
             user: process.env.USER_EMAIL,
