@@ -1,6 +1,7 @@
 import React from 'react';
 
 export const Register = () =>
+    <div className="register-container ">
         <div className="container-fluid">
             <div className="bg-img">
                 <div className="logo-in-sign-up">
@@ -28,12 +29,11 @@ export const Register = () =>
                     <div className="email-wrapper">
                         <h5>Email</h5>
                         <input type="email" name="email" placeholder="johndoe@gmail.com"/>
-                        <br/>
                         <h5>Password</h5>
                         <input type="password" name="password" placeholder="4+ characters"/>
                     </div>
-                    <br/>
                     <a href="#" className="btn btn-primary sing-up">sign up</a>
                 </div>
             </div>
         </div>
+    </div>
