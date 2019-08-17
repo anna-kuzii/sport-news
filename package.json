@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "nodemon server.js",
-    "eslint": "node_modules/.bin/eslint --ignore-path .gitignore *.{js,jsx} ",
+    "eslint": "node_modules/.bin/eslint --ignore-path .gitignore *.{js,jsx} --fix ",
     "SassLint": "node_modules/.bin/sass-lint --ignore-path .gitignore -v *.scss ",
     "precommit": "lint-staged"
   },
@@ -24,13 +24,17 @@
   },
   "homepage": "https://github.com/anna-kuzii/sport-news#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.3.1",
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
+    "express-validator": "^6.1.1",
     "mongodb": "^3.3.0",
     "mongoose": "^5.6.9",
-    "nodemon": "^1.19.1"
+    "nodemon": "^1.19.1",
+    "passport": "^0.4.0",
+    "nodemailer": "^6.3.0",
   },
   "devDependencies": {
     "eslint": "^6.1.0",
