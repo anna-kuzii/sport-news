@@ -1,19 +1,27 @@
 .register-container {
   .container-fluid {
     display: flex;
-    align-items: center;
     justify-content: flex-start;
-    height: 1024px;
+    max-width: 1440px;
     padding: 0;
     background: $white;
   }
 
   .bg-img {
-    width: 640px;
-    height: 1024px;
-    background: url('../../assets/img/signup-bg.jpg');
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    max-width: 640px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      max-width: 640px;
+    }
 
     .logo-in-sign-up {
+      position: absolute;
       width: 253px;
       height: 83px;
       text-align: center;
@@ -47,11 +55,12 @@
       width: 100%;
       height: 83px;
       max-width: 375px;
+      padding: 30px 0;
       margin: 0 20px 0 auto;
       text-align: center;
 
       h3 {
-        margin: 29px 0;
+        margin: 0;
         font-family: Open Sans, serif;
         font-size: 12px;
         font-style: normal;
@@ -77,6 +86,7 @@
         border: 1px solid $crimson;
         border-radius: 0;
         box-sizing: border-box;
+        transition: 1s;
 
         &:hover,
         &:active {
@@ -86,11 +96,11 @@
       }
     }
 
-    .create-account-elements {
-      max-width: 400px;
+    .create-account-wrapper {
       width: 100%;
-      height: 440px;
+      max-width: 400px;
       margin: 200px 0 auto;
+
       ::placeholder {
         font-family: Open Sans, serif;
         font-size: 12px;
@@ -109,7 +119,7 @@
         color: $black;
       }
 
-      h5 {
+      label {
         width: 50%;
         font-family: Roboto, serif;
         font-size: 10px;
@@ -154,31 +164,19 @@
         color: $river-bed;
       }
 
-      .first-last-name {
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 110%;
-        height: 11px;
-
-        h5 {
-          margin: 0;
-        }
-      }
-
       .user-info {
         display: flex;
         align-items: center;
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
-        height: 60px;
+        height: 70px;
 
         input {
           width: 180px;
           height: 40px;
           padding-left: 15px;
+          margin-bottom: 10px;
           border: 1px solid $mischka;
           outline: 0;
           box-sizing: border-box;
@@ -186,6 +184,8 @@
       }
 
       .email-wrapper {
+        display: flex;
+        flex-direction: column;
         width: 100%;
 
         h5 {
@@ -196,7 +196,7 @@
           width: 100%;
           height: 40px;
           padding-left: 15px;
-          margin-bottom: 15px;
+          margin-bottom: 10px;
           border: 1px solid $mischka;
           outline: 0;
           box-sizing: border-box;
@@ -233,6 +233,68 @@
         letter-spacing: 1px;
         color: $white;
         text-transform: uppercase;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .register-container {
+    .bg-img {
+      img {
+        display: none;
+      }
+
+      .logo-in-sign-up {
+        z-index: 2;
+      }
+    }
+
+    .create-account-form {
+      position: absolute;
+      z-index: 1;
+      background: linear-gradient($dimming, $dimming), url('../../assets/img/signup-bg.jpg') no-repeat;
+      background-size: cover;
+
+      .log-in {
+        h3 {
+          color: $white;
+        }
+      }
+
+      .create-account-wrapper {
+        max-width: 80%;
+
+        h2,
+        label,
+        p {
+          margin-top: 20px;
+          color: $white;
+        }
+
+        h2 {
+          font-size: 24px;
+          line-height: 33px;
+        }
+
+        .user-info {
+          input {
+            width: 100%;
+          }
+        }
+
+        .btn-primary {
+          width: 100%;
+          margin-top: 30px;
+        }
+
+        .fb-icon {
+          background: url('../../assets/img/facebook-icon-mobile.svg') no-repeat;
+        }
+
+        .gplus-icon {
+          background: url('../../assets/img/gplus-icon-mobile.svg') no-repeat;
+        }
       }
     }
   }

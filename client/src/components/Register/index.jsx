@@ -1,4 +1,5 @@
 import React from 'react';
+import sign_up_bg from '../../assets/img/signup-bg.jpg';
 
 export const Register = () =>
     <div className="register-container ">
@@ -7,32 +8,35 @@ export const Register = () =>
                 <div className="logo-in-sign-up">
                     <h1>Sport News</h1>
                 </div>
+                <img src={sign_up_bg} alt="signup_bg"/>
             </div>
             <div className="create-account-form">
                 <div className="log-in">
                     <h3>Already have an account?</h3>
                     <a href="#" className="btn btn-primary login">Log In</a>
                 </div>
-                <div className="create-account-elements">
+                <div className="create-account-wrapper">
                     <h2>Create Account</h2>
                     <a href="#" className="btn fb-icon"></a>
                     <a href="#" className="btn gplus-icon"></a>
                     <p>Or use your email for registration</p>
-                    <div className="first-last-name">
-                        <h5>first name</h5>
-                        <h5>last name</h5>
-                    </div>
                     <div className="user-info">
-                        <input type="text" name="first-name" placeholder="John"/>
-                        <input type="text" name="last-name" placeholder="Doe"/>
+                        <div className="first-name">
+                            <label htmlFor="first-name-input">First name</label>
+                            <input type="text" id="first-name-input" placeholder="John"/>
+                        </div>
+                        <div className="last-name">
+                            <label htmlFor="last-name-input">Last name</label>
+                            <input type="text" id="last-name" placeholder="Doe"/>
+                        </div>
                     </div>
                     <div className="email-wrapper">
-                        <h5>Email</h5>
-                        <input type="email" name="email" placeholder="johndoe@gmail.com"/>
-                        <h5>Password</h5>
-                        <input type="password" name="password" placeholder="4+ characters"/>
+                        <label htmlFor="email-input">Email</label>
+                        <input type="email" id="email-input" placeholder="johndoe@gmail.com"/>
+                        <label htmlFor="password-input">Password</label>
+                        <input type="password" id="password-input" placeholder="4+ characters"/>
                     </div>
-                    <a href="#" className="btn btn-primary sing-up">sign up</a>
+                    <button className="btn btn-primary sing-up">sign up</button>
                 </div>
             </div>
         </div>
