@@ -1,7 +1,6 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 
 export const Register = () =>
-    <Fragment>
         <div className="container-fluid">
             <div className="bg-img">
             </div>
@@ -40,4 +39,3 @@ export const Register = () =>
                 </div>
             </div>
         </div>
-    </Fragment>
