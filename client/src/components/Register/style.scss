@@ -10,7 +10,7 @@
   left: 0;
   width: 640px;
   height: 1024px;
-  background: url('../../img/signup-bg.jpg');
+  background: url('../../assets/img/signup-bg.jpg');
 }
 
 .row-fluid {
@@ -150,10 +150,10 @@
       height: 35px;
       margin: 0 6px 10px;
       cursor: pointer;
-      background: url('../../img/facebook-icon.svg') no-repeat;
+      background: url('../../assets/img/facebook-icon.svg') no-repeat;
 
       &:hover {
-        background: url('../../img/facebook-icon-hover.svg') no-repeat;
+        background: url('../../assets/img/facebook-icon-hover.svg') no-repeat;
       }
     }
 
@@ -162,10 +162,10 @@
       height: 35px;
       margin: 0 6px 10px;
       cursor: pointer;
-      background: url('../../img/gplus-icon.svg') no-repeat;
+      background: url('../../assets/img/gplus-icon.svg') no-repeat;
 
       &:hover {
-        background: url('../../img/gplus-icon-hover.svg') no-repeat;
+        background: url('../../assets/img/gplus-icon-hover.svg') no-repeat;
       }
     }
 
