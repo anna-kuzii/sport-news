@@ -6,8 +6,6 @@ exports.sendRegNotification = (user) => {
         to: user,
         subject: 'Subscription in Sport News',
         html: `<table style="background:#f9f9fb;width: 100%;padding: 0 20%;">
-                <thead>   
-                </thead>
                 <tbody style="font-size: 24px">
                     <tr>
                         <td style="color:#000000;font-style:normal;font-family: Open Sans,sans-serif;text-align:center;font-weight:600;">
