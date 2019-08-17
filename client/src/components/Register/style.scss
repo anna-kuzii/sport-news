@@ -19,7 +19,7 @@
       height: 100%;
       max-width: 640px;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: $mobile-width) {
         display: none;
       }
     }
@@ -41,7 +41,7 @@
         color: $rose-white;
       }
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: $mobile-width) {
         z-index: 2;
       }
     }
@@ -76,7 +76,7 @@
         line-height: 25px;
         color: $shuttle-gray;
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: $mobile-width) {
           color: $white;
         }
       }
@@ -130,7 +130,7 @@
         line-height: 40px;
         color: $black;
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: $mobile-width) {
           margin-top: 20px;
           font-size: 24px;
           line-height: 33px;
@@ -149,7 +149,7 @@
         color: $river-bed;
         text-transform: uppercase;
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: $mobile-width) {
           margin-top: 20px;
           color: $white;
         }
@@ -166,7 +166,7 @@
           background: url('../../assets/img/facebook-icon-hover.svg') no-repeat;
         }
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: $mobile-width) {
           background: url('../../assets/img/facebook-icon-mobile.svg') no-repeat;
         }
       }
@@ -182,7 +182,7 @@
           background: url('../../assets/img/gplus-icon-hover.svg') no-repeat;
         }
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: $mobile-width) {
           background: url('../../assets/img/gplus-icon-mobile.svg') no-repeat;
         }
       }
@@ -195,7 +195,7 @@
         line-height: 16px;
         color: $river-bed;
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: $mobile-width) {
           margin-top: 20px;
           color: $white;
         }
@@ -218,7 +218,7 @@
           outline: 0;
           box-sizing: border-box;
 
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: $mobile-width) {
             width: 100%;
           }
         }
@@ -264,7 +264,7 @@
           background: $monza;
         }
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: $mobile-width) {
           width: 100%;
           margin-top: 30px;
         }
@@ -281,12 +281,12 @@
         text-transform: uppercase;
       }
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: $mobile-width) {
         max-width: 80%;
       }
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $mobile-width) {
       position: absolute;
       z-index: 1;
       background: linear-gradient($dimming, $dimming), url('../../assets/img/signup-bg.jpg') no-repeat;
