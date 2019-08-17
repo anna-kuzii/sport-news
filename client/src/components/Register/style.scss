@@ -9,13 +9,11 @@
   }
 
   .bg-img {
-    z-index: 1;
     width: 640px;
     height: 1024px;
     background: url('../../assets/img/signup-bg.jpg');
 
     .logo-in-sign-up {
-      z-index: 2;
       width: 253px;
       height: 83px;
       text-align: center;
@@ -89,10 +87,10 @@
     }
 
     .create-account-elements {
-      width: 400px;
+      max-width: 400px;
+      width: 100%;
       height: 440px;
-      margin-bottom: 35%;
-
+      margin: 200px 0 auto;
       ::placeholder {
         font-family: Open Sans, serif;
         font-size: 12px;
@@ -121,12 +119,6 @@
         letter-spacing: 1px;
         color: $river-bed;
         text-transform: uppercase;
-      }
-
-      br {
-        display: block;
-        margin-top: 10px;
-        content: '';
       }
 
       .fb-icon {
