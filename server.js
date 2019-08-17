@@ -1,6 +1,17 @@
 const express = require('express');
+
+const bodyParser = require('body-parser');
+
 require('dotenv').config();
+
 const app = express();
+const dbConnect = require('./db/connect');
+
+dbConnect.connect();
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.json());
+
 // TODO: change that part ,please:)
 app.get('/', (req, res) => {
   res.send('Hello');
