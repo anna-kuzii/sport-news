@@ -3,17 +3,15 @@ import React from 'react';
 export const Register = () =>
         <div className="container-fluid">
             <div className="bg-img">
-            </div>
-            <div className="row-fluid">
                 <div className="logo-in-sign-up">
                     <h1>Sport News</h1>
                 </div>
+            </div>
+            <div className="create-account-form">
                 <div className="log-in">
                     <h3>Already have an account?</h3>
                     <a href="#" className="btn btn-primary login">Log In</a>
                 </div>
-            </div>
-            <div className="create-account-form">
                 <div className="create-account-elements">
                     <h2>Create Account</h2>
                     <a href="#" className="btn fb-icon"></a>

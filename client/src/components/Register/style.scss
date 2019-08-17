@@ -1,267 +1,260 @@
 .container-fluid {
-  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
   height: 1024px;
   background: $white;
-}
 
-.bg-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 640px;
-  height: 1024px;
-  background: url('../../assets/img/signup-bg.jpg');
-}
 
-.row-fluid {
-  width: 100%;
-  height: 83px;
-  margin: 0;
-
-  .logo-in-sign-up {
-    position: absolute;
+  .bg-img {
     top: 0;
     left: 0;
-    width: 253px;
-    height: 83px;
-    text-align: center;
-    background: $crimson;
+    width: 640px;
+    height: 1024px;
+    z-index: 1;
+    background: url('../../assets/img/signup-bg.jpg');
 
-    h1 {
-      margin: 29px 0;
-      font-family: Open Sans, serif;
-      font-size: 1.5rem;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 25px;
-      color: $rose-white;
-    }
-  }
-
-  .log-in {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 375px;
-    height: 83px;
-    text-align: center;
-
-    h3 {
-      margin: 29px 0;
-      font-family: Open Sans, serif;
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 25px;
-      color: $shuttle-gray;
-    }
-
-    .btn {
-      display: inline-block;
-      width: 130px;
-      height: 32px;
-      font-family: Open Sans, serif;
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 16px;
-      color: $crimson;
+    .logo-in-sign-up {
+      width: 253px;
+      height: 83px;
+      z-index: 2;
       text-align: center;
-      text-transform: capitalize;
-      cursor: pointer;
-      background-color: $white;
-      border: 1px solid $crimson;
-      border-radius: 0;
-      box-sizing: border-box;
+      background: $crimson;
 
-      &:hover {
-        color: $white;
-        background: $crimson;
+      h1 {
+        margin: 0;
+        font-family: Open Sans, serif;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 83px;
+        color: $rose-white;
       }
-
-      &:active {
-        color: $white;
-        background: $crimson;
-      }
-    }
-
-    .login {
-      margin: 0 55px 0 30px;
     }
   }
-}
 
-.create-account-form {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 800px;
-  height: 941px;
+  .create-account-form {
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 800px;
+    height: 1024px;
 
-  .create-account-elements {
-    width: 400px;
-    height: 440px;
-
-    ::placeholder {
-      font-family: Open Sans, serif;
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 16px;
-      color: $shuttle-gray;
-    }
-
-    h2 {
-      left: 0;
-      font-family: Open Sans, serif;
-      font-size: 24px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 40px;
-      color: $black;
-    }
-
-    h5 {
-      width: 50%;
-      font-family: Roboto, serif;
-      font-size: 10px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 11px;
-      letter-spacing: 1px;
-      color: $river-bed;
-      text-transform: uppercase;
-    }
-
-    br {
-      display: block;
-      margin-top: 10px;
-      content: '';
-    }
-
-    .fb-icon {
-      width: 35px;
-      height: 35px;
-      margin: 0 6px 10px;
-      cursor: pointer;
-      background: url('../../assets/img/facebook-icon.svg') no-repeat;
-
-      &:hover {
-        background: url('../../assets/img/facebook-icon-hover.svg') no-repeat;
-      }
-    }
-
-    .gplus-icon {
-      width: 35px;
-      height: 35px;
-      margin: 0 6px 10px;
-      cursor: pointer;
-      background: url('../../assets/img/gplus-icon.svg') no-repeat;
-
-      &:hover {
-        background: url('../../assets/img/gplus-icon-hover.svg') no-repeat;
-      }
-    }
-
-    p {
-      font-family: Open Sans, serif;
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 16px;
-      color: $river-bed;
-    }
-
-    .first-last-name {
+    .log-in {
+      top: 0;
+      right: 0;
       display: flex;
       align-items: center;
-      flex-direction: row;
-      justify-content: space-between;
-      width: 110%;
-      height: 11px;
+      justify-content: space-around;
+      width: 375px;
+      height: 83px;
+      margin: 0 0 0 45%;
+      text-align: center;
 
-      h5 {
-        margin: 0;
+      h3 {
+        margin: 29px 0;
+        font-family: Open Sans, serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 25px;
+        color: $shuttle-gray;
+      }
+
+      .btn {
+        display: inline-block;
+        width: 130px;
+        height: 32px;
+        font-family: Open Sans, serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 16px;
+        color: $crimson;
+        text-align: center;
+        text-transform: capitalize;
+        cursor: pointer;
+        background-color: $white;
+        border: 1px solid $crimson;
+        border-radius: 0;
+        box-sizing: border-box;
+
+        &:hover {
+          color: $white;
+          background: $crimson;
+        }
+
+        &:active {
+          color: $white;
+          background: $crimson;
+        }
       }
     }
 
-    .user-info {
-      display: flex;
-      align-items: center;
-      flex-direction: row;
-      justify-content: space-between;
-      width: 100%;
-      height: 60px;
+    .create-account-elements {
+      width: 400px;
+      height: 440px;
+      margin-bottom: 35%;
 
-      input {
-        width: 180px;
-        height: 40px;
-        padding-left: 15px;
-        border: 1px solid $mischka;
-        outline: 0;
-        box-sizing: border-box;
+      ::placeholder {
+        font-family: Open Sans, serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 16px;
+        color: $shuttle-gray;
       }
-    }
 
-    .email-wrapper {
-      width: 100%;
+      h2 {
+        left: 0;
+        font-family: Open Sans, serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 40px;
+        color: $black;
+      }
 
       h5 {
-        width: 100%;
-      }
-
-      input {
-        width: 100%;
-        height: 40px;
-        padding-left: 15px;
-        border: 1px solid $mischka;
-        outline: 0;
-        box-sizing: border-box;
+        width: 50%;
+        font-family: Roboto, serif;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 11px;
+        letter-spacing: 1px;
+        color: $river-bed;
+        text-transform: uppercase;
       }
 
       br {
         display: block;
-        margin-top: 20px;
+        margin-top: 10px;
         content: '';
       }
-    }
 
-    .btn-primary {
-      display: inline-block;
-      width: 400px;
-      height: 42px;
-      color: $white;
-      text-transform: capitalize;
-      cursor: pointer;
-      background-color: $crimson;
-      border: 1px solid $crimson;
-      border-radius: 0;
-      box-sizing: border-box;
+      .fb-icon {
+        width: 35px;
+        height: 35px;
+        margin: 0 6px 10px;
+        cursor: pointer;
+        background: url('../../assets/img/facebook-icon.svg') no-repeat;
 
-      &:hover {
-        background: $crimson;
+        &:hover {
+          background: url('../../assets/img/facebook-icon-hover.svg') no-repeat;
+        }
       }
 
-      &:active {
-        background: $monza;
-      }
-    }
+      .gplus-icon {
+        width: 35px;
+        height: 35px;
+        margin: 0 6px 10px;
+        cursor: pointer;
+        background: url('../../assets/img/gplus-icon.svg') no-repeat;
 
-    .sign-up {
-      font-family: Roboto, serif;
-      font-size: 12px;
-      font-style: normal;
-      font-weight: bold;
-      line-height: 14px;
-      letter-spacing: 1px;
-      color: $white;
-      text-transform: uppercase;
+        &:hover {
+          background: url('../../assets/img/gplus-icon-hover.svg') no-repeat;
+        }
+      }
+
+      p {
+        font-family: Open Sans, serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 16px;
+        color: $river-bed;
+      }
+
+      .first-last-name {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 110%;
+        height: 11px;
+
+        h5 {
+          margin: 0;
+        }
+      }
+
+      .user-info {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: 60px;
+
+        input {
+          width: 180px;
+          height: 40px;
+          padding-left: 15px;
+          border: 1px solid $mischka;
+          outline: 0;
+          box-sizing: border-box;
+        }
+      }
+
+      .email-wrapper {
+        width: 100%;
+
+        h5 {
+          width: 100%;
+        }
+
+        input {
+          width: 100%;
+          height: 40px;
+          padding-left: 15px;
+          border: 1px solid $mischka;
+          outline: 0;
+          box-sizing: border-box;
+        }
+
+        br {
+          display: block;
+          margin-top: 20px;
+          content: '';
+        }
+      }
+
+      .btn-primary {
+        display: inline-block;
+        width: 400px;
+        height: 42px;
+        color: $white;
+        text-transform: capitalize;
+        cursor: pointer;
+        background-color: $crimson;
+        border: 1px solid $crimson;
+        border-radius: 0;
+        box-sizing: border-box;
+
+        &:hover {
+          background: $crimson;
+        }
+
+        &:active {
+          background: $monza;
+        }
+      }
+
+      .sign-up {
+        font-family: Roboto, serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: 14px;
+        letter-spacing: 1px;
+        color: $white;
+        text-transform: uppercase;
+      }
     }
   }
 }
