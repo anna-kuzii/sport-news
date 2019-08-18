@@ -1,6 +1,5 @@
 import axios from 'axios';
-const BASE_URL = "http://localhost:5000";
-
+require('dotenv').config();
 export const postReq = (path, data) =>{
-    return axios.post(BASE_URL + path, data)
+    return axios.post(process.env.REACT_APP_SERVER_URL + path, data)
 };
