@@ -11,8 +11,8 @@ export const registerFunc = newUser => {
 
 
 function handleResponse(response) {
-   
-        if (!response.status === 200) {
+
+        if (response.status !== 200) {
             const error =  response.statusText;
             return Promise.reject(error);
         }
