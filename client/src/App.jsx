@@ -7,6 +7,7 @@ import { history } from './_helpers';
 import { alertActions } from './_actions';
 import {Register} from "./components/Register";
 
+
 class App extends Component {
     constructor(props) {
         super(props);
