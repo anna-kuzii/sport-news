@@ -24,12 +24,11 @@ class FormValidator {
    }
 
   valid() {
-    const validation = {}
-
-    this.validations.map(rule => (
-      validation[rule.field] = { isInvalid: false, message: '' }
-    ));
-    return { isValid: true, ...validation };
+    
+    return { isValid: true, ...(this.validations.reduce((result, rule) => {
+      result[rule.field] = { isInvalid: false, message: '' }
+      return result;
+    },{}))};
   }
 }
 
