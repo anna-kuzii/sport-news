@@ -3,3 +3,8 @@ export const alertConstants = {
     ERROR: 'ALERT_ERROR',
     CLEAR: 'ALERT_CLEAR'
 };
+
+export const nextAlertConstants ={
+    SUCCESS: 'alert-success',
+    ERROR: 'alert-danger'
+};

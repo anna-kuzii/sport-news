@@ -49,7 +49,7 @@ class Register extends Component {
     }
 
     render() {
-      let validation = this.submitted ?                         // if the form has been submitted at least once
+      const validation = this.submitted ?                         // if the form has been submitted at least once
                       this.validator.validate(this.state) :   // then check validity every time we render
                       this.state.validation
         return (
