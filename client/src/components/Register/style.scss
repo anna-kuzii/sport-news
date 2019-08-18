@@ -156,9 +156,22 @@
         border: 1px solid $mischka;
         outline: 0;
         box-sizing: border-box;
+      }
+        
+      .has-error {
+        input {
+          margin-bottom: 0;
+          border: 1px solid $crimson;
+          outline: 0;
+          box-sizing: border-box;
+        }
 
-        @media screen and (max-width: $mobile-width) {
-          width: 100%;
+        .help-block {
+          display: block;
+          margin-bottom: 5px;
+          font-size: 12px;
+          font-weight: 400;
+          color: $crimson;
         }
       }
     }
