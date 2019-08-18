@@ -4,7 +4,7 @@ export const alertConstants = {
     CLEAR: 'ALERT_CLEAR'
 };
 
-export const nextAlertConstants ={
+export const alertTypes ={
     SUCCESS: 'alert-success',
     ERROR: 'alert-danger'
 };

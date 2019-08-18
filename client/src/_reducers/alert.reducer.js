@@ -1,15 +1,15 @@
-import { alertConstants, nextAlertConstants } from '../_constants';
+import { alertConstants, alertTypes } from '../_constants';
 
 export function alert(state = {}, action) {
     switch (action.type) {
         case alertConstants.SUCCESS:
             return {
-                type: nextAlertConstants.SUCCESS,
+                type: alertTypes.SUCCESS,
                 message: action.message
             };
         case alertConstants.ERROR:
             return {
-                type: nextAlertConstants.ERROR,
+                type: alertTypes.ERROR,
                 message: action.message
             };
         case alertConstants.CLEAR:

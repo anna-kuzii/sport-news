@@ -9,22 +9,21 @@ export const userActions = {
 
 function register(user) {
     return dispatch => {
-        dispatch(request(user));
-
+        dispatch(registrationRequest(user));
         instance.post('/register', user)
             .then(
                 user => {
-                    dispatch(success());
+                    dispatch(registrationSuccess());
                     history.push('/login');
                     dispatch(alertActions.success('Registration successful'));
                 }
             ).catch( error => {
-            dispatch(failure(error.toString()));
-            dispatch(alertActions.error(error.toString()));
+            dispatch(registrationFailure(error.message));
+            dispatch(alertActions.error(error.message));
         });
     };
 
-    function request(user) { return { type: userConstants.REGISTER_REQUEST, user } }
-    function success(user) { return { type: userConstants.REGISTER_SUCCESS, user } }
-    function failure(error) { return { type: userConstants.REGISTER_FAILURE, error } }
+    function registrationRequest(user) { return { type: userConstants.REGISTER_REQUEST, user } }
+    function registrationSuccess(user) { return { type: userConstants.REGISTER_SUCCESS, user } }
+    function registrationFailure(error) { return { type: userConstants.REGISTER_FAILURE, error } }
 }
