@@ -1,5 +1,5 @@
 import React from 'react';
-import sign_up_bg from '../../assets/img/signup-bg.jpg';
+import sign_up_bg from '../../assets/img/register-login-bg.jpg';
 
 export const Register = () =>
     <div className="register-container ">
