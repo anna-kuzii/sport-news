@@ -1,5 +1,7 @@
 import React from 'react';
 import sign_up_bg from '../../assets/img/register-login-bg.jpg';
+import {Link} from 'react-router-dom';
+
 
 export const Register = () =>
     <div className="register-container ">
@@ -13,7 +15,7 @@ export const Register = () =>
             <div className="create-account-form">
                 <div className="log-in">
                     <h3>Already have an account?</h3>
-                    <a href="#" className="btn btn-primary login">Log In</a>
+                    <Link to="/login" className="btn btn-primary login">Log In</Link>
                 </div>
                 <div className="create-account-wrapper">
                     <h2>Create Account</h2>
@@ -37,7 +39,9 @@ export const Register = () =>
                         <input type="password" id="password-input" placeholder="4+ characters"/>
                     </div>
                     <button className="btn btn-primary sing-up">sign up</button>
-                    <a href="#">Already have an account?</a>
+                    <div className="mobile-link">
+                        <Link to="/login" className="mobile-link">Already have an account?</Link>
+                    </div>
                 </div>
             </div>
         </div>

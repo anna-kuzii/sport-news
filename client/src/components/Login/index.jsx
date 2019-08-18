@@ -1,5 +1,6 @@
 import React from 'react';
 import login_bg from '../../assets/img/register-login-bg.jpg';
+import {Link} from "react-router-dom";
 
 export const Login = () =>
     <div className="login-container ">
@@ -13,7 +14,7 @@ export const Login = () =>
             <div className="log-in-form">
                 <div className="get-started">
                     <h3>Don't have an account?</h3>
-                    <a href="#" className="btn btn-primary">Get Started</a>
+                    <Link to="/register" className="btn btn-primary">Get Started</Link>
                 </div>
                 <div className="log-in-wrapper">
                     <h2>Log in to Sport News</h2>
@@ -27,7 +28,9 @@ export const Login = () =>
                         <input type="password" id="password-input" placeholder="Enter your password"/>
                     </div>
                     <button className="btn btn-primary log-in">log in</button>
-                    <a href="#">Dont have an account?</a>
+                    <div className="mobile-link">
+                        <Link to="/register" className="mobile-link">Don't have an account?</Link>
+                    </div>
                 </div>
             </div>
         </div>
