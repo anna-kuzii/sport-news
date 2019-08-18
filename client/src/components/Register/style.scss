@@ -43,7 +43,14 @@
 
       @media screen and (max-width: $mobile-width) {
         z-index: 2;
+        width: 100%;
+        max-width: $mobile-width;
       }
+    }
+
+    @media screen and (max-width: $mobile-width) {
+      width: 100%;
+      max-width: $mobile-width;
     }
   }
 
@@ -105,6 +112,10 @@
           color: $white;
           background: $crimson;
         }
+      }
+
+      @media screen and (max-width: $mobile-width) {
+        display: none;
       }
     }
 
@@ -221,6 +232,16 @@
           @media screen and (max-width: $mobile-width) {
             width: 100%;
           }
+        }
+      }
+
+      a {
+        display: none;
+
+        @media screen and (max-width: $mobile-width) {
+          display: inline-block;
+          margin-top: 20px;
+          color: $white;
         }
       }
 

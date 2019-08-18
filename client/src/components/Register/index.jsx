@@ -37,6 +37,7 @@ export const Register = () =>
                         <input type="password" id="password-input" placeholder="4+ characters"/>
                     </div>
                     <button className="btn btn-primary sing-up">sign up</button>
+                    <a href="#">Already have an account?</a>
                 </div>
             </div>
         </div>
