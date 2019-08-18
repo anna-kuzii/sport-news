@@ -2,7 +2,7 @@ import React from 'react';
 import login_bg from '../../assets/img/register-login-bg.jpg';
 import {Link} from "react-router-dom";
 
-export const Login = () =>
+export const ForgotPassword = () =>
     <div className="login-container ">
         <div className="container-fluid">
             <div className="bg-img">
@@ -11,25 +11,24 @@ export const Login = () =>
                 </div>
                 <img src={login_bg} alt="login_bg"/>
             </div>
-            <div className="log-in-form">
+            <div className="forgot-password-form">
                 <div className="get-started">
                     <h3>Don't have an account?</h3>
                     <Link to="/register" className="btn btn-primary">Get Started</Link>
                 </div>
-                <div className="log-in-wrapper">
-                    <h2>Log in to Sport News</h2>
+                <div className="forgot-password-wrapper">
+                    <h2>Forgot your password?</h2>
+                    <p>Enter your email address below and we'll get you back on track.</p>
                     <div className="email-wrapper">
                         <label htmlFor="email-input">Email address</label>
                         <input type="email" id="email-input" placeholder="Email@gmail.com"/>
-                        <div className="forgot-pass">
-                            <label htmlFor="password-input">Password</label>
-                            <Link to="/forgotpassword">Forgot password?</Link>
-                        </div>
-                        <input type="password" id="password-input" placeholder="Enter your password"/>
                     </div>
-                    <button className="btn btn-primary log-in">log in</button>
-                    <div className="mobile-link">
-                        <Link to="/register" className="mobile-link">Don't have an account?</Link>
+                    <button className="btn btn-primary forgot-password">request reset link</button>
+                    <div className="sign-up">
+                        <Link to="/register" className="sign-up">Don't have an account?</Link>
+                    </div>
+                    <div className="sign-in">
+                        <Link to="/login" className="sign-in">Back to Sign in</Link>
                     </div>
                 </div>
             </div>

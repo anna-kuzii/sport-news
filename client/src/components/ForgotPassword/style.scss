@@ -54,7 +54,7 @@
     }
   }
 
-  .log-in-form {
+  .forgot-password-form {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -119,7 +119,7 @@
       }
     }
 
-    .log-in-wrapper {
+    .forgot-password-wrapper {
       width: 100%;
       max-width: 400px;
       margin: 200px 0 auto;
@@ -150,13 +150,43 @@
         }
       }
 
-      .mobile-link {
+      p {
+        width: 60%;
+        font-family: Open Sans, serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 19px;
+        color: $shuttle-gray;
+
+        @media screen and (max-width: $mobile-width) {
+          width: 100%;
+          margin: 20px 0 0;
+          color: $white;
+        }
+      }
+
+      .sign-up {
         display: none;
+      }
+
+      .sign-in,
+      .sign-up {
+        margin: 12px 0 0;
+        font-family: Open Sans, serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 16px;
+        color: $black;
+        text-align: center;
+
 
         @media screen and (max-width: $mobile-width) {
           display: block;
-          margin-top: 20px;
+          margin-top: 15px;
           color: $white;
+          text-align: left;
         }
       }
 
@@ -164,12 +194,7 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        margin: 30px 0 0;
-
-        .forgot-pass {
-          display: flex;
-          flex-direction: row;
-        }
+        margin: 10px 0 0;
 
         label {
           width: 50%;
@@ -213,6 +238,10 @@
             color: $white;
           }
         }
+
+        @media screen and (max-width: $mobile-width) {
+          margin: 0;
+        }
       }
 
       .btn-primary {
@@ -241,7 +270,7 @@
         }
       }
 
-      .log-in {
+      .forgot-password {
         margin: 20px 0 0;
         font-family: Roboto, serif;
         font-size: 12px;
@@ -258,7 +287,6 @@
         margin: 200px 0 auto;
       }
     }
-
     @media screen and (max-width: $mobile-width) {
       position: absolute;
       z-index: 1;
