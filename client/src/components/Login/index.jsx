@@ -9,7 +9,7 @@ export const Login = () =>
                 <div className="logo-in-sign-up">
                     <h1>Sport News</h1>
                 </div>
-                <img src={login_bg} alt="login_bg"/>
+                <img src={login_bg} alt="background image"/>
             </div>
             <div className="log-in-form">
                 <div className="get-started">

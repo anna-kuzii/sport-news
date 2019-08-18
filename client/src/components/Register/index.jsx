@@ -10,7 +10,7 @@ export const Register = () =>
                 <div className="logo-in-sign-up">
                     <h1>Sport News</h1>
                 </div>
-                <img src={sign_up_bg} alt="signup_bg"/>
+                <img src={sign_up_bg} alt="background image"/>
             </div>
             <div className="create-account-form">
                 <div className="log-in">

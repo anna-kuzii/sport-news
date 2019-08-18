@@ -1,318 +1,203 @@
 .register-container {
-  .container-fluid {
-    display: flex;
-    justify-content: flex-start;
-    max-width: 1440px;
-    padding: 0;
-    background: $white;
-  }
-
-  .bg-img {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    max-width: 640px;
-    overflow: hidden;
-
-    img {
-      width: 100%;
-      height: 100%;
-      max-width: 640px;
-
-      @media screen and (max-width: $mobile-width) {
-        display: none;
-      }
-    }
-
-    .logo-in-sign-up {
-      position: absolute;
-      width: 253px;
-      height: 83px;
-      text-align: center;
-      background: $crimson;
-
-      h1 {
-        margin: 0;
-        font-family: Open Sans, serif;
-        font-size: 1.5rem;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 83px;
-        color: $rose-white;
-      }
-
-      @media screen and (max-width: $mobile-width) {
-        z-index: 2;
-        width: 100%;
-        max-width: $mobile-width;
-      }
-    }
-
-    @media screen and (max-width: $mobile-width) {
-      width: 100%;
-      max-width: $mobile-width;
-    }
-  }
-
-  .create-account-form {
+  .log-in {
     display: flex;
     align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
-    height: 100%;
-    max-width: 800px;
-
-    .log-in {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      width: 100%;
-      height: 83px;
-      max-width: 375px;
-      padding: 30px 0;
-      margin: 0 20px 0 auto;
-      text-align: center;
-
-      h3 {
-        margin: 0;
-        font-family: Open Sans, serif;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 25px;
-        color: $shuttle-gray;
-
-        @media screen and (max-width: $mobile-width) {
-          color: $white;
-        }
-      }
-
-      .btn {
-        display: inline-block;
-        width: 130px;
-        height: 32px;
-        font-family: Open Sans, serif;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 16px;
-        color: $crimson;
-        text-align: center;
-        text-transform: capitalize;
-        cursor: pointer;
-        background-color: $white;
-        border: 1px solid $crimson;
-        border-radius: 0;
-        box-sizing: border-box;
-        transition: 1s;
-
-        &:hover,
-        &:active {
-          color: $white;
-          background: $crimson;
-        }
-      }
-
-      @media screen and (max-width: $mobile-width) {
-        display: none;
-      }
-    }
-
-    .create-account-wrapper {
-      width: 100%;
-      max-width: 400px;
-      margin: 200px 0 auto;
-
-      ::placeholder {
-        font-family: Open Sans, serif;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 16px;
-        color: $shuttle-gray;
-      }
-
-      h2 {
-        font-family: Open Sans, serif;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 40px;
-        color: $black;
-
-        @media screen and (max-width: $mobile-width) {
-          margin-top: 20px;
-          font-size: 24px;
-          line-height: 33px;
-          color: $white;
-        }
-      }
-
-      label {
-        width: 50%;
-        font-family: Roboto, serif;
-        font-size: 10px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 11px;
-        letter-spacing: 1px;
-        color: $river-bed;
-        text-transform: uppercase;
-
-        @media screen and (max-width: $mobile-width) {
-          margin-top: 20px;
-          color: $white;
-        }
-      }
-
-      .fb-icon {
-        width: 35px;
-        height: 35px;
-        margin: 0 6px 10px;
-        cursor: pointer;
-        background: url('../../assets/img/facebook-icon.svg') no-repeat;
-
-        &:hover {
-          background: url('../../assets/img/facebook-icon-hover.svg') no-repeat;
-        }
-
-        @media screen and (max-width: $mobile-width) {
-          background: url('../../assets/img/facebook-icon-mobile.svg') no-repeat;
-        }
-      }
-
-      .gplus-icon {
-        width: 35px;
-        height: 35px;
-        margin: 0 6px 10px;
-        cursor: pointer;
-        background: url('../../assets/img/gplus-icon.svg') no-repeat;
-
-        &:hover {
-          background: url('../../assets/img/gplus-icon-hover.svg') no-repeat;
-        }
-
-        @media screen and (max-width: $mobile-width) {
-          background: url('../../assets/img/gplus-icon-mobile.svg') no-repeat;
-        }
-      }
-
-      p {
-        font-family: Open Sans, serif;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 16px;
-        color: $river-bed;
-
-        @media screen and (max-width: $mobile-width) {
-          margin-top: 20px;
-          color: $white;
-        }
-      }
-
-      .user-info {
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-        height: 70px;
-
-        .first-name {
-          margin-right: 40px;
-        }
-
-        input {
-          width: 180px;
-          height: 40px;
-          padding-left: 15px;
-          margin-bottom: 10px;
-          border: 1px solid $mischka;
-          outline: 0;
-          box-sizing: border-box;
-
-          @media screen and (max-width: $mobile-width) {
-            width: 100%;
-          }
-        }
-      }
-
-      .mobile-link {
-        display: none;
-
-        @media screen and (max-width: $mobile-width) {
-          display: inline-block;
-          margin-top: 10px;
-          color: $white;
-        }
-      }
-
-      .email-wrapper {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-
-        input {
-          width: 100%;
-          height: 40px;
-          padding-left: 15px;
-          margin-bottom: 10px;
-          border: 1px solid $mischka;
-          outline: 0;
-          box-sizing: border-box;
-        }
-      }
-
-      .btn-primary {
-        display: inline-block;
-        width: 400px;
-        height: 42px;
-        color: $white;
-        text-transform: capitalize;
-        cursor: pointer;
-        background-color: $crimson;
-        border: 1px solid $crimson;
-        border-radius: 0;
-        box-sizing: border-box;
-
-        &:hover {
-          background: $crimson;
-        }
-
-        &:active {
-          background: $monza;
-        }
-
-        @media screen and (max-width: $mobile-width) {
-          width: 100%;
-          margin-top: 30px;
-        }
-      }
-
-      .sign-up {
-        font-family: Roboto, serif;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: bold;
-        line-height: 14px;
-        letter-spacing: 1px;
-        color: $white;
-        text-transform: uppercase;
-      }
-
-      @media screen and (max-width: $mobile-width) {
-        max-width: 80%;
-        margin: 200px 0 auto;
-      }
-    }
+    height: 83px;
+    max-width: 375px;
+    padding: 30px 0;
+    margin: 0 20px 0 auto;
+    text-align: center;
 
     @media screen and (max-width: $mobile-width) {
-      position: absolute;
-      z-index: 1;
-      background: linear-gradient($dimming, $dimming), url('../../assets/img/register-login-bg.jpg') no-repeat center;
-      background-size: cover;
+      display: none;
+    }
+
+    h3 {
+      margin: 0;
+      font-family: Open Sans, serif;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 25px;
+      color: $shuttle-gray;
+
+      @media screen and (max-width: $mobile-width) {
+        color: $white;
+      }
+    }
+
+    .btn {
+      display: inline-block;
+      width: 130px;
+      height: 32px;
+      font-family: Open Sans, serif;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 16px;
+      color: $crimson;
+      text-align: center;
+      text-transform: capitalize;
+      cursor: pointer;
+      background-color: $white;
+      border: 1px solid $crimson;
+      border-radius: 0;
+      box-sizing: border-box;
+      transition: 1s;
+
+      &:hover,
+      &:active {
+        color: $white;
+        background: $crimson;
+      }
+    }
+  }
+
+  .create-account-wrapper {
+    h2 {
+      font-family: Open Sans, serif;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 40px;
+      color: $black;
+
+      @media screen and (max-width: $mobile-width) {
+        margin-top: 20px;
+        font-size: 24px;
+        line-height: 33px;
+        color: $white;
+      }
+    }
+
+    label {
+      width: 50%;
+      font-family: Roboto, serif;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 11px;
+      letter-spacing: 1px;
+      color: $river-bed;
+      text-transform: uppercase;
+
+      @media screen and (max-width: $mobile-width) {
+        margin-top: 20px;
+        width: 100%;
+        color: $white;
+      }
+    }
+
+    .fb-icon {
+      width: 35px;
+      height: 35px;
+      margin: 0 6px 10px;
+      cursor: pointer;
+      background: url('../../assets/img/facebook-icon.svg') no-repeat;
+
+      @media screen and (max-width: $mobile-width) {
+        background: url('../../assets/img/facebook-icon-mobile.svg') no-repeat;
+      }
+
+      &:hover {
+        background: url('../../assets/img/facebook-icon-hover.svg') no-repeat;
+      }
+    }
+
+    .gplus-icon {
+      width: 35px;
+      height: 35px;
+      margin: 0 6px 10px;
+      cursor: pointer;
+      background: url('../../assets/img/gplus-icon.svg') no-repeat;
+
+      @media screen and (max-width: $mobile-width) {
+        background: url('../../assets/img/gplus-icon-mobile.svg') no-repeat;
+      }
+
+      &:hover {
+        background: url('../../assets/img/gplus-icon-hover.svg') no-repeat;
+      }
+    }
+
+    p {
+      font-family: Open Sans, serif;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 16px;
+      color: $river-bed;
+
+      @media screen and (max-width: $mobile-width) {
+        margin-top: 20px;
+        color: $white;
+      }
+    }
+
+    .user-info {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      height: 70px;
+
+      .first-name {
+        margin-right: 40px;
+      }
+
+      input {
+        width: 180px;
+        height: 40px;
+        padding-left: 15px;
+        margin-bottom: 10px;
+        border: 1px solid $mischka;
+        outline: 0;
+        box-sizing: border-box;
+
+        @media screen and (max-width: $mobile-width) {
+          width: 100%;
+        }
+      }
+    }
+
+    .mobile-link {
+      display: none;
+
+      @media screen and (max-width: $mobile-width) {
+        display: inline-block;
+        margin-top: 10px;
+        color: $white;
+      }
+    }
+
+    .email-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      input {
+        width: 100%;
+        height: 40px;
+        padding-left: 15px;
+        margin-bottom: 10px;
+        border: 1px solid $mischka;
+        outline: 0;
+        box-sizing: border-box;
+      }
+    }
+
+    .sign-up {
+      font-family: Roboto, serif;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: bold;
+      line-height: 14px;
+      letter-spacing: 1px;
+      color: $white;
+      text-transform: uppercase;
     }
   }
 }
