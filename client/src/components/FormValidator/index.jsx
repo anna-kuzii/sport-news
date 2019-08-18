@@ -19,7 +19,6 @@ class FormValidator {
           result.isValid = false;
         }
       }
-      console.log(result);
       return result;
     },this.valid());
    }
