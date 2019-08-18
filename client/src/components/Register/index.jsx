@@ -15,7 +15,7 @@ this.validator = new FormValidator(rules);
     email: '',
     password: '',
     validation: this.validator.valid(),
-    submited: false
+    submitted: false,
   }
 }
 
@@ -30,7 +30,7 @@ handleInputChange = event => {
     event.preventDefault();
     const validation = this.validator.validate(this.state);
     this.setState({ validation });
-    this.setState({submited: true})
+    this.setState({submitted:true});
     if (validation.isValid) {
       // handle actual form submission here
     }
