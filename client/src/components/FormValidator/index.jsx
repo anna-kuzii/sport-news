@@ -20,10 +20,10 @@ class FormValidator {
         }
       }
       return result;
-    },this.createValidationObj());
+    },this.createValidObj());
    }
 
-    createValidationObj() {
+    createValidObj() {
     const validation = this.validations.reduce((result, rule) => (
        {...result,[rule.field]:{ isInvalid: false, message: '' }}
     ),{});
