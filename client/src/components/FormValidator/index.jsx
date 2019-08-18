@@ -24,10 +24,9 @@ class FormValidator {
    }
 
   valid() {
-    
+
     return { isValid: true, ...(this.validations.reduce((result, rule) => {
-      result[rule.field] = { isInvalid: false, message: '' }
-      return result;
+      return {...result,[rule.field]:{ isInvalid: false, message: '' }};
     },{}))};
   }
 }
