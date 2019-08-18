@@ -224,6 +224,7 @@
         }
       }
 
+
       .email-wrapper {
         display: flex;
         flex-direction: column;
@@ -243,6 +244,24 @@
           box-sizing: border-box;
         }
       }
+
+      .has-error {
+        input {
+          margin-bottom: 0;
+          border: 1px solid $alizarin-crimson;
+          outline: 0;
+          box-sizing: border-box;
+        }
+
+        .help-block {
+          display: block;
+          margin-bottom: 5px;
+          font-size: 12px;
+          font-weight: 400;
+          color: $alizarin-crimson;
+        }
+      }
+
 
       .btn-primary {
         display: inline-block;
