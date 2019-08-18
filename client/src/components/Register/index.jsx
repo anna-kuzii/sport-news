@@ -36,7 +36,6 @@ class Register extends Component {
     }
 
     render() {
-        const { registering  } = this.props;
         return (<div className="register-container ">
                 <div className="container-fluid">
                     <div className="bg-img">
@@ -72,7 +71,7 @@ class Register extends Component {
                                 <input type="password" id="password-input" placeholder="4+ characters" name="password" value={this.state.password} onChange={this.handleChange}/>
                             </div>
                             <button type="submit" className="btn btn-primary sing-up" >sign up</button>
-                            {registering}
+
                         </div>
                     </form>
                 </div>
