@@ -1,12 +1,8 @@
-import axios from 'axios';
+import { postReq } from './axios.instanse';
+require('dotenv').config();
 
 export const registerFunc = newUser => {
-    return axios.post('http://localhost:5000/register', {
-        first_name: newUser.first_name,
-        last_name: newUser.last_name,
-        email: newUser.email,
-        password: newUser.password,
-    }).then(handleResponse)
+     return postReq('/register', newUser).then(handleResponse)
 };
 
 
@@ -16,5 +12,4 @@ function handleResponse(response) {
             const error =  response.statusText;
             return Promise.reject(error);
         }
-
 }
