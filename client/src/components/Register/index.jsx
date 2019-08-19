@@ -15,7 +15,7 @@ this.validator = new FormValidator(rules);
     last_name: '',
     email: '',
     password: '',
-    validation: this.validator.valid(),
+    validation: this.validator.createValidObj(),
     submitted: false,
   }
 }
@@ -61,7 +61,7 @@ handleInputChange = event => {
                     <a href="#" className="btn gplus-icon"></a>
                     <p>Or use your email for registration</p>
                     <div className="user-info">
-                        <div className={validation.first_name.isInvalid ?   'has-error': 'first_name'}>
+                        <div className={validation.first_name.isInvalid ?   'has-error first-name': 'first-name'}>
                             <label htmlFor="first-name-input">First name</label>
                             <input type="text" id="first-name-input"
                             placeholder="John"
@@ -69,7 +69,7 @@ handleInputChange = event => {
                             onChange={this.handleInputChange}/>
                             <span className="help-block">{validation.first_name.message}</span>
                         </div>
-                        <div className={validation.last_name.isInvalid ? 'has-error' : 'last_name'}>
+                        <div className={validation.last_name.isInvalid ? 'has-error last-name' : 'last-name'}>
                            <label htmlFor="last-name-input">Last name</label>
                             <input type="text" id="last-name"
                             placeholder="Doe"

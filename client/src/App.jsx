@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import {Register} from "./components/Register";
+import Register from "./components/Register";
 import {Login} from "./components/Login";
 import {ForgotPassword} from "./components/ForgotPassword"
 import {BrowserRouter as Router, Route} from 'react-router-dom';

@@ -1,9 +1,26 @@
 .container-fluid {
   display: flex;
   justify-content: flex-start;
+  width: 100%;
   max-width: 1440px;
   padding: 0;
   background: $white;
+
+  .create-account-form,
+  .log-in-form,
+  .forgot-password-form {
+    // sass-lint:disable-block nesting-depth
+    .btn-primary {
+      &:hover,
+      &:active,
+      &:focus,
+      &:focus-within {
+        background-color: $crimson;
+        border-color: $crimson;
+        box-shadow: none;
+      }
+    }
+  }
 }
 
 .bg-img {
@@ -133,11 +150,11 @@
 .forgot-password-wrapper {
   width: 100%;
   max-width: 400px;
-  margin: 200px 0;
+  margin: 200px 0 0;
 
   @media screen and (max-width: $mobile-width) {
     max-width: 80%;
-    margin: 200px 0;
+    margin: 200px 0 0;
   }
 
   ::placeholder {
@@ -148,10 +165,7 @@
     line-height: 16px;
     color: $shuttle-gray;
   }
-}
 
-.log-in-wrapper,
-.forgot-password-wrapper {
   h2 {
     font-family: Open Sans, serif;
     font-size: 24px;
@@ -180,6 +194,7 @@
   background-color: $crimson;
   border: 1px solid $crimson;
   border-radius: 0;
+  outline: 0;
   box-sizing: border-box;
 
   @media screen and (max-width: $mobile-width) {
@@ -189,10 +204,6 @@
 
   &:hover {
     background: $crimson;
-  }
-
-  &:active {
-    background: $monza;
   }
 }
 
