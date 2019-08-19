@@ -1,6 +1,5 @@
 
 const { validationResult } = require('express-validator');
-const User = require('../db/models/User');
 const UserQuery = require('../db/query/UserQuery');
 const encrypt = require('./encrypt');
 
@@ -10,8 +9,8 @@ exports.registerController = (req, res) => {
   if (!errors.isEmpty()) {
     return res.status(422).json({ errors: errors.array() });
   }
-  const { password } = req.body;
-  return User.findOne({ email: req.body.email })
+  const { password, email } = req.body;
+  return UserQuery.findUserOne(email)
     .then((user) => {
       if (user) {
         return res.status(400).json({

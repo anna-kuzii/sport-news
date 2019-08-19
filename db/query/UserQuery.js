@@ -25,3 +25,5 @@ exports.createUser = (user, hashPassword) => {
   });
   return newUser.save();
 };
+
+exports.findUserOne = (email) => User.findOne({ email });
