@@ -84,8 +84,8 @@
       text-transform: uppercase;
 
       @media screen and (max-width: $mobile-width) {
-        margin-top: 20px;
         width: 100%;
+        margin-top: 20px;
         color: $white;
       }
     }

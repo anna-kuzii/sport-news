@@ -3,7 +3,7 @@ import login_bg from '../../assets/img/register-login-bg.jpg';
 import {Link} from "react-router-dom";
 
 export const ForgotPassword = () =>
-    <div className="login-container ">
+    <div className="forgot-password-container">
         <div className="container-fluid">
             <div className="bg-img">
                 <div className="logo-in-sign-up">

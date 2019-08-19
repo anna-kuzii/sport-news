@@ -1,9 +1,5 @@
-.login-container {
+.forgot-password-container {
   .forgot-password-wrapper {
-    width: 100%;
-    max-width: 400px;
-    margin: 200px 0;
-
     ::placeholder {
       font-family: Open Sans, serif;
       font-size: 12px;
@@ -74,11 +70,6 @@
       letter-spacing: 1px;
       color: $white;
       text-transform: uppercase;
-    }
-
-    @media screen and (max-width: $mobile-width) {
-      max-width: 80%;
-      margin: 200px 0 auto;
     }
   }
 }
