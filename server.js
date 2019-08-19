@@ -1,5 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const session = require('express-session');
+const passport = require('passport');
+const cookieParser = require('cookie-parser');
 
 require('dotenv').config();
 
@@ -10,6 +13,18 @@ dbConnect.connect();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(cookieParser());
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use(session({
+  secret: 'secret',
+  cookie: { maxAge: 60000 },
+  resave: false,
+  saveUninitialized: true,
+}));
+
 
 // TODO: change that part ,please:)
 app.get('/', (req, res) => {
