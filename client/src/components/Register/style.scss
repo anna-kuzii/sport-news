@@ -127,6 +127,14 @@
         }
       }
 
+      .register-error {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 12px;
+        font-weight: 400;
+        color: $crimson;
+      }
+
       .user-info {
         display: flex;
         align-items: center;

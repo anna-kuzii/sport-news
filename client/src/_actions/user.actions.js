@@ -14,7 +14,7 @@ function register(user) {
                     dispatch(registrationSuccess());
                 }
             ).catch( error => {
-            dispatch(registrationFailure(error.message));
+            dispatch(registrationFailure(error.response.data && error.response.data.message));
         });
     };
 

@@ -5,7 +5,6 @@ import {Link} from 'react-router-dom';
 import FormValidator from '../FormValidator';
 import {rules} from '../FormValidator/rules';
 import { userActions } from '../../_actions';
-import { alertActions } from '../../_actions';
 import { connect } from 'react-redux';
 
 
@@ -20,8 +19,9 @@ class Register extends Component {
             last_name: '',
             email: '',
             password:'',
-             validation: this.validator.createValidObj(),
-             submitted: false,
+            validation: this.validator.createValidObj(),
+            submitted: false,
+            error: ''
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -56,6 +56,8 @@ class Register extends Component {
        const validation = this.submitted ?                         // if the form has been submitted at least once
                        this.validator.validate(this.state) :   // then check validity every time we render
                        this.state.validation;
+       const { registering  } = this.props;
+
         return (
           <div className="register-container ">
                 <div className="container-fluid">
@@ -75,6 +77,9 @@ class Register extends Component {
                             <a href="#" className="btn fb-icon"></a>
                             <a href="#" className="btn gplus-icon"></a>
                             <p>Or use your email for registration</p>
+                            {registering.error &&
+                            <span className="register-error">{registering.error}</span>
+                            }
                             <div className="user-info">
                                 <div className={validation.first_name.isInvalid ?   'has-error first-name': 'first-name'}>
                                     <label htmlFor="first-name-input">First name</label>
@@ -127,11 +132,15 @@ class Register extends Component {
     }
 }
 
+function mapState(state) {
+    return { registering : state.registration};
+}
+
 const actionCreators = {
     register: userActions.register,
 };
 
-const connectedRegisterPage = connect(null, actionCreators)(Register);
+const connectedRegisterPage = connect(mapState, actionCreators)(Register);
 export { connectedRegisterPage as Register };
 
 
