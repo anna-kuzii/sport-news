@@ -1,5 +1,6 @@
+import sign_up_bg from '../../assets/img/register-login-bg.jpg';
+import {Link} from 'react-router-dom';
 import React, { Component } from 'react';
-import sign_up_bg from '../../assets/img/signup-bg.jpg';
 import FormValidator from '../FormValidator';
 import {rules} from '../FormValidator/rules';
 
@@ -47,12 +48,12 @@ handleInputChange = event => {
                 <div className="logo-in-sign-up">
                     <h1>Sport News</h1>
                 </div>
-                <img src={sign_up_bg} alt="signup_bg"/>
+                <img src={sign_up_bg} alt="background image"/>
             </div>
             <div className="create-account-form">
                 <div className="log-in">
                     <h3>Already have an account?</h3>
-                    <a href="#" className="btn btn-primary login">Log In</a>
+                    <Link to="/login" className="btn btn-primary login">Log In</Link>
                 </div>
                 <div className="create-account-wrapper">
                     <h2>Create Account</h2>
@@ -60,7 +61,7 @@ handleInputChange = event => {
                     <a href="#" className="btn gplus-icon"></a>
                     <p>Or use your email for registration</p>
                     <div className="user-info">
-                        <div className={validation.first_name.isInvalid ?   'has-error': 'first_name'}>
+                        <div className={validation.first_name.isInvalid ?   'has-error first-name': 'first-name'}>
                             <label htmlFor="first-name-input">First name</label>
                             <input type="text" id="first-name-input"
                             placeholder="John"
@@ -68,7 +69,7 @@ handleInputChange = event => {
                             onChange={this.handleInputChange}/>
                             <span className="help-block">{validation.first_name.message}</span>
                         </div>
-                        <div className={validation.last_name.isInvalid ? 'has-error' : 'last_name'}>
+                        <div className={validation.last_name.isInvalid ? 'has-error last-name' : 'last-name'}>
                            <label htmlFor="last-name-input">Last name</label>
                             <input type="text" id="last-name"
                             placeholder="Doe"
@@ -96,6 +97,9 @@ handleInputChange = event => {
                       </div>
                     </div>
                     <button onClick={this.handleFormSubmit } className="btn btn-primary sing-up">sign up</button>
+                    <div className="mobile-link">
+                        <Link to="/login" className="mobile-link">Already have an account?</Link>
+                    </div>
                 </div>
             </div>
         </div>
