@@ -9,7 +9,6 @@ const router = express.Router();
 router.use(cors());
 
 router.get('/', (req, res) => {
-  // TODO: render a register form
   res.send('it is a register block');
 });
 
