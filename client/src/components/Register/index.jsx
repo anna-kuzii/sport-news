@@ -70,7 +70,7 @@ class Register extends Component {
                     <div className="create-account-form">
                         <div className="log-in">
                             <h3>Already have an account?</h3>
-                            <a href="#" className="btn btn-primary login">Log In</a>
+                            <Link to="/login" className="btn btn-primary login">Log In</Link>
                         </div>
                         <div className="create-account-wrapper">
                             <h2>Create Account</h2>
