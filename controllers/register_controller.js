@@ -1,7 +1,5 @@
 const mongoose = require('mongoose');
 const User = require('../db/models/User');
-const notificationMail = require('../controllers/sendEmail');
-const regNotification = require('../templates/registrationNotificationTemplate');
 const encrypt = require('./encrypt');
 const { validationResult } = require('express-validator');
 exports.registerController = (req, res) => {
@@ -33,7 +31,6 @@ exports.registerController = (req, res) => {
                         email,
                         password: result,
                     });
-                    notificationMail.sendEmail(regNotification.sendRegNotification(newUser.email));
                     return newUser.save();
                 }).then(() => res.status(200).send('new user registered')
                 )
