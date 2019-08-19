@@ -18,7 +18,7 @@ class Register extends Component {
             last_name: '',
             email: '',
             password:'',
-             validation: this.validator.valid(),
+             validation: this.validator.createValidObj(),
              submitted: false,
         };
 
