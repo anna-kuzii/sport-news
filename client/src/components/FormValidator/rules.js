@@ -3,7 +3,7 @@ export const rules = [
     field: 'first_name',
     method: 'isEmpty',
     validWhen: false,
-    message: 'Enter a first_name.'
+    message: 'Enter a first name.'
   },
   {
     field: 'first_name',
@@ -16,7 +16,7 @@ export const rules = [
     field: 'last_name',
     method: 'isEmpty',
     validWhen: false,
-    message: 'Enter a last_name.'
+    message: 'Enter a last name.'
   },
   {
     field: 'last_name',
