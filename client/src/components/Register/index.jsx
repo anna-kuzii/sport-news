@@ -1,5 +1,7 @@
-import React ,{ Component } from 'react';
-import sign_up_bg from '../../assets/img/signup-bg.jpg';
+import React , { Component } from 'react';
+import sign_up_bg from '../../assets/img/register-login-bg.jpg';
+import {Link} from 'react-router-dom';
+
 import FormValidator from '../FormValidator';
 import {rules} from '../FormValidator/rules';
 import { userActions } from '../../_actions';
@@ -33,6 +35,7 @@ class Register extends Component {
     handleSubmit(e){
         e.preventDefault();
 
+
         const newUser = {
             first_name: this.state.first_name,
             last_name: this.state.last_name,
@@ -60,11 +63,10 @@ class Register extends Component {
                     <div className="bg-img">
                         <div className="logo-in-sign-up">
                             <h1>Sport News</h1>
-
                         </div>
                         <img src={sign_up_bg} alt="signup_bg"/>
                     </div>
-                    <div className="create-account-form" onSubmit={this.handleSubmit}>
+                    <div className="create-account-form">
                         <div className="log-in">
                             <h3>Already have an account?</h3>
                             <a href="#" className="btn btn-primary login">Log In</a>
@@ -78,7 +80,7 @@ class Register extends Component {
                                 <div className={`alert ${alert.type}`} onClick={this.props.clearAlerts}>{alert.message}</div>
                             }
                             <div className="user-info">
-                                <div className={validation.first_name.isInvalid ?   'has-error': 'first_name'}>
+                                <div className={validation.first_name.isInvalid ?   'has-error first-name': 'first-name'}>
                                     <label htmlFor="first-name-input">First name</label>
                                     <input type="text" id="first-name-input" 
                                       placeholder="John" 
@@ -87,7 +89,7 @@ class Register extends Component {
                                       onChange={this.handleChange}/>
                                     <span className="help-block">{validation.first_name.message}</span>
                                 </div>
-                                <div className={validation.last_name.isInvalid ?   'has-error': 'last_name'}>
+                                 <div className={validation.last_name.isInvalid ? 'has-error last-name' : 'last-name'}>
                                     <label htmlFor="last-name-input">Last name</label>
                                     <input type="text" id="last-name" 
                                       placeholder="Doe" 
@@ -117,7 +119,10 @@ class Register extends Component {
                                 <span className="help-block">{validation.password.message}</span>
                                </div>
                             </div>
-                            <button onClick={this.handleSubmit } className="btn btn-primary sing-up" >sign up</button>
+                             <button onClick={this.handleSubmit } className="btn btn-primary sing-up">sign up</button>
+                            <div className="mobile-link">
+                                <Link to="/login" className="mobile-link">Already have an account?</Link>
+                            </div>
                         </div>
                     </div>
                 </div>
