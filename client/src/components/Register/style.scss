@@ -1,140 +1,65 @@
 .register-container {
-  .container-fluid {
+  .log-in {
     display: flex;
-    justify-content: flex-start;
-    max-width: 1440px;
-    padding: 0;
-    background: $white;
-  }
-
-  .bg-img {
-    position: relative;
+    align-items: center;
+    justify-content: space-around;
     width: 100%;
-    height: 100vh;
-    max-width: 640px;
-    overflow: hidden;
+    height: 83px;
+    max-width: 375px;
+    padding: 30px 0;
+    margin: 0 20px 0 auto;
+    text-align: center;
 
-    img {
-      width: 100%;
-      height: 100%;
-      max-width: 640px;
+    @media screen and (max-width: $mobile-width) {
+      display: none;
+    }
+
+    h3 {
+      margin: 0;
+      font-family: Open Sans, serif;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 25px;
+      color: $shuttle-gray;
 
       @media screen and (max-width: $mobile-width) {
-        display: none;
+        color: $white;
       }
     }
 
-    .logo-in-sign-up {
-      position: absolute;
-      width: 253px;
-      height: 83px;
+    .btn {
+      display: inline-block;
+      width: 130px;
+      height: 32px;
+      font-family: Open Sans, serif;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 16px;
+      color: $crimson;
       text-align: center;
-      background: $crimson;
+      text-transform: capitalize;
+      cursor: pointer;
+      background-color: $white;
+      border: 1px solid $crimson;
+      border-radius: 0;
+      box-sizing: border-box;
+      transition: 1s;
 
-      h1 {
-        margin: 0;
-        font-family: Open Sans, serif;
-        font-size: 1.5rem;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 83px;
-        color: $rose-white;
-      }
-
-      @media screen and (max-width: $mobile-width) {
-        z-index: 2;
+      &:hover,
+      &:active {
+        color: $white;
+        background: $crimson;
       }
     }
   }
 
   .create-account-form {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-    max-width: 800px;
-
-    .log-in {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      width: 100%;
-      height: 83px;
-      max-width: 375px;
-      padding: 30px 0;
-      margin: 0 20px 0 auto;
-      text-align: center;
-
-      h3 {
-        margin: 0;
-        font-family: Open Sans, serif;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 25px;
-        color: $shuttle-gray;
-
-        @media screen and (max-width: $mobile-width) {
-          color: $white;
-        }
-      }
-
-      .btn {
-        display: inline-block;
-        width: 130px;
-        height: 32px;
-        font-family: Open Sans, serif;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 16px;
-        color: $crimson;
-        text-align: center;
-        text-transform: capitalize;
-        cursor: pointer;
-        background-color: $white;
-        border: 1px solid $crimson;
-        border-radius: 0;
-        box-sizing: border-box;
-        transition: 1s;
-
-        &:hover,
-        &:active {
-          color: $white;
-          background: $crimson;
-        }
-      }
-    }
-
     .create-account-wrapper {
-      width: 100%;
-      max-width: 400px;
-      margin: 200px 0 auto;
-
-      ::placeholder {
-        font-family: Open Sans, serif;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 16px;
-        color: $shuttle-gray;
-      }
-
       h2 {
-        font-family: Open Sans, serif;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 40px;
-        color: $black;
-
         @media screen and (max-width: $mobile-width) {
-          margin-top: 20px;
-          font-size: 24px;
-          line-height: 33px;
-          color: $white;
+          text-align: left;
         }
       }
 
@@ -150,6 +75,7 @@
         text-transform: uppercase;
 
         @media screen and (max-width: $mobile-width) {
+          width: 100%;
           margin-top: 20px;
           color: $white;
         }
@@ -162,12 +88,12 @@
         cursor: pointer;
         background: url('../../assets/img/facebook-icon.svg') no-repeat;
 
-        &:hover {
-          background: url('../../assets/img/facebook-icon-hover.svg') no-repeat;
-        }
-
         @media screen and (max-width: $mobile-width) {
           background: url('../../assets/img/facebook-icon-mobile.svg') no-repeat;
+        }
+
+        &:hover {
+          background: url('../../assets/img/facebook-icon-hover.svg') no-repeat;
         }
       }
 
@@ -178,12 +104,12 @@
         cursor: pointer;
         background: url('../../assets/img/gplus-icon.svg') no-repeat;
 
-        &:hover {
-          background: url('../../assets/img/gplus-icon-hover.svg') no-repeat;
-        }
-
         @media screen and (max-width: $mobile-width) {
           background: url('../../assets/img/gplus-icon-mobile.svg') no-repeat;
+        }
+
+        &:hover {
+          background: url('../../assets/img/gplus-icon-hover.svg') no-repeat;
         }
       }
 
@@ -209,6 +135,19 @@
         width: 100%;
         height: 70px;
 
+        .first-name {
+          width: 45%;
+          margin-right: 10%;
+
+          @media screen and (max-width: $mobile-width) {
+            margin-right: 0;
+          }
+        }
+
+        .last-name {
+          width: 45%;
+        }
+
         input {
           width: 180px;
           height: 40px;
@@ -220,19 +159,42 @@
 
           @media screen and (max-width: $mobile-width) {
             width: 100%;
+            color: $white;
+          }
+        }
+
+        .has-error {
+          input {
+            margin-bottom: 0;
+            border: 1px solid $crimson;
+            outline: 0;
+            box-sizing: border-box;
+          }
+
+          .help-block {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 12px;
+            font-weight: 400;
+            color: $crimson;
           }
         }
       }
 
+      .mobile-link {
+        display: none;
+
+        @media screen and (max-width: $mobile-width) {
+          display: inline-block;
+          margin-top: 10px;
+          color: $white;
+        }
+      }
 
       .email-wrapper {
         display: flex;
         flex-direction: column;
         width: 100%;
-
-        h5 {
-          width: 100%;
-        }
 
         input {
           width: 100%;
@@ -243,49 +205,22 @@
           outline: 0;
           box-sizing: border-box;
         }
-      }
 
-      .has-error {
-        input {
-          margin-bottom: 0;
-          border: 1px solid $alizarin-crimson;
-          outline: 0;
-          box-sizing: border-box;
-        }
+        .has-error {
+          input {
+            margin-bottom: 0;
+            border: 1px solid $crimson;
+            outline: 0;
+            box-sizing: border-box;
+          }
 
-        .help-block {
-          display: block;
-          margin-bottom: 5px;
-          font-size: 12px;
-          font-weight: 400;
-          color: $alizarin-crimson;
-        }
-      }
-
-
-      .btn-primary {
-        display: inline-block;
-        width: 400px;
-        height: 42px;
-        color: $white;
-        text-transform: capitalize;
-        cursor: pointer;
-        background-color: $crimson;
-        border: 1px solid $crimson;
-        border-radius: 0;
-        box-sizing: border-box;
-
-        &:hover {
-          background: $crimson;
-        }
-
-        &:active {
-          background: $monza;
-        }
-
-        @media screen and (max-width: $mobile-width) {
-          width: 100%;
-          margin-top: 30px;
+          .help-block {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 12px;
+            font-weight: 400;
+            color: $crimson;
+          }
         }
       }
 
@@ -299,17 +234,6 @@
         color: $white;
         text-transform: uppercase;
       }
-
-      @media screen and (max-width: $mobile-width) {
-        max-width: 80%;
-      }
-    }
-
-    @media screen and (max-width: $mobile-width) {
-      position: absolute;
-      z-index: 1;
-      background: linear-gradient($dimming, $dimming), url('../../assets/img/signup-bg.jpg') no-repeat;
-      background-size: cover;
     }
   }
 }
