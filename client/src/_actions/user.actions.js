@@ -1,6 +1,4 @@
 import { userConstants } from '../_constants';
-import { alertActions } from './';
-import { history } from '../_helpers';
 import  {instance}   from '../axios.instanse';
 
 export const userActions = {
@@ -14,19 +12,9 @@ function register(user) {
             .then(
                 user => {
                     dispatch(registrationSuccess());
-                    //history.push('/login');
-                    dispatch(alertActions.success('Registration successful'));
-                    setTimeout(()=>{
-                        dispatch(alertActions.clear());
-                    },3000);
                 }
             ).catch( error => {
             dispatch(registrationFailure(error.message));
-            dispatch(alertActions.error(error.message));
-            setTimeout(()=>{
-                dispatch(alertActions.clear());
-            },3000);
-
         });
     };
 
