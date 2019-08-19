@@ -1,6 +1,6 @@
 const JWTStrategy = require('passport-jwt').Strategy;
 const ExtractJWT = require('passport-jwt').ExtractJwt;
-const findById = require('../db/query/findById.js');
+const UserQuery = require('../db/query/UserQuery');
 
 const opts = {};
 
@@ -9,5 +9,5 @@ opts.secretOrKey = 'secret';
 
 module.exports = (passport) => (
   passport.use(new JWTStrategy(opts, (jwtPayload, done) => {
-    findById.findUser(jwtPayload.id, done);
+    UserQuery.findUserById(jwtPayload.id, done);
   })));
