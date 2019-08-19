@@ -74,9 +74,8 @@ class Register extends Component {
                             <a href="#" className="btn fb-icon"></a>
                             <a href="#" className="btn gplus-icon"></a>
                             <p>Or use your email for registration</p>
-                            {alert.message ?
-                                <div className={`alert ${alert.type}`}>{alert.message}</div> :
-                                <div className={`alert ${alert.type} d-none`} >{alert.message}</div>
+                            {alert.message &&
+                                <div className={`alert ${alert.type}`}>{alert.message}</div>
                             }
                             <div className="user-info">
                                 <div className='first_name'>
