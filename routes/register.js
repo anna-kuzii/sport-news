@@ -5,7 +5,6 @@ const registerValidation = require('../templates/registrationValidationTemplate'
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  // TODO: render a register form
   res.send('it is a register block');
 });
 
