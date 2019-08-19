@@ -1,33 +1,22 @@
-const LocalStrategy = require('passport-local').Strategy;
+const mongoose = require('mongoose');
 
-const User = require('../db/models/User');
+const User = mongoose.model('users');
+const JWTStrategy = require('passport-jwt').Strategy;
+const ExtractJWT = require('passport-jwt').ExtractJwt;
 
-module.exports = (passport) => {
-  // used to serialize the user for the session
-  passport.serializeUser((user, done) => {
-    done(null, user.id);
-  });
+const opts = {};
 
-  // used to deserialize the user
-  passport.deserializeUser((id, done) => {
-    User.findById(id, (err, user) => {
-      done(err, user);
-    });
-  });
+opts.jwtFromRequest = ExtractJWT.fromAuthHeaderAsBearerToken();
+opts.secretOrKey = 'secret';
 
-  passport.use('local-signup', new LocalStrategy({
-
-    usernameField: 'email',
-    passwordField: 'password',
-    passReqToCallback: true,
-  },
-  (req, email, password, done) => {
-    process.nextTick(() => {
-      User.findOne({ email }, (err, user) => {
-        if (err) return done(err);
-        if (user) return done(null, false);
-        return done(null, user);
-      });
-    });
-  }));
-};
+module.exports = (passport) => (
+  passport.use(new JWTStrategy(opts, (jwtPayload, done) => {
+    User.findById(jwtPayload.id)
+      .then((user) => {
+        if (user) {
+          return done(null, user);
+        }
+        return done(null, false);
+      })
+      .catch((err) => console.error(err));
+  })));

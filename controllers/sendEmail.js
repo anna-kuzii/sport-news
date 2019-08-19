@@ -11,6 +11,6 @@ exports.sendEmail = (message) => {
   });
     // TODO remove console.log
   sendEmail(message)
-    .then(function(info){console.log(info)})
-    .catch(function(err){console.log('got error'); console.log(err)});
+    .then((info) => { console.log(info); })
+    .catch((err) => { console.log('got error'); console.log(err); });
 };

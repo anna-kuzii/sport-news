@@ -13,18 +13,27 @@ exports.registerController = (req, res) => {
   const {
     first_name: firstName, last_name: lastName, email, password,
   } = req.body;
+  return User.findOne({ email: req.body.email })
+    .then((user) => {
+      if (user) {
+        console.log(User.findOne({ email }));
+        return res.status(400).json({
+          email: 'Email already exist',
+        });
+      }
 
-  // TODO: VALIDATION
-  return encrypt.hashPassword(password)
-    .then((result) => {
-      const newUser = new User({
-        _id: new mongoose.Types.ObjectId().toHexString(),
-        first_name: firstName,
-        last_name: lastName,
-        email,
-        password: result,
-      });
-      return newUser.save();
-    }).then(() => res.status(200).send('new user registered'))
-    .catch((error) => res.send(error));
+
+      return encrypt.hashPassword(password)
+        .then((result) => {
+          const newUser = new User({
+            _id: new mongoose.Types.ObjectId().toHexString(),
+            first_name: firstName,
+            last_name: lastName,
+            email,
+            password: result,
+          });
+          return newUser.save();
+        }).then(() => res.status(200).send('new user registered'))
+        .catch((error) => res.send(error));
+    });
 };
