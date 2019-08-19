@@ -75,7 +75,7 @@ class Register extends Component {
                             <a href="#" className="btn gplus-icon"></a>
                             <p>Or use your email for registration</p>
                             {alert.message &&
-                                <div className={`alert ${alert.type}`}>{alert.message}</div>
+                                <div className={`alert ${alert.type}`} onClick={this.props.clearAlerts}>{alert.message}</div>
                             }
                             <div className="user-info">
                                 <div className={validation.first_name.isInvalid ?   'has-error': 'first_name'}>
