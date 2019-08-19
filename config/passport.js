@@ -1,8 +1,6 @@
-const mongoose = require('mongoose');
-
-const User = mongoose.model('users');
 const JWTStrategy = require('passport-jwt').Strategy;
 const ExtractJWT = require('passport-jwt').ExtractJwt;
+const findById = require('../db/query/findById.js');
 
 const opts = {};
 
@@ -11,12 +9,5 @@ opts.secretOrKey = 'secret';
 
 module.exports = (passport) => (
   passport.use(new JWTStrategy(opts, (jwtPayload, done) => {
-    User.findById(jwtPayload.id)
-      .then((user) => {
-        if (user) {
-          return done(null, user);
-        }
-        return done(null, false);
-      })
-      .catch((err) => console.error(err));
+    findById.findUser(jwtPayload.id, done);
   })));
