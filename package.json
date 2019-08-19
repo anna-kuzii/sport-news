@@ -8,13 +8,12 @@
     "*.scss": "node_modules/.bin/sass-lint"
   },
   "scripts": {
-    "start": "node server.js",
     "server": "nodemon server.js",
     "eslint": "node_modules/.bin/eslint --ignore-path .gitignore *.{js,jsx} --fix ",
     "SassLint": "node_modules/.bin/sass-lint --ignore-path .gitignore -v *.scss ",
     "precommit": "lint-staged",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "start": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
