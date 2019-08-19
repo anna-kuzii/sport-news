@@ -78,16 +78,16 @@ class Register extends Component {
                                 <div className={`alert ${alert.type}`}>{alert.message}</div>
                             }
                             <div className="user-info">
-                                <div className='first_name'>
+                                <div className={validation.first_name.isInvalid ?   'has-error': 'first_name'}>
                                     <label htmlFor="first-name-input">First name</label>
                                     <input type="text" id="first-name-input" 
                                       placeholder="John" 
                                       name="first_name" 
                                       value={this.state.first_name} 
                                       onChange={this.handleChange}/>
-
+                                    <span className="help-block">{validation.first_name.message}</span>
                                 </div>
-                                <div className='last_name'>
+                                <div className={validation.last_name.isInvalid ?   'has-error': 'last_name'}>
                                     <label htmlFor="last-name-input">Last name</label>
                                     <input type="text" id="last-name" 
                                       placeholder="Doe" 
