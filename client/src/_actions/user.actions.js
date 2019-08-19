@@ -18,14 +18,15 @@ function register(user) {
                     dispatch(alertActions.success('Registration successful'));
                     setTimeout(()=>{
                         dispatch(alertActions.clear());
-                    },3000)
+                    },3000);
                 }
             ).catch( error => {
             dispatch(registrationFailure(error.message));
             dispatch(alertActions.error(error.message));
             setTimeout(()=>{
                 dispatch(alertActions.clear());
-            },3000)
+            },3000);
+
         });
     };
 
