@@ -13,7 +13,7 @@
     "SassLint": "node_modules/.bin/sass-lint --ignore-path .gitignore -v *.scss ",
     "precommit": "lint-staged",
     "client": "npm start --prefix client",
-    "start": "concurrently \"npm run server\" \"npm run client\""
+    "start": "concurrently 'npm run server' 'npm run client'"
   },
   "repository": {
     "type": "git",
