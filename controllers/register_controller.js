@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const User = require('../db/models/User');
 const encrypt = require('./encrypt');
+const notificationMail = require('../controllers/sendEmail');
+const regNotification = require('../templates/registrationNotificationTemplate');
 const { validationResult } = require('express-validator');
 const UserQuery = require('../db/query/UserQuery');
 const encrypt = require('./encrypt');
