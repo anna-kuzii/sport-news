@@ -11,15 +11,15 @@ class Register extends Component {
     constructor(props){
         super(props);
       
-      // this.validator = new FormValidator(rules);
+       this.validator = new FormValidator(rules);
       
         this.state = {
             first_name: '',
             last_name: '',
             email: '',
             password:'',
-            // validation: this.validator.valid(),
-            // submitted: false,
+             validation: this.validator.valid(),
+             submitted: false,
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -41,18 +41,18 @@ class Register extends Component {
         };
 
         this.props.register(newUser);
-        // const validation = this.validator.validate(this.state);
-        // this.setState({ validation });
-        // this.setState({submitted:true});
-        // if (validation.isValid) {
-        //   // handle actual form submission here
-        // }
+         const validation = this.validator.validate(this.state);
+         this.setState({ validation });
+         this.setState({submitted:true});
+         if (validation.isValid) {
+           // handle actual form submission here
+         }
     }
 
     render() {
-      // const validation = this.submitted ?                         // if the form has been submitted at least once
-      //                 this.validator.validate(this.state) :   // then check validity every time we render
-      //                 this.state.validation
+       const validation = this.submitted ?                         // if the form has been submitted at least once
+                       this.validator.validate(this.state) :   // then check validity every time we render
+                       this.state.validation;
         const { alert } = this.props;
         return (
           <div className="register-container ">
@@ -94,26 +94,27 @@ class Register extends Component {
                                       name="last_name" 
                                       value={this.state.last_name} 
                                       onChange={this.handleChange}/>
-
+                                      <span className="help-block">{validation.last_name.message}</span>
                                 </div>
                             </div>
                           <div className="email-wrapper">
-                            <div className='undefined'>
+                            <div className={validation.email.isInvalid ? 'has-error' : 'undefined'}>
                                 <label htmlFor="email-input">Email</label>
                                 <input type="email" id="email-input" 
                                   placeholder="johndoe@gmail.com" 
                                   name="email" 
                                   value={this.state.email} 
                                   onChange={this.handleChange}/>
-
+                                  <span className="help-block">{validation.email.message}</span>
                               </div>
-                              <div className='undefined'>
+                              <div className={validation.password.isInvalid ? 'has-error' : 'undefined'}>
                                 <label htmlFor="password-input">Password</label>
                                 <input type="password" id="password-input" 
                                   placeholder="4+ characters" 
                                   name="password" 
                                   value={this.state.password} 
                                   onChange={this.handleChange}/>
+                                <span className="help-block">{validation.password.message}</span>
                                </div>
                             </div>
                             <button onClick={this.handleSubmit } className="btn btn-primary sing-up" >sign up</button>
@@ -138,4 +139,5 @@ const actionCreators = {
 
 const connectedRegisterPage = connect(mapState, actionCreators)(Register);
 export { connectedRegisterPage as Register };
+
 
