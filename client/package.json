@@ -3,12 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.19.0",
+    "history": "^4.9.0",
     "node-sass": "^4.12.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-redux": "^7.1.0",
     "validator": "^11.1.0",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.1.1"
+    "react-scripts": "3.1.1",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0"
   },
   "lint-staged": {
     "*.{js,jsx}": "node_modules/.bin/eslint",
@@ -39,6 +45,7 @@
     ]
   },
   "devDependencies": {
+    "dotenv": "^8.1.0",
     "sass-lint": "^1.13.1"
   }
 }

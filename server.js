@@ -8,8 +8,6 @@ require('dotenv').config();
 const app = express();
 const dbConnect = require('./db/connect');
 
-const register = require('./routes/register');
-
 dbConnect.connect();
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -43,4 +41,3 @@ app.use('/register', register);
 app.use('/login', login);
 app.use('/forgotpassword', forgotPassword);
 app.use('/logout', logout);
-
