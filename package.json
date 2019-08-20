@@ -6,7 +6,6 @@
   "scripts": {
     "server": "nodemon server.js",
     "SassLint": "node_modules/.bin/sass-lint --ignore-path .gitignore -v *.scss ",
-    "precommit": "lint-staged",
     "client": "npm start --prefix client",
     "start": "npm run server",
     "heroku-postbuild": "cd client && npm install && npm start"
@@ -43,7 +42,6 @@
     "passport-local": "^1.0.0"
   },
   "devDependencies": {
-    "lint-staged": "^9.2.1",
     "pre-commit": "^1.2.2",
     "sass-lint": "^1.13.1"
   }
