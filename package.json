@@ -14,7 +14,7 @@
     "build": "react-scripts build",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "nothing": "nothing",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=true npm install --prefix client && npm run build --prefix client"  
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=true npm install --prefix client && npm run build --prefix client"
   },
   "repository": {
     "type": "git",
@@ -49,6 +49,7 @@
     "path": "^0.12.7"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.2",
     "pre-commit": "^1.2.2",
     "sass-lint": "^1.13.1"
   }
