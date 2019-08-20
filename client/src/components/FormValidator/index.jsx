@@ -23,7 +23,12 @@ class FormValidator {
 
   createValidObj() {
     const validation = this.validations.reduce((result, rule) => (
-      { ...result, [rule.field]:{ isInvalid: false, message: '' } }
+      { ...result,
+        [rule.field]:{
+          isInvalid: false,
+          message: '',
+        },
+      }
     ), {})
     return { isValid: true, ...validation }
   }

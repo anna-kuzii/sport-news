@@ -46,9 +46,11 @@ class Register extends Component {
     const { register } = this.props
     register(newUser)
     const validation = this.validator.validate(state)
-    this.setState((prevState) =>
-      ({ validation: this.validator.validate(prevState), submitted:true })
-    )
+    this.setState((prevState) => ({
+      ...prevState,
+      validation: this.validator.validate(prevState),
+      submitted:true,
+    }))  
     if (validation.isValid) {
     // handle actual form submission here
     }
@@ -84,7 +86,7 @@ class Register extends Component {
               >facebook
               </a>
               <a
-                href='google.com' 
+                href='google.com'
                 className='btn gplus-icon'
               >google</a>
               <p>Or use your email for registration</p>
