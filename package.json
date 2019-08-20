@@ -3,13 +3,8 @@
   "version": "1.0.0",
   "description": "sport news site",
   "main": "server.js",
-  "lint-staged": {
-    "*.{js,jsx}": "node_modules/.bin/eslint",
-    "*.scss": "node_modules/.bin/sass-lint"
-  },
   "scripts": {
     "server": "nodemon server.js",
-    "eslint": "node_modules/.bin/eslint --ignore-path .gitignore *.{js,jsx} --fix ",
     "SassLint": "node_modules/.bin/sass-lint --ignore-path .gitignore -v *.scss ",
     "precommit": "lint-staged",
     "client": "npm start --prefix client",
@@ -45,16 +40,9 @@
     "nodemon": "^1.19.1",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
-    "passport-local": "^1.0.0",
-    "eslint": "^6.1.0"
+    "passport-local": "^1.0.0"
   },
   "devDependencies": {
-    "eslint-config-airbnb": "^18.0.1",
-    "eslint-plugin-flowtype": "^4.2.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-react-hooks": "^1.7.0",
     "lint-staged": "^9.2.1",
     "pre-commit": "^1.2.2",
     "sass-lint": "^1.13.1"
