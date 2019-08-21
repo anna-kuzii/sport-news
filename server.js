@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const passport = require('passport');
 const cookieParser = require('cookie-parser');
+const path = require('path');
 
 require('dotenv').config();
 
@@ -18,7 +19,7 @@ app.use(cookieParser());
 app.use(passport.initialize());
 require('./config/passport')(passport);
 // TODO: change that part ,please:)
-app.get('/', (req, res) => {
+app.get('/hello', (req, res) => {
   res.send('Hello');
 });
 
@@ -41,3 +42,10 @@ app.use('/register', register);
 app.use('/login', login);
 app.use('/forgotpassword', forgotPassword);
 app.use('/logout', logout);
+
+
+  app.use(express.static(path.join(__dirname, 'client/build')));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  });
