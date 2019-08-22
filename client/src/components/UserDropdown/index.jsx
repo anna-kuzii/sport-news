@@ -45,7 +45,7 @@ class UserDropdown extends Component {
             {`${first_name} ${ last_name}`}
             <div className={displayMenu ? 'down-triangle' : 'up-triangle'} />
           </div>
-          {displayMenu ? (
+          {displayMenu && (
             <div className='dropdown-content'>
               <div className='dropdown-triangle' />
               <div className='user-name'>{`${first_name} ${ last_name}`} </div>
@@ -56,8 +56,7 @@ class UserDropdown extends Component {
               <Link to='/mySurveys'>My Surveys</Link>
               <Link to='/setting'>Log Out</Link>
             </div>
-          )
-            : null}
+          )}
         </div>
       </div>
     )
