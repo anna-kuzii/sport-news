@@ -10,8 +10,6 @@ class UserDropdown extends Component {
       ...props,
       displayMenu: false,
     }
-    //Test push in GITHUB
-
     this.handleShowDropdownMenu = this.handleShowDropdownMenu.bind(this)
     this.hideDropdownMenu = this.hideDropdownMenu.bind(this)
   }
