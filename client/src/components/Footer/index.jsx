@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.scss';
 
- const Footer = () => (
+ export const Footer = () => (
   <footer className='footer-container'>
     <div className='footer-item'>
       <h4>COMPANY INFO</h4>
@@ -37,5 +37,3 @@ import './style.scss';
     </div>
   </footer>
 );
-
-export default Footer;

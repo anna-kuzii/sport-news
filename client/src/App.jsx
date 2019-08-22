@@ -7,7 +7,6 @@ import { history } from './_helpers'
 import { Register } from './components/Register'
 import { Login } from './components/Login'
 import { ForgotPassword } from './components/ForgotPassword'
-import Footer from './components/Footer';
 
 const App = () => (
   <Router history={history}>
