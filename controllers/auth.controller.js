@@ -20,7 +20,7 @@ exports.authorization = (req, res) => {
                     email: user.email
                 };
 
-                jwt.sign(payload, process.env.SECRET_KEY, {
+                return  jwt.sign(payload, process.env.SECRET_KEY, {
                         expiresIn: 2000
                     }, (err, token) => {
                         res.json({
@@ -29,9 +29,8 @@ exports.authorization = (req, res) => {
                         });
                     }
                 );
-            } else {
-                return res.status(404).json({ message: "Incorrect password"})
             }
+                return res.status(404).json({ message: "Incorrect password"})
         })
     })
 };
