@@ -1,0 +1,129 @@
+@import '../styles/variables.scss';
+
+li {
+  font-size: 12px;
+  line-height: 2.5;
+  list-style-type: none;
+}
+
+a {
+  color: $text-grey;
+
+  &:hover {
+    color: $crimson;
+    text-decoration: none;
+  }
+}
+
+ul {
+  padding: 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  margin-top: 40px;
+  font-family: Open Sans, serif;
+  border-top: 1px solid $line-grey;
+
+  & .footer-item {
+    margin-right: 60px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    & h4 {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 19px;
+    }
+
+    & p {
+      font-size: 14px;
+      line-height: 22px;
+      color: $text-grey;
+    }
+
+    @media screen and (max-width: $mobile-width) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (max-width: $mobile-width) {
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+  }
+}
+
+.services {
+  display: flex;
+  justify-content: space-between;
+  width: 220px;
+
+  & span {
+    font-size: 14px;
+    line-height: 19px;
+    color: $placeholder-grey;
+  }
+}
+
+.facebook-icon {
+  display: block;
+  width: 35px;
+  height: 35px;
+  background: url('../../assets/img/facebook-normal.svg') no-repeat;
+}
+
+.twitter-icon {
+  display: block;
+  width: 35px;
+  height: 35px;
+  background: url('../../assets/img/twitter-normal.svg') no-repeat;
+}
+
+.googlePlus-icon {
+  display: block;
+  width: 35px;
+  height: 35px;
+  background: url('../../assets/img/gplus-normal.svg') no-repeat;
+}
+
+.subscribe {
+  height: 30px;
+  margin-bottom: 20px;
+
+  & input {
+    width: 190px;
+    height: 100%;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 30px;
+    border: 1px solid $ghost;
+    border-right: 0;
+
+    & ::placeholder {
+      color: $placeholder-grey;
+    }
+  }
+
+  & button {
+    width: 95px;
+    height: 100%;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 17px;
+    color: $white;
+    background-color: $crimson;
+    border: 0;
+
+    &:hover {
+      color: $crimson;
+      background-color: $white;
+      border: 1px solid $crimson;
+    }
+  }
+}
