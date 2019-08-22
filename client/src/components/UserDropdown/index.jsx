@@ -43,7 +43,7 @@ class UserDropdown extends Component {
           >
             <div className='avatar' />
             {`${first_name} ${ last_name}`}
-            <div className={displayMenu ? 'down-triangle' : 'up-triangle'} />
+            <div className={'up-triangle' || (displayMenu && 'up-triangle')} />
           </div>
           {displayMenu && (
             <div className='dropdown-content'>
