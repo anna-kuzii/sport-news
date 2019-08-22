@@ -29,34 +29,37 @@ class UserDropdown extends Component {
   }
 
   render() {
-    const state = this.state
+    const { displayMenu, first_name, last_name, email } = this.state
 
     return (
-      <div className='dropdown'>
-        <div
-          className='button-menu'
-          onClick={this.handleShowDropdownMenu}
-          onKeyPress={this.handleShowDropdownMenu}
-          role='button'
-          tabIndex={0}
-        >
-          <div className='avatar' />
-          {' '+ state.first_name +' '+ state.last_name}
-          <div className={state.displayMenu ? 'down-triangle' : 'up-triangle'} />
-        </div>
-
-        <div className={state.displayMenu ? 'dropdown-content': 'null'}>
-          <div className='decor' />
-          <div className='user-name'>{state.first_name +' '+state.last_name}</div>
-          <div className='email'>{state.email}</div>
-          <button type='button' className='button-view'>view profile</button>
-          <Link to='/create-ads'>Personal</Link>
-          <Link to='/changePassword'>Change Password</Link>
-          <Link to='/mySurveys'>My Surveys</Link>
-          <Link to='/setting'>Log Out</Link>
+      <div className='dropdown-wrapper'>
+        <div className='dropdown'>
+          <div
+            className='button-menu'
+            onClick={this.handleShowDropdownMenu}
+            onKeyPress={this.handleShowDropdownMenu}
+            role='button'
+            tabIndex={0}
+          >
+            <div className='avatar' />
+            {' '+ first_name +' '+ last_name}
+            <div className={displayMenu ? 'down-triangle' : 'up-triangle'} />
+          </div>
+          {displayMenu ? (
+            <div className='dropdown-content'>
+              <div className='dropdown-triangle' />
+              <div className='user-name'>{first_name +' '+last_name}</div>
+              <div className='email'>{email}</div>
+              <button type='button' className='button-view'>view profile</button>
+              <Link to='/create-ads'>Personal</Link>
+              <Link to='/changePassword'>Change Password</Link>
+              <Link to='/mySurveys'>My Surveys</Link>
+              <Link to='/setting'>Log Out</Link>
+            </div>
+          )
+            : null}
         </div>
       </div>
-
     )
   }
 }
