@@ -36,8 +36,8 @@
 
       @media screen and (max-width: $mobile-width) {
         display: none;
-    }
-  }
+     }
+   }
 
 
     .down-triangle {
@@ -51,9 +51,9 @@
 
       @media screen and (max-width: $mobile-width) {
         display: none;
+      }
     }
   }
-}
 
   .dropdown-content {
     position: absolute;
@@ -75,9 +75,9 @@
 
       @media screen and (max-width: $mobile-width) {
         display: none;
-     }
+      }
 
-  }
+    }
 
     .user-name {
       padding: 10px 25px 0;
@@ -86,7 +86,7 @@
       font-style: normal;
       font-weight: 600;
       line-height: 24px;
-   }
+    }
 
     .email {
       padding: 0 25px 10px;
@@ -96,7 +96,7 @@
       font-weight: normal;
       line-height: 19px;
       color: $boulder;
-   }
+     }
 
     a {
       display: block;
@@ -110,10 +110,9 @@
         width: 100%;
         color: $crimson;
         background-color: $mine-shaft-11;
-
       }
-    }
- }
+     }
+   }
 
   .button-view {
     width: 100px;
