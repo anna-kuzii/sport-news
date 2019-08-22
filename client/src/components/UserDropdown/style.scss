@@ -1,3 +1,5 @@
+@import '../styles/variables.scss';
+
 .button-menu {
   display: inline-block;
   padding: 5px;
@@ -7,14 +9,15 @@
   font-weight: 600;
   line-height: 24px;
   outline: none;
+
   @media screen and (max-width: 770px) {
     font-size: 0;
   }
 
   .avatar {
     display: inline-block;
-    width: 35px;
-    height: 35px;
+    width: 34px;
+    height: 34px;
     vertical-align: middle;
     cursor: pointer;
     background: url('../../assets/img/user-avatar.svg') no-repeat;
