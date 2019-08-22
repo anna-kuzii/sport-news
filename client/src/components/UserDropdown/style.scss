@@ -22,7 +22,7 @@
       vertical-align: middle;
       cursor: pointer;
       background: url('../../assets/img/user-avatar.svg') no-repeat;
-  }
+    }
 
 
     .up-triangle {
@@ -75,7 +75,7 @@
 
       @media screen and (max-width: $mobile-width) {
         display: none;
-    }
+     }
 
   }
 
@@ -111,9 +111,9 @@
         color: $crimson;
         background-color: $mine-shaft-11;
 
+      }
     }
-  }
-}
+ }
 
   .button-view {
     width: 100px;
@@ -130,5 +130,5 @@
     text-align: center;
     background-color: $crimson;
     border: 0;
- }
+  }
 }

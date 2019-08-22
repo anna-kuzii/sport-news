@@ -42,13 +42,13 @@ class UserDropdown extends Component {
             tabIndex={0}
           >
             <div className='avatar' />
-            {' '+ first_name +' '+ last_name}
+            {`${first_name} ${ last_name}`}
             <div className={displayMenu ? 'down-triangle' : 'up-triangle'} />
           </div>
           {displayMenu ? (
             <div className='dropdown-content'>
               <div className='dropdown-triangle' />
-              <div className='user-name'>{first_name +' '+last_name}</div>
+              <div className='user-name'>{`${first_name} ${ last_name}`} </div>
               <div className='email'>{email}</div>
               <button type='button' className='button-view'>view profile</button>
               <Link to='/create-ads'>Personal</Link>
