@@ -36,12 +36,13 @@ const register = require('./routes/register');
 const login = require('./routes/login');
 const forgotPassword = require('./routes/forgotPassword');
 const logout = require('./routes/logout');
+const updateProfile = require('./routes/updateProfile')
 
-
-app.use('/register', register);
-app.use('/login', login);
-app.use('/forgotpassword', forgotPassword);
-app.use('/logout', logout);
+app.use('/register', register)
+app.use('/login', login)
+app.use('/forgotpassword', forgotPassword)
+app.use('/logout', logout)
+app.use('/updateprofile', updateProfile)
 
 
   app.use(express.static(path.join(__dirname, 'client/build')));
