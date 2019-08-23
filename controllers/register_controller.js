@@ -19,10 +19,10 @@ exports.registerController = (req, res) => {
         })
       }
       return encrypt.hashPassword(password)
-        .then((result) => {
-          UserQuery.createUser(req.body, result)
-          notificationMail.sendEmail(regNotification.sendRegNotification(req.body.email))
-        }).then(() => res.status(200).send('new user registered'))
-        .catch((error) => res.send(error))
     })
+    .then((result) => {
+      UserQuery.createUser(req.body, result)
+      notificationMail.sendEmail(regNotification.sendRegNotification(req.body.email))
+    }).then(() => res.status(200).send('new user registered'))
+    .catch((error) => res.send(error))
 }

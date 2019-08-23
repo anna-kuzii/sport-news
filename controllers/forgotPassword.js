@@ -1,10 +1,11 @@
-const User = require('../db/models/User')
+const UserQuery = require('../db/query/UserQuery')
 const tokenCreator = require('../controllers/token.js')
 const sendEmail = require('../controllers/sendEmail')
 const forgotPasswordEmail = require('../templates/forgotPasswordTemplate')
 
 exports.sendForgotPasswordEmail = (req, res) => {
-  return User.findOne({ email: req.body.email })
+  console.log(req.body.email)
+  return UserQuery.findUserOne(req.body.email)
     .then((user) => {
       if (!user) {
         return res.status(400).json({

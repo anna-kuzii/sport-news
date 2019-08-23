@@ -27,3 +27,7 @@ exports.createUser = (user, hashPassword) => {
 }
 
 exports.findUserOne = (email) => User.findOne({ email })
+
+exports.findUserId = (id) => User.findOne({ _id: id })
+
+exports.UpdateUserPasswordById = (id, password) => User.findOneAndUpdate({ _id: id }, { password: password })
