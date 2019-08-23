@@ -2,10 +2,10 @@ const UserQuery = require('../db/query/UserQuery')
 const tokenCreator = require('../controllers/token.js')
 const sendEmail = require('../controllers/sendEmail')
 const forgotPasswordEmail = require('../templates/forgotPasswordTemplate')
+require('dotenv').config()
 
 exports.sendForgotPasswordEmail = (req, res) => {
-  console.log(req.body.email)
-  return UserQuery.findUserOne(req.body.email)
+  return UserQuery.findUserByEmail(req.body.email)
     .then((user) => {
       if (!user) {
         return res.status(400).json({
@@ -13,7 +13,7 @@ exports.sendForgotPasswordEmail = (req, res) => {
         })
       }
       const token = tokenCreator.usePasswordHashToMakeToken(user.password, user._id, user.date)
-      const url = `http://localhost:5000/resetpassword/${user._id}/${token}`
+      const url = `${process.env.RESET_PASSWORD_URL}/${user._id}/${token}`
       //TODO : add a beatifull email
       sendEmail.sendEmail(forgotPasswordEmail.forgotPasswordTemplate(user, url))
     })

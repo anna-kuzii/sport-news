@@ -26,7 +26,7 @@ exports.createUser = (user, hashPassword) => {
   return newUser.save()
 }
 
-exports.findUserOne = (email) => User.findOne({ email })
+exports.findUserByEmail = (email) => User.findOne({ email })
 
 exports.findUserId = (id) => User.findOne({ _id: id })
 

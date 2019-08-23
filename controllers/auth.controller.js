@@ -6,7 +6,7 @@ require('dotenv').config();
 
 exports.authorization = (req, res) => {
 
-    UserQuery.findUserOne(req.body.email).then(user => {
+    UserQuery.findUserByEmail(req.body.email).then(user => {
         if (!user) {
             return res.status(403).json({message: 'User not found'})
         }
