@@ -135,7 +135,7 @@
     }
   }
 
-  .btn {
+  .btn  {
     display: inline-block;
     width: 130px;
     height: 32px;
@@ -201,7 +201,8 @@
   }
 }
 
-.btn-primary {
+.btn-primary ,
+.update-profile {
   display: inline-block;
   width: 400px;
   height: 42px;
@@ -223,7 +224,8 @@
   }
 }
 
-.email-wrapper {
+.email-wrapper,
+.update-input-wrapper {
   label {
     width: 50%;
     font-family: Roboto, serif;

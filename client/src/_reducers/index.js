@@ -1,9 +1,13 @@
-import { combineReducers } from 'redux';
+import {
+  combineReducers,
+} from 'redux'
 
-import { registration } from './registration.reducer';
+import {
+  registration,
+} from './registration.reducer'
 
 const rootReducer = combineReducers({
-    registration
-});
+  registration,
+})
 
-export default rootReducer;
+export default rootReducer

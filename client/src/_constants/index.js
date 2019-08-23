@@ -1,1 +1,1 @@
-export * from './user.constans';
+export * from './user.constans'
