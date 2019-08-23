@@ -11,13 +11,19 @@
   .forgot-password-form {
     // sass-lint:disable-block nesting-depth
     .btn-primary {
+
+      &:active:focus {
+        box-shadow: none;
+      }
+
       &:hover,
       &:active,
       &:focus,
       &:focus-within {
-        background-color: $crimson;
-        border-color: $crimson;
+        background-color: $alizarin-crimson;
+        border-color: $alizarin-crimson;
         box-shadow: none;
+        outline: none;
       }
     }
   }
@@ -50,7 +56,7 @@
     width: 253px;
     height: 83px;
     text-align: center;
-    background: $crimson;
+    background: $alizarin-crimson;
 
     @media screen and (max-width: $mobile-width) {
       z-index: 2;
@@ -80,6 +86,15 @@
   width: 100%;
   height: 100%;
   max-width: 800px;
+
+  input {
+    padding: 0 15px 0 15px;
+    font-family: Open Sans, serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+  }
 
   @media screen and (max-width: $mobile-width) {
     position: absolute;
@@ -127,12 +142,12 @@
     font-style: normal;
     font-weight: 600;
     line-height: 16px;
-    color: $crimson;
+    color: $alizarin-crimson;
     text-align: center;
     text-transform: capitalize;
     cursor: pointer;
     background-color: $white;
-    border: 1px solid $crimson;
+    border: 1px solid $alizarin-crimson;
     border-radius: 0;
     box-sizing: border-box;
     transition: 1s;
@@ -140,7 +155,7 @@
     &:hover,
     &:active {
       color: $white;
-      background: $crimson;
+      background: $alizarin-crimson;
     }
   }
 }
@@ -191,9 +206,8 @@
   color: $white;
   text-transform: capitalize;
   cursor: pointer;
-  background-color: $crimson;
-  border: 1px solid $crimson;
-  border-radius: 0;
+  background-color: $alizarin-crimson;
+  border: none;
   outline: 0;
   box-sizing: border-box;
 
@@ -203,7 +217,7 @@
   }
 
   &:hover {
-    background: $crimson;
+    background-color: $alizarin-crimson-hover !important;
   }
 }
 
@@ -228,8 +242,7 @@
   input {
     width: 100%;
     height: 40px;
-    padding-left: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border: 1px solid $mischka;
     outline: 0;
     box-sizing: border-box;

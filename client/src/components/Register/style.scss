@@ -37,12 +37,12 @@
       font-style: normal;
       font-weight: 600;
       line-height: 16px;
-      color: $crimson;
+      color: $alizarin-crimson;
       text-align: center;
       text-transform: capitalize;
       cursor: pointer;
       background-color: $white;
-      border: 1px solid $crimson;
+      border: 1px solid $alizarin-crimson;
       border-radius: 0;
       box-sizing: border-box;
       transition: 1s;
@@ -50,7 +50,7 @@
       &:hover,
       &:active {
         color: $white;
-        background: $crimson;
+        background: $alizarin-crimson;
       }
     }
   }
@@ -93,7 +93,12 @@
         }
 
         &:hover {
+          cursor: url(../../assets/img/cursor-hover.svg), auto;
           background: url('../../assets/img/facebook-icon-hover.svg') no-repeat;
+        }
+
+        &:focus {
+          box-shadow: none;
         }
       }
 
@@ -109,7 +114,12 @@
         }
 
         &:hover {
+          cursor: url(../../assets/img/cursor-hover.svg), auto;
           background: url('../../assets/img/gplus-icon-hover.svg') no-repeat;
+        }
+
+        &:focus {
+          box-shadow: none;
         }
       }
 
@@ -132,7 +142,7 @@
         margin-bottom: 5px;
         font-size: 12px;
         font-weight: 400;
-        color: $crimson;
+        color: $alizarin-crimson;
       }
 
       .user-info {
@@ -174,7 +184,7 @@
         .has-error {
           input {
             margin-bottom: 0;
-            border: 1px solid $crimson;
+            border: 1px solid $alizarin-crimson;
             outline: 0;
             box-sizing: border-box;
           }
@@ -184,7 +194,7 @@
             margin-bottom: 5px;
             font-size: 12px;
             font-weight: 400;
-            color: $crimson;
+            color: $alizarin-crimson;
           }
         }
       }
@@ -204,20 +214,10 @@
         flex-direction: column;
         width: 100%;
 
-        input {
-          width: 100%;
-          height: 40px;
-          padding-left: 15px;
-          margin-bottom: 10px;
-          border: 1px solid $mischka;
-          outline: 0;
-          box-sizing: border-box;
-        }
-
         .has-error {
           input {
             margin-bottom: 0;
-            border: 1px solid $crimson;
+            border: 1px solid $alizarin-crimson;
             outline: 0;
             box-sizing: border-box;
           }
@@ -227,7 +227,7 @@
             margin-bottom: 5px;
             font-size: 12px;
             font-weight: 400;
-            color: $crimson;
+            color: $alizarin-crimson;
           }
         }
       }
