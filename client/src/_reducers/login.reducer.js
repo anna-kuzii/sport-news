@@ -24,6 +24,7 @@ export function login(state = initialState, action) {
             return {
                 ...state,
                 loading: true,
+                error: null,
             };
         case userConstants.SET_CURRENT_GET_ERRORS:
             return {

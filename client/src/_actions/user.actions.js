@@ -57,13 +57,17 @@ function login(user) {
                 setAuthToken( token );
                 const decoded = jwt_decode(token);
                 dispatch(setCurrentUser(decoded));
-            }).catch(err =>
-            dispatch({
-                type: userConstants.SET_CURRENT_GET_ERRORS,
-                error: err.response.data && err.response.data.message,
-            })
+            }).catch(error =>
+            dispatch(loginFailure(error.response.data && error.response.data.message))
         );
     };
+
+    function loginFailure(error) {
+        return{
+            type: userConstants.SET_CURRENT_GET_ERRORS,
+            error
+        }
+    }
 }
 
 export const setCurrentUser = decoded => {
