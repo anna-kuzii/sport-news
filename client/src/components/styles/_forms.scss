@@ -9,6 +9,11 @@
   .create-account-form,
   .log-in-form,
   .forgot-password-form {
+    margin: 0 20px;
+
+    @media screen and (max-width: $mobile-width) {
+      margin: 0;
+    }
     // sass-lint:disable-block nesting-depth
     .btn-primary {
 
@@ -24,8 +29,8 @@
       &:focus-within {
         background-color: $alizarin-crimson;
         border-color: $alizarin-crimson;
-        box-shadow: none;
         outline: none;
+        box-shadow: none;
       }
     }
   }
@@ -92,9 +97,9 @@
   input {
     padding: 0 15px;
     font-family: Open Sans, serif;
+    font-size: 12px;
     font-style: normal;
     font-weight: 600;
-    font-size: 12px;
     line-height: 16px;
   }
 
@@ -106,7 +111,8 @@
   }
 }
 
-.get-started {
+.get-started,
+.log-in {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -135,7 +141,7 @@
     }
   }
 
-  .btn  {
+  .btn {
     display: inline-block;
     width: 130px;
     height: 32px;
@@ -201,21 +207,23 @@
   }
 }
 
-.btn-primary ,
+.btn-primary,
 .update-profile {
   display: inline-block;
-  width: 400px;
+  max-width: 400px;
+  width: 100%;
   height: 42px;
   color: $white;
   text-transform: capitalize;
   cursor: pointer;
   background-color: $alizarin-crimson;
-  border: none;
+  border: 0;
   outline: 0;
   box-sizing: border-box;
 
   @media screen and (max-width: $mobile-width) {
     width: 100%;
+    max-width: 100%;
     margin-top: 30px;
   }
 
