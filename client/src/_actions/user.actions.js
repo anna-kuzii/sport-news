@@ -72,13 +72,3 @@ export const setCurrentUser = decoded => {
         payload: decoded,
     };
 };
-export const setUserLoading = () => {
-    return {
-        type: userConstants.USER_LOADING,
-    };
-};
-export const logoutUser = () => dispatch => {
-    localStorage.removeItem('jwtToken');
-    setAuthToken(false);
-    dispatch(setCurrentUser({}));
-};
