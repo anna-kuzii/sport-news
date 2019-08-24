@@ -167,11 +167,11 @@
 .forgot-password-wrapper {
   width: 100%;
   max-width: 400px;
-  margin: 200px 0 0;
+  margin: 30% 20px 0;
 
   @media screen and (max-width: $mobile-width) {
     max-width: 80%;
-    margin: 200px 0 0;
+    margin: 30% 0 0;
   }
 
   ::placeholder {
