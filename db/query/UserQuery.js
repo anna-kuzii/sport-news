@@ -26,4 +26,12 @@ exports.createUser = (user, hashPassword) => {
   return newUser.save();
 };
 
-exports.findUserOne = (email) => User.findOne({ email });
+exports.findUserOne = (email) => User.findOne({ email })
+
+exports.updateUserProfile = (req, res) => {
+  const { email, newEmail, newName } = req.body
+  const fullName = newName.split(' ')
+  User.findOneAndUpdate({ email:email }, { first_name:fullName[1], last_name: fullName[0], email:newEmail })
+    .then(() => res.status(200).send('Profile was changed'))
+    .catch((error) => res.send(error))
+}
