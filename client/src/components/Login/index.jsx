@@ -100,7 +100,6 @@ class Login extends Component {
 function mapState (state)  {
     return {
     auth: state.auth,
-    errors: state.errors,
     logining: state.login,
     }
 };
