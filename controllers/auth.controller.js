@@ -8,7 +8,7 @@ exports.authorization = (req, res) => {
 
     UserQuery.findUserOne(req.body.email).then(user => {
         if (!user) {
-            return res.status(403).json({message: 'Incorrect user ID or password. Try again.'})
+            return res.status(404).json({message: 'Incorrect user ID or password. Try again.'})
         }
 
         bcrypt.compare(req.body.password, user.password).then(isMatch => {

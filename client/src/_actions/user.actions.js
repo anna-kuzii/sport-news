@@ -59,7 +59,7 @@ function login(user) {
                 dispatch(setCurrentUser(decoded));
             }).catch(err =>
             dispatch({
-                type: userConstants.GET_ERRORS,
+                type: userConstants.SET_CURRENT_GET_ERRORS,
                 error: err.response.data && err.response.data.message,
             })
         );
@@ -68,7 +68,7 @@ function login(user) {
 
 export const setCurrentUser = decoded => {
     return {
-        type: userConstants.SET_CURRENT_USER,
+        type: userConstants.SET_CURRENT_USER_SUCCESS,
         payload: decoded,
     };
 };

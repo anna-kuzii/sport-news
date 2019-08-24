@@ -29,13 +29,11 @@ class Login extends Component {
             email: state.email,
             password: state.password,
         };
-
-        const { login } = this.props;
-        login(user)
+        this.props.login(user)
     }
 
     render() {
-        const states = this.state
+        const {email,password} = this.state
         const { logining } = this.props;
 
         return (
@@ -64,7 +62,7 @@ class Login extends Component {
                                     id='email-input'
                                     placeholder='Email@gmail.com'
                                     name='email'
-                                    value={states.email}
+                                    value={email}
                                     onChange={this.handleChange}
                                 />
                                 <div className='forgot-pass'>
@@ -76,7 +74,7 @@ class Login extends Component {
                                     id='password-input'
                                     placeholder='Enter your password'
                                     name='password'
-                                    value={states.password}
+                                    value={password}
                                     onChange={this.handleChange}
                                 />
                             </div>
