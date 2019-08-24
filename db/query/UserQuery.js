@@ -28,10 +28,8 @@ exports.createUser = (user, hashPassword) => {
 
 exports.findUserOne = (email) => User.findOne({ email })
 
-exports.updateUserProfile = (req, res) => {
+exports.updateUserProfile = (req) => {
   const { email, newEmail, newName } = req.body
   const fullName = newName.split(' ')
-  User.findOneAndUpdate({ email:email }, { first_name:fullName[1], last_name: fullName[0], email:newEmail })
-    .then(() => res.status(200).send('Profile was changed'))
-    .catch((error) => res.send(error))
+  return User.findOneAndUpdate({ email:email }, { first_name:fullName[1], last_name: fullName[0], email:newEmail })
 }
