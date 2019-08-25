@@ -1,11 +1,12 @@
-const express = require('express');
-const authController = require('../controllers/auth.controller');
+const express = require('express')
+//const authController = require('../controllers/auth.controller')
+const authPassport = require('../controllers/auth.controller.passport')
 
-const router = express.Router();
+const router = express.Router()
 router.get('/', (req, res) => {
   // TODO: connect a login form
-  res.send('it is a login block');
-});
+  res.send('it is a login block')
+})
 
-router.post('/',authController.authorization);
-module.exports = router;
+router.post('/', authPassport.authPassport)
+module.exports = router
