@@ -24,10 +24,10 @@ exports.authPassport = (req, res) => {
 
       const tokenResult ={
         success: true,
-        token: jwt.sign(payload, process.env.SECRET_KEY),
+        token: jwt.sign(payload, process.env.SECRET_KEY, { expiresIn: 60 * 60 }),
       }
 
-      return res.json({ user, tokenResult })
+      return res.json({ tokenResult })
     })
   })(req, res)
 }
