@@ -12,13 +12,6 @@ export function getExpireTime() {
     return localStorage.getItem('expiresIn')
 }
 
-export function refreshTokens() {
-    return instance.post('refreshtoken/', {refreshToken: getRefreshToken()})
-        .then(response => {
-            _setAuthData(response)
-        })
-}
-
 
 export function _setAuthData(response) {
     localStorage.setItem('refreshToken', response.data.refreshToken);

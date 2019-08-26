@@ -24,16 +24,16 @@ class Login extends Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        const state = this.state;
+        const {email,password} = this.state
         const user = {
-            email: state.email,
-            password: state.password,
+            email: email,
+            password: password,
         };
         this.props.login(user)
     }
 
     render() {
-        const {email,password} = this.state
+        const { email, password } = this.state
         const { logining } = this.props;
 
         return (

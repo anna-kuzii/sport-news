@@ -4,7 +4,6 @@ import {
 import {
     instance,
 } from '../axios.instanse'
-import authToken from '../utils/AuthToken'
 import jwt_decode from 'jwt-decode'
 import { _setAuthData } from '../utils/auth.service'
 
@@ -54,7 +53,6 @@ function login(user) {
         instance.post('/login', user)
             .then(res => {
                 const { accessToken } = res.data;
-                authToken( accessToken );
                 _setAuthData(res);
                 dispatch(setCurrentUser(jwt_decode(accessToken)));
             }).catch(error =>
@@ -63,7 +61,7 @@ function login(user) {
     };
 
     function loginFailure(error) {
-        return{
+    return {
             type: userConstants.SET_CURRENT_GET_ERRORS,
             error
         }
