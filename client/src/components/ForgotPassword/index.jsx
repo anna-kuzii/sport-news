@@ -6,7 +6,7 @@ export const ForgotPassword = () => (
   <div className='forgot-password-container'>
     <div className='container-fluid'>
       <div className='bg-img'>
-        <div className='logo-in-sign-up'>
+        <div className='logo'>
           <h1>Sport News</h1>
         </div>
         <img src={login_bg} alt='background ' />

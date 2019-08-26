@@ -67,7 +67,7 @@ class Register extends Component {
       <div className='register-container '>
         <div className='container-fluid'>
           <div className='bg-img'>
-            <div className='logo-in-sign-up'>
+            <div className='logo'>
               <h1>Sport News</h1>
             </div>
             <img src={sign_up_bg} alt='signup_bg' />
