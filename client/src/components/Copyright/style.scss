@@ -1,0 +1,29 @@
+@import '../styles/variables.scss';
+
+.cop-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 80px;
+  padding: 25px 55px;
+  color: $rose-white;
+  background-color: $alizarin-crimson;
+
+  & h2 {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 28px;
+  }
+
+  & h4 {
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 28px;
+  }
+
+  & .privacy {
+    text-align: end;
+  }
+}
