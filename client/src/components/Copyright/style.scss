@@ -1,6 +1,6 @@
 @import '../styles/variables.scss';
 
-.cop-container {
+.copyright-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10,20 +10,20 @@
   color: $rose-white;
   background-color: $alizarin-crimson;
 
-  & h2 {
+  h2 {
     font-size: 22px;
     font-weight: 600;
     line-height: 28px;
   }
 
-  & h4 {
+  h4 {
     margin-bottom: 0;
     font-size: 12px;
     font-weight: 600;
     line-height: 28px;
   }
 
-  & .privacy {
+  .privacy {
     text-align: end;
   }
 }
