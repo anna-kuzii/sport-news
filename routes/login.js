@@ -1,5 +1,5 @@
-const express = require('express');
-const authController = require('../controllers/auth.controller');
+const express = require('express')
+const authPassport = require('../controllers/auth.controller.passport')
 
 const router = express.Router()
 router.get('/', (req, res) => {
@@ -7,6 +7,6 @@ router.get('/', (req, res) => {
   res.send('it is a login block')
 })
 
-router.post('/',authController.authorization);
-module.exports = router;
+router.post('/', authPassport.authPassport)
+module.exports = router
 

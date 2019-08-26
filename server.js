@@ -17,7 +17,9 @@ app.use(cookieParser())
 
 
 app.use(passport.initialize())
-require('./config/passport')(passport)
+
+//require('./config/passport')(passport)
+require('./config/passport')
 // TODO: change that part ,please:)
 app.get('/hello', (req, res) => {
   res.send('Hello')
@@ -46,6 +48,7 @@ app.use('/logout', logout)
 
 
 app.use(express.static(path.join(__dirname, 'client/build')))
+
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'client/build', 'index.html'))

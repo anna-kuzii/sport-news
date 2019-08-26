@@ -42,7 +42,6 @@ class Register extends Component {
       email: state.email,
       password: state.password,
     }
-
     const { register } = this.props
     register(newUser)
     const validation = this.validator.validate(state)
