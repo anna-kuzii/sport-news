@@ -1,14 +1,13 @@
 import React from 'react'
 import login_bg from '../../assets/img/register-login-bg.jpg'
 import { Link } from 'react-router-dom'
+import { Logo } from '../Logo'
 
 export const Login = () => (
   <div className='login-container '>
     <div className='container-fluid'>
       <div className='bg-img'>
-        <div className='logo'>
-          <h1>Sport News</h1>
-        </div>
+        <Logo />
         <img src={login_bg} alt='background' />
       </div>
       <div className='log-in-form'>
