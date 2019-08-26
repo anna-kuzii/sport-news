@@ -23,7 +23,7 @@ exports.authPassport = (req, res) => {
       }
 
       return jwt.sign(payload, process.env.SECRET_KEY, {
-            expiresIn: '48h'
+            expiresIn: 2000
           }, (err, token) => {
             res.json({
               success: true,
