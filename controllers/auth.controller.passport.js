@@ -3,6 +3,8 @@ const passport = require('passport')
 
 require('dotenv').config()
 
+const expireTime = 2000
+
 exports.authPassport = (req, res) => {
   passport.authenticate('local', { session: false }, (err, user, info) => {
     if (err || !user) {
@@ -23,7 +25,7 @@ exports.authPassport = (req, res) => {
       }
 
       return jwt.sign(payload, process.env.SECRET_KEY, {
-            expiresIn: 2000
+            expiresIn: expireTime
           }, (err, token) => {
             res.json({
               success: true,
