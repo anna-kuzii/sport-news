@@ -1,8 +1,26 @@
 import React from 'react'
 import { Logo } from '../Logo'
+import UserDropdown from '../UserDropdown'
+import search_icon from '../../assets/img/search-icon.svg'
 
 export const Header = () => (
   <div className='header'>
-    <Logo />
+    <div className='header-logo'>
+      <Logo />
+    </div>
+    <div className='search-by'>
+      <img src={search_icon} alt='' />
+      <input type='text' placeholder='Search by' />
+    </div>
+    <div className='social'>
+      Social
+    </div>
+    <div className='profile'>
+      <UserDropdown />
+    </div>
+    <div className='language'>
+      EN
+    </div>
+
   </div>
 )

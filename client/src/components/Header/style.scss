@@ -1,0 +1,76 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  height: 83px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid $gallery;
+
+  .header-logo {
+    height: 100%;
+    width: 100%;
+    max-width: 253px;
+  }
+
+  .search-by {
+    height: 100%;
+    width: 100%;
+    max-width: 457px;
+    border-right: 1px solid $gallery;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 3%;
+
+    input {
+      border: none;
+      margin-left: 20px;
+      outline: none;
+    }
+
+    ::placeholder {
+      font-family: Open Sans, serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 19px;
+      color: $ghost;
+    }
+  }
+
+  .social {
+    height: 100%;
+    width: 100%;
+    max-width: 317px;
+    border-right: 1px solid $gallery;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profile {
+    height: 100%;
+    width: 100%;
+    max-width: 310px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .language {
+    height: 100%;
+    width: 100%;
+    max-width: 103px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: Open Sans, serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+  }
+}
