@@ -42,7 +42,6 @@ class Register extends Component {
       email: state.email,
       password: state.password,
     }
-
     const { register } = this.props
     register(newUser)
     const validation = this.validator.validate(state)
@@ -50,7 +49,7 @@ class Register extends Component {
       ...prevState,
       validation: this.validator.validate(prevState),
       submitted:true,
-    }))  
+    }))
     if (validation.isValid) {
     // handle actual form submission here
     }
@@ -76,7 +75,7 @@ class Register extends Component {
           <div className='create-account-form'>
             <div className='log-in'>
               <h3>Already have an account?</h3>
-              <a href='facebook.com' className='btn btn-primary login'>Log In</a>
+              <Link to='/login' className='btn btn-primary login'>Log In</Link>
             </div>
             <div className='create-account-wrapper'>
               <h2>Create Account</h2>
