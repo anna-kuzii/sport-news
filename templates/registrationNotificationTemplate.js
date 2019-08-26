@@ -1,11 +1,11 @@
-require('dotenv').config();
+require('dotenv').config()
 
 exports.sendRegNotification = (user) => {
-    const mailOptions = {
-        from: '"Sport News" <process.env.USER_EMAIL>',
-        to: user,
-        subject: 'Subscription in Sport News',
-        html: `<table style="background:#f9f9fb;width: 100%;padding: 0 20%;">
+  const mailOptions = {
+    from: '"Sport News" <process.env.USER_EMAIL>',
+    to: user,
+    subject: 'Subscription in Sport News',
+    html: `<table style="background:#f9f9fb;width: 100%;padding: 0 20%;">
                 <tbody style="font-size: 24px">
                     <tr>
                         <td style="color:#000000;font-style:normal;font-family: Open Sans,sans-serif;text-align:center;font-weight:600;">
@@ -21,14 +21,14 @@ exports.sendRegNotification = (user) => {
                                 the world of sport </p>
                             </td>
                         </tr>
-                      </table>     
+                      </table>
                 </tbody>
                 </table>`,
-        attachments: [{
-            filename: 'check.png',
-            path: './assets/check.png',
-            cid: 'unique@cid'
-        }]
-    };
-    return mailOptions;
-};
+    attachments: [ {
+      filename: 'check.png',
+      path: './assets/check.png',
+      cid: 'unique@cid',
+    } ],
+  }
+  return mailOptions
+}

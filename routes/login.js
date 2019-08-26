@@ -1,5 +1,4 @@
 const express = require('express')
-//const authController = require('../controllers/auth.controller')
 const authPassport = require('../controllers/auth.controller.passport')
 
 const router = express.Router()
@@ -10,3 +9,4 @@ router.get('/', (req, res) => {
 
 router.post('/', authPassport.authPassport)
 module.exports = router
+

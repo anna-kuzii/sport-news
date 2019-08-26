@@ -1,9 +1,6 @@
-const notificationMail = require('../controllers/sendEmail')
-const regNotification = require('../templates/registrationNotificationTemplate')
 const { validationResult } = require('express-validator')
 const UserQuery = require('../db/query/UserQuery')
-const encrypt = require('./encrypt')
-
+const UserWithHash = require('./createUserWithHash')
 
 exports.registerController = (req, res) => {
   const errors = validationResult(req)
@@ -11,18 +8,13 @@ exports.registerController = (req, res) => {
     return res.status(422).json({ message: 'Invalid input' })
   }
   const { password, email } = req.body
-  return UserQuery.findUserOne(email)
+  return UserQuery.findUserByEmail(email)
     .then((user) => {
       if (user) {
         return res.status(400).json({
           message: 'Email already exist',
         })
       }
-      return encrypt.hashPassword(password)
-        .then((result) => {
-          UserQuery.createUser(req.body, result)
-          notificationMail.sendEmail(regNotification.sendRegNotification(req.body.email))
-        }).then(() => res.status(200).send('new user registered'))
-        .catch((error) => res.send(error))
+      return UserWithHash.createUserWithHash(password, req, res)
     })
 }

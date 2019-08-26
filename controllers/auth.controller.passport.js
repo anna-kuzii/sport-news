@@ -1,6 +1,8 @@
 const jwt = require('jsonwebtoken')
 const passport = require('passport')
 
+const constants = require('../constants/common.constants');
+
 require('dotenv').config()
 
 exports.authPassport = (req, res) => {
@@ -22,12 +24,15 @@ exports.authPassport = (req, res) => {
         email: user.email,
       }
 
-      const tokenResult ={
-        success: true,
-        token: jwt.sign(payload, process.env.SECRET_KEY, { expiresIn: 60 * 60 }),
-      }
-
-      return res.json({ tokenResult })
+      return jwt.sign(payload, process.env.SECRET_KEY, {
+            expiresIn: constants.expireTime
+          }, (err, token) => {
+            res.json({
+              success: true,
+              token: token
+            });
+          }
+      );
     })
   })(req, res)
 }
