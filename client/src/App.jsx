@@ -1,5 +1,5 @@
 import React from 'react'
-import { Router, Route } from 'react-router-dom'
+import { Router, Route, Switch } from 'react-router-dom'
 
 import './App.scss'
 
@@ -13,12 +13,16 @@ import { UpdateProfile } from './components/UpdateProfile'
 
 const App = () => (
   <Router history={history}>
-    <Route
-      exact path='/'
-    >
-      <Header />
-      <Route path='/' component={Home} />
+    <Route exact path='/'>
+      <Switch>
+        <Header />
+      </Switch>
+      <Route
+        exact path='/'
+        component={Home}
+      />
     </Route>
+
     <Route path='/updateprofile' component={UpdateProfile} />
     <Route path='/register' component={Register} />
     <Route path='/login' component={Login} />

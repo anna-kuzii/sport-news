@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import sign_up_bg from '../../assets/img/register-login-bg.jpg'
 import { Link } from 'react-router-dom'
+import { Logo } from '../Logo'
 
 import FormValidator from '../FormValidator'
 import { rules } from '../FormValidator/rules'
@@ -67,9 +68,7 @@ class Register extends Component {
       <div className='register-container '>
         <div className='container-fluid'>
           <div className='bg-img'>
-            <div className='logo'>
-              <h1>Sport News</h1>
-            </div>
+            <Logo />
             <img src={sign_up_bg} alt='signup_bg' />
           </div>
           <div className='create-account-form'>
