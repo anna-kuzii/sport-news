@@ -27,3 +27,5 @@ exports.createUser = (user, hashPassword) => {
 };
 
 exports.findUserOne = (email) => User.findOne({ email });
+
+exports.findUserOneById = ( _id )  =>  User.findById( _id );

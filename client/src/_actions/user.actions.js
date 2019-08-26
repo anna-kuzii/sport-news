@@ -4,8 +4,9 @@ import {
 import {
     instance,
 } from '../axios.instanse'
-import setAuthToken from '../utils/setAuthToken'
+import authToken from '../utils/AuthToken'
 import jwt_decode from 'jwt-decode'
+import { _setAuthData } from '../utils/auth.service'
 
 export const userActions = {
     register,
@@ -52,11 +53,10 @@ function login(user) {
     return dispatch => {
         instance.post('/login', user)
             .then(res => {
-                const { token } = res.data;
-                localStorage.setItem('jwtToken', token);
-                setAuthToken( token );
-                const decoded = jwt_decode(token);
-                dispatch(setCurrentUser(decoded));
+                const { accessToken } = res.data;
+                authToken( accessToken );
+                _setAuthData(res.data);
+                dispatch(setCurrentUser(jwt_decode(accessToken)));
             }).catch(error =>
             dispatch(loginFailure(error.response.data && error.response.data.message))
         );
