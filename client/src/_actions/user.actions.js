@@ -55,7 +55,7 @@ function login(user) {
             .then(res => {
                 const { accessToken } = res.data;
                 authToken( accessToken );
-                _setAuthData(res.data);
+                _setAuthData(res);
                 dispatch(setCurrentUser(jwt_decode(accessToken)));
             }).catch(error =>
             dispatch(loginFailure(error.response.data && error.response.data.message))

@@ -26,12 +26,12 @@ exports.authorization = (req, res) => {
                 return  jwt.sign(payload, process.env.SECRET_KEY, {
                         expiresIn: 200
                     }, (err, token) => {
-                    const expire = Math.floor(new Date().getTime() / 1000) + 200;
+                    const expires = Math.floor(new Date().getTime() / 1000) + 200;
                         res.json({
                             success: true,
                             accessToken: token,
                             refreshToken: refreshToken,
-                            expire: expire,
+                            expires: expires,
                         });
                     }
                 );

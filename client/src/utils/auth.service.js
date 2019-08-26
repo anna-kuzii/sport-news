@@ -13,16 +13,17 @@ export function getExpireTime() {
 }
 
 export function refreshTokens() {
-      return instance.post('refreshtoken/', { refreshToken: getRefreshToken() })
-          .then(response =>{
-              _setAuthData(response)
-          })
+    return instance.post('refreshtoken/', {refreshToken: getRefreshToken()})
+        .then(response => {
+            _setAuthData(response)
+        })
 }
+
 
 export function _setAuthData(response) {
     localStorage.setItem('refreshToken', response.data.refreshToken);
     localStorage.setItem('accessToken', response.data.accessToken);
-    localStorage.setItem('expiresIn', response.data.expire);
+    localStorage.setItem('expiresIn', response.data.expires);
 }
 
 export function isAccessTokenExpired() {
