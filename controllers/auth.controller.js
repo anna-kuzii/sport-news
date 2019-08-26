@@ -1,8 +1,6 @@
 const UserQuery = require('../db/query/UserQuery');
-const TokenQuery = require('../db/query/TokenQuery');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const uuid = require("uuid/v4");
 
 require('dotenv').config();
 
@@ -21,17 +19,13 @@ exports.authorization = (req, res) => {
                     last_name: user.last_name,
                     email: user.email
                 };
-                const refreshToken = uuid();
-                TokenQuery.createToken(user._id,refreshToken);
+
                 return  jwt.sign(payload, process.env.SECRET_KEY, {
                         expiresIn: 200
                     }, (err, token) => {
-                    const expires = Math.floor(new Date().getTime() / 1000) + 200;
                         res.json({
                             success: true,
                             accessToken: token,
-                            refreshToken: refreshToken,
-                            expires: expires,
                         });
                     }
                 );

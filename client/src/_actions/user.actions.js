@@ -5,7 +5,6 @@ import {
     instance,
 } from '../axios.instanse'
 import jwt_decode from 'jwt-decode'
-import { _setAuthData } from '../utils/auth.service'
 
 export const userActions = {
     register,
@@ -53,7 +52,7 @@ function login(user) {
         instance.post('/login', user)
             .then(res => {
                 const { accessToken } = res.data;
-                _setAuthData(res);
+                localStorage.setItem('accessToken', accessToken);
                 dispatch(setCurrentUser(jwt_decode(accessToken)));
             }).catch(error =>
             dispatch(loginFailure(error.response.data && error.response.data.message))
