@@ -6,13 +6,13 @@
   width: 100%;
   max-width: 220px;
 
-  & span {
+  span {
     font-size: 14px;
     line-height: 19px;
     color: $placeholder-grey;
   }
 
-  & div {
+  div {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -21,29 +21,22 @@
   }
 }
 
-.facebook-icon {
+.icon {
   display: block;
   width: 20px;
   height: 20px;
-  background: url('../../assets/img/facebook-normal.svg') no-repeat;
   background-position: center;
   background-size: cover;
+  }
+
+.facebook-icon {
+  background: url('../../assets/img/facebook-normal.svg') no-repeat;
 }
 
 .twitter-icon {
-  display: block;
-  width: 20px;
-  height: 20px;
   background: url('../../assets/img/twitter-normal.svg') no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .linkedin-icon {
-  display: block;
-  width: 18px;
-  height: 18px;
   background: url('../../assets/img/linkedin.svg') no-repeat;
-  background-position: center;
-  background-size: cover;
 }
