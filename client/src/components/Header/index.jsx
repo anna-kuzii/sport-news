@@ -1,6 +1,7 @@
 import React from 'react'
 import { Logo } from '../Logo'
 import UserDropdown from '../UserDropdown'
+import { Share } from '../Share'
 import search_icon from '../../assets/img/search-icon.svg'
 
 export const Header = () => (
@@ -12,8 +13,8 @@ export const Header = () => (
       <img src={search_icon} alt='' />
       <input type='text' placeholder='Search by' />
     </div>
-    <div className='social'>
-      Social
+    <div className='share'>
+      <Share />
     </div>
     <div className='profile'>
       <UserDropdown />
@@ -21,6 +22,5 @@ export const Header = () => (
     <div className='language'>
       EN
     </div>
-
   </div>
 )

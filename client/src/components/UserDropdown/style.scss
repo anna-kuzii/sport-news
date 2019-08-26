@@ -107,8 +107,8 @@
       &:hover {
         width: 100%;
         color: $alizarin-crimson;
-        background-color: $mine-shaft-11;
         cursor: url('../../assets/img/cursor-hover.svg'), auto;
+        background-color: $mine-shaft-11;
       }
      }
    }
@@ -126,8 +126,8 @@
     letter-spacing: 1px;
     color: $rose-white;
     text-align: center;
+    text-transform: uppercase;
     background-color: $alizarin-crimson;
     border: 0;
-    text-transform: uppercase;
   }
 }
