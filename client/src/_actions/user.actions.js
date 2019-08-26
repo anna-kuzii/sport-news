@@ -5,7 +5,7 @@ import {
     instance,
 } from '../axios.instanse'
 import jwt_decode from 'jwt-decode'
-
+import { history } from '../_helpers';
 export const userActions = {
     register,
     login
@@ -18,6 +18,7 @@ function register(user) {
             .then(
                 () => {
                     dispatch(registrationSuccess())
+                    history.push('/login');
                 }
             ).catch(error => {
             dispatch(registrationFailure(error.response.data && error.response.data.message))
