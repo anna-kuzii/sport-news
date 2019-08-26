@@ -57,30 +57,6 @@
       display: none;
     }
   }
-
-  .logo-in-sign-up {
-    position: absolute;
-    width: 253px;
-    height: 83px;
-    text-align: center;
-    background: $alizarin-crimson;
-
-    @media screen and (max-width: $mobile-width) {
-      z-index: 2;
-      width: 100%;
-      max-width: $mobile-width;
-    }
-
-    h1 {
-      margin: 0;
-      font-family: Open Sans, serif;
-      font-size: 1.5rem;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 83px;
-      color: $rose-white;
-    }
-  }
 }
 
 .create-account-form,
@@ -186,7 +162,7 @@
     font-style: normal;
     font-weight: 600;
     line-height: 16px;
-    color: $shuttle-gray;
+    color: $ghost;
   }
 
   h2 {
