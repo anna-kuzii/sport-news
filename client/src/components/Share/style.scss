@@ -3,7 +3,8 @@
 .services {
   display: flex;
   justify-content: space-between;
-  width: 220px;
+  width: 100%;
+  max-width: 220px;
 
   & span {
     font-size: 14px;
@@ -15,7 +16,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 120px;
+    width: 100%;
+    max-width: 120px;
   }
 }
 
