@@ -1,7 +1,8 @@
 import React from 'react'
+import { Logo } from '../Logo'
 
 export const Header = () => (
   <div className='header'>
-    <h1>Header</h1>
+    <Logo />
   </div>
 )
