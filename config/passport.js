@@ -22,7 +22,7 @@ passport.use(new LocalStrategy(
     usernameField: 'email',
   },
   function (email, password, done) {
-    UserQuery.findUserOne(email)
+    UserQuery.findUserByEmail(email)
       .then(function (user) {
         if (!user) {
           return done(null, false, {
