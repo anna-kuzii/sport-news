@@ -19,6 +19,7 @@ export function login(state = initialState, action) {
                 error: null,
                 isAuthenticated: !isEmpty(action.payload),
                 user: action.payload,
+                loading: false,
             };
         case userConstants.SET_CURRENT_USER_LOADING:
             return {
@@ -30,6 +31,7 @@ export function login(state = initialState, action) {
             return {
                 ...state,
                 error: action.error,
+                loading: false,
             };
         default:
             return state;
