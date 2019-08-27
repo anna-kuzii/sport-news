@@ -4,14 +4,11 @@ const jwt = require('jsonwebtoken')
 const encrypt = require('./encrypt')
 
 exports.receiveNewPassword = (req, res) => {
-  const { password, confirm_password , userId, token } = req.body
+  const { password, userId, token } = req.body
 
     const errors = validationResult(req)
     if (!errors.isEmpty()) {
         return res.status(422).json({ message: 'Your password must be a-z,A-Z  and at least 5 characters ' })
-    }
-    if(password !== confirm_password) {
-        return res.status(423).json({ message: 'Passwords need to match' })
     }
     UserQuery.findUserId(userId)
     .then(user => {
