@@ -1,17 +1,18 @@
 require('dotenv').config()
 
 Date.prototype.getMonthName = function() {
-  var monthNames = ["January", "February", "March", "April", "May", "June",
+  const monthNames = ["January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
   ];
   return monthNames[this.getMonth()];
 }
 
 const n = new Date();
-const y = n.getFullYear();
-const m = n.getMonthName();
-const d = n.getDate();
-const date = m + ' ' + d + ', ' + y;
+const year = n.getFullYear();
+const month = n.getMonthName();
+const day = n.getDate();
+
+const date = `${month} ${day} , ${year}`;
 exports.sendRegNotification = (user) => {
   const mailOptions = {
     from: '"Sport News" <process.env.USER_EMAIL>',
