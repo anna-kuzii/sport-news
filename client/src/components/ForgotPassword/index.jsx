@@ -1,9 +1,9 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import login_bg from '../../assets/img/register-login-bg.jpg'
-import {Link} from 'react-router-dom'
-import {userActions} from '../../_actions'
-import {connect} from 'react-redux'
-import {Logo} from '../Logo'
+import { Link } from 'react-router-dom'
+import { userActions } from '../../_actions'
+import { connect } from 'react-redux'
+import { Logo } from '../Logo'
 
 class ForgotPassword extends Component {
     constructor(props) {
@@ -24,11 +24,8 @@ class ForgotPassword extends Component {
     handleSubmit(e) {
         e.preventDefault();
         const { email } = this.state
-        const data = {
-          email : email
-        }
 
-        this.props.forgotPassword(data)
+        this.props.forgotPassword({ email })
     }
 
     render() {
@@ -38,7 +35,7 @@ class ForgotPassword extends Component {
             <div className='forgot-password-container'>
                 <div className='container-fluid'>
                     <div className='bg-img'>
-                        <Logo/>
+                        <Logo />
                         <img src={login_bg} alt='background '/>
                     </div>
                     <div className='forgot-password-form'>
