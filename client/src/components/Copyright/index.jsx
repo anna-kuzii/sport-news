@@ -1,5 +1,4 @@
 import React from "react";
-import "./style.scss";
 
 export const Copyright = () => (
   <div className="copyright-container">
