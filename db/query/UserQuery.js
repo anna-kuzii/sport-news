@@ -1,33 +1,39 @@
-const mongoose = require('mongoose');
-const User = require('../models/User');
+const mongoose = require('mongoose')
+const User = require('../models/User')
 
 exports.findUserById = (id, done) => {
   User.findById(id)
     .then((user) => {
       if (user) {
-        return done(null, user);
+        return done(null, user)
       }
-      return done(null, false);
+      return done(null, false)
     })
-    .catch((err) => console.error(err));
-};
+    .catch((err) => console.error(err))
+}
 
 exports.createUser = (user, hashPassword) => {
   const {
     first_name: firstName, last_name: lastName, email,
-  } = user;
+  } = user
   const newUser = new User({
     _id: new mongoose.Types.ObjectId().toHexString(),
     first_name: firstName,
     last_name: lastName,
     email,
     password: hashPassword,
-  });
-  return newUser.save();
-};
+  })
+  return newUser.save()
+}
 
-exports.findUserOne = (email) => User.findOne({ email })
 
 exports.updateUserProfile = (email, newEmail, fullName) => {
   return User.findOneAndUpdate({ email:email }, { first_name:fullName[1], last_name: fullName[0], email:newEmail })
 }
+
+exports.findUserByEmail = (email) => User.findOne({ email })
+
+exports.findUserId = (id) => User.findOne({ _id: id })
+
+exports.UpdateUserPasswordById = (id, password) => User.findOneAndUpdate({ _id: id }, { password: password })
+
