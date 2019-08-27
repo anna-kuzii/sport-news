@@ -10,8 +10,13 @@ export const Header = () => (
       <Logo />
     </div>
     <div className='search-by'>
-      <img src={search_icon} alt='' />
-      <input type='text' placeholder='Search by' />
+      <label htmlFor='search-input'>
+        <img src={search_icon} alt='' />
+      </label>
+      <input
+        type='text'
+        placeholder='Search by'
+        id='search-input' />
     </div>
     <div className='share'>
       <Share />
