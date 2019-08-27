@@ -7,12 +7,12 @@ Date.prototype.getMonthName = function() {
   return monthNames[this.getMonth()];
 }
 
-const n = new Date();
-const year = n.getFullYear();
-const month = n.getMonthName();
-const day = n.getDate();
+const newDate = new Date();
+const year = newDate.getFullYear();
+const month = newDate.getMonthName();
+const day = newDate.getDate();
 
-const date = `${month} ${day} , ${year}`;
+const date = `${month} ${day}, ${year}`;
 exports.sendRegNotification = (user) => {
   const mailOptions = {
     from: '"Sport News" <process.env.USER_EMAIL>',
