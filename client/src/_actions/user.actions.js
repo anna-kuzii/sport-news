@@ -5,10 +5,12 @@ import {
     instance,
 } from '../axios.instanse'
 import jwt_decode from 'jwt-decode'
-import { history } from '../_helpers';
+import {history} from '../_helpers';
+
 export const userActions = {
     register,
-    login
+    login,
+    forgotPassword,
 }
 
 function register(user) {
@@ -52,7 +54,7 @@ function login(user) {
     return dispatch => {
         instance.post('/login', user)
             .then(res => {
-                const { accessToken } = res.data;
+                const {accessToken} = res.data;
                 localStorage.setItem('accessToken', accessToken);
                 dispatch(setCurrentUser(jwt_decode(accessToken)));
             }).catch(error =>
@@ -61,7 +63,7 @@ function login(user) {
     };
 
     function loginFailure(error) {
-    return {
+        return {
             type: userConstants.SET_CURRENT_GET_ERRORS,
             error
         }
@@ -74,3 +76,29 @@ export const setCurrentUser = decoded => {
         payload: decoded,
     };
 };
+
+
+function forgotPassword(email) {
+    return dispatch => {
+        instance.post('/forgotpassword', email)
+            .then(() => {
+                dispatch(forgotPasswordSuccess(email))
+            }).catch(error => {
+            dispatch(forgotPasswordFailure(error.response.data && error.response.data.message))
+        })
+    }
+
+    function forgotPasswordSuccess(email) {
+        return {
+            type: userConstants.FORGOT_PASSWORD_SUCCESS,
+            email,
+        }
+    }
+
+    function forgotPasswordFailure(error) {
+        return {
+            type: userConstants.FORGOT_PASSWORD_FAILURE,
+            error,
+        }
+    }
+}
