@@ -10,19 +10,19 @@ export const NewsOfTheDays = (props) => {
   }
 
   return (
-    <div className='newsofthedayWrapper'>
-      <div className='newsDivider'>
+    <div className='newsoftheday-wrapper'>
+      <div className='news-divider'>
         <p>photo of the day</p>
       </div>
-      <div className='newsBlock'>
+      <div className='news-block'>
         <img src={image} alt='background' />
-        <div className='photoOftheDayTriangle'>
+        <div className='photo-triangle'>
           <p>photo<span><br />of the<br /></span>day</p>
         </div>
-        <div className='textOfNews'>
+        <div className='news-article'>
           <h1 className='title'>{tittle}</h1>
-          <p className='newsText'>{showSeeMoreButton(text, full_news)}</p>
-          <div className='photoCourtesy'>{photo_courtesy}</div>
+          <p className='news-text'>{showSeeMoreButton(text, full_news)}</p>
+          <div className='photo-courtesy'>{photo_courtesy}</div>
         </div>
       </div>
     </div>

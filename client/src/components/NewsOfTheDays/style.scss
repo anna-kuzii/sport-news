@@ -1,4 +1,4 @@
-.newsofthedayWrapper {
+.newsoftheday-wrapper {
   position: relative;
   width: 60%;
   margin: 0 auto;
@@ -7,7 +7,7 @@
     width: 100vw;
   }
 
-  .newsDivider {
+  .news-divider {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,7 +31,7 @@
      }
   }
 
-  .newsBlock {
+  .news-block {
     position: relative;
     width: 100%;
     max-height: 80vh;
@@ -48,7 +48,7 @@
       width: 100%;
     }
 
-    .photoOftheDayTriangle {
+    .photo-triangle {
       position: absolute;
       top: -30px;
       left: -20px;
@@ -80,7 +80,7 @@
       }
     }
 
-    .textOfNews {
+    .news-article {
       position: absolute;
       bottom: 20px;
       width: 100%;
@@ -101,7 +101,7 @@
         line-height: 30px;
       }
 
-      .newsText {
+      .news-text {
         font-family: Open Sans;
         font-size: 14px;
         font-style: normal;
@@ -109,7 +109,7 @@
         line-height: 19px;
       }
 
-      .photoCourtesy {
+      .photo-courtesy {
         font-family: Open Sans;
         font-size: 14px;
         font-style: italic;
