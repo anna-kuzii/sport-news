@@ -3,7 +3,7 @@ import './style.scss'
 import { Link } from 'react-router-dom'
 
 export const NewsOfTheDays = (props) => {
-  const { image, tittle, text, photo_courtesy, full_news } = props
+  const { image, title, text, photo_courtesy, full_news } = props
   function showSeeMoreButton(text, full_news) {
     return text.length <100 ? text
       : <p>{text.slice(0, 60)}<Link to={full_news} className='see-more'> ...</Link></p>
@@ -20,7 +20,7 @@ export const NewsOfTheDays = (props) => {
           <p>photo<span><br />of the<br /></span>day</p>
         </div>
         <div className='news-article'>
-          <h1 className='title'>{tittle}</h1>
+          <h1 className='title'>{title}</h1>
           <p className='news-text'>{showSeeMoreButton(text, full_news)}</p>
           <div className='photo-courtesy'>{photo_courtesy}</div>
         </div>
