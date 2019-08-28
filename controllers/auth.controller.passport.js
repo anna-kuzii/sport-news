@@ -9,7 +9,7 @@ exports.authPassport = (req, res) => {
   passport.authenticate('local', { session: false }, (err, user, info) => {
     if (err || !user) {
       return res.status(400).json({
-        message: info ? info.message : 'Login failed',
+        message: info ? info.message : 'Incorrect user ID or password. Try again.',
         user   : user,
       })
     }
@@ -29,7 +29,7 @@ exports.authPassport = (req, res) => {
           }, (err, token) => {
             res.json({
               success: true,
-              token: token
+              accessToken: token
             });
           }
       );
