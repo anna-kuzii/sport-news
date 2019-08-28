@@ -8,7 +8,7 @@ exports.receiveNewPassword = (req, res) => {
 
     const errors = validationResult(req)
     if (!errors.isEmpty()) {
-        return res.status(422).json({ message: 'Your password must be a-z,A-Z  and at least 5 characters ' })
+        return res.status(422).json({ message: 'Your password must be at least 5 characters ' })
     }
     UserQuery.findUserId(userId)
     .then(user => {
