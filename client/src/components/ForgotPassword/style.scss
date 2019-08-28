@@ -20,6 +20,13 @@
       }
     }
 
+    .forgot-password-error {
+      display: block;
+      font-size: 12px;
+      font-weight: 400;
+      color: $alizarin-crimson;
+    }
+
     .sign-up {
       display: none;
     }
