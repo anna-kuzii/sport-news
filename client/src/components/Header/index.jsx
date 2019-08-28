@@ -9,7 +9,7 @@ export const Header = () => (
     <div className='header-logo'>
       <Logo />
     </div>
-    <div className='search-by'>
+    <div className='search'>
       <label htmlFor='search-input'>
         <img src={search_icon} alt='' />
       </label>
