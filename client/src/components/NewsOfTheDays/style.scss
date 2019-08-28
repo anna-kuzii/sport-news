@@ -1,7 +1,5 @@
-@import '../styles/variables';
-@import '../styles/fonts';
 
-.newsoftheday-wrapper {
+.newsofthedayWrapper {
   position: relative;
   width: 60%;
   margin: 0 auto;
@@ -13,19 +11,13 @@
   .newsDivider {
     display: flex;
     align-items: center;
-
-    hr {
-      width: 100%;
-      padding-bottom: 10px;
-      margin: 0 auto;
-
-      @media screen and (max-width: $mobile-width) {
-        width: 100vw;
-      }
-
-     }
+    justify-content: center;
+    width: 100%;
+    margin: 40px auto;
+    border-bottom: 1px solid $placeholder-grey;
 
     p {
+      position: absolute;
       padding: 10px 30px;
       font-family: Open Sans;
       font-size: 14px;
@@ -33,6 +25,7 @@
       font-weight: bold;
       line-height: 19px;
       white-space: nowrap;
+      background-color: $white;
       border: 1px solid;
       border-color: $placeholder-grey;
       border-radius: 20px;
@@ -45,17 +38,18 @@
     max-height: 80vh;
     margin: 30px auto;
 
+
     @media screen and (max-width: $mobile-width) {
       width: 90%;
       max-width: $mobile-width;
-      margin: 0 auto;
+      margin: 30px auto;
     }
 
     img {
       width: 100%;
     }
 
-    .photoOftheDay-triangle {
+    .photoOftheDayTriangle {
       position: absolute;
       top: -30px;
       left: -20px;
@@ -90,9 +84,10 @@
     .textOfNews {
       position: absolute;
       bottom: 20px;
-      width: 80%;
-      padding: 20px;
+      width: 100%;
+      padding: 10px;
       color: $white;
+      word-wrap: break-word;
 
       @media screen and (max-width: $mobile-width) {
         width: 100%;
