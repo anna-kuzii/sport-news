@@ -1,21 +1,24 @@
-import first_popular from '../../assets/img/first-popular.png'
+import first_comments from '../img/first-comments.png'
+import second_comments from '../img/second-comments.png'
+import third_comments from '../img/third-comments.png'
+
 
 export default [
   {
     id: '1',
-    image: first_popular,
+    image: first_comments,
     title: 'Lorem ipsum',
     text: 'Lorem ipsum dolor sit amet, consectetur',
   },
   {
     id: '2',
-    image: first_popular,
+    image: second_comments,
     title: 'Lorem ipsum',
     text: 'Lorem ipsum dolor sit amet, consectetur',
   },
   {
     id: '3',
-    image: first_popular,
+    image: third_comments,
     title: 'Lorem ipsum',
     text: 'Lorem ipsum dolor sit amet, consectetur',
   },
