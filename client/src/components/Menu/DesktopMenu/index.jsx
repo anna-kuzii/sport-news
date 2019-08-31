@@ -1,241 +1,65 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ButtonToolbar from "react-bootstrap/ButtonToolbar";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from 'react-bootstrap/Dropdown'
+import data from '../menu-item.json';
 
 
-export const DesktopMenu = () =>
-    <div className="desktop-menu-container">
+export class DesktopMenu extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      showSubMenu: false,
+      idItem: []
+    }
+  }
+
+
+  toggleClick = (items) => {
+    console.log('___________________ ', items)
+    {/*<ul>*/}
+      {/*{items.map((item) =>*/}
+        {/*<li key={item.id} onClick={() => this.toggleClick(item.menu)}>*/}
+          {/*<a href='#'>{item.title}</a>*/}
+          {/*/!*{this.state.idItem.includes(item.id) && item.menu && this.renderMenu(item.menu, this.state.showSubMenu)}*!/*/}
+          {/*/!*{console.log('this.state.idItem!! ', this.state.idItem)}*!/*/}
+          {/*{console.log('!!!!!!!!!!!!!!', item)}*/}
+        {/*</li>*/}
+      {/*)}*/}
+    {/*</ul>*/}
+    }
+
+
+  // renderMenu = (items, showItems = true) =>
+  //     <ul>
+  //       {showItems && items.map((item) =>
+  //         <li key={item.id} onClick={() => this.toggleClick(item.menu)}>
+  //           <a href='#'>{item.title}</a>
+  //           {/*{this.state.idItem.includes(item.id) && item.menu && this.renderMenu(item.menu, this.state.showSubMenu)}*/}
+  //           {/*{console.log('this.state.idItem!! ', this.state.idItem)}*/}
+  //           {console.log('!!!!!!!!!!!!!!', item)}
+  //         </li>
+  //       )}
+  //     </ul>
+
+  render() {
+    return (
+      <div className="desktop-menu-container">
         <div className="container">
-            <ButtonToolbar className="toolbar">
-                {['right'].map(direction => (
-                    <DropdownButton
-                        drop={direction}
-                        variant="primary"
-                        title={`NBA`}
-                        id={`dropdown-button-drop-${direction}`}
-                        key={direction}
-                        className="drop-btn"
-                    >
-                        <div className="menu-second-layer">
-                            <DropdownButton
-                                drop={direction}
-                                variant="secondary"
-                                title={` AFC East `}
-                                id={`dropdown-button-drop-${direction}`}
-                                key={direction}
-                                className="second-layer-btn"
-                            >
-                            </DropdownButton>
-
-                            <DropdownButton
-                                drop={direction}
-                                variant="secondary"
-                                title={` AFC North `}
-                                id={`dropdown-button-drop-${direction}`}
-                                key={direction}
-                                className="second-layer-btn"
-                            >
-                            </DropdownButton>
-
-                            <DropdownButton
-                                drop={direction}
-                                variant="secondary"
-                                title={` AFC South `}
-                                id={`dropdown-button-drop-${direction}`}
-                                key={direction}
-                                className="second-layer-btn"
-                            >
-                                <div className="menu-third-layer">
-                                    <Dropdown.Item eventKey="1" className="third-layer-link">Houston</Dropdown.Item>
-                                    <Dropdown.Item eventKey="2"
-                                                   className="third-layer-link">Indianapolis</Dropdown.Item>
-                                    <Dropdown.Item eventKey="3"
-                                                   className="third-layer-link">Jacksonville</Dropdown.Item>
-                                    <Dropdown.Item eventKey="4" className="third-layer-link">Tennessee</Dropdown.Item>
-                                </div>
-                            </DropdownButton>
-
-                            <DropdownButton
-                                drop={direction}
-                                variant="secondary"
-                                title={` AFC West `}
-                                id={`dropdown-button-drop-${direction}`}
-                                key={direction}
-                                className="second-layer-btn"
-                            >
-                            </DropdownButton>
-
-                            <DropdownButton
-                                drop={direction}
-                                variant="secondary"
-                                title={` NFC East `}
-                                id={`dropdown-button-drop-${direction}`}
-                                key={direction}
-                                className="second-layer-btn"
-                            >
-                            </DropdownButton>
-
-                            <DropdownButton
-                                drop={direction}
-                                variant="secondary"
-                                title={` NFC North `}
-                                id={`dropdown-button-drop-${direction}`}
-                                key={direction}
-                                className="second-layer-btn"
-                            >
-                            </DropdownButton>
-
-                            <DropdownButton
-                                drop={direction}
-                                variant="secondary"
-                                title={` NFC South `}
-                                id={`dropdown-button-drop-${direction}`}
-                                key={direction}
-                                className="second-layer-btn"
-                            >
-                            </DropdownButton>
-
-                            <DropdownButton
-                                drop={direction}
-                                variant="secondary"
-                                title={` NFC West `}
-                                id={`dropdown-button-drop-${direction}`}
-                                key={direction}
-                                className="second-layer-btn"
-                            >
-                            </DropdownButton>
-                        </div>
-                    </DropdownButton>
-                ))}
-            </ButtonToolbar>
-
-            <ButtonToolbar className="toolbar">
-                {['right'].map(direction => (
-                    <DropdownButton
-                        drop={direction}
-                        variant="primary"
-                        title={`NFL`}
-                        id={`dropdown-button-drop-NFL`}
-                        key={direction}
-                        className="drop-btn"
-                    >
-                    </DropdownButton>
-                ))}
-            </ButtonToolbar>
-
-            <ButtonToolbar className="toolbar">
-                {['right'].map(direction => (
-                    <DropdownButton
-                        drop={direction}
-                        variant="primary"
-                        title={`MLB`}
-                        id={`dropdown-button-drop-MLB`}
-                        key={direction}
-                        className="drop-btn"
-                    >
-                    </DropdownButton>
-                ))}
-            </ButtonToolbar>
-
-            <ButtonToolbar className="toolbar">
-                {['right'].map(direction => (
-                    <DropdownButton
-                        drop={direction}
-                        variant="primary"
-                        title={`NHL`}
-                        id={`dropdown-button-drop-NHL`}
-                        key={direction}
-                        className="drop-btn"
-                    >
-                    </DropdownButton>
-                ))}
-            </ButtonToolbar>
-
-            <ButtonToolbar className="toolbar">
-                {['right'].map(direction => (
-                    <DropdownButton
-                        drop={direction}
-                        variant="primary"
-                        title={`CBB`}
-                        id={`dropdown-button-drop-CBB`}
-                        key={direction}
-                        className="drop-btn"
-                    >
-                    </DropdownButton>
-                ))}
-            </ButtonToolbar>
-
-            <ButtonToolbar className="toolbar">
-                {['right'].map(direction => (
-                    <DropdownButton
-                        drop={direction}
-                        variant="primary"
-                        title={`CFB`}
-                        id={`dropdown-button-drop-CFB`}
-                        key={direction}
-                        className="drop-btn"
-                    >
-                    </DropdownButton>
-                ))}
-            </ButtonToolbar>
-
-            <ButtonToolbar className="toolbar">
-                {['right'].map(direction => (
-                    <DropdownButton
-                        drop={direction}
-                        variant="primary"
-                        title={`NASCAR`}
-                        id={`dropdown-button-drop-NASCAR`}
-                        key={direction}
-                        className="drop-btn"
-                    >
-                    </DropdownButton>
-                ))}
-            </ButtonToolbar>
-
-            <ButtonToolbar className="toolbar">
-                {['right'].map(direction => (
-                    <DropdownButton
-                        drop={direction}
-                        variant="primary"
-                        title={`GOLF`}
-                        id={`dropdown-button-drop-GOLF`}
-                        key={direction}
-                        className="drop-btn"
-                    >
-                    </DropdownButton>
-                ))}
-            </ButtonToolbar>
-
-            <ButtonToolbar className="toolbar">
-                {['right'].map(direction => (
-                    <DropdownButton
-                        drop={direction}
-                        variant="primary"
-                        title={`SOCCER`}
-                        id={`dropdown-button-drop-SOCCER`}
-                        key={direction}
-                        className="drop-btn"
-                    >
-                    </DropdownButton>
-                ))}
-            </ButtonToolbar>
-
-            <ButtonToolbar className="toolbar">
-                {['right'].map(direction => (
-                    <DropdownButton
-                        drop={direction}
-                        variant="primary"
-                        title={`MORE`}
-                        id={`dropdown-button-drop-MORE`}
-                        key={direction}
-                        className="drop-btn"
-                    >
-                    </DropdownButton>
-                ))}
-            </ButtonToolbar>
-
-
+          <ul>
+            {data.menu.map((item) =>
+              <li key={item.id} onClick={() => this.toggleClick(item.menu)}>
+                <a href='#'>{item.title}</a>
+                {/*{this.state.idItem.includes(item.id) && item.menu && this.renderMenu(item.menu, this.state.showSubMenu)}*/}
+                {/*{console.log('this.state.idItem!! ', this.state.idItem)}*/}
+                {console.log('!!!!!!!!!!!!!!', item)}
+              </li>
+            )}
+          </ul>
+          {console.log('+++++++++++++++')}
         </div>
-    </div>;
+      </div>
+    )
+  }
+}

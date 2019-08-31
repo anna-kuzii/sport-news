@@ -1,0 +1,1658 @@
+{
+  "menu": [
+    {
+      "id": "NBA",
+      "title": "NBA",
+      "menu": [
+        {
+          "id": "NBA_AFC_East",
+          "title": "AFC East",
+          "menu": [
+            {
+              "id": "NBA_AFC_East_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "NBA_AFC_East_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "NBA_AFC_East_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "NBA_AFC_East_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "NBA_AFC_North",
+          "title": "AFC North",
+          "menu": [
+            {
+              "id": "NBA_AFC_North_Tennessee",
+              "title": "Houston"
+            },
+            {
+              "id": "NBA_AFC_North_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "NBA_AFC_North_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "NBA_AFC_North_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "NBA_AFC_South",
+          "title": "AFC South",
+          "menu": [
+            {
+              "id": "NBA_AFC_South_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "NBA_AFC_South_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "NBA_AFC_South_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "NBA_AFC_South_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "NBA_AFC_West",
+          "title": "AFC West",
+          "menu": [
+            {
+              "id": "NBA_AFC_West_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "NBA_AFC_West_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "NBA_AFC_West_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "NBA_AFC_West_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "NBA_NFC_East",
+          "title": "NFC East",
+          "menu": [
+            {
+              "id": "NBA_NFC_East_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "NBA_NFC_East_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "NBA_NFC_East_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "NBA_NFC_East_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "NBA_NFC_North",
+          "title": "NFC North",
+          "menu": [
+            {
+              "id": "NBA_NFC_North_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "NBA_NFC_North_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "NBA_NFC_North_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "NBA_NFC_North_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "NBA_NFC_South",
+          "title": "NFC South",
+          "menu": [
+            {
+              "id": "NBA_NFC_South_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "NBA_NFC_South_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "NBA_NFC_South_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "NBA_NFC_South_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "NBA_NFC_West",
+          "title": "NFC West",
+          "menu": [
+            {
+              "id": "NBA_NFC_West_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "NBA_NFC_West_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "NBA_NFC_West_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "NBA_NFC_West_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "NFL",
+      "title": "NFL",
+      "menu": [
+        {
+          "id": "NFL_AFC_East",
+          "title": "AFC East",
+          "menu": [
+            {
+              "id": "NFL_AFC_East_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "NFL_AFC_East_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "NFL_AFC_East_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "NFL_AFC_East_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "NFL_AFC_North",
+          "title": "AFC North",
+          "menu": [
+            {
+              "id": "NFL_AFC_North_Tennessee",
+              "title": "Houston"
+            },
+            {
+              "id": "NFL_AFC_North_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "NFL_AFC_North_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "NFL_AFC_North_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "NFL_AFC_South",
+          "title": "AFC South",
+          "menu": [
+            {
+              "id": "NFL_AFC_South_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "NFL_AFC_South_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "NFL_AFC_South_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "NFL_AFC_South_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "NFL_AFC_West",
+          "title": "AFC West",
+          "menu": [
+            {
+              "id": "NFL_AFC_West_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "NFL_AFC_West_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "NFL_AFC_West_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "NFL_AFC_West_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "NFL_NFC_East",
+          "title": "NFC East",
+          "menu": [
+            {
+              "id": "NFL_NFC_East_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "NFL_NFC_East_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "NFL_NFC_East_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "NFL_NFC_East_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "NFL_NFC_North",
+          "title": "NFC North",
+          "menu": [
+            {
+              "id": "NFL_NFC_North_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "NFL_NFC_North_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "NFL_NFC_North_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "NFL_NFC_North_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "NFL_NFC_South",
+          "title": "NFC South",
+          "menu": [
+            {
+              "id": "NFL_NFC_South_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "NFL_NFC_South_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "NFL_NFC_South_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "NFL_NFC_South_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "NFL_NFC_West",
+          "title": "NFC West",
+          "menu": [
+            {
+              "id": "NFL_NFC_West_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "NFL_NFC_West_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "NFL_NFC_West_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "NFL_NFC_West_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MLB",
+      "title": "MLB",
+      "menu": [
+        {
+          "id": "MLB_AFC_East",
+          "title": "AFC East",
+          "menu": [
+            {
+              "id": "MLB_AFC_East_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "MLB_AFC_East_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "MLB_AFC_East_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "MLB_AFC_East_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "MLB_AFC_North",
+          "title": "AFC North",
+          "menu": [
+            {
+              "id": "MLB_AFC_North_Tennessee",
+              "title": "Houston"
+            },
+            {
+              "id": "MLB_AFC_North_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "MLB_AFC_North_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "MLB_AFC_North_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "MLB_AFC_South",
+          "title": "AFC South",
+          "menu": [
+            {
+              "id": "MLB_AFC_South_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "MLB_AFC_South_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "MLB_AFC_South_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "MLB_AFC_South_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "MLB_AFC_West",
+          "title": "AFC West",
+          "menu": [
+            {
+              "id": "MLB_AFC_West_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "MLB_AFC_West_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "MLB_AFC_West_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "MLB_AFC_West_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "MLB_NFC_East",
+          "title": "NFC East",
+          "menu": [
+            {
+              "id": "MLB_NFC_East_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "MLB_NFC_East_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "MLB_NFC_East_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "MLB_NFC_East_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "MLB_NFC_North",
+          "title": "NFC North",
+          "menu": [
+            {
+              "id": "MLB_NFC_North_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "MLB_NFC_North_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "MLB_NFC_North_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "MLB_NFC_North_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "MLB_NFC_South",
+          "title": "NFC South",
+          "menu": [
+            {
+              "id": "MLB_NFC_South_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "MLB_NFC_South_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "MLB_NFC_South_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "MLB_NFC_South_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "MLB_NFC_West",
+          "title": "NFC West",
+          "menu": [
+            {
+              "id": "MLB_NFC_West_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "MLB_NFC_West_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "MLB_NFC_West_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "MLB_NFC_West_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "NHL",
+      "title": "NHL",
+      "menu": [
+        {
+          "id": "NHL_AFC_East",
+          "title": "AFC East",
+          "menu": [
+            {
+              "id": "NHL_AFC_East_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "NHL_AFC_East_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "NHL_AFC_East_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "NHL_AFC_East_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "NHL_AFC_North",
+          "title": "AFC North",
+          "menu": [
+            {
+              "id": "NHL_AFC_North_Tennessee",
+              "title": "Houston"
+            },
+            {
+              "id": "NHL_AFC_North_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "NHL_AFC_North_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "NHL_AFC_North_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "NHL_AFC_South",
+          "title": "AFC South",
+          "menu": [
+            {
+              "id": "NHL_AFC_South_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "NHL_AFC_South_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "NHL_AFC_South_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "NHL_AFC_South_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "NHL_AFC_West",
+          "title": "AFC West",
+          "menu": [
+            {
+              "id": "NHL_AFC_West_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "NHL_AFC_West_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "NHL_AFC_West_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "NHL_AFC_West_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "NHL_NFC_East",
+          "title": "NFC East",
+          "menu": [
+            {
+              "id": "NHL_NFC_East_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "NHL_NFC_East_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "NHL_NFC_East_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "NHL_NFC_East_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "NHL_NFC_North",
+          "title": "NFC North",
+          "menu": [
+            {
+              "id": "NHL_NFC_North_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "NHL_NFC_North_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "NHL_NFC_North_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "NHL_NFC_North_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "NHL_NFC_South",
+          "title": "NFC South",
+          "menu": [
+            {
+              "id": "NHL_NFC_South_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "NHL_NFC_South_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "NHL_NFC_South_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "NHL_NFC_South_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "NHL_NFC_West",
+          "title": "NFC West",
+          "menu": [
+            {
+              "id": "NHL_NFC_West_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "NHL_NFC_West_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "NHL_NFC_West_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "NHL_NFC_West_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CBB",
+      "title": "CBB",
+      "menu": [
+        {
+          "id": "CBB_AFC_East",
+          "title": "AFC East",
+          "menu": [
+            {
+              "id": "CBB_AFC_East_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "CBB_AFC_East_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "CBB_AFC_East_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "CBB_AFC_East_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "CBB_AFC_North",
+          "title": "AFC North",
+          "menu": [
+            {
+              "id": "CBB_AFC_North_Tennessee",
+              "title": "Houston"
+            },
+            {
+              "id": "CBB_AFC_North_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "CBB_AFC_North_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "CBB_AFC_North_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "CBB_AFC_South",
+          "title": "AFC South",
+          "menu": [
+            {
+              "id": "CBB_AFC_South_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "CBB_AFC_South_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "CBB_AFC_South_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "CBB_AFC_South_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "CBB_AFC_West",
+          "title": "AFC West",
+          "menu": [
+            {
+              "id": "CBB_AFC_West_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "CBB_AFC_West_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "CBB_AFC_West_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "CBB_AFC_West_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "CBB_NFC_East",
+          "title": "NFC East",
+          "menu": [
+            {
+              "id": "CBB_NFC_East_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "CBB_NFC_East_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "CBB_NFC_East_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "CBB_NFC_East_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "CBB_NFC_North",
+          "title": "NFC North",
+          "menu": [
+            {
+              "id": "CBB_NFC_North_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "CBB_NFC_North_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "CBB_NFC_North_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "CBB_NFC_North_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "CBB_NFC_South",
+          "title": "NFC South",
+          "menu": [
+            {
+              "id": "CBB_NFC_South_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "CBB_NFC_South_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "CBB_NFC_South_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "CBB_NFC_South_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "CBB_NFC_West",
+          "title": "NFC West",
+          "menu": [
+            {
+              "id": "CBB_NFC_West_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "CBB_NFC_West_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "CBB_NFC_West_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "CBB_NFC_West_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CFB",
+      "title": "CFB",
+      "menu": [
+        {
+          "id": "CFB_AFC_East",
+          "title": "AFC East",
+          "menu": [
+            {
+              "id": "CFB_AFC_East_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "CFB_AFC_East_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "CFB_AFC_East_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "CFB_AFC_East_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "CFB_AFC_North",
+          "title": "AFC North",
+          "menu": [
+            {
+              "id": "CFB_AFC_North_Tennessee",
+              "title": "Houston"
+            },
+            {
+              "id": "CFB_AFC_North_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "CFB_AFC_North_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "CFB_AFC_North_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "CFB_AFC_South",
+          "title": "AFC South",
+          "menu": [
+            {
+              "id": "CFB_AFC_South_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "CFB_AFC_South_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "CFB_AFC_South_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "CFB_AFC_South_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "CFB_AFC_West",
+          "title": "AFC West",
+          "menu": [
+            {
+              "id": "CFB_AFC_West_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "CFB_AFC_West_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "CFB_AFC_West_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "CFB_AFC_West_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "CFB_NFC_East",
+          "title": "NFC East",
+          "menu": [
+            {
+              "id": "CFB_NFC_East_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "CFB_NFC_East_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "CFB_NFC_East_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "CFB_NFC_East_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "CFB_NFC_North",
+          "title": "NFC North",
+          "menu": [
+            {
+              "id": "CFB_NFC_North_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "CFB_NFC_North_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "CFB_NFC_North_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "CFB_NFC_North_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "CFB_NFC_South",
+          "title": "NFC South",
+          "menu": [
+            {
+              "id": "CFB_NFC_South_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "CFB_NFC_South_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "CFB_NFC_South_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "CFB_NFC_South_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "CFB_NFC_West",
+          "title": "NFC West",
+          "menu": [
+            {
+              "id": "CFB_NFC_West_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "CFB_NFC_West_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "CFB_NFC_West_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "CFB_NFC_West_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "NASCAR",
+      "title": "NASCAR",
+      "menu": [
+        {
+          "id": "NASCAR_AFC_East",
+          "title": "AFC East",
+          "menu": [
+            {
+              "id": "NASCAR_AFC_East_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "NASCAR_AFC_East_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "NASCAR_AFC_East_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "NASCAR_AFC_East_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "NASCAR_AFC_North",
+          "title": "AFC North",
+          "menu": [
+            {
+              "id": "NASCAR_AFC_North_Tennessee",
+              "title": "Houston"
+            },
+            {
+              "id": "NASCAR_AFC_North_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "NASCAR_AFC_North_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "NASCAR_AFC_North_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "NASCAR_AFC_South",
+          "title": "AFC South",
+          "menu": [
+            {
+              "id": "NASCAR_AFC_South_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "NASCAR_AFC_South_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "NASCAR_AFC_South_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "NASCAR_AFC_South_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "NASCAR_AFC_West",
+          "title": "AFC West",
+          "menu": [
+            {
+              "id": "NASCAR_AFC_West_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "NASCAR_AFC_West_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "NASCAR_AFC_West_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "NASCAR_AFC_West_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "NASCAR_NFC_East",
+          "title": "NFC East",
+          "menu": [
+            {
+              "id": "NASCAR_NFC_East_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "NASCAR_NFC_East_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "NASCAR_NFC_East_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "NASCAR_NFC_East_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "NASCAR_NFC_North",
+          "title": "NFC North",
+          "menu": [
+            {
+              "id": "NASCAR_NFC_North_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "NASCAR_NFC_North_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "NASCAR_NFC_North_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "NASCAR_NFC_North_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "NASCAR_NFC_South",
+          "title": "NFC South",
+          "menu": [
+            {
+              "id": "NASCAR_NFC_South_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "NASCAR_NFC_South_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "NASCAR_NFC_South_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "NASCAR_NFC_South_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "NASCAR_NFC_West",
+          "title": "NFC West",
+          "menu": [
+            {
+              "id": "NASCAR_NFC_West_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "NASCAR_NFC_West_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "NASCAR_NFC_West_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "NASCAR_NFC_West_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GOLF",
+      "title": "GOLF",
+      "menu": [
+        {
+          "id": "GOLF_AFC_East",
+          "title": "AFC East",
+          "menu": [
+            {
+              "id": "GOLF_AFC_East_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "GOLF_AFC_East_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "GOLF_AFC_East_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "GOLF_AFC_East_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "GOLF_AFC_North",
+          "title": "AFC North",
+          "menu": [
+            {
+              "id": "GOLF_AFC_North_Tennessee",
+              "title": "Houston"
+            },
+            {
+              "id": "GOLF_AFC_North_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "GOLF_AFC_North_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "GOLF_AFC_North_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "GOLF_AFC_South",
+          "title": "AFC South",
+          "menu": [
+            {
+              "id": "GOLF_AFC_South_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "GOLF_AFC_South_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "GOLF_AFC_South_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "GOLF_AFC_South_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "GOLF_AFC_West",
+          "title": "AFC West",
+          "menu": [
+            {
+              "id": "GOLF_AFC_West_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "GOLF_AFC_West_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "GOLF_AFC_West_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "GOLF_AFC_West_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "GOLF_NFC_East",
+          "title": "NFC East",
+          "menu": [
+            {
+              "id": "GOLF_NFC_East_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "GOLF_NFC_East_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "GOLF_NFC_East_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "GOLF_NFC_East_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "GOLF_NFC_North",
+          "title": "NFC North",
+          "menu": [
+            {
+              "id": "GOLF_NFC_North_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "GOLF_NFC_North_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "GOLF_NFC_North_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "GOLF_NFC_North_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "GOLF_NFC_South",
+          "title": "NFC South",
+          "menu": [
+            {
+              "id": "GOLF_NFC_South_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "GOLF_NFC_South_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "GOLF_NFC_South_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "GOLF_NFC_South_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "GOLF_NFC_West",
+          "title": "NFC West",
+          "menu": [
+            {
+              "id": "GOLF_NFC_West_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "GOLF_NFC_West_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "GOLF_NFC_West_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "GOLF_NFC_West_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SOCCER",
+      "title": "SOCCER",
+      "menu": [
+        {
+          "id": "SOCCER_AFC_East",
+          "title": "AFC East",
+          "menu": [
+            {
+              "id": "SOCCER_AFC_East_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "SOCCER_AFC_East_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "SOCCER_AFC_East_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "SOCCER_AFC_East_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "SOCCER_AFC_North",
+          "title": "AFC North",
+          "menu": [
+            {
+              "id": "SOCCER_AFC_North_Tennessee",
+              "title": "Houston"
+            },
+            {
+              "id": "SOCCER_AFC_North_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "SOCCER_AFC_North_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "SOCCER_AFC_North_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "SOCCER_AFC_South",
+          "title": "AFC South",
+          "menu": [
+            {
+              "id": "SOCCER_AFC_South_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "SOCCER_AFC_South_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "SOCCER_AFC_South_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "SOCCER_AFC_South_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "SOCCER_AFC_West",
+          "title": "AFC West",
+          "menu": [
+            {
+              "id": "SOCCER_AFC_West_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "SOCCER_AFC_West_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "SOCCER_AFC_West_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "SOCCER_AFC_West_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "SOCCER_NFC_East",
+          "title": "NFC East",
+          "menu": [
+            {
+              "id": "SOCCER_NFC_East_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "SOCCER_NFC_East_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "SOCCER_NFC_East_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "SOCCER_NFC_East_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "SOCCER_NFC_North",
+          "title": "NFC North",
+          "menu": [
+            {
+              "id": "SOCCER_NFC_North_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "SOCCER_NFC_North_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "SOCCER_NFC_North_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "SOCCER_NFC_North_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "SOCCER_NFC_South",
+          "title": "NFC South",
+          "menu": [
+            {
+              "id": "SOCCER_NFC_South_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "SOCCER_NFC_South_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "SOCCER_NFC_South_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "SOCCER_NFC_South_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        },
+        {
+          "id": "SOCCER_NFC_West",
+          "title": "NFC West",
+          "menu": [
+            {
+              "id": "SOCCER_NFC_West_Houston",
+              "title": "Houston"
+            },
+            {
+              "id": "SOCCER_NFC_West_Indianapolis",
+              "title": "Indianapolis"
+            },
+            {
+              "id": "SOCCER_NFC_West_Jacksonville",
+              "title": "Jacksonville"
+            },
+            {
+              "id": "SOCCER_NFC_West_Tennessee",
+              "title": "Tennessee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MORE",
+      "title": "MORE"
+    },
+    {
+      "id": "LIFESTYLE",
+      "title": "LIFESTYLE"
+    },
+    {
+      "id": "DEALBOOK",
+      "title": "DEALBOOK"
+    },
+    {
+      "id": "VIDEO",
+      "title": "VIDEO"
+    }
+  ]
+}

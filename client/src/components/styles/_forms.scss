@@ -9,14 +9,27 @@
   .create-account-form,
   .log-in-form,
   .forgot-password-form {
+    margin: 0 20px;
+
+    @media screen and (max-width: $mobile-width) {
+      margin: 0;
+    }
     // sass-lint:disable-block nesting-depth
     .btn-primary {
+
+      &:active {
+        &:focus {
+          box-shadow: none;
+        }
+      }
+
       &:hover,
       &:active,
       &:focus,
       &:focus-within {
-        background-color: $crimson;
-        border-color: $crimson;
+        background-color: $alizarin-crimson;
+        border-color: $alizarin-crimson;
+        outline: none;
         box-shadow: none;
       }
     }
@@ -44,30 +57,6 @@
       display: none;
     }
   }
-
-  .logo-in-sign-up {
-    position: absolute;
-    width: 253px;
-    height: 83px;
-    text-align: center;
-    background: $crimson;
-
-    @media screen and (max-width: $mobile-width) {
-      z-index: 2;
-      width: 100%;
-      max-width: $mobile-width;
-    }
-
-    h1 {
-      margin: 0;
-      font-family: Open Sans, serif;
-      font-size: 1.5rem;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 83px;
-      color: $rose-white;
-    }
-  }
 }
 
 .create-account-form,
@@ -81,6 +70,15 @@
   height: 100%;
   max-width: 800px;
 
+  input {
+    padding: 0 15px;
+    font-family: Open Sans, serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+  }
+
   @media screen and (max-width: $mobile-width) {
     position: absolute;
     z-index: 1;
@@ -89,7 +87,8 @@
   }
 }
 
-.get-started {
+.get-started,
+.log-in {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -127,12 +126,12 @@
     font-style: normal;
     font-weight: 600;
     line-height: 16px;
-    color: $crimson;
+    color: $alizarin-crimson;
     text-align: center;
     text-transform: capitalize;
     cursor: pointer;
     background-color: $white;
-    border: 1px solid $crimson;
+    border: 1px solid $alizarin-crimson;
     border-radius: 0;
     box-sizing: border-box;
     transition: 1s;
@@ -140,7 +139,7 @@
     &:hover,
     &:active {
       color: $white;
-      background: $crimson;
+      background: $alizarin-crimson;
     }
   }
 }
@@ -150,11 +149,11 @@
 .forgot-password-wrapper {
   width: 100%;
   max-width: 400px;
-  margin: 200px 0 0;
+  margin: 30% 20px 0;
 
   @media screen and (max-width: $mobile-width) {
     max-width: 80%;
-    margin: 200px 0 0;
+    margin: 30% 0 0;
   }
 
   ::placeholder {
@@ -163,7 +162,7 @@
     font-style: normal;
     font-weight: 600;
     line-height: 16px;
-    color: $shuttle-gray;
+    color: $ghost;
   }
 
   h2 {
@@ -184,30 +183,33 @@
   }
 }
 
-.btn-primary {
+.btn-primary,
+.update-profile {
   display: inline-block;
-  width: 400px;
+  max-width: 400px;
+  width: 100%;
   height: 42px;
   color: $white;
   text-transform: capitalize;
   cursor: pointer;
-  background-color: $crimson;
-  border: 1px solid $crimson;
-  border-radius: 0;
+  background-color: $alizarin-crimson;
+  border: 0;
   outline: 0;
   box-sizing: border-box;
 
   @media screen and (max-width: $mobile-width) {
     width: 100%;
+    max-width: 100%;
     margin-top: 30px;
   }
 
   &:hover {
-    background: $crimson;
+    background-color: $alizarin-crimson-hover !important;
   }
 }
 
-.email-wrapper {
+.email-wrapper,
+.update-input-wrapper {
   label {
     width: 50%;
     font-family: Roboto, serif;
@@ -228,8 +230,7 @@
   input {
     width: 100%;
     height: 40px;
-    padding-left: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border: 1px solid $mischka;
     outline: 0;
     box-sizing: border-box;
