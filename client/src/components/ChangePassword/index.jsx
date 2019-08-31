@@ -71,7 +71,7 @@ class ChangePassword extends Component {
               />
               <span className='help-block'>{validation.old_password.message}</span>
             </div>
-            <div className={validation.new_password.isInvalid ? 'has-error' : 'undefined'}>
+            <div className={validation.new_password.isInvalid ? 'has-error' : 'valid'}>
               <label htmlFor='new-password-input'>new password</label>
               <input
                 type={type}
