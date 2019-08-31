@@ -1,5 +1,5 @@
 import React from 'react'
-import SingleNews from '../SingleNews'
+import NewsBlock from '../SingleNews'
 
 
 export const MostPopularComments = (props) => {
@@ -12,8 +12,8 @@ export const MostPopularComments = (props) => {
         <hr />
       </div>
       <div className='news-block'>
-        <SingleNews
-          singleNews={news}
+        <NewsBlock
+          newsBlock={news}
         />
       </div>
     </div>
