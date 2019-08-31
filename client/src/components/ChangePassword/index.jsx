@@ -25,11 +25,11 @@ class ChangePassword extends Component {
   }
 
   handleShowHide=(e)=> {
-    const states = this.state
+    const { type } = this.state
     e.preventDefault()
     e.stopPropagation()
     this.setState(()=> ({
-      type: states.type === 'input' ? 'password' : 'input',
+      type: type === 'input' ? 'password' : 'input',
     }))
   }
 
@@ -39,9 +39,7 @@ class ChangePassword extends Component {
 
   handleSubmit(e) {
     e.preventDefault()
-
-    const state = this.state
-    const validation = this.validator.validate(state)
+    const validation = this.validator.validate(this.state)
     this.setState((prevState) => ({
       ...prevState,
       validation: this.validator.validate(prevState),
@@ -54,46 +52,48 @@ class ChangePassword extends Component {
 
 
   render() {
-    const states = this.state
+    const { type, old_password, new_password, validations } = this.state
     const validation = this.submitted
-      ? this.validator.validate(states)
-      : states.validation
+      ? this.validator.validate(this.state)
+      : validations
     return (
       <div className='change-password-wrapper'>
-        <div className='change-password-form'>
-          <div className={validation.old_password.isInvalid ? 'has-error' : 'undefined'}>
-            <label htmlFor='password-input'>old Password</label>
-            <input
-              type={states.type}
-              id='password-input'
-              name='old_password'
-              value={states.old_password}
-              onChange={this.handleChange}
-            />
-            <span className='help-block'>{validation.old_password.message}</span>
+        <div className='change-password'>
+          <div className='change-password-form'>
+            <div className={validation.old_password.isInvalid ? 'has-error' : 'undefined'}>
+              <label htmlFor='password-input'>old Password</label>
+              <input
+                type={type}
+                id='password-input'
+                name='old_password'
+                value={old_password}
+                onChange={this.handleChange}
+              />
+              <span className='help-block'>{validation.old_password.message}</span>
+            </div>
+            <div className={validation.new_password.isInvalid ? 'has-error' : 'undefined'}>
+              <label htmlFor='new-password-input'>new password</label>
+              <input
+                type={type}
+                id='new-password-input'
+                name='new_password'
+                value={new_password}
+                onChange={this.handleChange}
+              />
+              <span className='help-block'>{validation.new_password.message}</span>
+              <span
+                className='password-show'
+                role='presentation'
+                onClick={this.handleShowHide}
+              ><img src={eyeicon} alt='show/hide icon' /></span>
+            </div>
           </div>
-          <div className={validation.new_password.isInvalid ? 'has-error' : 'undefined'}>
-            <label htmlFor='new-password-input'>new password</label>
-            <input
-              type={states.type}
-              id='new-password-input'
-              name='new_password'
-              value={states.new_password}
-              onChange={this.handleChange}
-            />
-            <span className='help-block'>{validation.new_password.message}</span>
-            <span
-              className='password-show'
-              role='presentation'
-              onClick={this.handleShowHide}
-            ><img src={eyeicon} alt='show/hide icon' /></span>
-          </div>
+          <button
+            type='button'
+            onClick={this.handleSubmit}
+            className='change-password-btn'
+          >CHANGE PASSWORD</button>
         </div>
-        <button
-          type='button'
-          onClick={this.handleSubmit}
-          className='change-password-btn'
-        >CHANGE PASSWORD</button>
       </div>
     )
   }
