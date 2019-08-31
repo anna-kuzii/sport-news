@@ -1,0 +1,10 @@
+.home-page-wrapper {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0;
+  margin: auto;
+  .most-container {
+    display: flex;
+    flex-direction: row;
+  }
+}
