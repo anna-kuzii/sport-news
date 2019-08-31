@@ -1,5 +1,4 @@
 const express = require('express');
-const { check } = require('express-validator');
 const cors = require('cors');
 
 const registerController = require('../controllers/register_controller');
