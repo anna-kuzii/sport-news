@@ -3,7 +3,6 @@ import hover_arrow from '../../assets/img/news-hover-arrow.svg'
 import { Link } from 'react-router-dom'
 
 export default function SingleNews({ singleNews }) {
-  console.log(singleNews)
   return (
     singleNews.map(element => (
       <div className='single-news' key={element.id}>
