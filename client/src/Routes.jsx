@@ -8,6 +8,7 @@ import { ForgotPassword } from './components/ForgotPassword'
 import { Header } from './components/Header'
 import { Home } from './components/Home'
 import { UpdateProfile } from './components/UpdateProfile'
+import { Footer } from './components/Footer';
 
 export default class Routes extends Component {
   render() {
@@ -21,6 +22,9 @@ export default class Routes extends Component {
             exact path='/'
             component={Home}
           />
+          <Switch>
+            <Footer />
+          </Switch>
         </Route>
         <Route path='/updateprofile' component={UpdateProfile} />
         <Route path='/register' component={Register} />

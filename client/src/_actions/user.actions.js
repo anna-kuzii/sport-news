@@ -11,6 +11,7 @@ export const userActions = {
     register,
     login,
     forgotPassword,
+    subscription,
 }
 
 function register(user) {
@@ -102,3 +103,30 @@ function forgotPassword(email) {
         }
     }
 }
+
+function subscription(email) {
+    return dispatch => {
+        debugger
+        instance.post('/subscription', email)
+            .then(() => {
+                dispatch(subscriptionSuccess(email))
+            }).catch(error => {
+            dispatch(subscriptionFailure(error.response.data && error.response.data.message))
+        })
+    }
+
+    function subscriptionSuccess(email) {
+        return {
+            type: userConstants.SUBSCRIPTION_SUCCESS,
+            email,
+        }
+    }
+
+    function subscriptionFailure(error) {
+        return {
+            type: userConstants.SUBSCRIPTION_FAILURE,
+            error,
+        }
+    }
+}
+
