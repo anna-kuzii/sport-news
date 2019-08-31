@@ -16,5 +16,6 @@ exports.sendForgotPasswordEmail = (req, res) => {
       const url = `${process.env.RESET_PASSWORD_URL}/${user._id}/${token}`
       //TODO : add a beatifull email
       sendEmail.sendEmail(forgotPasswordEmail.forgotPasswordTemplate(user, url))
+        res.status(200).send('email send successful')
     })
 }

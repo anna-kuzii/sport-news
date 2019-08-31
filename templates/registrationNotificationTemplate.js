@@ -1,5 +1,18 @@
 require('dotenv').config()
 
+Date.prototype.getMonthName = function() {
+  const monthNames = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
+  return monthNames[this.getMonth()];
+}
+
+const date= new Date();
+const year = date.getFullYear();
+const month = date.getMonthName();
+const day = date.getDate();
+
+const currentDate = `${month} ${day}, ${year}`;
 exports.sendRegNotification = (user) => {
   const mailOptions = {
     from: '"Sport News" <process.env.USER_EMAIL>',
@@ -9,7 +22,7 @@ exports.sendRegNotification = (user) => {
                 <tbody style="font-size: 24px">
                     <tr>
                         <td style="color:#000000;font-style:normal;font-family: Open Sans,sans-serif;text-align:center;font-weight:600;">
-                            <p style="margin:50px 0 50px">Hello! You have successfully registered to Sport News <br> March 21, 2019</p>
+                            <p style="margin:50px 0 50px">Hello! You have successfully registered to Sport News <br><span>  ${ currentDate }</span></p>
                         </td>
                     </tr>
                     <table style="background:#f9f9fb;width: 100%;padding: 0 45px 50px;">
