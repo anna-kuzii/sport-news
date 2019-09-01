@@ -1,8 +1,11 @@
 import React from 'react'
-
+import { NewsSlider } from '../NewsSlider'
+import SliderArticles from '../../assets/data/slider'
 
 export const Home = () => (
   <div className='home-page'>
-    <h1>Content</h1>
+    <NewsSlider
+      articles={SliderArticles}
+    />
   </div>
 )

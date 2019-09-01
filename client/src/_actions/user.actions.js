@@ -57,6 +57,7 @@ function login(user) {
                 const {accessToken} = res.data;
                 localStorage.setItem('accessToken', accessToken);
                 dispatch(setCurrentUser(jwt_decode(accessToken)));
+                history.push('/');
             }).catch(error =>
             dispatch(loginFailure(error.response.data && error.response.data.message))
         );
