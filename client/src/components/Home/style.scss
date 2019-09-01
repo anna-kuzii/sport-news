@@ -6,9 +6,11 @@
   margin: auto;
   background: $concrete;
 
+
   .most-container {
     width: 100%;
     max-width: 835px;
+    margin-top: 200px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

@@ -7,7 +7,9 @@ import MostComments from '../../assets/data/MostCommentsNewsList'
 
 export const Home = () => (
   <div className='home-page-wrapper'>
-    <NewsSlider />
+    <div className='slider-container'>
+      <NewsSlider />
+    </div>
     <div className='most-container'>
       <MostPopularComments
         block_title='most popular'
@@ -19,4 +21,4 @@ export const Home = () => (
       />
     </div>
   </div>
-
+)
