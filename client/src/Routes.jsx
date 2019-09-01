@@ -8,6 +8,7 @@ import { ForgotPassword } from './components/ForgotPassword'
 import { Header } from './components/Header'
 import { Home } from './components/Home'
 import { UpdateProfile } from './components/UpdateProfile'
+import { ChangePassword } from './components/ChangePassword'
 
 export default class Routes extends Component {
   render() {
@@ -22,6 +23,7 @@ export default class Routes extends Component {
             component={Home}
           />
         </Route>
+        <Route path='/changepassword' component={ChangePassword} />
         <Route path='/updateprofile' component={UpdateProfile} />
         <Route path='/register' component={Register} />
         <Route path='/login' component={Login} />

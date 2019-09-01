@@ -52,15 +52,14 @@ class ChangePassword extends Component {
 
 
   render() {
-    const { type, old_password, new_password, validations } = this.state
-    const validation = this.submitted
-      ? this.validator.validate(this.state)
-      : validations
+    const { type, old_password, new_password, validation, submitted } = this.state
+    const validations = submitted ? this.validator.validate(this.state) : validation
+
     return (
       <div className='change-password-wrapper'>
         <div className='change-password'>
           <div className='change-password-form'>
-            <div className={validation.old_password.isInvalid ? 'has-error' : 'undefined'}>
+            <div className={validations.old_password.isInvalid ? 'has-error' : 'undefined'}>
               <label htmlFor='password-input'>old Password</label>
               <input
                 type={type}
@@ -69,9 +68,9 @@ class ChangePassword extends Component {
                 value={old_password}
                 onChange={this.handleChange}
               />
-              <span className='help-block'>{validation.old_password.message}</span>
+              <span className='help-block'>{validations.old_password.message}</span>
             </div>
-            <div className={validation.new_password.isInvalid ? 'has-error' : 'valid'}>
+            <div className={validations.new_password.isInvalid ? 'has-error' : 'valid'}>
               <label htmlFor='new-password-input'>new password</label>
               <input
                 type={type}
@@ -80,7 +79,7 @@ class ChangePassword extends Component {
                 value={new_password}
                 onChange={this.handleChange}
               />
-              <span className='help-block'>{validation.new_password.message}</span>
+              <span className='help-block'>{validations.new_password.message}</span>
               <span
                 className='password-show'
                 role='presentation'
