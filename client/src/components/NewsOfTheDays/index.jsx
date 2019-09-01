@@ -1,10 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 export const NewsOfTheDays = (props) => {
-  const { image, title, text, photo_courtesy, full_news } = props
+  const {image, title, text, photo_courtesy, full_news} = props
+
   function showSeeMoreButton(text, full_news) {
-    return text.length <100 ? text
+    return text.length < 100 ? text
       : <p>{text.slice(0, 60)}<Link to={full_news} className='see-more'> ...</Link></p>
   }
 
@@ -14,9 +15,9 @@ export const NewsOfTheDays = (props) => {
         <p>photo of the day</p>
       </div>
       <div className='news-block'>
-        <img src={image} alt='background' />
+        <img src={image} alt='background'/>
         <div className='photo-triangle'>
-          <p>photo<span><br />of the<br /></span>day</p>
+          <p>photo<span><br/>of the<br/></span>day</p>
         </div>
         <div className='news-article'>
           <h1 className='title'>{title}</h1>

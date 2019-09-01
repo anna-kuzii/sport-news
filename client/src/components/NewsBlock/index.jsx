@@ -2,16 +2,14 @@ import React from 'react'
 import hover_arrow from '../../assets/img/news-hover-arrow.svg'
 import { Link } from 'react-router-dom'
 
-export default function SingleNews({ singleNews }) {
+export default function NewsBlock({ newsBlock }) {
   return (
-    singleNews.map(element => (
-      <div className='single-news' key={element.id}>
-        <div className='single-news-logo'>
-          <h2>{element.logo}</h2>
-        </div>
-        <img src={element.image} alt='Single news' />
+    newsBlock.map(element => (
+      <div className='news-block' key={element.id}>
+        <img src={element.image} alt='News block' />
         <div key={element.id}>
           <h4>{element.title}</h4>
+          <p>{element.text}</p>
         </div>
         <Link>
           <img

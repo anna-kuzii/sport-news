@@ -1,5 +1,5 @@
 .home-page-wrapper {
-  height: 100vh;
+  height: auto;
   width: 100%;
   max-width: 1440px;
   padding: 0;
@@ -12,5 +12,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .breakdown-container {
+    width: 100%;
+    max-width: 835px;
+    display: flex;
+    flex-direction: row;
   }
 }

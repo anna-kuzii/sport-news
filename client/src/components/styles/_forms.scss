@@ -252,3 +252,28 @@
     }
   }
 }
+
+// News divider
+
+.news-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 40px auto;
+  border-bottom: 1px solid $placeholder-grey;
+
+  p {
+    position: absolute;
+    padding: 10px 30px;
+    font-family: Open Sans, serif;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    white-space: nowrap;
+    background-color: $white;
+    border: 1px solid $placeholder-grey;
+    border-radius: 20px;
+    text-transform: uppercase;
+  }
+}
