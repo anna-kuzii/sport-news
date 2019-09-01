@@ -24,9 +24,12 @@ class Footer extends Component {
     const { email } = this.state;
 
     this.props.subscription({ email });
-  }            
+  }
+
   render() {
+    
     const { email } = this.state;
+
     return (
       <footer className="footer-container">
         <div className="footer-item">
