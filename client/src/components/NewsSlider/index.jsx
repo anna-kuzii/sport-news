@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import SliderArticles from '../../assets/data/slider'
+import articles from '../../assets/data/slider'
 import hover_arrow from '../../assets/img/news-hover-arrow.svg'
 
 export class NewsSlider extends Component {
@@ -47,16 +47,17 @@ export class NewsSlider extends Component {
 
   render() {
     const { currentArticle } = this.state
+    const { articles } = this.props
 
     const arr = [ 1, 2, 3, 4 ]
     return (
       <div >
         <div className='news-slider-container'>
-          <img src={SliderArticles[currentArticle - 1].img} alt='main article' />
+          <img src={articles[currentArticle - 1].img} alt='main article' />
           <div className='news-info'>
             <p className='publish-time'>Published / 20.09.2019</p>
-            <p className='title'>{SliderArticles[currentArticle - 1].title}</p>
-            <p className='news-text'>{SliderArticles[currentArticle - 1].text}</p>
+            <p className='title'>{articles[currentArticle - 1].title}</p>
+            <p className='news-text'>{articles[currentArticle - 1].text}</p>
             <button className='more-button'>More</button>
           </div>
           <div className='slider-controller'>
@@ -85,9 +86,9 @@ export class NewsSlider extends Component {
         <div className='sub-articles-container'>
           {arr.map(element =>(
             <div className='sub-article' onClick={() =>this.handleClick(element)}>
-              <img src={SliderArticles[element - 1].img} alt='sub article' />
+              <img src={articles[element - 1].img} alt='sub article' />
               <p className='sub-article-title'> Lorem ipsum </p>
-              <p className='sub-article-text'>{SliderArticles[element - 1].title}  </p>
+              <p className='sub-article-text'>{articles[element - 1].title}  </p>
               <img
                 src={hover_arrow}
                 alt='hover arrow'
