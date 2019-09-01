@@ -47,6 +47,7 @@
       width: 37.5%;
       height: 35px;
       color: $white;
+      cursor: url('../../assets/img/cursor-hover.svg'), auto;
       background: $monza;
       border: 0;
     }
@@ -67,6 +68,7 @@
 
       &:hover {
         color: $flush-mahogany;
+        cursor: url('../../assets/img/cursor-hover.svg'), auto;
         border-color: $flush-mahogany;
         fill: $flush-mahogany;
       }
