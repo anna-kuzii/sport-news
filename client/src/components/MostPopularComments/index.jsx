@@ -1,5 +1,5 @@
 import React from 'react'
-import NewsBlock from '../NewsBlock'
+import { NewsBlock } from '../NewsBlock'
 
 
 export const MostPopularComments = (props) => {

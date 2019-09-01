@@ -1,6 +1,6 @@
 import React from 'react'
-import NewsBlock from '../NewsBlock'
-import SingleNews from '../SingleNews'
+import { NewsBlock } from '../NewsBlock'
+import { SingleNews } from '../SingleNews'
 
 
 export const Breakdown = (props) => {
