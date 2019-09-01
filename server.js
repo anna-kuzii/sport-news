@@ -34,10 +34,10 @@ app.listen(PORT, () => {
 
 // Route Files
 
-const register = require('./routes/register');
-const login = require('./routes/login');
-const forgotPassword = require('./routes/forgotPassword');
-const logout = require('./routes/logout');
+const register = require('./routes/register')
+const login = require('./routes/login')
+const forgotPassword = require('./routes/forgotPassword')
+const logout = require('./routes/logout')
 const updateProfile = require('./routes/updateProfile')
 const resetPassword = require('./routes/resetPassword')
 
