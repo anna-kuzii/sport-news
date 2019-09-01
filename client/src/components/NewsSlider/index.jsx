@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import SliderArticles from '../../assets/data/slider'
+import hover_arrow from '../../assets/img/news-hover-arrow.svg'
 
 export class NewsSlider extends Component {
   constructor(props) {
@@ -11,6 +12,7 @@ export class NewsSlider extends Component {
 
     this.handleNextSlide = this.handleNextSlide.bind(this)
     this.handlePrevSlide = this.handlePrevSlide.bind(this)
+    this.handleClick = this.handleClick.bind(this)
   }
 
   handleNextSlide(e) {
@@ -39,10 +41,14 @@ export class NewsSlider extends Component {
     }
   }
 
+  handleClick(element) {
+    this.setState({ currentArticle: element })
+  }
 
   render() {
     const { currentArticle } = this.state
 
+    const arr = [ 1, 2, 3, 4 ]
     return (
       <div >
         <div className='news-slider-container'>
@@ -62,10 +68,10 @@ export class NewsSlider extends Component {
                 <path d='m88.6,121.3c0.8,0.8 1.8,1.2 2.9,1.2s2.1-0.4 2.9-1.2c1.6-1.6 1.6-4.2 0-5.8l-51-51 51-51c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-54,53.9c-1.6,1.6-1.6,4.2 0,5.8l54,53.9z' />
               </svg>
             </button>
-            <button className={currentArticle === 1 ? 'current-slide': ''} >01</button>
-            <button className={currentArticle === 2 ? 'current-slide': ''} >02</button>
-            <button className={currentArticle === 3 ? 'current-slide': ''} >03</button>
-            <button className={currentArticle === 4 ? 'current-slide': ''} >04</button>
+            {arr.map(element =>(
+              <button className={currentArticle === element ? 'current-slide': ''} onClick={() =>this.handleClick(element)}>{'0'+element}</button>
+            ))}
+
             <button className='slider-next' onClick={this.handleNextSlide}>
               <svg
                 version='1.1' xmlns='http://www.w3.org/2000/svg'
@@ -75,6 +81,20 @@ export class NewsSlider extends Component {
               </svg>
             </button>
           </div>
+        </div>
+        <div className='sub-articles-container'>
+          {arr.map(element =>(
+            <div className='sub-article' onClick={() =>this.handleClick(element)}>
+              <img src={SliderArticles[element - 1].img} alt='sub article' />
+              <p className='sub-article-title'> Lorem ipsum </p>
+              <p className='sub-article-text'>{SliderArticles[element - 1].title}  </p>
+              <img
+                src={hover_arrow}
+                alt='hover arrow'
+                className='hover-arrow'
+              />
+            </div>
+          ))}
         </div>
       </div>
     )
