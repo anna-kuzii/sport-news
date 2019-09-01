@@ -1,9 +1,9 @@
 .most-popular-comments-wrapper {
-  height: 400px;
   width: 100%;
+  height: 400px;
   max-width: 390px;
-  margin: 0;
   padding: 0;
+  margin: 0;
 
   .block-title {
     display: flex;
@@ -12,22 +12,22 @@
     margin-bottom: 35px;
 
     h3 {
-      margin: 0;
       width: 100%;
       max-width: 126px;
+      margin: 0;
       font-family: Open Sans, serif;
+      font-size: 14px;
       font-style: normal;
       font-weight: bold;
-      font-size: 14px;
       line-height: 20px;
       text-transform: uppercase;
     }
 
     hr {
-      margin: 0.8rem 0 0 10px;
-      height: 1px;
       width: 100%;
+      height: 1px;
       max-width: 270px;
+      margin: .8rem 0 0 10px;
       border-top: 0;
       border-bottom: 1px solid $placeholder-grey;
     }
@@ -35,8 +35,8 @@
 
   .popular-news-block {
     width: 100%;
-    max-width: 390px;
     height: 300px;
+    max-width: 390px;
     border: 1px solid $gallery;
   }
 }
