@@ -79,12 +79,12 @@ class Register extends Component {
             <div className='create-account-wrapper'>
               <h2>Create Account</h2>
               <a
-                href='facebook.com'
+                href='http://facebook.com'
                 className='btn fb-icon'
               >facebook
               </a>
               <a
-                href='google.com'
+                href='http://google.com'
                 className='btn gplus-icon'
               >google</a>
               <p>Or use your email for registration</p>
