@@ -12,12 +12,12 @@ class ChangePassword extends Component {
     this.validator = new FormValidator(rules);
 
     this.state = {
-      old_password:'',
-      new_password:'',
+      oldPassword: '',
+      newPassword: '',
       type: 'password',
       validation: this.validator.createValidObj(),
       submitted: false,
-      error:'',
+      error: '',
     };
     this.handleShowHide = this.handleShowHide.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -26,6 +26,7 @@ class ChangePassword extends Component {
 
   handleShowHide=(e)=> {
     const { type } = this.state;
+
     e.preventDefault();
     e.stopPropagation();
     this.setState(()=> ({
@@ -40,10 +41,11 @@ class ChangePassword extends Component {
   handleSubmit(e) {
     e.preventDefault();
     const validation = this.validator.validate(this.state);
+
     this.setState((prevState) => ({
       ...prevState,
       validation: this.validator.validate(prevState),
-      submitted:true,
+      submitted: true,
     }));
     if (validation.isValid) {
     // handle actual form submission here
@@ -52,34 +54,34 @@ class ChangePassword extends Component {
 
 
   render() {
-    const { type, old_password, new_password, validation, submitted } = this.state;
+    const { type, oldPassword, newPassword, validation, submitted } = this.state;
     const validations = submitted ? this.validator.validate(this.state) : validation;
 
     return (
       <div className='change-password-wrapper'>
         <div className='change-password'>
           <div className='change-password-form'>
-            <div className={validations.old_password.isInvalid ? 'has-error' : 'undefined'}>
+            <div className={validations.oldPassword.isInvalid ? 'has-error' : 'undefined'}>
               <label htmlFor='password-input'>old Password</label>
               <input
                 type={type}
                 id='password-input'
                 name='old_password'
-                value={old_password}
+                value={oldPassword}
                 onChange={this.handleChange}
               />
-              <span className='help-block'>{validations.old_password.message}</span>
+              <span className='help-block'>{validations.oldPassword.message}</span>
             </div>
-            <div className={validations.new_password.isInvalid ? 'has-error' : 'valid'}>
+            <div className={validations.newPassword.isInvalid ? 'has-error' : 'valid'}>
               <label htmlFor='new-password-input'>new password</label>
               <input
                 type={type}
                 id='new-password-input'
                 name='new_password'
-                value={new_password}
+                value={newPassword}
                 onChange={this.handleChange}
               />
-              <span className='help-block'>{validations.new_password.message}</span>
+              <span className='help-block'>{validations.newPassword.message}</span>
               <span
                 className='password-show'
                 role='presentation'

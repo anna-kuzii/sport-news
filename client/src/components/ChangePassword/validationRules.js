@@ -1,15 +1,15 @@
 export const rules = [
   {
-    field: 'old_password',
+    field: 'oldPassword',
     method: 'isLength',
-    args: [ { min:4, max:256 } ],
+    args: [ { min: 4, max: 256 } ],
     validWhen: true,
     message: '4+ character',
   },
   {
-    field: 'new_password',
+    field: 'newPassword',
     method: 'isLength',
-    args: [ { min:4, max:256 } ],
+    args: [ { min: 4, max: 256 } ],
     validWhen: true,
     message: '4+ character',
   },

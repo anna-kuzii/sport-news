@@ -6,15 +6,15 @@ import {
 
 import {
   registration,
-} from '../containers/Register/registration.reducer';
+} from '../containers/Register/reducer';
 
 import {
   login,
-} from '../containers/Login/login.reducer';
+} from '../containers/Login/reducer';
 
 import {
   forgotPassword,
-} from '../containers/ForgotPassword/forgotpassword.reducer';
+} from '../containers/ForgotPassword/reducer';
 
 import thunkMiddleware from 'redux-thunk';
 import {

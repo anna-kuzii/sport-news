@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import login_bg from '../../../assets/img/register-login-bg.jpg';
+import loginBg from '../../../assets/img/register-login-bg.jpg';
 import { Link } from 'react-router-dom';
 import { userActions } from '../action';
 import { connect } from 'react-redux';
@@ -33,12 +33,13 @@ class ForgotPassword extends Component {
   render() {
     const { email } = this.state;
     const { forgot } = this.props;
+
     return (
       <div className='forgot-password-container'>
         <div className='container-fluid'>
           <div className='bg-img'>
             <Logo />
-            <img src={login_bg} alt='background ' />
+            <img src={loginBg} alt='background ' />
           </div>
           <div className='forgot-password-form'>
             <div className='get-started'>
@@ -89,8 +90,10 @@ function mapState(state) {
 }
 
 const actionCreators = {
+
   forgotPassword: userActions.forgotPassword,
 };
 
 const conectedForgotPasswordPage = connect(mapState, actionCreators)(ForgotPassword);
+
 export { conectedForgotPasswordPage as ForgotPassword };

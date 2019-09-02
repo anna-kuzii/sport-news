@@ -18,8 +18,8 @@ exports.createUser = (user, hashPassword) => {
   } = user
   const newUser = new User({
     _id: new mongoose.Types.ObjectId().toHexString(),
-    first_name: firstName,
-    last_name: lastName,
+    firstName: firstName,
+    lastName: lastName,
     email,
     password: hashPassword,
   })
@@ -28,7 +28,7 @@ exports.createUser = (user, hashPassword) => {
 
 
 exports.updateUserProfile = (email, newEmail, fullName) => {
-  return User.findOneAndUpdate({ email:email }, { first_name:fullName[1], last_name: fullName[0], email:newEmail })
+  return User.findOneAndUpdate({ email:email }, { firstName:fullName[1], lastName: fullName[0], email:newEmail })
 }
 
 exports.findUserByEmail = (email) => User.findOne({ email })

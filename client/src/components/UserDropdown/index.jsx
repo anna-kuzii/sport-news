@@ -28,7 +28,7 @@ class UserDropdown extends Component {
   }
 
   render() {
-    const { displayMenu, first_name, last_name, email } = this.state;
+    const { displayMenu, firstName, lastName, email } = this.state;
 
     return (
       <div className='dropdown-wrapper'>
@@ -41,13 +41,13 @@ class UserDropdown extends Component {
             tabIndex={0}
           >
             <div className='avatar' />
-            {`${first_name} ${ last_name}`}
+            {`${firstName} ${ lastName}`}
             <div className={(displayMenu && 'down-triangle') || 'up-triangle'} />
           </div>
           {displayMenu && (
             <div className='dropdown-content'>
               <div className='dropdown-triangle' />
-              <div className='user-name'>{`${first_name} ${ last_name}`} </div>
+              <div className='user-name'>{`${firstName} ${ lastName}`} </div>
               <div className='email'>{email}</div>
               <button type='button' className='button-view'>view profile</button>
               <Link to='/create-ads'>Personal</Link>

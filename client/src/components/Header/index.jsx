@@ -2,7 +2,7 @@ import React from 'react';
 import { Logo } from '../Logo';
 import UserDropdown from '../UserDropdown';
 import { Share } from '../Share';
-import search_icon from '../../assets/img/search-icon.svg';
+import searchIcon from '../../assets/img/search-icon.svg';
 import './style.scss';
 
 export const Header = () => (
@@ -12,7 +12,7 @@ export const Header = () => (
     </div>
     <div className='search'>
       <label htmlFor='search-input'>
-        <img src={search_icon} alt='' />
+        <img src={searchIcon} alt='' />
       </label>
       <input
         type='text'

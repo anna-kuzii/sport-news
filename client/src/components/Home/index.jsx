@@ -12,17 +12,17 @@ export const Home = () => (
     <div className='breakdown-container'>
       <Breakdown
         singleNews={SingleNews}
-        news_block={BreakDown}
+        newsBlock={BreakDown}
       />
     </div>
     <div className='most-container'>
       <MostPopularComments
-        block_title='most popular'
-        news_block={MostPopular}
+        blockTitle='most popular'
+        newsBlock={MostPopular}
       />
       <MostPopularComments
-        block_title='most comments'
-        news_block={MostComments}
+        blockTitle='most comments'
+        newsBlock={MostComments}
       />
     </div>
   </div>

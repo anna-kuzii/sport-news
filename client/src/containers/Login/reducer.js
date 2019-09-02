@@ -8,7 +8,7 @@ const initialState = {
   isAuthenticated: false,
   user: {},
   loading: false,
-  error:null,
+  error: null,
 };
 
 export function login(state = initialState, action) {
