@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import sign_up_bg from '../../assets/img/register-login-bg.jpg'
+import sign_up_bg from '../../../assets/img/register-login-bg.jpg'
 import { Link } from 'react-router-dom'
-import { Logo } from '../Logo'
+import { Logo } from '../../../components/Logo'
 
-import FormValidator from '../FormValidator'
-import { rules } from '../FormValidator/rules'
-import { userActions } from '../../_actions'
+import FormValidator from '../../../utils/FormValidator'
+import { rules } from '../../../utils/FormValidator/rules'
+import { userActions } from '../action'
 import { connect } from 'react-redux'
-
+import './style.scss'
 
 class Register extends Component {
   constructor(props) {

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './style.scss'
 
 export const NewsOfTheDays = (props) => {
   const { image, title, text, photo_courtesy, full_news } = props
@@ -15,7 +16,7 @@ export const NewsOfTheDays = (props) => {
         <p>photo of the day</p>
       </div>
       <div className='news-block'>
-        <img src={image} alt='background'/>
+        <img src={image} alt='background' />
         <div className='photo-triangle'>
           <p>photo<span><br />of the<br /></span>day</p>
         </div>

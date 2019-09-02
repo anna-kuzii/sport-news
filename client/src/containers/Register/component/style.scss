@@ -1,3 +1,5 @@
+@import '../../../styles/variables';
+
 .register-container {
   .create-account-wrapper {
     h2 {
@@ -30,15 +32,15 @@
       margin: 0 6px 10px;
       font-size: 0;
       cursor: pointer;
-      background: url('../../assets/img/facebook-icon.svg') no-repeat;
+      background: url('../../../assets/img/facebook-icon.svg') no-repeat;
 
       @media screen and (max-width: $mobile-width) {
-        background: url('../../assets/img/facebook-icon-mobile.svg') no-repeat;
+        background: url('../../../assets/img/facebook-icon-mobile.svg') no-repeat;
       }
 
       &:hover {
-        cursor: url('../../assets/img/cursor-hover.svg'), auto;
-        background: url('../../assets/img/facebook-icon-hover.svg') no-repeat;
+        cursor: url('../../../assets/img/cursor-hover.svg'), auto;
+        background: url('../../../assets/img/facebook-icon-hover.svg') no-repeat;
       }
 
       &:focus {
@@ -52,15 +54,15 @@
       margin: 0 6px 10px;
       font-size: 0;
       cursor: pointer;
-      background: url('../../assets/img/gplus-icon.svg') no-repeat;
+      background: url('../../../assets/img/gplus-icon.svg') no-repeat;
 
       @media screen and (max-width: $mobile-width) {
-        background: url('../../assets/img/gplus-icon-mobile.svg') no-repeat;
+        background: url('../../../assets/img/gplus-icon-mobile.svg') no-repeat;
       }
 
       &:hover {
-        cursor: url('../../assets/img/cursor-hover.svg'), auto;
-        background: url('../../assets/img/gplus-icon-hover.svg') no-repeat;
+        cursor: url('../../../assets/img/cursor-hover.svg'), auto;
+        background: url('../../../assets/img/gplus-icon-hover.svg') no-repeat;
       }
 
       &:focus {

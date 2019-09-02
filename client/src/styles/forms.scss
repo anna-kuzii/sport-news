@@ -82,7 +82,7 @@
   @media screen and (max-width: $mobile-width) {
     position: absolute;
     z-index: 1;
-    background: linear-gradient($dimming, $dimming), url('../../assets/img/register-login-bg.jpg') no-repeat center;
+    background: linear-gradient($dimming, $dimming), url('../assets/img/register-login-bg.jpg') no-repeat center;
     background-size: cover;
   }
 }

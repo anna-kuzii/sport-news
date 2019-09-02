@@ -3,6 +3,7 @@ import { Logo } from '../Logo'
 import UserDropdown from '../UserDropdown'
 import { Share } from '../Share'
 import search_icon from '../../assets/img/search-icon.svg'
+import './style.scss'
 
 export const Header = () => (
   <div className='header'>
