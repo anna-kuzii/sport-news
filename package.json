@@ -6,7 +6,6 @@
   "scripts": {
     "lint:js": "eslint --ext .jsx --ext .js client",
     "lint:sass": "sass-lint --verbose -c .sass-lint.yml",
-    "precommit": "lint-staged",
     "client-install": "npm install --prefix client",
     "start": "node server.js",
     "server": "nodemon server.js",
