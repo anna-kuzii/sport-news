@@ -4,8 +4,8 @@
   "description": "sport news site",
   "main": "server.js",
   "scripts": {
-    "eslint": "node_modules/.bin/eslint --ignore-path .gitignore *.{js,jsx} --fix ",
-    "SassLint": "node_modules/.bin/sass-lint --ignore-path .gitignore -v *.scss ",
+    "lint:js": "eslint --ext .jsx --ext .js client",
+    "lint:sass": "sass-lint --verbose -c .sass-lint.yml",
     "precommit": "lint-staged",
     "client-install": "npm install --prefix client",
     "start": "node server.js",
@@ -15,6 +15,10 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "nothing": "nothing",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=true npm install --prefix client && npm run build --prefix client"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx}": "lint:js",
+    "**/*.scss": "lint:sass"
   },
   "repository": {
     "type": "git",
