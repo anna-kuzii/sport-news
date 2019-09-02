@@ -25,8 +25,9 @@ class ForgotPassword extends Component {
   handleSubmit(e) {
     e.preventDefault();
     const { email } = this.state;
+    const { forgotPassword } = this.props;
 
-    this.props.forgotPassword({ email });
+    forgotPassword({ email });
   }
 
   render() {

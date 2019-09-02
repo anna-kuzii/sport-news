@@ -31,7 +31,9 @@ class Login extends Component {
       email: email,
       password: password,
     };
-    this.props.login(user);
+    const { login } = this.props;
+
+    login(user);
   }
 
   render() {

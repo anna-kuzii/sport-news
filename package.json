@@ -4,9 +4,8 @@
   "description": "sport news site",
   "main": "server.js",
   "scripts": {
-    "lint:js": "eslint --ext .jsx --ext .js client/src --fix",
+    "lint:js": "eslint --ext .jsx --ext .js client/src",
     "lint:sass": "sass-lint --verbose -c .sass-lint.yml",
-    "precommit": "lint-staged",
     "client-install": "npm install --prefix client",
     "start": "node server.js",
     "server": "nodemon server.js",
@@ -16,10 +15,10 @@
     "nothing": "nothing",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=true npm install --prefix client && npm run build --prefix client"
   },
-  "lint-staged": {
-    "**/*.{js,jsx}": "lint:js",
-    "**/*.scss": "lint:sass"
-  },
+  "precommit": [
+    "lint:js",
+    "lint:sass"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/anna-kuzii/sport-news.git"
