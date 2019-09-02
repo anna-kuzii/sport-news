@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Router, Route, Switch } from 'react-router-dom'
 
-import { history } from './_helpers'
+import { history } from './helpers'
 import { Register } from './containers/Register/component'
 import { Login } from './containers/Login/component'
 import { ForgotPassword } from './containers/ForgotPassword/component'
