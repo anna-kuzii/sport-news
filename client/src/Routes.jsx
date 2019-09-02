@@ -22,7 +22,7 @@ export default class Routes extends Component {
             component={Home}
           />
         </Route>
-        <Route path='/updateprofile' component={UpdateProfile} />
+        <Route path='/updateprofile' component={UpdateProfile}/>
         <Route path='/register' component={Register} />
         <Route path='/login' component={Login} />
         <Route path='/forgotpassword' component={ForgotPassword} />

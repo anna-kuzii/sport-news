@@ -52,6 +52,8 @@
         color: $white;
         text-transform: uppercase;
 
+        // TODO remove this rule when remove additional wrapper
+        // sass-lint:disable-block nesting-depth
         span {
           font-weight: normal;
         }

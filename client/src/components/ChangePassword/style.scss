@@ -2,6 +2,8 @@
 
 .change-password-wrapper {
 
+  // TODO remove this rule when remove additional wrapper
+  // sass-lint:disable-block nesting-depth
   .change-password {
     display: flex;
     align-items: center;

@@ -94,7 +94,7 @@
       "prop": "parens-new-line"
     }],
     "require-yield": 0,
-    "semi": [2, "never"],
+    "semi": [2, "always"],
     "space-before-blocks": [2, "always"],
     "space-before-function-paren": ["error", {
       "anonymous": "always",
