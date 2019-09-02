@@ -6,15 +6,13 @@ require('dotenv').config()
 exports.sendSubscriptionEmail = (req, res) => {
   return UserQuery.findUserByEmail(req.body.email)
     .then((user) => {
-      if (!user) {
-        return res.status(400).json({
-          message: 'No user found with that email address.',
-        })
-      }
-      // const token = tokenCreator.usePasswordHashToMakeToken(user.password, user._id, user.date)
-      const url = `${process.env.USER_EMAIL}/`
-      //TODO : add a beatifull email
-      sendEmail.sendEmail(subscriptionEmail.subscriptionTemplate(user, url))
+      // if (!user) {
+      //   return res.status(400).json({
+      //     message: 'No user found with that email address.',
+      //   })
+      // }
+      
+      sendEmail.sendEmail(subscriptionEmail.subscriptionTemplate(req.body.email))
         res.status(200).send('email send successful')
     })
 }

@@ -106,7 +106,6 @@ function forgotPassword(email) {
 
 function subscription(email) {
     return dispatch => {
-        debugger
         instance.post('/subscription', email)
             .then(() => {
                 dispatch(subscriptionSuccess(email))
