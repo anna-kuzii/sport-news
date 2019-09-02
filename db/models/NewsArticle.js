@@ -21,8 +21,8 @@ const NewsArticleSchema = new Schema({
   imageURL: {
     type: String,
   },
-  date:{
-    type:Date,
+  date: {
+    type: Date,
     default: Date.now,
   },
 })
