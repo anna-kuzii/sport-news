@@ -3,32 +3,28 @@ import { NewsBlock } from '../NewsBlock'
 import { SingleNews } from '../SingleNews'
 
 
-export const Breakdown = (props) => {
-  const { singleNews, news_block } = props
-
-  return (
-    <div className='breakdown-wrapper'>
-      <div className='news-divider'>
-        <p>breakdown</p>
+export const Breakdown = ({ singleNews, news_block }) => (
+  <div className='breakdown-wrapper'>
+    <div className='news-divider'>
+      <p>breakdown</p>
+    </div>
+    <div className='news-container'>
+      <div className='single-news-block'>
+        <SingleNews singleNews={singleNews} />
+        <SingleNews singleNews={singleNews} />
       </div>
-      <div className='news-container'>
-        <div className='single-news-block'>
-          <SingleNews singleNews={singleNews} />
-          <SingleNews singleNews={singleNews} />
+      <div className='news-boxes'>
+        <div className='news-box'>
+          <NewsBlock
+            newsBlock={news_block}
+          />
         </div>
-        <div className='news-boxes'>
-          <div className='news-box'>
-            <NewsBlock
-              newsBlock={news_block}
-            />
-          </div>
-          <div className='news-box'>
-            <NewsBlock
-              newsBlock={news_block}
-            />
-          </div>
+        <div className='news-box'>
+          <NewsBlock
+            newsBlock={news_block}
+          />
         </div>
       </div>
     </div>
-  )
-}
+  </div>
+)
