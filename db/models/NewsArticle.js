@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
-const { Schema } = mongoose;
+const { Schema } = mongoose
 
 const NewsArticleSchema = new Schema({
   _id: mongoose.Schema.Types.ObjectId,
@@ -19,10 +19,13 @@ const NewsArticleSchema = new Schema({
     type: String,
   },
   imageURL: {
-   type: String
- }
-});
+    type: String,
+  },
+  date:{
+    type:String,
+  },
+})
 
-const NewsArticleSchema = mongoose.model('newsArticles', NewsArticleSchema);
+const NewsArticlesSchema = mongoose.model('newsArticles', NewsArticleSchema)
 
-module.exports = NewsArticleSchema;
+module.exports = NewsArticlesSchema
