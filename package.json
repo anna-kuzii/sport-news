@@ -15,10 +15,6 @@
     "nothing": "nothing",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=true npm install --prefix client && npm run build --prefix client"
   },
-  "lint-staged": {
-    "**/*.{js,jsx}": "lint:js",
-    "**/*.scss": "lint:sass"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/anna-kuzii/sport-news.git"
