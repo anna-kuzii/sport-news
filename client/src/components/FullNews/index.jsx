@@ -1,11 +1,6 @@
 import React from "react";
-import basketball_img from '../../assets/img/Basketball.png';
-import data from './base';
 
-
-export const SingleNews = () => {
-
-   
+export const FullNews = () => {
 
     return (
         <section className="single-news-container">

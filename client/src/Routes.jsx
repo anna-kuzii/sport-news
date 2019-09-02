@@ -8,7 +8,7 @@ import { ForgotPassword } from './components/ForgotPassword'
 import { Header } from './components/Header'
 import { Home } from './components/Home'
 import { UpdateProfile } from './components/UpdateProfile'
-import { SingleNews } from './components/SingleNews';
+import { FullNews } from './components/FullNews';
 
 export default class Routes extends Component {
   render() {
@@ -20,7 +20,7 @@ export default class Routes extends Component {
           </Switch>
           <Route
             exact path='/'
-            component={SingleNews}
+            component={FullNews}
           />
         </Route>
         <Route path='/updateprofile' component={UpdateProfile} />
