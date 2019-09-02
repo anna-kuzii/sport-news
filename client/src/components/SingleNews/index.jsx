@@ -11,13 +11,12 @@ export const SingleNews = () => {
         <section className="single-news-container">
           <div className="top-info">
             <h4>
-             <span>NBA </span> > Tennessee / As M.L.B.'s Season Opens in Japan, at Least the Dirt Is
-              Familiar
+             <span className='nba-span'>NBA </span> <p className='nba-paragraph'> > Tennessee / As M.L.B.'s Season Opens in Japan, at Least the Dirt Is Familiar</p>
             </h4>
           </div>
           <div className="middle-container">
             <div className="image-container">
-              <img src={basketball_img} alt="Basketball" />
+              <div></div>
             </div>
             <div className="card-container">
               <h4>Published / 20.09.2019</h4>
