@@ -16,7 +16,8 @@ export const Header = () => (
       <input
         type='text'
         placeholder='Search by'
-        id='search-input' />
+        id='search-input'
+      />
     </div>
     <div className='share'>
       <Share />

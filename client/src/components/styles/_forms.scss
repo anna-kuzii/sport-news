@@ -184,7 +184,8 @@
 }
 
 .btn-primary,
-.update-profile {
+.update-profile,
+.change-password-btn {
   display: inline-block;
   width: 100%;
   height: 42px;
@@ -209,7 +210,8 @@
 }
 
 .email-wrapper,
-.update-input-wrapper {
+.update-input-wrapper,
+.change-password-wrapper {
   label {
     width: 50%;
     font-family: Roboto, serif;
@@ -250,5 +252,30 @@
       margin-top: 20px;
       color: $white;
     }
+  }
+}
+
+// News divider
+
+.news-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 40px auto;
+  border-bottom: 1px solid $placeholder-grey;
+
+  p {
+    position: absolute;
+    padding: 10px 30px;
+    font-family: Open Sans, serif;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    background-color: $white;
+    border: 1px solid $placeholder-grey;
+    border-radius: 20px;
   }
 }
