@@ -8,6 +8,7 @@ import { ForgotPassword } from './components/ForgotPassword'
 import { Header } from './components/Header'
 import { Home } from './components/Home'
 import { UpdateProfile } from './components/UpdateProfile'
+import { SingleNews } from './components/SingleNews';
 
 export default class Routes extends Component {
   render() {
@@ -19,7 +20,7 @@ export default class Routes extends Component {
           </Switch>
           <Route
             exact path='/'
-            component={Home}
+            component={SingleNews}
           />
         </Route>
         <Route path='/updateprofile' component={UpdateProfile} />
