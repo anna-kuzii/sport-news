@@ -1,7 +1,7 @@
 import React from 'react'
 import { NewsBlock } from '../NewsBlock'
 import { SingleNews } from '../SingleNews'
-
+import './style.scss'
 
 export const Breakdown = ({ singleNews, news_block }) => (
   <div className='breakdown-wrapper'>

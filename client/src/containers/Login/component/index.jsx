@@ -1,45 +1,46 @@
-import React, {Component} from 'react'
-import login_bg from '../../assets/img/register-login-bg.jpg'
+import React, { Component } from 'react'
+import login_bg from '../../../assets/img/register-login-bg.jpg'
 import { Link } from 'react-router-dom'
-import { userActions } from '../../_actions'
-import {connect} from "react-redux";
-import { Logo } from '../Logo'
+import { userActions } from '../action'
+import { connect } from 'react-redux'
+import { Logo } from '../../../components/Logo'
+import './style.scss'
 
 class Login extends Component {
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props)
 
-        this.state = {
-            email: '',
-            password: '',
-            errors: '',
-        }
-
-        this.handleChange = this.handleChange.bind(this)
-        this.handleSubmit = this.handleSubmit.bind(this)
+    this.state = {
+      email: '',
+      password: '',
+      errors: '',
     }
 
-    handleChange(e) {
-        this.setState({[e.target.name]: e.target.value})
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
     }
 
-    handleSubmit(e) {
-        e.preventDefault();
-        const {email,password} = this.state
-        const user = {
-            email: email,
-            password: password,
-        };
-        this.props.login(user)
+  handleChange(e) {
+    this.setState({ [e.target.name]: e.target.value })
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    const { email, password } = this.state
+    const user = {
+        email: email,
+        password: password,
     }
+    this.props.login(user)
+  }
 
-    render() {
-        const { email, password } = this.state
-        const { logining } = this.props;
+  render() {
+    const { email, password } = this.state
+    const { logining } = this.props;
 
-        return (
-            <div className='login-container '>
-                <div className='container-fluid'>
+    return (
+      <div className='login-container '>
+          <div className='container-fluid'>
                     <div className='bg-img'>
                         <Logo />
                         <img src={login_bg} alt='background'/>

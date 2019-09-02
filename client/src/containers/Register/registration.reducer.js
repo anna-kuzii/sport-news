@@ -1,6 +1,6 @@
 import {
   userConstants,
-} from '../_constants'
+} from './constant'
 
 export const initialState = {
   registering: false,

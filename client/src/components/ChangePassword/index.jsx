@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './style.scss'
 import eyeicon from '../../assets/img/eye-icon.svg'
 
-import FormValidator from '../FormValidator'
+import FormValidator from '../../utils/FormValidator'
 import { rules } from './validationRules'
 
 class ChangePassword extends Component {
