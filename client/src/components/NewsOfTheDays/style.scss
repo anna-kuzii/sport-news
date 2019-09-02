@@ -1,0 +1,104 @@
+.newsoftheday-wrapper {
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
+
+  @media screen and (max-width: $mobile-width) {
+    width: 100vw;
+  }
+
+  .news-block {
+    position: relative;
+    width: 100%;
+    max-height: 80vh;
+    margin: 30px auto;
+
+
+    @media screen and (max-width: $mobile-width) {
+      width: 90%;
+      max-width: $mobile-width;
+      margin: 30px auto;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .photo-triangle {
+      position: absolute;
+      top: -30px;
+      left: -20px;
+      width: 0;
+      height: 0;
+      border-color: transparent transparent transparent $alizarin-crimson;
+      border-style: solid;
+      border-width: 60px 0 60px 170px;
+
+      @media screen and (max-width: $mobile-width) {
+        display: none;
+      }
+
+      p {
+        position: absolute;
+        top: -30px;
+        right: 100px;
+        font-family: Open Sans;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: 22px;
+        color: $white;
+        text-transform: uppercase;
+
+        span {
+          font-weight: normal;
+        }
+      }
+    }
+
+    .news-article {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      padding: 10px;
+      color: $white;
+      word-wrap: break-word;
+
+      @media screen and (max-width: $mobile-width) {
+        width: 100%;
+        max-height: 50%;
+        padding: 10px;
+      }
+
+      .title {
+        font-family: Open Sans;
+        font-size: 22px;
+        font-style: bold;
+        line-height: 30px;
+      }
+
+      .news-text {
+        font-family: Open Sans;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 19px;
+      }
+
+      .photo-courtesy {
+        font-family: Open Sans;
+        font-size: 14px;
+        font-style: italic;
+        font-weight: normal;
+        line-height: 19px;
+      }
+
+      .see-more {
+        font-size: 22px;
+        font-weight: 800;
+        color: $white;
+        text-decoration: none;
+      }
+    }
+  }
+}

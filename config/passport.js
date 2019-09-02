@@ -22,11 +22,11 @@ passport.use(new LocalStrategy(
     usernameField: 'email',
   },
   function (email, password, done) {
-    UserQuery.findUserOne(email)
+    UserQuery.findUserByEmail(email)
       .then(function (user) {
         if (!user) {
           return done(null, false, {
-            message: 'User not found.',
+            message: 'Incorrect user ID or password. Try again.',
           })
         }
         bcrypt.compare(password, user.password)
@@ -35,7 +35,7 @@ passport.use(new LocalStrategy(
               return done(null, user)
             }
             return done(null, false, {
-              message: 'Incorrect password.',
+              message: 'Incorrect user ID or password. Try again.',
             })
           })
       })

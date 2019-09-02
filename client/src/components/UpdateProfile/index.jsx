@@ -1,5 +1,4 @@
 import React from 'react'
-import './style.scss'
 
 export const UpdateProfile = () =>(
   <div className='update-wrapper'>

@@ -17,6 +17,7 @@ app.use(cookieParser())
 
 
 app.use(passport.initialize())
+
 //require('./config/passport')(passport)
 require('./config/passport')
 // TODO: change that part ,please:)
@@ -37,15 +38,19 @@ const register = require('./routes/register')
 const login = require('./routes/login')
 const forgotPassword = require('./routes/forgotPassword')
 const logout = require('./routes/logout')
-
+const updateProfile = require('./routes/updateProfile')
+const resetPassword = require('./routes/resetPassword')
 
 app.use('/register', register)
 app.use('/login', login)
 app.use('/forgotpassword', forgotPassword)
 app.use('/logout', logout)
+app.use('/updateprofile', updateProfile)
+app.use('/resetpassword', resetPassword)
 
 
 app.use(express.static(path.join(__dirname, 'client/build')))
+
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'client/build', 'index.html'))
