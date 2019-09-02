@@ -1,13 +1,14 @@
-import React, {Component} from 'react'
-import login_bg from '../../assets/img/register-login-bg.jpg'
-import {Link} from 'react-router-dom'
-import {userActions} from '../../_actions'
-import {connect} from 'react-redux'
-import {Logo} from '../Logo'
+import React, { Component } from 'react'
+import login_bg from '../../../assets/img/register-login-bg.jpg'
+import { Link } from 'react-router-dom'
+import { userActions } from '../action'
+import { connect } from 'react-redux'
+import { Logo } from '../../../components/Logo'
+
 
 class ForgotPassword extends Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       email: '',
@@ -18,25 +19,25 @@ class ForgotPassword extends Component {
   }
 
   handleChange(e) {
-    this.setState({[e.target.name]: e.target.value})
+    this.setState({ [e.target.name]: e.target.value })
   }
 
   handleSubmit(e) {
-    e.preventDefault();
-    const {email} = this.state
+    e.preventDefault()
+    const { email } = this.state
 
-    this.props.forgotPassword({email})
+    this.props.forgotPassword({ email })
   }
 
   render() {
-    const {email} = this.state
-    const {forgot} = this.props
+    const { email } = this.state
+    const { forgot } = this.props
     return (
       <div className='forgot-password-container'>
         <div className='container-fluid'>
           <div className='bg-img'>
-            <Logo/>
-            <img src={login_bg} alt='background '/>
+            <Logo />
+            <img src={login_bg} alt='background ' />
           </div>
           <div className='forgot-password-form'>
             <div className='get-started'>
@@ -82,13 +83,13 @@ class ForgotPassword extends Component {
 
 function mapState(state) {
   return {
-    forgot: state.forgotPassword
+    forgot: state.forgotPassword,
   }
 }
 
 const actionCreators = {
-  forgotPassword: userActions.forgotPassword
+  forgotPassword: userActions.forgotPassword,
 }
 
 const conectedForgotPasswordPage = connect(mapState, actionCreators)(ForgotPassword)
-export {conectedForgotPasswordPage as ForgotPassword}
+export { conectedForgotPasswordPage as ForgotPassword }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import './style.scss'
 
 class UserDropdown extends Component {
   constructor(props) {

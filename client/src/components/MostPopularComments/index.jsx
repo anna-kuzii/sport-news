@@ -1,6 +1,6 @@
 import React from 'react'
 import { NewsBlock } from '../NewsBlock'
-
+import './style.scss'
 
 export const MostPopularComments = ({ block_title, news_block }) => (
 
