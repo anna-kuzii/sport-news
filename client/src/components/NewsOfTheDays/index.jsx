@@ -1,14 +1,14 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import './style.scss'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './style.scss';
 
 export const NewsOfTheDays = (props) => {
-  const { image, title, text, photo_courtesy, full_news } = props
+  const { image, title, text, photo_courtesy, full_news } = props;
 
   const showSeeMoreButton = (text, full_news) => (
     text.length < 100 ? text
       : <p>{text.slice(0, 60)}<Link to={full_news} className='see-more'> ...</Link></p>
-  )
+  );
 
   return (
     <div className='newsoftheday-wrapper'>
@@ -27,5 +27,5 @@ export const NewsOfTheDays = (props) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

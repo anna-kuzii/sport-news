@@ -1,19 +1,19 @@
-import React, { Component } from 'react'
-import sign_up_bg from '../../../assets/img/register-login-bg.jpg'
-import { Link } from 'react-router-dom'
-import { Logo } from '../../../components/Logo'
+import React, { Component } from 'react';
+import sign_up_bg from '../../../assets/img/register-login-bg.jpg';
+import { Link } from 'react-router-dom';
+import { Logo } from '../../../components/Logo';
 
-import FormValidator from '../../../utils/FormValidator'
-import { rules } from '../../../utils/FormValidator/rules'
-import { userActions } from '../action'
-import { connect } from 'react-redux'
-import './style.scss'
+import FormValidator from '../../../utils/FormValidator';
+import { rules } from '../../../utils/FormValidator/rules';
+import { userActions } from '../action';
+import { connect } from 'react-redux';
+import './style.scss';
 
 class Register extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
-    this.validator = new FormValidator(rules)
+    this.validator = new FormValidator(rules);
 
     this.state = {
       first_name: '',
@@ -23,45 +23,45 @@ class Register extends Component {
       validation: this.validator.createValidObj(),
       submitted: false,
       error: '',
-    }
+    };
 
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(e) {
-    this.setState({ [e.target.name]: e.target.value })
+    this.setState({ [e.target.name]: e.target.value });
   }
 
   handleSubmit(e) {
-    e.preventDefault()
+    e.preventDefault();
 
-    const state = this.state
+    const state = this.state;
     const newUser = {
       first_name : state.first_name,
       last_name: state.last_name,
       email: state.email,
       password: state.password,
-    }
-    const { register } = this.props
-    register(newUser)
-    const validation = this.validator.validate(state)
+    };
+    const { register } = this.props;
+    register(newUser);
+    const validation = this.validator.validate(state);
     this.setState((prevState) => ({
       ...prevState,
       validation: this.validator.validate(prevState),
       submitted:true,
-    }))
+    }));
     if (validation.isValid) {
     // handle actual form submission here
     }
   }
 
   render() {
-    const states = this.state
+    const states = this.state;
     const validation = this.submitted
       ? this.validator.validate(states)
-      : states.validation
-    const { registering } = this.props
+      : states.validation;
+    const { registering } = this.props;
 
 
     return (
@@ -154,17 +154,17 @@ class Register extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
 function mapState(state) {
-  return { registering : state.registration }
+  return { registering : state.registration };
 }
 
 const actionCreators = {
   register: userActions.register,
-}
+};
 
-const connectedRegisterPage = connect(mapState, actionCreators)(Register)
-export { connectedRegisterPage as Register }
+const connectedRegisterPage = connect(mapState, actionCreators)(Register);
+export { connectedRegisterPage as Register };

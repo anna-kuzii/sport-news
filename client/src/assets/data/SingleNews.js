@@ -1,4 +1,4 @@
-import single_news from '../img/single-news.png'
+import single_news from '../img/single-news.png';
 
 export default [
   {
@@ -7,4 +7,4 @@ export default [
     title: 'Lorem ipsum dolor sit amet, consectetur',
     logo: 'NBA',
   },
-]
+];

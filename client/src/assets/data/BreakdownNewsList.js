@@ -1,6 +1,6 @@
-import first_breakdown from '../img/breakdown-first.png'
-import second_breakdown from '../img/breakdown-second.png'
-import third_breakdown from '../img/breakdown-third.png'
+import first_breakdown from '../img/breakdown-first.png';
+import second_breakdown from '../img/breakdown-second.png';
+import third_breakdown from '../img/breakdown-third.png';
 
 
 export default [
@@ -22,4 +22,4 @@ export default [
     title: 'Lorem ipsum',
     text: 'Lorem ipsum dolor sit amet, consectetur',
   },
-]
+];

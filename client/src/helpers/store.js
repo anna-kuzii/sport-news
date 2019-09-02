@@ -2,32 +2,32 @@ import {
   createStore,
   applyMiddleware,
   combineReducers,
-} from 'redux'
+} from 'redux';
 
 import {
   registration,
-} from '../containers/Register/registration.reducer'
+} from '../containers/Register/registration.reducer';
 
 import {
   login,
-} from '../containers/Login/login.reducer'
+} from '../containers/Login/login.reducer';
 
 import {
   forgotPassword,
-} from '../containers/ForgotPassword/forgotpassword.reducer'
+} from '../containers/ForgotPassword/forgotpassword.reducer';
 
-import thunkMiddleware from 'redux-thunk'
+import thunkMiddleware from 'redux-thunk';
 import {
   createLogger,
-} from 'redux-logger'
+} from 'redux-logger';
 
 const rootReducer = combineReducers({
   registration,
   forgotPassword,
   login,
-})
+});
 
-const loggerMiddleware = createLogger()
+const loggerMiddleware = createLogger();
 
 export const store = createStore(
   rootReducer,
@@ -35,4 +35,4 @@ export const store = createStore(
     thunkMiddleware,
     loggerMiddleware
   )
-)
+);

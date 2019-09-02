@@ -1,6 +1,6 @@
-import first_comments from '../img/first-comments.png'
-import second_comments from '../img/second-comments.png'
-import third_comments from '../img/third-comments.png'
+import first_comments from '../img/first-comments.png';
+import second_comments from '../img/second-comments.png';
+import third_comments from '../img/third-comments.png';
 
 
 export default [
@@ -22,4 +22,4 @@ export default [
     title: 'Lorem ipsum',
     text: 'Lorem ipsum dolor sit amet, consectetur',
   },
-]
+];

@@ -1,15 +1,15 @@
-import React, { Component } from 'react'
-import './style.scss'
-import eyeicon from '../../assets/img/eye-icon.svg'
+import React, { Component } from 'react';
+import './style.scss';
+import eyeicon from '../../assets/img/eye-icon.svg';
 
-import FormValidator from '../../utils/FormValidator'
-import { rules } from './validationRules'
+import FormValidator from '../../utils/FormValidator';
+import { rules } from './validationRules';
 
 class ChangePassword extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
-    this.validator = new FormValidator(rules)
+    this.validator = new FormValidator(rules);
 
     this.state = {
       old_password:'',
@@ -18,33 +18,33 @@ class ChangePassword extends Component {
       validation: this.validator.createValidObj(),
       submitted: false,
       error:'',
-    }
-    this.handleShowHide = this.handleShowHide.bind(this)
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
+    };
+    this.handleShowHide = this.handleShowHide.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleShowHide=(e)=> {
-    const { type } = this.state
-    e.preventDefault()
-    e.stopPropagation()
+    const { type } = this.state;
+    e.preventDefault();
+    e.stopPropagation();
     this.setState(()=> ({
       type: type === 'input' ? 'password' : 'input',
-    }))
+    }));
   }
 
   handleChange(e) {
-    this.setState({ [e.target.name]: e.target.value })
+    this.setState({ [e.target.name]: e.target.value });
   }
 
   handleSubmit(e) {
-    e.preventDefault()
-    const validation = this.validator.validate(this.state)
+    e.preventDefault();
+    const validation = this.validator.validate(this.state);
     this.setState((prevState) => ({
       ...prevState,
       validation: this.validator.validate(prevState),
       submitted:true,
-    }))
+    }));
     if (validation.isValid) {
     // handle actual form submission here
     }
@@ -52,8 +52,8 @@ class ChangePassword extends Component {
 
 
   render() {
-    const { type, old_password, new_password, validation, submitted } = this.state
-    const validations = submitted ? this.validator.validate(this.state) : validation
+    const { type, old_password, new_password, validation, submitted } = this.state;
+    const validations = submitted ? this.validator.validate(this.state) : validation;
 
     return (
       <div className='change-password-wrapper'>
@@ -94,7 +94,7 @@ class ChangePassword extends Component {
           >CHANGE PASSWORD</button>
         </div>
       </div>
-    )
+    );
   }
 }
-export { ChangePassword }
+export { ChangePassword };

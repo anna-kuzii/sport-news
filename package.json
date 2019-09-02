@@ -4,7 +4,7 @@
   "description": "sport news site",
   "main": "server.js",
   "scripts": {
-    "lint:js": "eslint --ext .jsx --ext .js client",
+    "lint:js": "eslint --ext .jsx --ext .js client/src --fix",
     "lint:sass": "sass-lint --verbose -c .sass-lint.yml",
     "precommit": "lint-staged",
     "client-install": "npm install --prefix client",

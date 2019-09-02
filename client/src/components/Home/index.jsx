@@ -1,11 +1,11 @@
-import React from 'react'
-import { MostPopularComments } from '../MostPopularComments'
-import { Breakdown } from '../Breakdown'
-import MostPopular from '../../assets/data/MostPopularNewsList'
-import MostComments from '../../assets/data/MostCommentsNewsList'
-import BreakDown from '../../assets/data/BreakdownNewsList'
-import SingleNews from '../../assets/data/SingleNews'
-import './style.scss'
+import React from 'react';
+import { MostPopularComments } from '../MostPopularComments';
+import { Breakdown } from '../Breakdown';
+import MostPopular from '../../assets/data/MostPopularNewsList';
+import MostComments from '../../assets/data/MostCommentsNewsList';
+import BreakDown from '../../assets/data/BreakdownNewsList';
+import SingleNews from '../../assets/data/SingleNews';
+import './style.scss';
 
 export const Home = () => (
   <div className='home-page-wrapper'>
@@ -26,4 +26,4 @@ export const Home = () => (
       />
     </div>
   </div>
-)
+);

@@ -13,4 +13,4 @@ export const rules = [
     validWhen: true,
     message: '4+ character',
   },
-]
+];

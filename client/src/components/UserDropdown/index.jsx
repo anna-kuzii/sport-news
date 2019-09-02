@@ -1,34 +1,34 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import './style.scss'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import './style.scss';
 
 class UserDropdown extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       ...props,
       displayMenu: false,
-    }
-    this.handleShowDropdownMenu = this.handleShowDropdownMenu.bind(this)
-    this.hideDropdownMenu = this.hideDropdownMenu.bind(this)
+    };
+    this.handleShowDropdownMenu = this.handleShowDropdownMenu.bind(this);
+    this.hideDropdownMenu = this.hideDropdownMenu.bind(this);
   }
 
   handleShowDropdownMenu(event) {
-    event.preventDefault()
+    event.preventDefault();
     this.setState({ displayMenu: true }, () => {
-      document.addEventListener('click', this.hideDropdownMenu)
-    })
+      document.addEventListener('click', this.hideDropdownMenu);
+    });
   }
 
   hideDropdownMenu() {
     this.setState({ displayMenu: false }, () => {
-      document.removeEventListener('click', this.hideDropdownMenu)
-    })
+      document.removeEventListener('click', this.hideDropdownMenu);
+    });
   }
 
   render() {
-    const { displayMenu, first_name, last_name, email } = this.state
+    const { displayMenu, first_name, last_name, email } = this.state;
 
     return (
       <div className='dropdown-wrapper'>
@@ -58,8 +58,8 @@ class UserDropdown extends Component {
           )}
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default UserDropdown
+export default UserDropdown;

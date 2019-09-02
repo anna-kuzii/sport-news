@@ -1,7 +1,7 @@
-import React from 'react'
-import hover_arrow from '../../assets/img/news-hover-arrow.svg'
-import { Link } from 'react-router-dom'
-import './style.scss'
+import React from 'react';
+import hover_arrow from '../../assets/img/news-hover-arrow.svg';
+import { Link } from 'react-router-dom';
+import './style.scss';
 
 export const SingleNews = ({ singleNews }) => (
   singleNews.map(element => (
@@ -22,4 +22,4 @@ export const SingleNews = ({ singleNews }) => (
       </Link>
     </div>
   ))
-)
+);

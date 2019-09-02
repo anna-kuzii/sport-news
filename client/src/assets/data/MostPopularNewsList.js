@@ -1,6 +1,6 @@
-import first_popular from '../img/first-popular.png'
-import second_popular from '../img/second-popular.png'
-import third_popular from '../img/third-popular.png'
+import first_popular from '../img/first-popular.png';
+import second_popular from '../img/second-popular.png';
+import third_popular from '../img/third-popular.png';
 
 
 export default [
@@ -22,4 +22,4 @@ export default [
     title: 'Lorem ipsum',
     text: 'Lorem ipsum dolor sit amet, consectetur',
   },
-]
+];

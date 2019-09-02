@@ -1,15 +1,15 @@
 import {
   userConstants,
-} from './constant'
+} from './constant';
 
-const isEmpty = require('is-empty')
+const isEmpty = require('is-empty');
 
 const initialState = {
   isAuthenticated: false,
   user: {},
   loading: false,
   error:null,
-}
+};
 
 export function login(state = initialState, action) {
   switch (action.type) {
@@ -20,20 +20,20 @@ export function login(state = initialState, action) {
         isAuthenticated: !isEmpty(action.payload),
         user: action.payload,
         loading: false,
-      }
+      };
     case userConstants.SET_CURRENT_USER_LOADING:
       return {
         ...state,
         loading: true,
         error: null,
-      }
+      };
     case userConstants.SET_CURRENT_GET_ERRORS:
       return {
         ...state,
         error: action.error,
         loading: false,
-      }
+      };
     default:
-      return state
+      return state;
   }
 }

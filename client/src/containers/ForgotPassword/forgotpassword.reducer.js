@@ -1,11 +1,11 @@
 import {
   userConstants,
-} from './constants'
+} from './constants';
 
 export const initialState = {
   forgot_password: false,
   error: null,
-}
+};
 
 
 export function forgotPassword(state = initialState, action) {
@@ -15,14 +15,14 @@ export function forgotPassword(state = initialState, action) {
         ...state,
         error: null,
         forgot_password: true,
-      }
+      };
     case userConstants.FORGOT_PASSWORD_FAILURE:
       return {
         ...state,
         error: action.error,
         forgot_password: false,
-      }
+      };
     default :
-      return state
+      return state;
   }
 }

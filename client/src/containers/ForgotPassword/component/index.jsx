@@ -1,37 +1,37 @@
-import React, { Component } from 'react'
-import login_bg from '../../../assets/img/register-login-bg.jpg'
-import { Link } from 'react-router-dom'
-import { userActions } from '../action'
-import { connect } from 'react-redux'
-import { Logo } from '../../../components/Logo'
+import React, { Component } from 'react';
+import login_bg from '../../../assets/img/register-login-bg.jpg';
+import { Link } from 'react-router-dom';
+import { userActions } from '../action';
+import { connect } from 'react-redux';
+import { Logo } from '../../../components/Logo';
 
 
 class ForgotPassword extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       email: '',
-    }
+    };
 
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(e) {
-    this.setState({ [e.target.name]: e.target.value })
+    this.setState({ [e.target.name]: e.target.value });
   }
 
   handleSubmit(e) {
-    e.preventDefault()
-    const { email } = this.state
+    e.preventDefault();
+    const { email } = this.state;
 
-    this.props.forgotPassword({ email })
+    this.props.forgotPassword({ email });
   }
 
   render() {
-    const { email } = this.state
-    const { forgot } = this.props
+    const { email } = this.state;
+    const { forgot } = this.props;
     return (
       <div className='forgot-password-container'>
         <div className='container-fluid'>
@@ -77,19 +77,19 @@ class ForgotPassword extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
 function mapState(state) {
   return {
     forgot: state.forgotPassword,
-  }
+  };
 }
 
 const actionCreators = {
   forgotPassword: userActions.forgotPassword,
-}
+};
 
-const conectedForgotPasswordPage = connect(mapState, actionCreators)(ForgotPassword)
-export { conectedForgotPasswordPage as ForgotPassword }
+const conectedForgotPasswordPage = connect(mapState, actionCreators)(ForgotPassword);
+export { conectedForgotPasswordPage as ForgotPassword };

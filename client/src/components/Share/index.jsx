@@ -1,5 +1,5 @@
-import React from 'react'
-import './style.scss'
+import React from 'react';
+import './style.scss';
 
 export const Share = () => (
   <div className='services'>
@@ -19,4 +19,4 @@ export const Share = () => (
       />
     </div>
   </div>
-)
+);
