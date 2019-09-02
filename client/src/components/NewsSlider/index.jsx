@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import articles from '../../assets/data/slider'
 import hover_arrow from '../../assets/img/news-hover-arrow.svg'
+import { Swipe, Position } from 'react-swipe-component'
+import articles from '../../assets/data/slider'
 
 export class NewsSlider extends Component {
   constructor(props) {
@@ -45,15 +46,42 @@ export class NewsSlider extends Component {
     this.setState({ currentArticle: element })
   }
 
+  onSwipeLeftListener = () => {
+    if ( this.state.currentArticle === 4) {
+      this.setState({ currentArticle: 1 })
+    } else {
+      this.setState(function (state) {
+        return {
+          currentArticle: state.currentArticle + 1,
+        }
+      })
+    }
+  }
+  onSwipeRightListener = () => {
+    if ( this.state.currentArticle === 1) {
+      this.setState({ currentArticle: 4 })
+    } else {
+      this.setState(function (state) {
+        return {
+          currentArticle: state.currentArticle - 1,
+        }
+      })
+    }
+  }
+
   render() {
     const { currentArticle } = this.state
-    const { articles } = this.props
 
     const arr = [ 1, 2, 3, 4 ]
     return (
       <div >
         <div className='news-slider-container'>
-          <img src={articles[currentArticle - 1].img} alt='main article' />
+          <Swipe
+            onSwipedLeft={this.onSwipeLeftListener}
+            onSwipedRight={this.onSwipeRightListener}
+          >
+            <img src={articles[currentArticle - 1].img} alt='main article' />
+          </Swipe>
           <div className='news-info'>
             <p className='publish-time'>Published / 20.09.2019</p>
             <p className='title'>{articles[currentArticle - 1].title}</p>
