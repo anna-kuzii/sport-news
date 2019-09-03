@@ -1,0 +1,70 @@
+@import '../../styles/variables.scss';
+
+.desktopMenuContainer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  height: 100%;
+  background-color: $white;
+  box-shadow: 13px 4px 14px $black-09;
+
+  .listContainer {
+    width: 250px;
+    padding: 80px 0 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  .listItem {
+    a {
+      display: flex;
+      padding: 12px 10px 12px 65px;
+      font-family: 'Open Sans Bold';
+      font-size: 14px;
+      line-height: 19px;
+      color: $silver-chalice;
+
+      &.activeItem,
+      &:hover {
+        position: relative;
+        color: $flush-mahogany;
+        border-right: 6px solid $flush-mahogany;
+
+        // sass-lint:disable nesting-depth
+        &::before {
+          position: absolute;
+          left: 55px;
+          content: '•';
+        }
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .listItem {
+      a {
+        font-family: 'Roboto Regular';
+        color: $black;
+
+        &.activeItem,
+        &:hover {
+          background: $alizarin-crimson-11;
+          border: 0;
+
+          // sass-lint:disable nesting-depth
+          &::before {
+            content: none;
+          }
+        }
+      }
+    }
+
+    .desktopMenuContainer {
+      position: absolute;
+      left: 100%;
+    }
+  }
+}
