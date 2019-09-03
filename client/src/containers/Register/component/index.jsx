@@ -98,7 +98,7 @@ class Register extends Component {
                     type='text'
                     id='first-name-input'
                     placeholder='John'
-                    name='first_name'
+                    name='firstName'
                     value={states.firstName}
                     onChange={this.handleChange}
                   />
@@ -110,7 +110,7 @@ class Register extends Component {
                     type='text'
                     id='last-name'
                     placeholder='Doe'
-                    name='last_name'
+                    name='lastName'
                     value={states.lastName}
                     onChange={this.handleChange}
                   />
