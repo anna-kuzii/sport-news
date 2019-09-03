@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .newsoftheday-wrapper {
   position: relative;
   width: 60%;
@@ -5,30 +7,6 @@
 
   @media screen and (max-width: $mobile-width) {
     width: 100vw;
-  }
-
-  .news-divider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin: 40px auto;
-    border-bottom: 1px solid $placeholder-grey;
-
-    p {
-      position: absolute;
-      padding: 10px 30px;
-      font-family: Open Sans;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: bold;
-      line-height: 19px;
-      white-space: nowrap;
-      background-color: $white;
-      border: 1px solid;
-      border-color: $placeholder-grey;
-      border-radius: 20px;
-     }
   }
 
   .news-block {
@@ -74,6 +52,8 @@
         color: $white;
         text-transform: uppercase;
 
+        // TODO remove this rule when remove additional wrapper
+        // sass-lint:disable-block nesting-depth
         span {
           font-weight: normal;
         }
@@ -122,9 +102,7 @@
         font-weight: 800;
         color: $white;
         text-decoration: none;
-
       }
     }
-
   }
 }
