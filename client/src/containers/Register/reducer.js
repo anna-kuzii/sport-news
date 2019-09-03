@@ -1,11 +1,11 @@
 import {
   userConstants,
-} from './constant'
+} from './constant';
 
 export const initialState = {
   registering: false,
   error: null,
-}
+};
 
 export function registration(state = initialState, action) {
   switch (action.type) {
@@ -13,19 +13,19 @@ export function registration(state = initialState, action) {
       return {
         ...state,
         registering: true,
-      }
+      };
     case userConstants.REGISTER_SUCCESS:
       return {
         ...state,
         error: null,
         registering: false,
-      }
+      };
     case userConstants.REGISTER_FAILURE:
       return {
         ...state,
         error: action.error,
-      }
+      };
     default:
-      return state
+      return state;
   }
 }

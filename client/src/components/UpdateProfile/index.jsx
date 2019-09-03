@@ -1,5 +1,5 @@
-import React from 'react'
-import './style.scss'
+import React from 'react';
+import './style.scss';
 
 export const UpdateProfile = () =>(
   <div className='updateProfile'>
@@ -24,4 +24,4 @@ export const UpdateProfile = () =>(
       <button type='button' className='update-profile'>Update Profile</button>
     </div>
   </div>
-)
+);

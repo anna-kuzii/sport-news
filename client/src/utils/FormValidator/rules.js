@@ -1,27 +1,27 @@
 export const rules = [
   {
-    field: 'first_name',
+    field: 'firstName',
     method: 'isEmpty',
     validWhen: false,
     message: 'Enter a first name.',
   },
   {
-    field: 'first_name',
+    field: 'firstName',
     method: 'isLength',
-    args: [ { max:256 } ],
+    args: [ { max: 256 } ],
     validWhen: true,
     message: 'enter less than 256 char.',
   },
   {
-    field: 'last_name',
+    field: 'lastName',
     method: 'isEmpty',
     validWhen: false,
     message: 'Enter a last name.',
   },
   {
-    field: 'last_name',
+    field: 'lastName',
     method: 'isLength',
-    args: [ { max:256 } ],
+    args: [ { max: 256 } ],
     validWhen: true,
     message: 'enter less than 256 char.',
   },
@@ -34,7 +34,7 @@ export const rules = [
   {
     field: 'email',
     method: 'isLength',
-    args: [ { max:256 } ],
+    args: [ { max: 256 } ],
     validWhen: true,
     message: 'enter less than 256 char.',
   },
@@ -47,8 +47,8 @@ export const rules = [
   {
     field: 'password',
     method: 'isLength',
-    args: [ { min:4, max:256 } ],
+    args: [ { min: 4, max: 256 } ],
     validWhen: true,
     message: '4+ character',
   },
-]
+];

@@ -1,75 +1,75 @@
-import React, { Component } from 'react'
-import sign_up_bg from '../../../assets/img/register-login-bg.jpg'
-import { Link } from 'react-router-dom'
-import { Logo } from '../../../components/Logo'
+import React, { Component } from 'react';
+import signupBg from '../../../assets/img/register-login-bg.jpg';
+import { Link } from 'react-router-dom';
+import { Logo } from '../../../components/Logo';
 
-import FormValidator from '../../../utils/FormValidator'
-import { rules } from '../../../utils/FormValidator/rules'
-import { userActions } from '../action'
-import { connect } from 'react-redux'
-import './style.scss'
+import FormValidator from '../../../utils/FormValidator';
+import { rules } from '../../../utils/FormValidator/rules';
+import { userActions } from '../action';
+import { connect } from 'react-redux';
+import './style.scss';
 
 class Register extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
-    this.validator = new FormValidator(rules)
+    this.validator = new FormValidator(rules);
 
     this.state = {
-      first_name: '',
-      last_name: '',
+      firstName: '',
+      lastName: '',
       email: '',
-      password:'',
+      password: '',
       validation: this.validator.createValidObj(),
       submitted: false,
       error: '',
-    }
+    };
 
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(e) {
-    this.setState({ [e.target.name]: e.target.value })
+    this.setState({ [e.target.name]: e.target.value });
   }
 
   handleSubmit(e) {
-    e.preventDefault()
+    e.preventDefault();
 
-    const state = this.state
+    const state = this.state;
     const newUser = {
-      first_name : state.first_name,
-      last_name: state.last_name,
+      firstName: state.firstName,
+      lastName: state.lastName,
       email: state.email,
       password: state.password,
-    }
-    const { register } = this.props
-    register(newUser)
-    const validation = this.validator.validate(state)
+    };
+    const { register } = this.props;
+    const validation = this.validator.validate(state);
+
+    register(newUser);
     this.setState((prevState) => ({
       ...prevState,
       validation: this.validator.validate(prevState),
-      submitted:true,
-    }))
+      submitted: true,
+    }));
     if (validation.isValid) {
     // handle actual form submission here
     }
   }
 
   render() {
-    const states = this.state
+    const states = this.state;
     const validation = this.submitted
       ? this.validator.validate(states)
-      : states.validation
-    const { registering } = this.props
-
+      : states.validation;
+    const { registering } = this.props;
 
     return (
       <div className='register-container '>
         <div className='container-fluid'>
           <div className='bg-img'>
             <Logo />
-            <img src={sign_up_bg} alt='signup_bg' />
+            <img src={signupBg} alt='sign up background' />
           </div>
           <div className='create-account-form'>
             <div className='log-in'>
@@ -92,29 +92,29 @@ class Register extends Component {
               && <span className='register-error'>{registering.error}</span>
               }
               <div className='user-info'>
-                <div className={validation.first_name.isInvalid ? 'has-error first-name': 'first-name'}>
+                <div className={validation.firstName.isInvalid ? 'has-error first-name': 'first-name'}>
                   <label htmlFor='first-name-input'>First name</label>
                   <input
                     type='text'
                     id='first-name-input'
                     placeholder='John'
                     name='first_name'
-                    value={states.first_name}
+                    value={states.firstName}
                     onChange={this.handleChange}
                   />
-                  <span className='help-block'>{validation.first_name.message}</span>
+                  <span className='help-block'>{validation.firstName.message}</span>
                 </div>
-                <div className={validation.last_name.isInvalid ? 'has-error last-name' : 'last-name'}>
+                <div className={validation.lastName.isInvalid ? 'has-error last-name' : 'last-name'}>
                   <label htmlFor='last-name-input'>Last name</label>
                   <input
                     type='text'
                     id='last-name'
                     placeholder='Doe'
                     name='last_name'
-                    value={states.last_name}
+                    value={states.lastName}
                     onChange={this.handleChange}
                   />
-                  <span className='help-block'>{validation.last_name.message}</span>
+                  <span className='help-block'>{validation.lastName.message}</span>
                 </div>
               </div>
               <div className='email-wrapper'>
@@ -154,17 +154,19 @@ class Register extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
 function mapState(state) {
-  return { registering : state.registration }
+  return { registering: state.registration };
 }
 
 const actionCreators = {
-  register: userActions.register,
-}
 
-const connectedRegisterPage = connect(mapState, actionCreators)(Register)
-export { connectedRegisterPage as Register }
+  register: userActions.register,
+};
+
+const connectedRegisterPage = connect(mapState, actionCreators)(Register);
+
+export { connectedRegisterPage as Register };

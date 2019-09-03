@@ -14,6 +14,7 @@
     @media screen and (max-width: $mobile-width) {
       margin: 0;
     }
+
     // sass-lint:disable-block nesting-depth
     .btn-primary {
 
@@ -204,6 +205,7 @@
     margin-top: 30px;
   }
 
+  // sass-lint:disable-block no-important
   &:hover {
     background-color: $alizarin-crimson-hover !important;
   }

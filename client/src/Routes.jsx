@@ -1,13 +1,13 @@
-import React, { Component } from 'react'
-import { Router, Route, Switch } from 'react-router-dom'
+import React, { Component } from 'react';
+import { Router, Route, Switch } from 'react-router-dom';
 
-import { history } from './helpers'
-import { Register } from './containers/Register/component'
-import { Login } from './containers/Login/component'
-import { ForgotPassword } from './containers/ForgotPassword/component'
-import { Header } from './components/Header'
-import { Home } from './components/Home'
-import { UpdateProfile } from './components/UpdateProfile'
+import { history } from './helpers';
+import { Register } from './containers/Register/component';
+import { Login } from './containers/Login/component';
+import { ForgotPassword } from './containers/ForgotPassword/component';
+import { Header } from './components/Header';
+import { Home } from './components/Home';
+import { UpdateProfile } from './components/UpdateProfile';
 
 export default class Routes extends Component {
   render() {
@@ -27,6 +27,6 @@ export default class Routes extends Component {
         <Route path='/login' component={Login} />
         <Route path='/forgotpassword' component={ForgotPassword} />
       </Router>
-    )
+    );
   }
 }

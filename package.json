@@ -4,9 +4,8 @@
   "description": "sport news site",
   "main": "server.js",
   "scripts": {
-    "eslint": "node_modules/.bin/eslint --ignore-path .gitignore *.{js,jsx} --fix ",
-    "SassLint": "node_modules/.bin/sass-lint --ignore-path .gitignore -v *.scss ",
-    "precommit": "lint-staged",
+    "lint:js": "eslint --ext .jsx --ext .js client/src",
+    "lint:sass": "sass-lint --verbose -c .sass-lint.yml",
     "client-install": "npm install --prefix client",
     "start": "node server.js",
     "server": "nodemon server.js",
@@ -16,6 +15,10 @@
     "nothing": "nothing",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=true npm install --prefix client && npm run build --prefix client"
   },
+  "precommit": [
+    "lint:js",
+    "lint:sass"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/anna-kuzii/sport-news.git"
@@ -54,6 +57,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.0.2",
+    "eslint": "^6.1.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.3",

@@ -1,10 +1,10 @@
-import single_news from '../img/single-news.png'
+import singleNews from '../img/single-news.png';
 
 export default [
   {
     id: '1',
-    image: single_news,
+    image: singleNews,
     title: 'Lorem ipsum dolor sit amet, consectetur',
     logo: 'NBA',
   },
-]
+];

@@ -1,5 +1,5 @@
-import React from 'react'
-import './style.scss'
+import React from 'react';
+import './style.scss';
 
 export const Copyright = () => (
   <div className='copyright-container'>
@@ -9,4 +9,4 @@ export const Copyright = () => (
       <h4 className='privacy'>Privacy/Terms</h4>
     </div>
   </div>
-)
+);
