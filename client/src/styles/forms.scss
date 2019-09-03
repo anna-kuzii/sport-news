@@ -83,7 +83,7 @@
   @media screen and (max-width: $mobile-width) {
     position: absolute;
     z-index: 1;
-    background: linear-gradient($dimming, $dimming), url('../assets/img/register-login-bg.jpg') no-repeat center;
+    background: linear-gradient($black-70, $black-70), url('../assets/img/register-login-bg.jpg') no-repeat center;
     background-size: cover;
   }
 }
@@ -265,7 +265,7 @@
   justify-content: center;
   width: 100%;
   margin: 40px auto;
-  border-bottom: 1px solid $placeholder-grey;
+  border-bottom: 1px solid $silver-chalice;
 
   p {
     position: absolute;
@@ -277,7 +277,7 @@
     text-transform: uppercase;
     white-space: nowrap;
     background-color: $white;
-    border: 1px solid $placeholder-grey;
+    border: 1px solid $silver-chalice;
     border-radius: 20px;
   }
 }
