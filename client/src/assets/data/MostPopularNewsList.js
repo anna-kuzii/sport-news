@@ -1,25 +1,25 @@
-import first_popular from '../img/first-popular.png'
-import second_popular from '../img/second-popular.png'
-import third_popular from '../img/third-popular.png'
+import firstPopular from '../img/first-popular.png';
+import secondPopular from '../img/second-popular.png';
+import thirdPopular from '../img/third-popular.png';
 
 
 export default [
   {
     id: '1',
-    image: first_popular,
+    image: firstPopular,
     title: 'Lorem ipsum',
     text: 'Lorem ipsum dolor sit amet, consectetur',
   },
   {
     id: '2',
-    image: second_popular,
+    image: secondPopular,
     title: 'Lorem ipsum',
     text: 'Lorem ipsum dolor sit amet, consectetur',
   },
   {
     id: '3',
-    image: third_popular,
+    image: thirdPopular,
     title: 'Lorem ipsum',
     text: 'Lorem ipsum dolor sit amet, consectetur',
   },
-]
+];

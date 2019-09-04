@@ -1,25 +1,25 @@
-import first_comments from '../img/first-comments.png'
-import second_comments from '../img/second-comments.png'
-import third_comments from '../img/third-comments.png'
+import firstComments from '../img/first-comments.png';
+import secondComments from '../img/second-comments.png';
+import thirdComments from '../img/third-comments.png';
 
 
 export default [
   {
     id: '1',
-    image: first_comments,
+    image: firstComments,
     title: 'Lorem ipsum',
     text: 'Lorem ipsum dolor sit amet, consectetur',
   },
   {
     id: '2',
-    image: second_comments,
+    image: secondComments,
     title: 'Lorem ipsum',
     text: 'Lorem ipsum dolor sit amet, consectetur',
   },
   {
     id: '3',
-    image: third_comments,
+    image: thirdComments,
     title: 'Lorem ipsum',
     text: 'Lorem ipsum dolor sit amet, consectetur',
   },
-]
+];

@@ -1,9 +1,9 @@
-import React from 'react'
-import { NewsBlock } from '../NewsBlock'
-import { SingleNews } from '../SingleNews'
+import React from 'react';
+import { NewsBlock } from '../NewsBlock';
+import { SingleNews } from '../SingleNews';
+import './style.scss';
 
-
-export const Breakdown = ({ singleNews, news_block }) => (
+export const Breakdown = ({ singleNews, newsBlock }) => (
   <div className='breakdown-wrapper'>
     <div className='news-divider'>
       <p>breakdown</p>
@@ -16,15 +16,15 @@ export const Breakdown = ({ singleNews, news_block }) => (
       <div className='news-boxes'>
         <div className='news-box'>
           <NewsBlock
-            newsBlock={news_block}
+            newsBlock={newsBlock}
           />
         </div>
         <div className='news-box'>
           <NewsBlock
-            newsBlock={news_block}
+            newsBlock={newsBlock}
           />
         </div>
       </div>
     </div>
   </div>
-)
+);

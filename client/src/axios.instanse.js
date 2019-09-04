@@ -1,9 +1,9 @@
-import axios from 'axios'
+import axios from 'axios';
 
-require('dotenv').config()
+require('dotenv').config();
 
 export var instance = axios.create(
   {
-    baseURL : process.env.REACT_APP_SERVER_URL,
+    baseURL: process.env.REACT_APP_SERVER_URL,
   }
-)
+);

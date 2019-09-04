@@ -1,0 +1,79 @@
+@import '../../../styles/variables';
+
+.forgot-password-container {
+  .forgot-password-wrapper {
+    ::placeholder {
+      color: $ghost;
+    }
+
+    p {
+      width: 60%;
+      font-family: Open Sans, serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 19px;
+      color: $shuttle-gray;
+
+      @media screen and (max-width: $mobile-width) {
+        width: 100%;
+        margin: 20px 0 0;
+        color: $white;
+      }
+    }
+
+    .forgot-password-error {
+      display: block;
+      font-size: 12px;
+      font-weight: 400;
+      color: $alizarin-crimson;
+    }
+
+    .sign-up {
+      display: none;
+    }
+
+    .sign-in,
+    .sign-up {
+      margin: 12px 0 0;
+      font-family: Open Sans, serif;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 16px;
+      color: $black;
+      text-align: center;
+
+
+      @media screen and (max-width: $mobile-width) {
+        display: block;
+        margin-top: 15px;
+        color: $white;
+        text-align: left;
+      }
+    }
+
+    .email-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: 10px 0 0;
+
+      @media screen and (max-width: $mobile-width) {
+        margin: 0;
+      }
+    }
+
+    .forgot-password {
+      margin: 20px 0 0;
+      font-family: Roboto, serif;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: bold;
+      line-height: 14px;
+      letter-spacing: 1px;
+      color: $white;
+      text-transform: uppercase;
+    }
+  }
+}
