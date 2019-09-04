@@ -17,7 +17,7 @@
   }
 
   .listItem {
-    a {
+    button {
       display: flex;
       padding: 12px 10px 12px 65px;
       font-family: 'Open Sans Bold';
@@ -45,7 +45,7 @@
     }
 
     .listItem {
-      a {
+      button {
         font-family: 'Roboto Regular';
         color: $black;
 

@@ -1,20 +1,14 @@
 @import '../../styles/variables.scss';
 
 .home-page-wrapper {
+  display: flex;
+  justify-content: center;
   width: 100%;
   height: auto;
   max-width: 1440px;
   padding: 0;
   margin: auto;
   background: $concrete;
-
-  .most-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 835px;
-  }
 
   .breakdown-container {
     display: flex;
