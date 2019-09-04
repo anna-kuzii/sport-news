@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
-import hover_arrow from '../../assets/img/news-hover-arrow.svg'
-import { Swipe, Position } from 'react-swipe-component'
-import articles from '../../assets/data/slider'
+import React, { Component } from 'react';
+import hoverArrow from '../../assets/img/news-hover-arrow.svg';
+import { Swipe } from 'react-swipe-component';
+import articles from '../../assets/data/slider';
+import './style.scss';
 
 export class NewsSlider extends Component {
   constructor(props) {
@@ -118,7 +119,7 @@ export class NewsSlider extends Component {
               <p className='sub-article-title'> Lorem ipsum </p>
               <p className='sub-article-text'>{articles[element - 1].title}  </p>
               <img
-                src={hover_arrow}
+                src={hoverArrow}
                 alt='hover arrow'
                 className='hover-arrow'
               />
