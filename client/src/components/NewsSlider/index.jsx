@@ -7,9 +7,7 @@ import './style.scss';
 let startArray = [];
 
 if (articles.length < 4) {
-  articles.forEach((item, index)=>{
-    startArray.push(index + 1);
-  });
+  Array.from({ length: articles.length }, (elem, idx) => idx+1);
 } else {
   startArray = [ 1, 2, 3, 4 ];
 }
@@ -140,7 +138,7 @@ export class NewsSlider extends Component {
                 onClick={() =>this.handleClick(element)}
                 key={element.id}
               >
-                { element > 9 ? element : '0'+ element}
+                { element > 9 ? element : `0${element}`}
               </button>
             ))}
             <button
