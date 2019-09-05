@@ -4,7 +4,15 @@ import { Swipe } from 'react-swipe-component';
 import articles from '../../assets/data/slider';
 import './style.scss';
 
-const startArray = [ 1, 2, 3, 4 ];
+let startArray = [];
+
+if (articles.length < 4) {
+  for (let i = 1;i<=articles.length;i++) {
+    startArray[i]=i;
+  }
+} else {
+  startArray = [ 1, 2, 3, 4 ];
+}
 
 export class NewsSlider extends Component {
   constructor(props) {
