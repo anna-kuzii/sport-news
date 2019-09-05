@@ -6,114 +6,120 @@ import './style.scss';
 
 export class NewsSlider extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       currentArticle: 1,
-    }
+      articleArray: [ 1, 2, 3, 4 ],
+    };
 
-    this.handleNextSlide = this.handleNextSlide.bind(this)
-    this.handlePrevSlide = this.handlePrevSlide.bind(this)
-    this.handleClick = this.handleClick.bind(this)
+    this.handleNextSlide = this.handleNextSlide.bind(this);
+    this.handlePrevSlide = this.handlePrevSlide.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleNextSlide(e) {
-    e.preventDefault()
-    if ( this.state.currentArticle === 4) {
-      this.setState({ currentArticle: 1 })
+    const { currentArticle, articleArray } = this.state;
+
+    e.preventDefault();
+    if ( currentArticle === articles.length) {
+      this.setState({ currentArticle: 1, articleArray: [ 1, 2, 3, 4 ] });
+    } else if ( articles.length > 4 && currentArticle === articleArray[3] ) {
+      this.setState(state =>{
+        const articleArray = state.articleArray.map(element => element + 1);
+
+        return { articleArray, currentArticle: articleArray[3] };
+      });
     } else {
       this.setState(function (state) {
         return {
           currentArticle: state.currentArticle + 1,
-        }
-      })
+        };
+      });
     }
   }
 
   handlePrevSlide(e) {
-    e.preventDefault()
-    if ( this.state.currentArticle === 1) {
-      this.setState({ currentArticle: 4 })
+    const { currentArticle, articleArray } = this.state;
+    const length = articles.length;
+    const newArticleArray = [ length-3, length-2, length-1, length ];
+
+    e.preventDefault();
+    if ( currentArticle === 1) {
+      this.setState({ currentArticle: length, articleArray: newArticleArray });
+    } else if (articles.length > 4 && currentArticle === articleArray[0]) {
+      this.setState(state =>{
+        const articleArray = state.articleArray.map(element => element - 1);
+
+        return { articleArray, currentArticle: articleArray[0] };
+      });
     } else {
       this.setState(function (state) {
         return {
           currentArticle: state.currentArticle - 1,
-        }
-      })
+        };
+      });
     }
   }
 
   handleClick(element) {
-    this.setState({ currentArticle: element })
+    this.setState({ currentArticle: element });
   }
 
   onSwipeLeftListener = () => {
-    if ( this.state.currentArticle === 4) {
-      this.setState({ currentArticle: 1 })
+    if ( this.state.currentArticle === articles.length) {
+      this.setState({ currentArticle: 1 });
     } else {
       this.setState(function (state) {
         return {
           currentArticle: state.currentArticle + 1,
-        }
-      })
+        };
+      });
     }
   }
   onSwipeRightListener = () => {
     if ( this.state.currentArticle === 1) {
-      this.setState({ currentArticle: 4 })
+      this.setState({ currentArticle: articles.length });
     } else {
       this.setState(function (state) {
         return {
           currentArticle: state.currentArticle - 1,
-        }
-      })
+        };
+      });
     }
   }
 
   render() {
-    const { currentArticle } = this.state
+    const { currentArticle, articleArray } = this.state;
+    const article = articles[currentArticle - 1];
 
-    const arr = [ 1, 2, 3, 4 ]
     return (
-      <div >
-        <div className='news-slider-container'>
+      <div className='slider-wrapper'>
+        <div className='main-article-container'>
           <Swipe
             onSwipedLeft={this.onSwipeLeftListener}
             onSwipedRight={this.onSwipeRightListener}
           >
-            <img src={articles[currentArticle - 1].img} alt='main article' />
+            <img src={article.img} alt='main article' />
           </Swipe>
           <div className='news-info'>
             <p className='publish-time'>Published / 20.09.2019</p>
-            <p className='title'>{articles[currentArticle - 1].title}</p>
-            <p className='news-text'>{articles[currentArticle - 1].text}</p>
+            <p className='title'>{article.title}</p>
+            <p className='news-text'>{article.text}</p>
             <button className='more-button'>More</button>
           </div>
           <div className='slider-controller'>
-            <button className='slider-back' onClick={this.handlePrevSlide}>
-              <svg
-                version='1.1' xmlns='http://www.w3.org/2000/svg'
-                viewBox='0 0 150 150'
-              >
-                <path d='m88.6,121.3c0.8,0.8 1.8,1.2 2.9,1.2s2.1-0.4 2.9-1.2c1.6-1.6 1.6-4.2 0-5.8l-51-51 51-51c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-54,53.9c-1.6,1.6-1.6,4.2 0,5.8l54,53.9z' />
-              </svg>
-            </button>
-            {arr.map(element =>(
-              <button className={currentArticle === element ? 'current-slide': ''} onClick={() =>this.handleClick(element)}>{'0'+element}</button>
+            <button className='slider-back' onClick={this.handlePrevSlide} />
+            {articleArray.map(element =>(
+              <button className={currentArticle === element ? 'current-slide': ''} onClick={() =>this.handleClick(element)}>
+                { element > 9 ? element : '0'+ element}
+              </button>
             ))}
-
-            <button className='slider-next' onClick={this.handleNextSlide}>
-              <svg
-                version='1.1' xmlns='http://www.w3.org/2000/svg'
-                viewBox='-20 0 150 150'
-              >
-                <path d='m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z' />
-              </svg>
-            </button>
+            <button className='slider-next' onClick={this.handleNextSlide} />
           </div>
         </div>
         <div className='sub-articles-container'>
-          {arr.map(element =>(
+          {articleArray.map(element =>(
             <div className='sub-article' onClick={() =>this.handleClick(element)}>
               <img src={articles[element - 1].img} alt='sub article' />
               <p className='sub-article-title'> Lorem ipsum </p>
@@ -127,6 +133,6 @@ export class NewsSlider extends Component {
           ))}
         </div>
       </div>
-    )
+    );
   }
 }
