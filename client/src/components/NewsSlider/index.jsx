@@ -52,7 +52,14 @@ export class NewsSlider extends Component {
   handlePrevSlide(e) {
     const { currentArticle, articleArray } = this.state;
     const articleLength = articles.length;
-    const newArticleArray = [ articleLength-3, articleLength-2, articleLength-1, articleLength ];
+
+    let newArticleArray = [ ];
+
+    if (articles.length < 4) {
+      newArticleArray = startArray;
+    } else {
+      newArticleArray = [ articleLength-3, articleLength-2, articleLength-1, articleLength ];
+    }
 
     e.preventDefault();
     if ( currentArticle === 1) {
