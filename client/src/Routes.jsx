@@ -22,14 +22,15 @@ export default class Routes extends Component {
             exact path='/'
             component={Home}
           />
-          <Route exact path='/nba'>
-          <Header />
+        </Route>
+        <Route exact path='/nba'>
+          <Switch>
+            <Header />
+          </Switch>
           <Route
             exact path='/nba'
             component={FullNews}
           />
-          </Route>
-           
         </Route>
         <Route path='/updateprofile' component={UpdateProfile} />
         <Route path='/register' component={Register} />

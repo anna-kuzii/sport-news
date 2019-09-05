@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config();
 
 exports.forgotPasswordTemplate = (user, url) => {
   const mailOptions = {
@@ -12,7 +12,7 @@ exports.forgotPasswordTemplate = (user, url) => {
   <a href=${url}>${url}</a>
   <p>If you don’t use this link within 1 hour, it will expire.</p>
   `,
-  }
+  };
 
-  return mailOptions
-}
+  return mailOptions;
+};
