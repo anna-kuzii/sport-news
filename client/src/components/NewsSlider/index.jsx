@@ -83,8 +83,10 @@ export class NewsSlider extends Component {
     this.setState({ currentArticle: element });
   }
 
-  onSwipeLeftListener = () => {
-    if ( this.state.currentArticle === articles.length) {
+  handleSwipeLeft = () => {
+    const { currentArticle } = this.state;
+
+    if ( currentArticle === articles.length) {
       this.setState({ currentArticle: 1 });
     } else {
       this.setState(function (state) {
@@ -94,8 +96,10 @@ export class NewsSlider extends Component {
       });
     }
   }
-  onSwipeRightListener = () => {
-    if ( this.state.currentArticle === 1) {
+  handleSwipeRight = () => {
+    const { currentArticle } = this.state;
+
+    if ( currentArticle === 1) {
       this.setState({ currentArticle: articles.length });
     } else {
       this.setState(function (state) {
@@ -114,8 +118,8 @@ export class NewsSlider extends Component {
       <div className='slider-wrapper'>
         <div className='main-article-container'>
           <Swipe
-            onSwipedLeft={this.onSwipeLeftListener}
-            onSwipedRight={this.onSwipeRightListener}
+            onSwipedLeft={this.handleSwipeLeft}
+            onSwipedRight={this.handleSwipeRight}
           >
             <img src={article.img} alt='main article' />
           </Swipe>
@@ -123,21 +127,31 @@ export class NewsSlider extends Component {
             <p className='publish-time'>Published / 20.09.2019</p>
             <p className='title'>{article.title}</p>
             <p className='news-text'>{article.text}</p>
-            <button className='more-button'>More</button>
+            <button type='reset' className='more-button'>More</button>
           </div>
           <div className='slider-controller'>
-            <button className='slider-back' onClick={this.handlePrevSlide} />
+            <button
+              type='reset' className='slider-back'
+              onClick={this.handlePrevSlide}
+            />
             {articleArray.map(element =>(
-              <button className={currentArticle === element ? 'current-slide': ''} onClick={() =>this.handleClick(element)}>
+              <button
+                type='reset' className={currentArticle === element ? 'current-slide': ''}
+                onClick={() =>this.handleClick(element)}
+                key={element.id}
+              >
                 { element > 9 ? element : '0'+ element}
               </button>
             ))}
-            <button className='slider-next' onClick={this.handleNextSlide} />
+            <button
+              type='reset' className='slider-next'
+              onClick={this.handleNextSlide}
+            />
           </div>
         </div>
         <div className='sub-articles-container'>
           {articleArray.map(element =>(
-            <div className='sub-article' onClick={() =>this.handleClick(element)}>
+            <div className='sub-article' key={element.id} >
               <img src={articles[element - 1].img} alt='sub article' />
               <p className='sub-article-title'> Lorem ipsum </p>
               <p className='sub-article-text'>{articles[element - 1].title}  </p>

@@ -1,5 +1,6 @@
 @import '../../styles/variables.scss';
-.slider-wrapper{
+
+.slider-wrapper {
   height: 820px;
   @media screen and(max-width: $tablet-width) {
     height: auto;
@@ -59,7 +60,7 @@
         border: 0;
       }
 
-      @media screen and (max-width: $small-width){
+      @media screen and (max-width: $small-width) {
         .publish-time {
           font-size: 12px;
         }
@@ -76,9 +77,9 @@
 
     .slider-controller {
       position: absolute;
-      display: flex;
       right: 0;
       bottom: 10px;
+      display: flex;
 
       button {
         margin-left: 5px;
@@ -102,9 +103,10 @@
         width: 30px;
         height: 30px;
         margin-right: 5px;
-        border: 0;
         background: url('../../assets/img/left-arrow.svg');
-        &:hover{
+        border: 0;
+
+        &:hover {
           background: url('../../assets/img/hover-left-arrow.svg');
         }
       }
@@ -113,26 +115,27 @@
         width: 30px;
         height: 30px;
         margin-left: 10px;
-        border: 0;
         background: url('../../assets/img/right-arrow.svg');
-        &:hover{
+        border: 0;
+
+        &:hover {
           background: url('../../assets/img/hover-right-arrow.svg');
         }
       }
 
       @media screen and (max-width: $small-width) {
-        button{
+        button {
           margin-left: 2px;
           font-size: 14px;
         }
 
-        .slider-back{
+        .slider-back {
           width: 25px;
           height: 25px;
           margin-right: 2px;
         }
 
-        .slider-next{
+        .slider-next {
           width: 25px;
           height: 25px;
           margin-left: 4px;
@@ -162,6 +165,7 @@
         background: $white;
         box-shadow: 0 2px 24px $news-hover-11;
 
+        // sass-lint:disable nesting-depth
         .hover-arrow {
           display: block;
           cursor: url('../../assets/img/cursor-hover.svg'), auto;
@@ -199,12 +203,11 @@
 
   @media screen and(max-width: $tablet-width) {
     .main-article-container {
+      top: 0;
+      left: 0;
       display: inline-block;
       width: 100%;
       max-width: 100%;
-      top: 0;
-      left: 0;
-
 
       img {
         position: static;
@@ -212,29 +215,29 @@
         height: auto;
       }
 
-      .news-info{
-        top:0;
+      .news-info {
         position: static;
+        top: 0;
         width: 100%;
         height: auto;
         padding: 5%;
         transform: translateY(0);
 
         .publish-time {
-          margin: 0 0 2% 0;
+          margin: 0 0 2% ;
           font-size: 12px;
           color: $boulder;
         }
 
         .title {
-          margin: 0 0 1% 0;
+          margin: 0 0 1% ;
           font-size: 16px;
           font-weight: 600;
           color: $flush-mahogany;
         }
 
         .news-text {
-          margin: 0 0 5% 0;
+          margin: 0 0 5% ;
           font-size: 16px;
           font-weight: bold;
           color: $ebony-clay;
@@ -242,10 +245,10 @@
 
         .more-button {
           bottom: 0;
-          margin-left: 50%;
           width: 37.5%;
-          min-width: 175px;
           height: 35px;
+          min-width: 175px;
+          margin-left: 50%;
           color: $white;
           cursor: url('../../assets/img/cursor-hover.svg'), auto;
           background: $monza;
@@ -260,13 +263,13 @@
     }
 
     .sub-articles-container {
-      display: inline-block;
       top: 20px;
       left: 0;
-      padding: 5% 10%;
+      display: inline-block;
       width: 100%;
       height: auto;
       max-width: 100%;
+      padding: 5% 10%;
 
       .sub-article {
         width: 100%;
@@ -281,6 +284,7 @@
         &:hover {
           background: none;
           box-shadow: 0 0 0;
+
           .hover-arrow {
             display: none;
           }
