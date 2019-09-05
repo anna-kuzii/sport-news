@@ -7,9 +7,9 @@ import './style.scss';
 let startArray = [];
 
 if (articles.length < 4) {
-  for (let i = 1;i<=articles.length;i++) {
-    startArray[i]=i;
-  }
+  articles.forEach((item, index)=>{
+    startArray.push(index + 1);
+  });
 } else {
   startArray = [ 1, 2, 3, 4 ];
 }
