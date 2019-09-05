@@ -53,7 +53,7 @@ export class NewsSlider extends Component {
     const { currentArticle, articleArray } = this.state;
     const articleLength = articles.length;
 
-    let newArticleArray = [ ];
+    let newArticleArray = [];
 
     if (articles.length < 4) {
       newArticleArray = startArray;
