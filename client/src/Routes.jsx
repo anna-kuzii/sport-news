@@ -8,6 +8,7 @@ import { ForgotPassword } from './containers/ForgotPassword/component';
 import { Header } from './components/Header';
 import { Home } from './components/Home';
 import { UpdateProfile } from './components/UpdateProfile';
+import { FullNews } from './components/FullNews';
 
 export default class Routes extends Component {
   render() {
@@ -21,6 +22,14 @@ export default class Routes extends Component {
             exact path='/'
             component={Home}
           />
+          <Route exact path='/nba'>
+          <Header />
+          <Route
+            exact path='/nba'
+            component={FullNews}
+          />
+          </Route>
+           
         </Route>
         <Route path='/updateprofile' component={UpdateProfile} />
         <Route path='/register' component={Register} />
