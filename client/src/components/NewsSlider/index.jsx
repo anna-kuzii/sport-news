@@ -4,13 +4,15 @@ import { Swipe } from 'react-swipe-component';
 import articles from '../../assets/data/slider';
 import './style.scss';
 
+const startArray = [ 1, 2, 3, 4 ];
+
 export class NewsSlider extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       currentArticle: 1,
-      articleArray: [ 1, 2, 3, 4 ],
+      articleArray: startArray,
     };
 
     this.handleNextSlide = this.handleNextSlide.bind(this);
@@ -23,7 +25,7 @@ export class NewsSlider extends Component {
 
     e.preventDefault();
     if ( currentArticle === articles.length) {
-      this.setState({ currentArticle: 1, articleArray: [ 1, 2, 3, 4 ] });
+      this.setState({ currentArticle: 1, articleArray: startArray });
     } else if ( articles.length > 4 && currentArticle === articleArray[3] ) {
       this.setState(state =>{
         const articleArray = state.articleArray.map(element => element + 1);
@@ -41,12 +43,12 @@ export class NewsSlider extends Component {
 
   handlePrevSlide(e) {
     const { currentArticle, articleArray } = this.state;
-    const length = articles.length;
-    const newArticleArray = [ length-3, length-2, length-1, length ];
+    const articleLength = articles.length;
+    const newArticleArray = [ articleLength-3, articleLength-2, articleLength-1, articleLength ];
 
     e.preventDefault();
     if ( currentArticle === 1) {
-      this.setState({ currentArticle: length, articleArray: newArticleArray });
+      this.setState({ currentArticle: articleLength, articleArray: newArticleArray });
     } else if (articles.length > 4 && currentArticle === articleArray[0]) {
       this.setState(state =>{
         const articleArray = state.articleArray.map(element => element - 1);
