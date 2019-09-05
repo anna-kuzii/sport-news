@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Router, Route, Switch } from 'react-router-dom';
+import { Router, Route } from 'react-router-dom';
 
 import { history } from './helpers';
 import { Register } from './containers/Register/component';
@@ -8,15 +8,16 @@ import { ForgotPassword } from './containers/ForgotPassword/component';
 import { Header } from './components/Header';
 import { Home } from './components/Home';
 import { UpdateProfile } from './components/UpdateProfile';
+import { Menu } from './components/Menu';
+import menuData from './assets/data/menuItems.json';
 
 export default class Routes extends Component {
   render() {
     return (
       <Router history={history}>
         <Route exact path='/'>
-          <Switch>
-            <Header />
-          </Switch>
+          <Header />
+          <Menu menuList={menuData.menu} />
           <Route
             exact path='/'
             component={Home}
