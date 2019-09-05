@@ -14,10 +14,24 @@
     height: 400px;
     max-width: 1000px;
 
+    @media screen and(max-width: $tablet-width) {
+      top: 0;
+      left: 0;
+      display: inline-block;
+      width: 100%;
+      max-width: 100%;
+    }
+
     img {
       position: absolute;
       width: 75%;
       height: 100%;
+
+      @media screen and(max-width: $tablet-width) {
+        position: static;
+        width: 100%;
+        height: auto;
+      }
     }
 
     .news-info {
@@ -28,11 +42,28 @@
       background: $wild-sand;
       transform: translateY(-50%);
 
+      @media screen and(max-width: $tablet-width) {
+        position: static;
+        top: 0;
+        width: 100%;
+        height: auto;
+        padding: 5%;
+        transform: translateY(0);
+      }
 
       .publish-time {
         margin: 10% 10% 2%;
         font-size: 14px;
         color: $boulder;
+
+        @media screen and (max-width: $laptop-width) {
+          font-size: 12px;
+        }
+
+        @media screen and(max-width: $tablet-width) {
+          margin: 0 0 2% ;
+          font-size: 12px;
+        }
       }
 
       .title {
@@ -40,6 +71,14 @@
         font-size: 16px;
         font-weight: 600;
         color: $flush-mahogany;
+
+        @media screen and (max-width: $laptop-width) {
+          font-size: 14px;
+        }
+
+        @media screen and(max-width: $tablet-width) {
+          margin: 0 0 1% ;
+        }
       }
 
       .news-text {
@@ -47,6 +86,15 @@
         font-size: 22px;
         font-weight: bold;
         color: $ebony-clay;
+
+        @media screen and (max-width: $laptop-width) {
+          font-size: 18px;
+        }
+
+        @media screen and(max-width: $tablet-width) {
+          margin: 0 0 5% ;
+          font-size: 16px;
+        }
       }
 
       .more-button {
@@ -58,19 +106,11 @@
         cursor: url('../../assets/img/cursor-hover.svg'), auto;
         background: $monza;
         border: 0;
-      }
 
-      @media screen and (max-width: $small-width) {
-        .publish-time {
-          font-size: 12px;
-        }
-
-        .title {
-          font-size: 14px;
-        }
-
-        .news-text {
-          font-size: 18px;
+        @media screen and(max-width: $tablet-width) {
+          min-width: 175px;
+          margin-left: 50%;
+          transform: translateX(-50%);
         }
       }
     }
@@ -80,6 +120,10 @@
       right: 0;
       bottom: 10px;
       display: flex;
+
+      @media screen and(max-width: $tablet-width) {
+          display: none;
+      }
 
       button {
         margin-left: 5px;
@@ -93,6 +137,11 @@
           color: $flush-mahogany;
           cursor: url('../../assets/img/cursor-hover.svg'), auto;
         }
+
+        @media screen and (max-width: $laptop-width) {
+            margin-left: 2px;
+            font-size: 14px;
+          }
       }
 
       .current-slide {
@@ -109,6 +158,12 @@
         &:hover {
           background: url('../../assets/img/hover-left-arrow.svg');
         }
+
+        @media screen and (max-width: $laptop-width) {
+          width: 25px;
+          height: 25px;
+          margin-right: 2px;
+        }
       }
 
       .slider-next {
@@ -121,21 +176,8 @@
         &:hover {
           background: url('../../assets/img/hover-right-arrow.svg');
         }
-      }
 
-      @media screen and (max-width: $small-width) {
-        button {
-          margin-left: 2px;
-          font-size: 14px;
-        }
-
-        .slider-back {
-          width: 25px;
-          height: 25px;
-          margin-right: 2px;
-        }
-
-        .slider-next {
+        @media screen and (max-width: $laptop-width) {
           width: 25px;
           height: 25px;
           margin-left: 4px;
@@ -153,6 +195,15 @@
     height: 300px;
     max-width: 770px;
 
+    @media screen and(max-width: $tablet-width) {
+      top: 20px;
+      left: 0;
+      display: inline-block;
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      padding: 5% 10%;
+    }
 
     .sub-article {
       position: relative;
@@ -160,15 +211,29 @@
       height: 300px;
       padding: 10px;
 
+      @media screen and(max-width: $tablet-width) {
+        width: 100%;
+        height: auto;
+      }
+
       &:hover {
         cursor: url('../../assets/img/cursor-hover.svg'), auto;
         background: $white;
         box-shadow: 0 2px 24px $news-hover-11;
 
+        @media screen and(max-width: $tablet-width) {
+          background: none;
+          box-shadow: 0 0 0;
+        }
+
         // sass-lint:disable nesting-depth
         .hover-arrow {
           display: block;
           cursor: url('../../assets/img/cursor-hover.svg'), auto;
+
+          @media screen and(max-width: $tablet-width) {
+            display: none;
+          }
         }
       }
 
@@ -185,6 +250,11 @@
         width: 100%;
         height: 130px;
         max-width: 180px;
+
+        @media screen and(max-width: $tablet-width) {
+            height: auto;
+            max-width: 100%;
+        }
       }
 
       .sub-article-title {
@@ -197,98 +267,6 @@
       .sub-article-text {
         font-size: 14px;
         color: $boulder;
-      }
-    }
-  }
-
-  @media screen and(max-width: $tablet-width) {
-    .main-article-container {
-      top: 0;
-      left: 0;
-      display: inline-block;
-      width: 100%;
-      max-width: 100%;
-
-      img {
-        position: static;
-        width: 100%;
-        height: auto;
-      }
-
-      .news-info {
-        position: static;
-        top: 0;
-        width: 100%;
-        height: auto;
-        padding: 5%;
-        transform: translateY(0);
-
-        .publish-time {
-          margin: 0 0 2% ;
-          font-size: 12px;
-          color: $boulder;
-        }
-
-        .title {
-          margin: 0 0 1% ;
-          font-size: 16px;
-          font-weight: 600;
-          color: $flush-mahogany;
-        }
-
-        .news-text {
-          margin: 0 0 5% ;
-          font-size: 16px;
-          font-weight: bold;
-          color: $ebony-clay;
-        }
-
-        .more-button {
-          bottom: 0;
-          width: 37.5%;
-          height: 35px;
-          min-width: 175px;
-          margin-left: 50%;
-          color: $white;
-          cursor: url('../../assets/img/cursor-hover.svg'), auto;
-          background: $monza;
-          border: 0;
-          transform: translateX(-50%);
-        }
-      }
-
-      .slider-controller {
-        display: none;
-      }
-    }
-
-    .sub-articles-container {
-      top: 20px;
-      left: 0;
-      display: inline-block;
-      width: 100%;
-      height: auto;
-      max-width: 100%;
-      padding: 5% 10%;
-
-      .sub-article {
-        width: 100%;
-        height: auto;
-
-        img {
-          width: 100%;
-          height: auto;
-          max-width: 100%;
-        }
-
-        &:hover {
-          background: none;
-          box-shadow: 0 0 0;
-
-          .hover-arrow {
-            display: none;
-          }
-        }
       }
     }
   }
