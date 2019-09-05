@@ -1,6 +1,10 @@
 @import '../../styles/variables.scss';
 .slider-wrapper{
   height: 820px;
+  @media screen and(max-width: $tablet-width) {
+    height: auto;
+  }
+
   .main-article-container {
     position: relative;
     top: 100px;
@@ -194,8 +198,6 @@
   }
 
   @media screen and(max-width: $tablet-width) {
-    height: auto;
-
     .main-article-container {
       display: inline-block;
       width: 100%;
