@@ -292,7 +292,7 @@
   background: $concrete;
 
   @media screen and (max-width: $tablet-width) {
-    padding: 0 20px 0;
+    padding: 0 20px;
   }
 
   .most-news-container {
@@ -304,8 +304,8 @@
     background: $concrete;
 
     @media screen and (max-width: $mobile-width) {
-      flex-direction: column;
       align-items: center;
+      flex-direction: column;
     }
 
   }
