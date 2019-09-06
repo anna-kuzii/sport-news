@@ -41,15 +41,15 @@ const forgotPassword = require('./routes/forgotPassword');
 const logout = require('./routes/logout');
 const updateProfile = require('./routes/updateProfile');
 const resetPassword = require('./routes/resetPassword');
-const passDataTocomponent = require('./routes/passDataTocomponent');
+const article = require('./routes/article');
 
-app.use('/passData', passDataTocomponent);
 app.use('/register', register);
 app.use('/login', login);
 app.use('/forgotpassword', forgotPassword);
 app.use('/logout', logout);
 app.use('/updateprofile', updateProfile);
 app.use('/resetpassword', resetPassword);
+app.use('/article', article);
 
 
 app.use(express.static(path.join(__dirname, 'client/build')));

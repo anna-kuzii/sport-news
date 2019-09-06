@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Loader from 'react-loader-spinner';
 import './style.scss';
 import {
   instance,
@@ -10,7 +11,7 @@ class NewsOfTheDays extends Component {
     super();
     this.state ={
       data: [],
-      isLoaded: false,
+      isLoading: true,
     };
   }
 
@@ -20,9 +21,9 @@ class NewsOfTheDays extends Component {
       : <p>{text.slice(0, 60)}<Link to={fullNews} className='see-more'> ...</Link></p>
   );*/
 
-  componentWillMount() {
-    instance.get('/passData').then(article =>{
-      this.setState({ data: article, isLoaded: true });
+  componentDidMount() {
+    instance.get('/article').then(article =>{
+      this.setState({ data: article, isLoading: false });
     });
   }
 
@@ -32,25 +33,38 @@ class NewsOfTheDays extends Component {
   };
 
   render() {
-    const { isLoaded, data } = this.state;
+    const { isLoading, data } = this.state;
 
     return (
-      <div className='newsoftheday-wrapper'>
-        <div className='news-divider'>
-          <p>photo of the day</p>
-        </div>
-        <div className='newsday-block'>
-          <img src={isLoaded && data.data[1].imageURL} alt='background' />
-          <div className='photo-triangle'>
-            <p>photo<span><br />of the<br /></span>day</p>
+      isLoading
+        ? (
+          <div className='data-loading'>
+            <Loader
+              type='TailSpin'
+              color='#C63638'
+              height='200'
+              width='200'
+            />
           </div>
-          <div className='news-article'>
-            <h1 className='title'>{isLoaded && data.data[1].title}</h1>
-            <p className='news-text'>{isLoaded && this.showSeeMoreButton(data.data[1].text)}</p>
-            <div className='photo-courtesy'>{isLoaded && data.data[1].author}</div>
+        )
+        : (
+          <div className='newsoftheday-wrapper'>
+            <div className='news-divider'>
+              <p>photo of the day</p>
+            </div>
+            <div className='newsday-block'>
+              <img src={!isLoading ? data.data[1].imageURL : ''} alt='background' />
+              <div className='photo-triangle'>
+                <p>photo<span><br />of the<br /></span>day</p>
+              </div>
+              <div className='news-article'>
+                <h1 className='title'>{!isLoading && data.data[1].title}</h1>
+                <p className='news-text'>{!isLoading && this.showSeeMoreButton(data.data[1].text)}</p>
+                <div className='photo-courtesy'>{!isLoading && data.data[1].author}</div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        )
     );
   }
 };

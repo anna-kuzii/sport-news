@@ -1,11 +1,11 @@
 const express = require('express');
-const passData = require('../controllers/passData');
 const cors = require('cors');
+const articleController =require('../controllers/newsArticle');
 
 const router = express.Router();
 
 router.use(cors());
 
-router.get('/', passData.passData);
+router.get('/', articleController.articleController);
 
 module.exports = router;
