@@ -1,10 +1,8 @@
 const express = require('express');
 const forgotPassword = require('../controllers/forgotPassword');
-const cors = require('cors');
 
 const router = express.Router();
 
-router.use(cors());
 
 router.get('/', (req, res) => {
   // TODO render a forgotPassword form

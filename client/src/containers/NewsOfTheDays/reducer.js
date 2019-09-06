@@ -4,7 +4,7 @@ import {
 
 
 const initialState = {
-  data: [],
+  dayNewsdata: [],
   loading: false,
   error: null,
 };
@@ -14,18 +14,18 @@ export function productReducer(
   action
 ) {
   switch (action.type) {
-    case dayNewsConstants.FETCH_DATA_PENDING:
+    case dayNewsConstants.FETCH_NEWS_DAY_DATA_PENDING:
       return {
         ...state,
         loading: true,
         error: null,
       };
 
-    case dayNewsConstants.FETCH_DATA_SUCCESS:
+    case dayNewsConstants.FETCH_NEWS_DAY_DATA_SUCCESS:
       return {
         ...state,
         loading: false,
-        data: action.payload.data,
+        dayNewsdata: action.payload.data,
       };
 
     case dayNewsConstants.FETCH_DATA_FAILURE:

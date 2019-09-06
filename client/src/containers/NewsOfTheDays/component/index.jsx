@@ -25,10 +25,10 @@ class NewsOfTheDays extends Component {
   };
 
   render() {
-    const { data } = this.props;
+    const { dayNewsdata } = this.props;
 
     return (
-      data.length === 0
+      !dayNewsdata.length
         ? (
           <div className='data-loading'>
             <Loader
@@ -45,14 +45,14 @@ class NewsOfTheDays extends Component {
               <p>photo of the day</p>
             </div>
             <div className='newsday-block'>
-              <img src={data[1].imageURL} alt='background' />
+              <img src={dayNewsdata[1].imageURL} alt='background' />
               <div className='photo-triangle'>
                 <p>photo<span><br />of the<br /></span>day</p>
               </div>
               <div className='news-article'>
-                <h1 className='title'>{data[1].title}</h1>
-                <p className='news-text'>{this.showSeeMoreButton(data[1].text)}</p>
-                <div className='photo-courtesy'>{data[1].author}</div>
+                <h1 className='title'>{dayNewsdata[1].title}</h1>
+                <p className='news-text'>{this.showSeeMoreButton(dayNewsdata[1].text)}</p>
+                <div className='photo-courtesy'>{dayNewsdata[1].author}</div>
               </div>
             </div>
           </div>
@@ -64,7 +64,7 @@ class NewsOfTheDays extends Component {
 const mapStateToProps = state => {
   return (
     {
-      data: state.productReducer.data,
+      dayNewsdata: state.productReducer.dayNewsdata,
       loading: state.productReducer.loading,
       error: state.productReducer.error,
     });

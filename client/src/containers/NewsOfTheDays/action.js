@@ -8,7 +8,7 @@ import {
 export function fetchNewsDayData() {
   return dispatch => {
     dispatch(fetchDataBegin());
-    return instance.get('/article')
+    instance.get('/article')
       .then(article => {
         dispatch(fetchDataSuccess(article.data));
         return article.data;
@@ -20,15 +20,15 @@ export function fetchNewsDayData() {
 }
 
 export const fetchDataBegin = () => ({
-  type: dayNewsConstants.FETCH_DATA_PENDING,
+  type: dayNewsConstants.FETCH_NEWS_DAY_DATA_PENDING,
 });
 
 export const fetchDataSuccess = data => ({
-  type: dayNewsConstants.FETCH_DATA_SUCCESS,
+  type: dayNewsConstants.FETCH_NEWS_DAY_DATA_SUCCESS,
   payload: { data },
 });
 
 export const fetchDataFailure = error => ({
-  type: dayNewsConstants.FETCH_DATA_FAILURE,
+  type: dayNewsConstants.FETCH_NEWS_DAY_DATA_FAILURE,
   payload: { error },
 });
