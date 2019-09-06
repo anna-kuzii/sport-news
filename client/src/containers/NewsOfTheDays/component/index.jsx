@@ -15,7 +15,7 @@ class NewsOfTheDays extends Component {
 
   componentDidMount() {
     const { fetchNewsDayData } = this.props;
-    
+
     fetchNewsDayData();
   }
 
@@ -61,14 +61,13 @@ class NewsOfTheDays extends Component {
   }
 };
 
-const mapStateToProps = state => {
-  return (
-    {
-      dayNewsdata: state.productReducer.dayNewsdata,
-      loading: state.productReducer.loading,
-      error: state.productReducer.error,
-    });
-};
+const mapStateToProps = state => (
+  {
+    dayNewsdata: state.productReducer.dayNewsdata,
+    loading: state.productReducer.loading,
+    error: state.productReducer.error,
+  }
+);
 
 const mapDispatchToProps = (dispatch) => (
   {
