@@ -2,13 +2,13 @@
 
 .logo {
   position: absolute;
-  width: 253px;
+  width: 250px;
   height: 83px;
   text-align: center;
   background: $alizarin-crimson;
 
   @media screen and (max-width: $mobile-width) {
-    z-index: 2;
+    z-index: 10;
     width: 100%;
     max-width: $mobile-width;
   }
