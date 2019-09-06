@@ -5,8 +5,8 @@ import {
   instance,
 } from '../../axios.instanse';
 
-export function fetchNewsDayData() {
-  return dispatch => {
+export const fetchNewsDayData =() =>(
+  dispatch => {
     dispatch(fetchDataBegin());
     instance.get('/article')
       .then(article => {
@@ -16,8 +16,8 @@ export function fetchNewsDayData() {
       .catch(error =>
         dispatch(fetchDataFailure(error))
       );
-  };
-}
+  }
+);
 
 export const fetchDataBegin = () => ({
   type: dayNewsConstants.FETCH_NEWS_DAY_DATA_PENDING,
