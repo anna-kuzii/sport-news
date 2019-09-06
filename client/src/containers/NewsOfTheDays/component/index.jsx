@@ -2,19 +2,11 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Loader from 'react-loader-spinner';
 import './style.scss';
-import {
-  instance,
-} from '../../../axios.instanse';
+import { fetchData } from '../action';
+import { connect } from 'react-redux';
+
 
 class NewsOfTheDays extends Component {
-  constructor() {
-    super();
-    this.state ={
-      data: [],
-      isLoading: true,
-    };
-  }
-
   //Create pass/link to news page to use this function
   /*const showSeeMoreButton = (text, fullNews) => (
     text.length < 100 ? text
@@ -22,9 +14,9 @@ class NewsOfTheDays extends Component {
   );*/
 
   componentDidMount() {
-    instance.get('/article').then(article =>{
-      this.setState({ data: article, isLoading: false });
-    });
+    const { dispatch } = this.props;
+
+    dispatch(fetchData());
   }
 
   showSeeMoreButton(text) {
@@ -33,10 +25,10 @@ class NewsOfTheDays extends Component {
   };
 
   render() {
-    const { isLoading, data } = this.state;
+    const { data } = this.props;
 
     return (
-      isLoading
+      data.length === 0
         ? (
           <div className='data-loading'>
             <Loader
@@ -53,14 +45,14 @@ class NewsOfTheDays extends Component {
               <p>photo of the day</p>
             </div>
             <div className='newsday-block'>
-              <img src={!isLoading ? data.data[1].imageURL : ''} alt='background' />
+              <img src={data[1].imageURL} alt='background' />
               <div className='photo-triangle'>
                 <p>photo<span><br />of the<br /></span>day</p>
               </div>
               <div className='news-article'>
-                <h1 className='title'>{!isLoading && data.data[1].title}</h1>
-                <p className='news-text'>{!isLoading && this.showSeeMoreButton(data.data[1].text)}</p>
-                <div className='photo-courtesy'>{!isLoading && data.data[1].author}</div>
+                <h1 className='title'>{data[1].title}</h1>
+                <p className='news-text'>{this.showSeeMoreButton(data[1].text)}</p>
+                <div className='photo-courtesy'>{data[1].author}</div>
               </div>
             </div>
           </div>
@@ -68,4 +60,14 @@ class NewsOfTheDays extends Component {
     );
   }
 };
-export default NewsOfTheDays;
+
+const mapStateToProps = state => {
+  return (
+    {
+      data: state.productReducer.data,
+      loading: state.productReducer.loading,
+      error: state.productReducer.error,
+    });
+};
+
+export default connect(mapStateToProps)(NewsOfTheDays);

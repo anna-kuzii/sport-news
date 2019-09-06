@@ -32,7 +32,11 @@ app.listen(PORT, () => {
   console.log(`Server is running on PORT ${PORT}`);
 });
 
+const cors = require('cors');
 
+const router = express.Router();
+
+router.use(cors());
 // Route Files
 
 const register = require('./routes/register');

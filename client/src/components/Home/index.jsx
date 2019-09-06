@@ -18,15 +18,5 @@ export const Home = () => (
     <div className='newsOfTheDayContainer'>
       <NewsOfTheDays />
     </div>
-    <div className='most-container'>
-      <MostPopularComments
-        blockTitle='most popular'
-        newsBlock={MostPopular}
-      />
-      <MostPopularComments
-        blockTitle='most comments'
-        newsBlock={MostComments}
-      />
-    </div>
   </div>
 );
