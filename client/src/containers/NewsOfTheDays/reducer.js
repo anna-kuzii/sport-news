@@ -4,7 +4,7 @@ import {
 
 
 const initialState = {
-  dayNewsdata: [],
+  dayNewsData: [],
   loading: false,
   error: null,
 };
@@ -25,7 +25,7 @@ export function productReducer(
       return {
         ...state,
         loading: false,
-        dayNewsdata: action.payload.data,
+        dayNewsData: action.payload.data,
       };
 
     case dayNewsConstants.FETCH_DATA_FAILURE:
