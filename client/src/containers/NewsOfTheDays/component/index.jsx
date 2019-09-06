@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Loader from 'react-loader-spinner';
 import './style.scss';
-import { fetchData } from '../action';
+import { fetchNewsDayData } from '../action';
 import { connect } from 'react-redux';
 
 
 class NewsOfTheDays extends Component {
-  //Create pass/link to news page to use this function
+  //TODO :Create pass/link to news page to use this function
   /*const showSeeMoreButton = (text, fullNews) => (
     text.length < 100 ? text
       : <p>{text.slice(0, 60)}<Link to={fullNews} className='see-more'> ...</Link></p>
@@ -16,7 +16,7 @@ class NewsOfTheDays extends Component {
   componentDidMount() {
     const { dispatch } = this.props;
 
-    dispatch(fetchData());
+    dispatch(fetchNewsDayData());
   }
 
   showSeeMoreButton(text) {

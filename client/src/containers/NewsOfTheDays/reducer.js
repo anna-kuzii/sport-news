@@ -14,7 +14,7 @@ export function productReducer(
   action
 ) {
   switch (action.type) {
-    case dayNewsConstants.FETCH_DATA_BEGIN:
+    case dayNewsConstants.FETCH_DATA_PENDING:
       return {
         ...state,
         loading: true,
@@ -33,7 +33,6 @@ export function productReducer(
         ...state,
         loading: false,
         error: action.payload.error,
-        items: [],
       };
 
     default:
