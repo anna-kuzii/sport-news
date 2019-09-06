@@ -5,6 +5,7 @@ const registerController = require('../controllers/register_controller');
 const registerValidation = require('../templates/registrationValidationTemplate');
 
 const router = express.Router();
+
 router.use(cors());
 
 router.get('/', (req, res) => {

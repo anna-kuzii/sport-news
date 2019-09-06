@@ -1,9 +1,8 @@
 const express = require('express');
-const update = require('../controllers/updateProfile');
+const passData = require('../controllers/passData');
 
 const router = express.Router();
 
-router.post('/', update.updateProfile);
-
+router.get('/', passData.passData);
 
 module.exports = router;
