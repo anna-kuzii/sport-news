@@ -14,9 +14,9 @@ class NewsOfTheDays extends Component {
   );*/
 
   componentDidMount() {
-    const { dispatch } = this.props;
-
-    dispatch(fetchNewsDayData());
+    const { fetchNewsDayData } = this.props;
+    
+    fetchNewsDayData();
   }
 
   showSeeMoreButton(text) {
@@ -70,4 +70,12 @@ const mapStateToProps = state => {
     });
 };
 
-export default connect(mapStateToProps)(NewsOfTheDays);
+const mapDispatchToProps = (dispatch) => (
+  {
+    fetchNewsDayData: () => {
+      dispatch(fetchNewsDayData());
+    },
+  }
+);
+
+export default connect(mapStateToProps, mapDispatchToProps)(NewsOfTheDays);
