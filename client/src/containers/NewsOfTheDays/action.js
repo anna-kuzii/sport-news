@@ -11,7 +11,6 @@ export const fetchNewsDayData =() =>(
     instance.get('/article')
       .then(article => {
         dispatch(fetchDataSuccess(article.data));
-        return article.data;
       })
       .catch(error =>
         dispatch(fetchDataFailure(error))
