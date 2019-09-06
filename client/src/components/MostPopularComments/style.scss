@@ -2,10 +2,10 @@
 
 .most-popular-comments-wrapper {
   width: 100%;
-  height: 400px;
+  height: auto;
   max-width: 390px;
   padding: 0;
-  margin: 0;
+  margin: 0 0 50px;
 
   .block-title {
     display: flex;
@@ -37,7 +37,7 @@
 
   .popular-news-block {
     width: 100%;
-    height: 300px;
+    height: auto;
     max-width: 390px;
     border: 1px solid $gallery;
   }
