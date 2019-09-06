@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { NewsSlider } from '../NewsSlider';
+import { NewsSlider } from '../../containers/NewsSlider';
 import { Breakdown } from '../Breakdown';
 import BreakDown from '../../assets/data/BreakdownNewsList';
 import SingleNews from '../../assets/data/SingleNews';
