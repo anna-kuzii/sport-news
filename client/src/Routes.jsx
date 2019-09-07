@@ -36,7 +36,7 @@ export default class Routes extends Component {
           />
           
         </Route>   
-        <Route exact path='/nba'>
+        <Route exact path='/teamarticle'>
           <Switch>
             <Header />
           </Switch>
@@ -44,7 +44,7 @@ export default class Routes extends Component {
             <Menu menuList={menuData.menu} />
           </Switch>
           <Route
-            path='/nba'
+            path='/teamarticle'
             component={NewsArticle}
           />
         </Route>
