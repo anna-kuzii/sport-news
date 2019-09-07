@@ -27,12 +27,12 @@ const NewsArticleSchema = new Schema({
   },
 });
 
-<<<<<<< HEAD
+
 const NewsArticlesSchema = mongoose.model('newsArticles', NewsArticleSchema);
 
 module.exports = NewsArticlesSchema;
-=======
+
 const NewsArticle = mongoose.model('newsArticles', NewsArticleSchema, 'newsArticles');
 
 module.exports = NewsArticle;
->>>>>>> a03a7b67500232301d14811ffdb12863143d7216
+

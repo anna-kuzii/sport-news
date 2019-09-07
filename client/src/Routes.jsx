@@ -18,7 +18,6 @@ import { MostPopularComments } from './components/MostPopularComments';
 import MostPopular from './assets/data/MostPopularNewsList';
 import MostComments from './assets/data/MostCommentsNewsList';
 
-
 export default class Routes extends Component {
   render() {
     return (
