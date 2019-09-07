@@ -36,7 +36,7 @@ export default class Routes extends Component {
           />
           
         </Route>   
-        <Route exact path='/teamarticle'>
+        <Route exact path='/news'>
           <Switch>
             <Header />
           </Switch>
@@ -44,7 +44,7 @@ export default class Routes extends Component {
             <Menu menuList={menuData.menu} />
           </Switch>
           <Route
-            path='/teamarticle'
+            path='/news'
             component={NewsArticle}
           />
         </Route>
