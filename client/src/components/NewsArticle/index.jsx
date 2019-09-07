@@ -1,17 +1,18 @@
 import React from 'react';
 import './style.scss';
+import teamImg from '../../assets/img/Basketball.png';
 
 export const NewsArticle = () => (
   <section className='single-news-container'>
     <div className='news-wrapper'>
       <div className='top-info'>
         <h4>
-          <span className='team-span'>NBA </span> <p className='team-paragraph'> &gt; Tennessee / As M.L.B. &apos; s Season Opens in Japan, at Least the Dirt Is Familiar</p>
+          <span className='team-name'>NBA </span> <p className='team-paragraph'> &gt; Tennessee / As M.L.B. &apos; s Season Opens in Japan, at Least the Dirt Is Familiar</p>
         </h4>
       </div>
       <div className='image-and-card-container'>
         <div className='image-container'>
-          <div>NBA PHOTO</div>
+          <img src={teamImg} alt='team-info' />
         </div>
         <div className='card-container'>
           <h4>Published / 20.09.2019</h4>
@@ -21,7 +22,7 @@ export const NewsArticle = () => (
           </h2>
         </div>
       </div>
-      <div className='description-of-the-team'>
+      <div className='team-text'>
         <p>
               TOKYO — Major League Baseball begins its 2019 season on Wednesday in
               Japan with the first of two games between the Oakland Athletics and the <span>Seattle Mariners</span>. NBA which equipe is the best? But when the teams take
