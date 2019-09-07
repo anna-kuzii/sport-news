@@ -9,6 +9,7 @@ import { Header } from './components/Header';
 import { Home } from './components/Home';
 import { UpdateProfile } from './components/UpdateProfile';
 import { Menu } from './components/Menu';
+
 import menuData from './assets/data/menuItems.json';
 import { MostPopularComments } from './components/MostPopularComments';
 import MostPopular from './assets/data/MostPopularNewsList';
