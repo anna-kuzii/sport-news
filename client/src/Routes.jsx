@@ -13,6 +13,7 @@ import menuData from './assets/data/menuItems.json';
 import { MostPopularComments } from './components/MostPopularComments';
 import MostPopular from './assets/data/MostPopularNewsList';
 import MostComments from './assets/data/MostCommentsNewsList';
+import { UserProfile } from './components/UserProfile';
 
 export default class Routes extends Component {
   render() {
@@ -45,6 +46,7 @@ export default class Routes extends Component {
             </div>
           </Switch>
         </Route>
+        <UserProfile />
         <Route path='/updateprofile' component={UpdateProfile} />
         <Route path='/register' component={Register} />
         <Route path='/login' component={Login} />

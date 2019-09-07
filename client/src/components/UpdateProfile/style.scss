@@ -5,6 +5,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  margin-top: 50px;
 
   @media screen and (max-width: $mobile-width) {
     width: 100%;
@@ -23,11 +24,12 @@
   .update-input-wrapper {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
+    min-width: 400px;
     margin: 10px 0 0;
 
     input {
       width: 100%;
+      padding: 0 10px;
 
       @media screen and (max-width: $mobile-width) {
         width: 80vw;
@@ -43,6 +45,7 @@
 
   .update-profile {
     margin-top: 10px;
+    font-weight: 600;
 
     @media screen and (max-width: $mobile-width) {
       width: 80vw;
