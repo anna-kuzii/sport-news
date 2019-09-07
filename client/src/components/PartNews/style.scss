@@ -29,7 +29,7 @@
       color: $alizarin-crimson;
     }
 
-    .nba-span {
+    .team-span {
       display: inline-block;
       font-family: Open Sans;
       font-size: 12px;
@@ -45,7 +45,7 @@
       }
     }
 
-    .nba-paragraph {
+    .team-paragraph {
       margin: 0;
 
       @media screen and (max-width: $mobile-width) {
@@ -54,7 +54,7 @@
     }
   }
 
-  .middle-container {
+  .image-and-card-container {
     position: relative;
     width: 100%;
     height: 100%;
@@ -101,6 +101,7 @@
       box-shadow: -2px 50px 65px -8px $shadow;
 
       @media screen and (max-width: $mobile-width) {
+        position: static;
         max-width: 100%;
         padding: 0 15px;
         background-color: $concrete;
@@ -145,14 +146,10 @@
           width: 100%;
         }
       }
-
-      @media screen and (max-width: $mobile-width) {
-        position: static;
-      }
     }
   }
 
-  .information {
+  .description-of-the-team {
     width: 100%;
 
     @media screen and (max-width: $mobile-width) {
