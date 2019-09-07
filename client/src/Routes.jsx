@@ -9,7 +9,7 @@ import { Header } from './components/Header';
 import { Home } from './components/Home';
 import { UpdateProfile } from './components/UpdateProfile';
 
-import { PartNews } from './components/PartNews';
+import { NewsArticle } from './components/NewsArticle';
 
 import { Menu } from './components/Menu';
 
@@ -45,7 +45,7 @@ export default class Routes extends Component {
           </Switch>
           <Route
             path='/nba'
-            component={PartNews}
+            component={NewsArticle}
           />
         </Route>
         <Switch>

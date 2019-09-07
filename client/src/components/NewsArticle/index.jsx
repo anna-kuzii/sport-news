@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.scss';
 
-export const PartNews = () => (
+export const NewsArticle = () => (
   <section className='single-news-container'>
     <div className='news-wrapper'>
       <div className='top-info'>
