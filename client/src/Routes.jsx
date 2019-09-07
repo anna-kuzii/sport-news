@@ -8,15 +8,28 @@ import { ForgotPassword } from './containers/ForgotPassword/component';
 import { Header } from './components/Header';
 import { Home } from './components/Home';
 import { UpdateProfile } from './components/UpdateProfile';
+
 import { PartNews } from './components/PartNews';
+
+import { Menu } from './components/Menu';
+
+import menuData from './assets/data/menuItems.json';
+import { MostPopularComments } from './components/MostPopularComments';
+import MostPopular from './assets/data/MostPopularNewsList';
+import MostComments from './assets/data/MostCommentsNewsList';
+
 
 export default class Routes extends Component {
   render() {
     return (
       <Router history={history}>
         <Route exact path='/'>
+          // TODO Need refactoring
           <Switch>
             <Header />
+          </Switch>
+          <Switch>
+            <Menu menuList={menuData.menu} />
           </Switch>
           <Route
             exact path='/'
@@ -28,11 +41,29 @@ export default class Routes extends Component {
           <Switch>
             <Header />
           </Switch>
+          <Switch>
+            <Menu menuList={menuData.menu} />
+          </Switch>
           <Route
             path='/nba'
             component={PartNews}
           />
         </Route>
+        <Switch>
+          <div className='most-wrapper'>
+            <div className='most-news-container'>
+              <MostPopularComments
+                blockTitle='most popular'
+                newsBlock={MostPopular}
+              />
+              <MostPopularComments
+                blockTitle='most comments'
+                newsBlock={MostComments}
+              />
+            </div>
+          </div>
+        </Switch>
+        
         
         <Route path='/updateprofile' component={UpdateProfile} />
         <Route path='/register' component={Register} />

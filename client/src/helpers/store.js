@@ -16,6 +16,10 @@ import {
   forgotPassword,
 } from '../containers/ForgotPassword/reducer';
 
+import {
+  productReducer,
+} from '../containers/NewsOfTheDays/reducer';
+
 import thunkMiddleware from 'redux-thunk';
 import {
   createLogger,
@@ -25,6 +29,7 @@ const rootReducer = combineReducers({
   registration,
   forgotPassword,
   login,
+  productReducer,
 });
 
 const loggerMiddleware = createLogger();

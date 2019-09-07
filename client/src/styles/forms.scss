@@ -83,7 +83,7 @@
   @media screen and (max-width: $mobile-width) {
     position: absolute;
     z-index: 1;
-    background: linear-gradient($dimming, $dimming), url('../assets/img/register-login-bg.jpg') no-repeat center;
+    background: linear-gradient($black-70, $black-70), url('../assets/img/register-login-bg.jpg') no-repeat center;
     background-size: cover;
   }
 }
@@ -265,7 +265,7 @@
   justify-content: center;
   width: 100%;
   margin: 40px auto;
-  border-bottom: 1px solid $placeholder-grey;
+  border-bottom: 1px solid $silver-chalice;
 
   p {
     position: absolute;
@@ -277,7 +277,36 @@
     text-transform: uppercase;
     white-space: nowrap;
     background-color: $white;
-    border: 1px solid $placeholder-grey;
+    border: 1px solid $silver-chalice;
     border-radius: 20px;
+  }
+}
+
+// Most container
+
+.most-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1440px;
+  background: $concrete;
+
+  @media screen and (max-width: $tablet-width) {
+    padding: 0 20px;
+  }
+
+  .most-news-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 835px;
+    background: $concrete;
+
+    @media screen and (max-width: $mobile-width) {
+      align-items: center;
+      flex-direction: column;
+    }
+
   }
 }

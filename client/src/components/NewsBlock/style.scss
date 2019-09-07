@@ -5,14 +5,14 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 100px;
+  height: auto;
   max-width: 400px;
   border: 1px solid $gallery;
 
   &:hover {
     cursor: url('../../assets/img/cursor-hover.svg'), auto;
     background: $white;
-    box-shadow: 0 2px 24px $news-hover;
+    box-shadow: 0 2px 24px $news-hover-11;
 
     .hover-arrow {
       display: block;
@@ -31,7 +31,7 @@
   }
 
   img {
-    height: 99px;
+    height: auto;
     max-width: 180px;
   }
 
