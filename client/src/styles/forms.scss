@@ -281,3 +281,32 @@
     border-radius: 20px;
   }
 }
+
+// Most container
+
+.most-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1440px;
+  background: $concrete;
+
+  @media screen and (max-width: $tablet-width) {
+    padding: 0 20px;
+  }
+
+  .most-news-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 835px;
+    background: $concrete;
+
+    @media screen and (max-width: $mobile-width) {
+      align-items: center;
+      flex-direction: column;
+    }
+
+  }
+}

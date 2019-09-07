@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { userActions } from '../action';
 import { connect } from 'react-redux';
 import { Logo } from '../../../components/Logo';
+import './style.scss';
 
 
 class ForgotPassword extends Component {
@@ -48,7 +49,7 @@ class ForgotPassword extends Component {
             </div>
             <div className='forgot-password-wrapper'>
               <h2>Forgot your password?</h2>
-              <p>Enter your email address below and well get you back on track.</p>
+              <p>Enter your email address below and we&#39;ll get you back on track.</p>
               {forgot.error
               && <span className='forgot-password-error'>{forgot.error}</span>
               }
