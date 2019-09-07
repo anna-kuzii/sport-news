@@ -12,7 +12,7 @@ import { Header } from '../Header';
 import { Menu } from '../Menu';
 import menuData from '../../assets/data/menuItems.json';
 
-const UserProfileComponent =()=> (
+const UserProfileComponent = () => (
   <Router>
     <div className='userprofile-wrapper'>
       <div className='buttons'>

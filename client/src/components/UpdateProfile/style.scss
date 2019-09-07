@@ -46,6 +46,7 @@
   .update-profile {
     margin-top: 10px;
     font-weight: 600;
+    text-transform: uppercase;
 
     @media screen and (max-width: $mobile-width) {
       width: 80vw;

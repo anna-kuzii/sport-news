@@ -60,7 +60,7 @@ class ChangePassword extends Component {
     return (
       <div className='change-password-wrapper'>
         <div className='change-password-form'>
-          <div className={validations.oldPassword.isInvalid ? 'has-error' : 'undefined'}>
+          <div className={validations.oldPassword.isInvalid ? 'has-error' : 'valid'}>
             <label htmlFor='password-input'>old Password</label>
             <input
               type={type}
