@@ -59,43 +59,42 @@ class ChangePassword extends Component {
 
     return (
       <div className='change-password-wrapper'>
-        <div className='change-password'>
-          <div className='change-password-form'>
-            <div className={validations.oldPassword.isInvalid ? 'has-error' : 'undefined'}>
-              <label htmlFor='password-input'>old Password</label>
-              <input
-                type={type}
-                id='password-input'
-                name='old_password'
-                value={oldPassword}
-                onChange={this.handleChange}
-              />
-              <span className='help-block'>{validations.oldPassword.message}</span>
-            </div>
-            <div className={validations.newPassword.isInvalid ? 'has-error' : 'valid'}>
-              <label htmlFor='new-password-input'>new password</label>
-              <input
-                type={type}
-                id='new-password-input'
-                name='new_password'
-                value={newPassword}
-                onChange={this.handleChange}
-              />
-              <span className='help-block'>{validations.newPassword.message}</span>
-              <span
-                className='password-show'
-                role='presentation'
-                onClick={this.handleShowHide}
-              ><img src={eyeicon} alt='show/hide icon' /></span>
-            </div>
+        <div className='change-password-form'>
+          <div className={validations.oldPassword.isInvalid ? 'has-error' : 'valid'}>
+            <label htmlFor='password-input'>old Password</label>
+            <input
+              type={type}
+              id='password-input'
+              name='oldPassword'
+              value={oldPassword}
+              onChange={this.handleChange}
+            />
+            <span className='help-block'>{validations.oldPassword.message}</span>
           </div>
-          <button
-            type='button'
-            onClick={this.handleSubmit}
-            className='change-password-btn'
-          >CHANGE PASSWORD</button>
+          <div className={validations.newPassword.isInvalid ? 'has-error' : 'valid'}>
+            <label htmlFor='new-password-input'>new password</label>
+            <input
+              type={type}
+              id='new-password-input'
+              name='newPassword'
+              value={newPassword}
+              onChange={this.handleChange}
+            />
+            <span className='help-block'>{validations.newPassword.message}</span>
+            <span
+              className='password-show'
+              role='presentation'
+              onClick={this.handleShowHide}
+            ><img src={eyeicon} alt='show/hide icon' /></span>
+          </div>
         </div>
+        <button
+          type='button'
+          onClick={this.handleSubmit}
+          className='change-password-btn'
+        >CHANGE PASSWORD</button>
       </div>
+
     );
   }
 }
