@@ -15,7 +15,7 @@ const NewsArticleSchema = new Schema({
     type: String,
     required: true,
   },
-  assosiated_press: {
+  assosiatedPress: {
     type: String,
   },
   imageURL: {
