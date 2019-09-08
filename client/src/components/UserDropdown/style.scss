@@ -1,6 +1,8 @@
 @import '../../styles/variables.scss';
 
 .dropdown-wrapper {
+  z-index: 5;
+
   .button-menu {
     display: inline-block;
     padding: 5px;
@@ -96,21 +98,23 @@
       font-weight: normal;
       line-height: 19px;
       color: $boulder;
-     }
+    }
 
-    a {
-      display: block;
-      padding: 10px 25px;
-      font-size: 14px;
-      line-height: 19px;
-      color: $black;
-      text-decoration: none;
+    .link-wrapper {
+      a {
+        display: block;
+        padding: 10px 25px;
+        font-size: 14px;
+        line-height: 19px;
+        color: $black;
+        text-decoration: none;
 
-      &:hover {
-        width: 100%;
-        color: $alizarin-crimson;
-        cursor: url('../../assets/img/cursor-hover.svg'), auto;
-        background-color: $alizarin-crimson-11;
+        &:hover {
+          width: 100%;
+          color: $alizarin-crimson;
+          cursor: url('../../assets/img/cursor-hover.svg'), auto;
+          background-color: $alizarin-crimson-11;
+        }
       }
      }
    }
@@ -124,12 +128,13 @@
     font-size: 12px;
     font-style: normal;
     font-weight: 600;
-    line-height: 14px;
+    line-height: 30px;
     letter-spacing: 1px;
-    color: $rose-white;
+    color: $white;
     text-align: center;
+    text-decoration: none;
     text-transform: uppercase;
     background-color: $alizarin-crimson;
-    border: 0;
   }
+
 }

@@ -1,0 +1,42 @@
+@import '../../styles/variables.scss';
+
+.dealbook-wrapper {
+  width: 100%;
+  height: auto;
+  max-width: 826px;
+  padding: 0 20px;
+
+  .news-block-section {
+    padding: 13px 0;
+    border-bottom: 1px solid $alto;
+
+    &:last-of-type {
+      border: 0;
+    }
+  }
+
+  .news-block {
+    width: 100%;
+    height: 182px;
+    max-width: 866px;
+    border: 0;
+
+    .hover-arrow {
+      width: 16px;
+      height: 13px;
+      padding: 0;
+      margin: 0 30px 12px 0;
+
+      &:focus {
+        outline: 0;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 284px;
+      padding: 12px;
+    }
+  }
+}
