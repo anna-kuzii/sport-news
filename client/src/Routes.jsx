@@ -8,15 +8,14 @@ import { ForgotPassword } from './containers/ForgotPassword/component';
 import { Header } from './components/Header';
 import { Home } from './components/Home';
 import { UpdateProfile } from './components/UpdateProfile';
-
-import { NewsArticle } from './components/NewsArticle';
-
 import { Menu } from './components/Menu';
 
 import menuData from './assets/data/menuItems.json';
 import { MostPopularComments } from './components/MostPopularComments';
 import MostPopular from './assets/data/MostPopularNewsList';
 import MostComments from './assets/data/MostCommentsNewsList';
+import { UserProfile } from './components/UserProfile';
+import { Copyright } from './components/Copyright';
 
 export default class Routes extends Component {
   render() {
@@ -34,28 +33,25 @@ export default class Routes extends Component {
             exact path='/'
             component={Home}
           />
-          
-        </Route>   
-        <Route
-          path='/news'
-          component={NewsArticle}
-        />
-        <Switch>
-          <div className='most-wrapper'>
-            <div className='most-news-container'>
-              <MostPopularComments
-                blockTitle='most popular'
-                newsBlock={MostPopular}
-              />
-              <MostPopularComments
-                blockTitle='most comments'
-                newsBlock={MostComments}
-              />
+          <Switch>
+            <Copyright />
+          </Switch>
+          <Switch>
+            <div className='most-wrapper'>
+              <div className='most-news-container'>
+                <MostPopularComments
+                  blockTitle='most popular'
+                  newsBlock={MostPopular}
+                />
+                <MostPopularComments
+                  blockTitle='most comments'
+                  newsBlock={MostComments}
+                />
+              </div>
             </div>
-          </div>
-        </Switch>
-        
-        
+          </Switch>
+        </Route>
+        <UserProfile />
         <Route path='/updateprofile' component={UpdateProfile} />
         <Route path='/register' component={Register} />
         <Route path='/login' component={Login} />
