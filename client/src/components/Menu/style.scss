@@ -1,12 +1,12 @@
 @import '../../styles/variables.scss';
 
-.menuWrapper {
+.menu-wrapper {
   @media screen and (max-width: $tablet-width) {
     display: none;
   }
 }
 
-.activeMenu {
+.active-menu {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -19,7 +19,7 @@
   backdrop-filter: blur(23px);
 }
 
-.desktopMenuContainer {
+.desktop-menu-container {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -28,7 +28,7 @@
   margin-top: 83px;
   background-color: $white;
 
-  .activeMenu {
+  .active-menu {
     display: block;
   }
 
@@ -36,7 +36,7 @@
     outline: 0;
   }
 
-  .listContainer {
+  .list-container {
     width: 250px;
     padding: 80px 0 0;
     margin: 0;
@@ -47,7 +47,7 @@
     }
   }
 
-  .listItem {
+  .list-item {
     &:focus {
       outline: 0;
     }
@@ -68,7 +68,7 @@
         outline: 0;
       }
 
-      &.activeItem,
+      &.active-item,
       &:hover {
         position: relative;
         color: $flush-mahogany;
@@ -87,14 +87,14 @@
       }
     }
 
-    .listItem {
+    .list-item {
       button {
         font-family: Open Sans, serif;
         font-style: normal;
         font-weight: normal;
         color: $black;
 
-        &.activeItem,
+        &.active-item,
         &:hover {
           background: $alizarin-crimson-11;
           border: 0;
@@ -108,19 +108,19 @@
     }
 
 
-    .desktopMenuContainer {
+    .desktop-menu-container {
       position: absolute;
       left: 100%;
       margin-top: 0;
 
-      .activeMenu {
+      .active-menu {
         display: none;
       }
 
-      .desktopMenuContainer {
+      .desktop-menu-container {
         max-width: 170px;
 
-        .listContainer {
+        .list-container {
           max-width: 170px;
 
           button {

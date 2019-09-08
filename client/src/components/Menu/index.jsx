@@ -23,10 +23,10 @@ export class Menu extends Component {
       { activeIndex } = this.state;
 
     return (
-      <div className='menuWrapper'>
-        <div className='activeMenu' />
-        <div className='desktopMenuContainer'>
-          <ul className='listContainer'>
+      <div className='menu-wrapper'>
+        <div className='active-menu' />
+        <div className='desktop-menu-container'>
+          <ul className='list-container'>
             {menuList.map((item, index) => (
               <MenuItem
                 item={item}
