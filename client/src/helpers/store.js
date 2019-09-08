@@ -20,6 +20,10 @@ import {
   productReducer,
 } from '../containers/NewsOfTheDays/reducer';
 
+import {
+  videoReducer,
+} from '../containers/VideoPage/reducer';
+
 import thunkMiddleware from 'redux-thunk';
 import {
   createLogger,
@@ -30,6 +34,7 @@ const rootReducer = combineReducers({
   forgotPassword,
   login,
   productReducer,
+  videoReducer,
 });
 
 const loggerMiddleware = createLogger();

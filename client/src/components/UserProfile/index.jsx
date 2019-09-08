@@ -32,19 +32,20 @@ const UserProfileComponent = () => (
             UpdateProfile
         </NavLink>
       </div>
-      <Switch>
-        <Route
-          exact path='/userprofile/changepassword'
-          component={ChangePassword}
-        />
-        <Route path='/userprofile/updateprofile' component={UpdateProfile} />
-      </Switch>
+      <Route
+        exact path='/userprofile/changepassword'
+        component={ChangePassword}
+      />
+      <Route
+        exact path='/userprofile/updateprofile'
+        component={UpdateProfile}
+      />
     </div>
   </Router>
 );
 
 export const UserProfile =()=>(
-  <Route exact path='/userprofile'>
+  <Route path='/userprofile'>
     <Switch>
       <Header />
     </Switch>

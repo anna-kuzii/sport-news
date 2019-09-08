@@ -1,0 +1,204 @@
+@import '../../../styles/variables.scss';
+
+.video-page-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 50vw;
+  max-width: 835px;
+  margin: 50px auto;
+
+  @media screen and (max-width: $medium-width) {
+    width: 80vw;
+  }
+  @media screen and (max-width: $tablet-width) {
+    width: 100%;
+  }
+
+  .news-word-wrap {
+    position:  absolute;
+    top: 50vh;
+    right: 10vw;
+    z-index: -1;
+    font-family: Roboto ;
+    font-size: 141px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 192px;
+    letter-spacing: 1.2px;
+    color: $grey-3;
+    transform: rotate(90deg);
+
+  }
+
+  .video-word-wrap {
+    position: absolute;
+    top: 35vh;
+    left: 10vw;
+    z-index: -1;
+    font-family: Roboto ;
+    font-size: 141px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 192px;
+    letter-spacing: 1.2px;
+    color: $grey-3;
+    transform: rotate(90deg);
+
+    @media screen and (max-width: $tablet-width) {
+      position: static;
+      width: 100%;
+      font-family: Open Sans;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: bold;
+      line-height: 19px;
+      color: $black;
+      text-align: left;
+      transform: rotate(0);
+    }
+  }
+
+  .section-name {
+    width: 100%;
+    margin-left: 0;
+
+    @media screen and (max-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  p {
+    font-family: Open Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 17px;
+    color: $alizarin-crimson;
+
+    span {
+      font-family: Open Sans;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: bold;
+      line-height: 16px;
+      color: $silver-chalice;
+      text-transform: uppercase;
+    }
+  }
+
+  h1 {
+    padding-left: 10px;
+    font-family: Open Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 22px;
+    color: $white;
+  }
+
+  .main-video-wrapper {
+    background-color: $black;
+
+    @media screen and (max-width: $medium-width) {
+      background-color: $white;
+    }
+
+    .main-title {
+      padding: 0 0 5px 10px;
+      font-family: Open Sans;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: bold;
+      line-height: 22px;
+      color: $white;
+
+      @media screen and (max-width: $medium-width) {
+        font-family: Open Sans;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: 30px;
+        color: $ebony-clay;
+      }
+    }
+  }
+
+  .main-video {
+    width: 50vw;
+    height: 55vh;
+    background-color: $black;
+    border: 0;
+
+    @media screen and (max-width: $medium-width) {
+      width: 80vw;
+      min-height: 40vh;
+    }
+
+    @media screen and (max-width: $tablet-width) {
+      min-width: 100vw;
+      min-height: 40vh;
+    }
+  }
+
+  .additional-video-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
+
+    @media screen and (max-width: $medium-width) {
+      width: 80vw;
+    }
+
+    @media screen and (max-width: $tablet-width) {
+      flex-direction: column;
+      width: 90%;
+    }
+
+    .single-video {
+      width: 95%;
+      margin-top: 30px;
+      text-align: left;
+      background-color: $black;
+
+      @media screen and (max-width: $tablet-width) {
+        width: 100%;
+      }
+    }
+
+
+    iframe {
+      width: 100%;
+      height: 25vh;
+      border: 0;
+
+      @media screen and (max-width: $tablet-width) {
+        width: 100%;
+        height: 30vh;
+      }
+     }
+
+    .left-column-video {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      width: 50%;
+
+      @media screen and (max-width: $tablet-width) {
+        width: 100%;
+      }
+    }
+
+    .right-column-video {
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+      width: 50%;
+
+      @media screen and (max-width: $tablet-width) {
+        align-items: center;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,8 +1,9 @@
 @import '../../../styles/variables.scss';
 
 .newsoftheday-wrapper {
-  position: relative;
-  width: 60%;
+  width: 100%;
+  height: auto;
+  max-width: 835px;
   margin: 0 auto;
 
   @media screen and (max-width: $mobile-width) {
@@ -21,7 +22,7 @@
 
 
     @media screen and (max-width: $mobile-width) {
-      width: 90%;
+      width: 100%;
       max-width: $mobile-width;
       margin: 30px auto;
     }

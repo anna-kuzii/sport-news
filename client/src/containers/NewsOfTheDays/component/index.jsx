@@ -26,6 +26,7 @@ class NewsOfTheDays extends Component {
 
   render() {
     const { dayNewsData } = this.props;
+    const n = Math.round(Math.random() * 10);
 
     return (
       !dayNewsData.length
@@ -45,14 +46,14 @@ class NewsOfTheDays extends Component {
               <p>photo of the day</p>
             </div>
             <div className='newsday-block'>
-              <img src={dayNewsData[1].imageURL} alt='background' />
+              <img src={dayNewsData[n].imageURL} alt='background' />
               <div className='photo-triangle'>
                 <p>photo<span><br />of the<br /></span>day</p>
               </div>
               <div className='news-article'>
-                <h1 className='title'>{dayNewsData[1].title}</h1>
-                <p className='news-text'>{this.showSeeMoreButton(dayNewsData[1].text)}</p>
-                <div className='photo-courtesy'>{dayNewsData[1].author}</div>
+                <h1 className='title'>{dayNewsData[n].title}</h1>
+                <p className='news-text'>{this.showSeeMoreButton(dayNewsData[n].text)}</p>
+                <div className='photo-courtesy'>{dayNewsData[n].author}</div>
               </div>
             </div>
           </div>
