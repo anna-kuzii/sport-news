@@ -57,7 +57,7 @@
     }
   }
 
-  .image-and-card-container {
+  .article-brochure {
     position: relative;
     width: 100%;
     margin-bottom: 50px;
@@ -92,8 +92,8 @@
       max-width: 420px;
       max-height: 270px;
       padding: 40px 55px 70px 30px;
-      background-color: $background-grey;
-      box-shadow: -2px 50px 65px -8px $shadow-02;
+      background-color: $wild-sand;
+      box-shadow: -2px 50px 65px -8px $dove-gray-02;
 
       @media screen and (max-width: $mobile-width) {
         position: static;
@@ -120,7 +120,7 @@
         font-style: normal;
         font-weight: 600;
         line-height: 22px;
-        color: $almost-red;
+        color: $flush-mahogany;
 
         @media screen and (max-width: $mobile-width) {
           margin-bottom: 5px;
@@ -135,7 +135,7 @@
         font-style: normal;
         font-weight: bold;
         line-height: 30px;
-        color: $almost-black;
+        color: $ebony-clay;
 
         @media screen and (max-width: $mobile-width) {
           width: 100%;
@@ -144,7 +144,7 @@
     }
   }
 
-  .team-text {
+  .information-about-current-news {
     width: 100%;
 
     @media screen and (max-width: $mobile-width) {

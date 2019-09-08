@@ -36,18 +36,10 @@ export default class Routes extends Component {
           />
           
         </Route>   
-        <Route exact path='/news'>
-          <Switch>
-            <Header />
-          </Switch>
-          <Switch>
-            <Menu menuList={menuData.menu} />
-          </Switch>
-          <Route
-            path='/news'
-            component={NewsArticle}
-          />
-        </Route>
+        <Route
+          path='/news'
+          component={NewsArticle}
+        />
         <Switch>
           <div className='most-wrapper'>
             <div className='most-news-container'>
