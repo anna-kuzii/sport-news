@@ -2,10 +2,7 @@ import React, { Component } from 'react';
 import Loader from 'react-loader-spinner';
 import './style.scss';
 import {
-  Link,
   Route,
-  NavLink,
-  BrowserRouter as Router,
   Switch,
 } from 'react-router-dom';
 import { Header } from '../../../components/Header';
