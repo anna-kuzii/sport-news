@@ -1,13 +1,15 @@
 import React from 'react';
 import './style.scss';
 import teamImg from '../../assets/img/Basketball.png';
-import { Route, Switch } from 'react-router-dom';
+import { Router, Switch } from 'react-router-dom';
 import { Header } from '../Header';
 import { Menu } from '../Menu';
 import menuData from '../../assets/data/menuItems.json';
+import { Copyright } from '../Copyright';
+import { history } from '../../helpers';
 
 export const NewsArticle = () => (
-  <Route exact path='/news'>
+  <Router history={history}>
     <Switch>
       <Header />
     </Switch>
@@ -59,7 +61,10 @@ export const NewsArticle = () => (
         </div>
       </div>    
     </section>
-  </Route>
+    <Switch>
+      <Copyright />
+    </Switch>
+  </Router>
 );
 
 

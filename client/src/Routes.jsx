@@ -16,6 +16,7 @@ import MostPopular from './assets/data/MostPopularNewsList';
 import MostComments from './assets/data/MostCommentsNewsList';
 import { UserProfile } from './components/UserProfile';
 import { Copyright } from './components/Copyright';
+import { NewsArticle } from './components/NewsArticle';
 
 export default class Routes extends Component {
   render() {
@@ -33,9 +34,10 @@ export default class Routes extends Component {
             exact path='/'
             component={Home}
           />
-          <Switch>
-            <Copyright />
-          </Switch>
+          <Route
+            path='/news'
+            component={NewsArticle}
+          /> 
           <Switch>
             <div className='most-wrapper'>
               <div className='most-news-container'>
@@ -49,6 +51,9 @@ export default class Routes extends Component {
                 />
               </div>
             </div>
+          </Switch>
+          <Switch>
+            <Copyright />
           </Switch>
         </Route>
         <UserProfile />
