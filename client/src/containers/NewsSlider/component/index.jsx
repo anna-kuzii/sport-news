@@ -11,11 +11,9 @@ class NewsSlider extends Component {
   constructor(props) {
     super(props);
 
-    const { startArray } = this.props;
-
     this.state = {
       currentArticle: 1,
-      articleArray: startArray,
+      articleArray: [],
     };
 
     this.handleNextSlide = this.handleNextSlide.bind(this);
@@ -29,26 +27,32 @@ class NewsSlider extends Component {
     getArticles();
   }
 
-  componentDidUpdate(prevProps) {
-    const { startArray } = this.props;
+  componentDidUpdate() {
+    const { articles } = this.props;
+    const minLength = 4;
 
-    if (prevProps.startArray.length !== startArray.length) {
+    const initialArticlesArray = (articles.length < minLength)
+      ? Array.from({ length: articles.length }, (elem, idx) => idx+1)
+      : Array.from({ length: minLength }, (elem, idx) => idx + 1);
+
+    if (this.state.articleArray.length !== initialArticlesArray.length) {
       // eslint-disable-next-line react/no-did-update-set-state
-      this.setState({ articleArray: startArray });
+      this.setState({ articleArray: initialArticlesArray });
     }
   }
 
   handleNextSlide() {
     const { currentArticle, articleArray } = this.state;
-    const { articles, startArray } = this.props;
+    const { articles } = this.props;
 
+    const minLength = 4;
 
-    if (!articleArray.length) {
-      this.setState({ articleArray: startArray });
-    }
+    const initialArticlesArray = (articles.length < minLength)
+      ? Array.from({ length: articles.length }, (elem, idx) => idx+1)
+      : Array.from({ length: minLength }, (elem, idx) => idx + 1);
 
     if ( currentArticle === articles.length) {
-      this.setState({ currentArticle: 1, articleArray: startArray });
+      this.setState({ currentArticle: 1, articleArray: initialArticlesArray });
     } else if ( articles.length > 4 && currentArticle === articleArray[3] ) {
       this.setState(state =>{
         const articleArray = state.articleArray.map(element => element + 1);
@@ -66,10 +70,10 @@ class NewsSlider extends Component {
 
   handlePrevSlide() {
     const { currentArticle, articleArray } = this.state;
-    const { articles, startArray } = this.props;
+    const { articles } = this.props;
     const articleLength = articles.length;
 
-    const newArticleArray = articles.length < 4 ? startArray : [ articleLength - 3, articleLength - 2, articleLength - 1, articleLength ];
+    const newArticleArray = articles.length < 4 ? articleArray : [ articleLength - 3, articleLength - 2, articleLength - 1, articleLength ];
 
     if ( currentArticle === 1) {
       this.setState({ currentArticle: articleLength, articleArray: newArticleArray });
@@ -168,7 +172,6 @@ class NewsSlider extends Component {
 function mapState(state) {
   return {
     articles: state.getArticles.articles,
-    startArray: state.getArticles.initialArticlesArray,
   };
 }
 

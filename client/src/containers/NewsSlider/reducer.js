@@ -3,7 +3,6 @@ import { articleConstants } from './constant';
 
 const initialState = {
   articles: [],
-  initialArticlesArray: [],
   loading: true,
   error: null,
 };
@@ -16,7 +15,6 @@ export function getArticles(state = initialState, action) {
         error: null,
         loading: false,
         articles: action.articles,
-        initialArticlesArray: action.initialArticlesArray,
       };
     case articleConstants.GET_ARTICLE_FAILURE:
       return {
