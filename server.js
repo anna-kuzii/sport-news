@@ -32,8 +32,12 @@ app.listen(PORT, () => {
   console.log(`Server is running on PORT ${PORT}`);
 });
 
+const cors = require('cors');
 
-// Route Files
+const router = express.Router();
+
+
+app.use(cors());
 
 const register = require('./routes/register');
 const login = require('./routes/login');
@@ -52,7 +56,6 @@ app.use('/resetpassword', resetPassword);
 app.use('/article', article);
 
 app.use(express.static(path.join(__dirname, 'client/build')));
-
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'client/build', 'index.html'));

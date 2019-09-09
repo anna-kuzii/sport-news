@@ -9,10 +9,13 @@ import { Header } from './components/Header';
 import { Home } from './components/Home';
 import { UpdateProfile } from './components/UpdateProfile';
 import { Menu } from './components/Menu';
+
 import menuData from './assets/data/menuItems.json';
 import { MostPopularComments } from './components/MostPopularComments';
 import MostPopular from './assets/data/MostPopularNewsList';
 import MostComments from './assets/data/MostCommentsNewsList';
+import { UserProfile } from './components/UserProfile';
+import { Copyright } from './components/Copyright';
 
 export default class Routes extends Component {
   render() {
@@ -30,6 +33,9 @@ export default class Routes extends Component {
             component={Home}
           />
           <Switch>
+            <Copyright />
+          </Switch>
+          <Switch>
             <div className='most-wrapper'>
               <div className='most-news-container'>
                 <MostPopularComments
@@ -44,6 +50,7 @@ export default class Routes extends Component {
             </div>
           </Switch>
         </Route>
+        <UserProfile />
         <Route path='/updateprofile' component={UpdateProfile} />
         <Route path='/register' component={Register} />
         <Route path='/login' component={Login} />

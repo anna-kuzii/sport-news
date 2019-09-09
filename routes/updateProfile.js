@@ -1,9 +1,9 @@
-const express = require('express')
-const update = require('../controllers/updateProfile')
+const express = require('express');
+const update = require('../controllers/updateProfile');
 
-const router = express.Router()
+const router = express.Router();
 
-router.post('/', update.updateProfile)
+router.post('/', update.updateProfile);
 
 
-module.exports = router
+module.exports = router;
