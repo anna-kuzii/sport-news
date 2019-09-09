@@ -18,12 +18,12 @@ import { UserProfile } from './components/UserProfile';
 import { Copyright } from './components/Copyright';
 import { NewsArticle } from './components/NewsArticle';
 
+
 export default class Routes extends Component {
   render() {
     return (
       <Router history={history}>
         <Route exact path='/'>
-          // TODO Need refactoring
           <Switch>
             <Header />
           </Switch>
