@@ -18,24 +18,26 @@ export class Menu extends Component {
     }));
   };
 
-
   render() {
     const { menuList } = this.props,
       { activeIndex } = this.state;
 
     return (
-      <div className='desktopMenuContainer'>
-        <ul className='listContainer'>
-          {menuList.map((item, index) => (
-            <MenuItem
-              item={item}
-              index={index}
-              key={item.id}
-              activeItem={activeIndex}
-              setActiveItem={this.setActiveItem}
-            />
-          ))}
-        </ul>
+      <div className='menu-wrapper'>
+        <div className='active-menu' />
+        <div className='desktop-menu-container'>
+          <ul className='list-container'>
+            {menuList.map((item, index) => (
+              <MenuItem
+                item={item}
+                index={index}
+                key={item.id}
+                activeItem={activeIndex}
+                setActiveItem={this.setActiveItem}
+              />
+            ))}
+          </ul>
+        </div>
       </div>
     );
   }

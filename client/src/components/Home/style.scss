@@ -2,15 +2,16 @@
 
 .home-page-wrapper {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   justify-content: center;
+  float: right;
   width: 100%;
   height: auto;
-  max-width: 1440px;
+  max-width: 1188px;
   padding: 0;
-  margin: auto;
-  background: $concrete;
+  margin-top: 83px;
+  background: $white;
 
   .slider-container {
     width: 100%;

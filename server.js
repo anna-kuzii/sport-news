@@ -34,10 +34,8 @@ app.listen(PORT, () => {
 
 const cors = require('cors');
 
-const router = express.Router();
-
-
 app.use(cors());
+// Route Files
 
 const register = require('./routes/register');
 const login = require('./routes/login');
