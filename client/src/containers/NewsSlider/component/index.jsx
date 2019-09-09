@@ -12,6 +12,7 @@ class NewsSlider extends Component {
     super(props);
 
     this.state = {
+      isLoading: true,
       currentArticle: 1,
       articleArray: [],
     };
@@ -28,6 +29,7 @@ class NewsSlider extends Component {
   }
 
   componentDidUpdate() {
+    const { articleArray } = this.state;
     const { articles } = this.props;
     const minLength = 4;
 
@@ -35,9 +37,9 @@ class NewsSlider extends Component {
       ? Array.from({ length: articles.length }, (elem, idx) => idx+1)
       : Array.from({ length: minLength }, (elem, idx) => idx + 1);
 
-    if (this.state.articleArray.length !== initialArticlesArray.length) {
+    if (articleArray.length !== initialArticlesArray.length) {
       // eslint-disable-next-line react/no-did-update-set-state
-      this.setState({ articleArray: initialArticlesArray });
+      this.setState({ articleArray: initialArticlesArray, isLoading: false });
     }
   }
 
@@ -97,12 +99,12 @@ class NewsSlider extends Component {
   }
 
   render() {
-    const { currentArticle, articleArray } = this.state;
+    const { currentArticle, articleArray, isLoading } = this.state;
     const { articles } = this.props;
     const article = articles[currentArticle - 1];
 
     return (
-      articles.length === 0
+      isLoading
         ? (
           <div className='data-loading'>
             <Loader
