@@ -6,7 +6,8 @@
   flex-direction: column;
   width: 50vw;
   max-width: 835px;
-  margin: 50px auto;
+  padding-top: 15vh;
+  margin: 0 auto;
 
   @media screen and (max-width: $medium-width) {
     width: 80vw;

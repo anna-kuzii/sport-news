@@ -35,9 +35,6 @@ export default class Routes extends Component {
             component={Home}
           />
           <Switch>
-            <Copyright />
-          </Switch>
-          <Switch>
             <div className='most-wrapper'>
               <div className='most-news-container'>
                 <MostPopularComments
@@ -50,6 +47,9 @@ export default class Routes extends Component {
                 />
               </div>
             </div>
+          </Switch>
+          <Switch>
+            <Copyright />
           </Switch>
         </Route>
         <Route path='/videopage'>
@@ -76,6 +76,9 @@ export default class Routes extends Component {
                 />
               </div>
             </div>
+          </Switch>
+          <Switch>
+            <Copyright />
           </Switch>
         </Route>
       );
