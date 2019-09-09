@@ -9,17 +9,17 @@ export const getArticles = () => dispatch =>{
         text: element.text.slice(0, element.text.indexOf('.')),
       }));
 
-      dispatch(getArticleSuccess(updateArticleList));
+      dispatch(getArticleSuccess(updateArticleList, false));
     }).catch(error =>{
       dispatch(getArticleFailure(error.response.data));
     });
 };
 
-function getArticleSuccess(updateArticleList) {
+function getArticleSuccess(updateArticleList, loading) {
   return {
     type: articleConstants.GET_ARTICLE_SUCCESS,
     articles: updateArticleList,
-
+    loading,
   };
 }
 

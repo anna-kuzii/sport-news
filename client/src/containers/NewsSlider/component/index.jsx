@@ -12,7 +12,6 @@ class NewsSlider extends Component {
     super(props);
 
     this.state = {
-      isLoading: true,
       currentArticle: 1,
       articleArray: [],
     };
@@ -99,12 +98,12 @@ class NewsSlider extends Component {
   }
 
   render() {
-    const { currentArticle, articleArray, isLoading } = this.state;
-    const { articles } = this.props;
+    const { currentArticle, articleArray } = this.state;
+    const { articles, loading } = this.props;
     const article = articles[currentArticle - 1];
 
     return (
-      isLoading
+      loading
         ? (
           <div className='data-loading'>
             <Loader
@@ -174,6 +173,7 @@ class NewsSlider extends Component {
 function mapState(state) {
   return {
     articles: state.getArticles.articles,
+    loading: state.getArticles.loading,
   };
 }
 
