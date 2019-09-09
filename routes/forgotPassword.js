@@ -1,16 +1,15 @@
-const express = require('express')
-const forgotPassword = require('../controllers/forgotPassword')
-const cors = require('cors');
+const express = require('express');
+const forgotPassword = require('../controllers/forgotPassword');
 
-const router = express.Router()
-router.use(cors());
+const router = express.Router();
+
 
 router.get('/', (req, res) => {
   // TODO render a forgotPassword form
-  res.send('it is a forgot password block')
-})
+  res.send('it is a forgot password block');
+});
 
-router.post('/', forgotPassword.sendForgotPasswordEmail)
+router.post('/', forgotPassword.sendForgotPasswordEmail);
 
 
-module.exports = router
+module.exports = router;
