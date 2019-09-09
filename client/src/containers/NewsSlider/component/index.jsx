@@ -19,6 +19,7 @@ class NewsSlider extends Component {
     this.handleNextSlide = this.handleNextSlide.bind(this);
     this.handlePrevSlide = this.handlePrevSlide.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.setArticle = this.setArticle.bind(this);
   }
 
   componentDidMount() {
@@ -29,12 +30,8 @@ class NewsSlider extends Component {
 
   componentDidUpdate() {
     const { articleArray } = this.state;
-    const { articles } = this.props;
-    const minLength = 4;
 
-    const initialArticlesArray = (articles.length < minLength)
-      ? Array.from({ length: articles.length }, (elem, idx) => idx+1)
-      : Array.from({ length: minLength }, (elem, idx) => idx + 1);
+    const initialArticlesArray = this.setArticle();
 
     if (articleArray.length !== initialArticlesArray.length) {
       // eslint-disable-next-line react/no-did-update-set-state
@@ -42,15 +39,21 @@ class NewsSlider extends Component {
     }
   }
 
-  handleNextSlide() {
-    const { currentArticle, articleArray } = this.state;
+  setArticle() {
     const { articles } = this.props;
 
     const minLength = 4;
 
-    const initialArticlesArray = (articles.length < minLength)
+    return (articles.length < minLength)
       ? Array.from({ length: articles.length }, (elem, idx) => idx+1)
       : Array.from({ length: minLength }, (elem, idx) => idx + 1);
+  }
+
+  handleNextSlide() {
+    const { currentArticle, articleArray } = this.state;
+    const { articles } = this.props;
+    
+    const initialArticlesArray = this.setArticle();
 
     if ( currentArticle === articles.length) {
       this.setState({ currentArticle: 1, articleArray: initialArticlesArray });
