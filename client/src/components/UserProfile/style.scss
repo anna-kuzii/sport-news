@@ -1,12 +1,11 @@
 @import '../../styles/variables.scss';
 
 .userprofile-wrapper {
-  margin-top: 15vh;
 
   .buttons {
     display: flex;
     justify-content: center;
-    padding: 10px 0;
+    padding: 15vh 0 5vh;
 
     @media screen and (max-width: $mobile-width) {
       display: none;

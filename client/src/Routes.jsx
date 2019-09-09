@@ -81,7 +81,6 @@ export default class Routes extends Component {
             <Copyright />
           </Switch>
         </Route>
-      );
         <Route path='/userprofile'>
           <Switch>
             <Header />
