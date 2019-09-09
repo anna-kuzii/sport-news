@@ -24,7 +24,6 @@ export default class Routes extends Component {
     return (
       <Router history={history}>
         <Route exact path='/'>
-          // TODO Need refactoring
           <Switch>
             <Header />
           </Switch>
