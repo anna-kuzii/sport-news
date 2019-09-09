@@ -1,4 +1,8 @@
+@import '../../styles/variables.scss';
+
 .header {
+  position: fixed;
+  z-index: 10;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -6,12 +10,13 @@
   max-width: 1440px;
   padding: 0;
   margin: auto;
+  background: $white;
   border-bottom: 1px solid $gallery;
 
   .header-logo {
     width: 100%;
     height: 100%;
-    max-width: 253px;
+    max-width: 250px;
 
     .logo {
       @media screen and (max-width: $tablet-width) {
@@ -33,12 +38,12 @@
     border-right: 1px solid $gallery;
 
     label {
-      cursor: pointer;
       padding-top: 5px;
+      cursor: pointer;
     }
 
     input {
-      width: 40%;
+      width: 75%;
       margin-left: 20px;
       border: 0;
       outline: none;

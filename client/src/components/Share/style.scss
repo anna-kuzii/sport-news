@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .services {
   display: flex;
   justify-content: space-between;
@@ -7,7 +9,7 @@
   span {
     font-size: 14px;
     line-height: 19px;
-    color: $placeholder-grey;
+    color: $silver-chalice;
   }
 
   div {
@@ -22,6 +24,7 @@
     display: block;
     width: 20px;
     height: 20px;
+    text-indent: -99999px;
     background-position: center;
     background-size: cover;
   }

@@ -1,0 +1,133 @@
+@import '../../styles/variables.scss';
+
+.menu-wrapper {
+  @media screen and (max-width: $tablet-width) {
+    display: none;
+  }
+
+  .active-menu {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    z-index: 1;
+    display: none;
+    width: 100vw;
+    height: 100%;
+    background: $black-30;
+    backdrop-filter: blur(23px);
+  }
+}
+
+.desktop-menu-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  height: 100%;
+  margin-top: 83px;
+  background-color: $white;
+
+  .active-menu {
+    display: block;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  .list-container {
+    width: 250px;
+    padding: 80px 0 0;
+    margin: 0;
+    list-style-type: none;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  .list-item {
+    &:focus {
+      outline: 0;
+    }
+
+    button {
+      display: flex;
+      width: 100%;
+      padding: 12px 10px 12px 65px;
+      font-family: 'Open Sans', serif;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 19px;
+      color: $silver-chalice;
+      background: none;
+      border: 0;
+
+      &:focus {
+        outline: 0;
+      }
+
+      &.active-item,
+      &:hover {
+        position: relative;
+        color: $flush-mahogany;
+        border-right: 6px solid $flush-mahogany;
+
+        // sass-lint:disable nesting-depth
+        &::before {
+          position: absolute;
+          left: 55px;
+          content: '•';
+        }
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .list-item {
+      button {
+        font-family: Open Sans, serif;
+        font-style: normal;
+        font-weight: normal;
+        color: $black;
+
+        &.active-item,
+        &:hover {
+          background: $alizarin-crimson-11;
+          border: 0;
+
+          // sass-lint:disable nesting-depth
+          &::before {
+            content: none;
+          }
+        }
+      }
+    }
+
+
+    .desktop-menu-container {
+      position: absolute;
+      left: 100%;
+      margin-top: 0;
+
+      .active-menu {
+        display: none;
+      }
+
+      .desktop-menu-container {
+        max-width: 170px;
+
+        .list-container {
+          max-width: 170px;
+
+          button {
+            padding: 12px 80px 12px 25px;
+          }
+        }
+      }
+    }
+  }
+}
