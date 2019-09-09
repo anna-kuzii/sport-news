@@ -1,6 +1,10 @@
 {
   "menu": [
     {
+      "id": "HOME",
+      "title": "HOME"
+    },
+    {
       "id": "NBA",
       "title": "NBA",
       "menu": [

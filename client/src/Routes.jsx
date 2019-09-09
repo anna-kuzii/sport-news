@@ -17,12 +17,12 @@ import MostComments from './assets/data/MostCommentsNewsList';
 import { UserProfile } from './components/UserProfile';
 import { Copyright } from './components/Copyright';
 
+
 export default class Routes extends Component {
   render() {
     return (
       <Router history={history}>
         <Route exact path='/'>
-          // TODO Need refactoring
           <Switch>
             <Header />
           </Switch>
