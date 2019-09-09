@@ -15,7 +15,6 @@
   .main-article-container {
     position: relative;
     top: 100px;
-    left: 250px;
     width: 75%;
     height: 400px;
     max-width: 1000px;
@@ -195,7 +194,7 @@
   .sub-articles-container {
     position: relative;
     top: 130px;
-    left: 240px;
+    left: -10px;
     display: flex;
     width: calc(56.25% + 20px) ;
     height: 300px;
