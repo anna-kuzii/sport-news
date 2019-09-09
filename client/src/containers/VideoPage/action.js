@@ -7,7 +7,7 @@ import {
 
 export const fetchVideoData =() =>(
   dispatch => {
-    dispatch(fetchVideoDataBegin());
+    dispatch(fetchVideoDataPending());
     instance.get('/video')
       .then(video => {
         dispatch(fetchVideoDataSuccess(video.data));
@@ -19,7 +19,7 @@ export const fetchVideoData =() =>(
   }
 );
 
-export const fetchVideoDataBegin = () => ({
+export const fetchVideoDataPending = () => ({
   type: videoConstants.FETCH_VIDEO_PENDING,
 });
 

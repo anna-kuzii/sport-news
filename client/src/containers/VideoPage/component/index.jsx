@@ -6,14 +6,16 @@ import { connect } from 'react-redux';
 
 class VideoPage extends Component {
   componentDidMount() {
-    this.props.fetchVideoData();
+    const { fetchVideoData } = this.props;
+
+    fetchVideoData();
   }
 
   render() {
-    const { videoData } = this.props;
+    const { loading, videoData } = this.props;
 
     return (
-      videoData.length === 0
+      !videoData.length && loading
         ?(
           <div className='data-loading'>
             <Loader
@@ -24,61 +26,67 @@ class VideoPage extends Component {
             />
           </div>
         )
-        : (
-          <div className='video-page-wrapper'>
-            <div className='news-word-wrap'>
+        : (!loading && !videoData.length)
+          ? (
+            <div className='emptyDB'>
+            sorry we don`t have any video :-)
+            </div>
+          )
+          : (
+            <div className='video-page-wrapper'>
+              <div className='news-word-wrap'>
                   NEWS
-            </div>
-            <div className='video-word-wrap'>
-                  VIDEO
-            </div>
-            <div className='section-name'>
-              <p><span>video</span> &gt; the NBA videos</p>
-            </div>
-            <div className='main-video-wrapper'>
-              <iframe
-                className='main-video'
-                title={videoData[0].title}
-                src={videoData[0].videoURL}
-              />
-              <div className='main-title' >{videoData[0].title}</div>
-            </div>
-            <div className='additional-video-wrapper'>
-              <div className='left-column-video'>
-                <div className='single-video'>
-                  <iframe
-                    title={videoData[1].title}
-                    src={videoData[1].videoURL}
-                  />
-                  <h1>{videoData[1].title}</h1>
+              </div>
+              <div className='video-word-wrap'>
+                   VIDEO
+              </div>
+              <div className='section-name'>
+                <p><span>video</span> &gt; the NBA videos</p>
+              </div>
+              <div className='main-video-wrapper'>
+                <iframe
+                  className='main-video'
+                  title={videoData[0].title}
+                  src={videoData[0].videoURL}
+                />
+                <div className='main-title' >{videoData[0].title}</div>
+              </div>
+              <div className='additional-video-wrapper'>
+                <div className='left-column-video'>
+                  <div className='single-video'>
+                    <iframe
+                      title={videoData[1].title}
+                      src={videoData[1].videoURL}
+                    />
+                    <h1>{videoData[1].title}</h1>
+                  </div>
+                  <div className='single-video'>
+                    <iframe
+                      title={videoData[2].title}
+                      src={videoData[2].videoURL}
+                    />
+                    <h1>{videoData[2].title}</h1>
+                  </div>
                 </div>
-                <div className='single-video'>
-                  <iframe
-                    title={videoData[2].title}
-                    src={videoData[2].videoURL}
-                  />
-                  <h1>{videoData[2].title}</h1>
+                <div className='right-column-video'>
+                  <div className='single-video'>
+                    <iframe
+                      title={videoData[3].title}
+                      src={videoData[3].videoURL}
+                    />
+                    <h1>{videoData[3].title}</h1>
+                  </div>
+                  <div className='single-video'>
+                    <iframe
+                      title={videoData[4].title}
+                      src={videoData[4].videoURL}
+                    />
+                    <h1>{videoData[4].title}</h1>
+                  </div>
                 </div>
               </div>
-              <div className='right-column-video'>
-                <div className='single-video'>
-                  <iframe
-                    title={videoData[3].title}
-                    src={videoData[3].videoURL}
-                  />
-                  <h1>{videoData[3].title}</h1>
-                </div>
-                <div className='single-video'>
-                  <iframe
-                    title={videoData[4].title}
-                    src={videoData[4].videoURL}
-                  />
-                  <h1>{videoData[4].title}</h1>
-                </div>
-              </div>
             </div>
-          </div>
-        )
+          )
     );
   }
 };

@@ -1,5 +1,17 @@
 @import '../../../styles/variables.scss';
 
+.emptyDB {
+  padding: 15vh 0;
+  font-family: Roboto ;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 192px;
+  letter-spacing: 1.2px;
+  color: $black-70;
+  text-align: center;
+}
+
 .video-page-wrapper {
   display: flex;
   align-items: center;
@@ -49,6 +61,7 @@
     @media screen and (max-width: $tablet-width) {
       position: static;
       width: 100%;
+      padding: 15px;
       font-family: Open Sans;
       font-size: 18px;
       font-style: normal;
@@ -91,7 +104,7 @@
   h1 {
     padding-left: 10px;
     font-family: Open Sans;
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
     font-weight: bold;
     line-height: 22px;
