@@ -7,6 +7,8 @@ import { connect } from 'react-redux';
 
 import './style.scss';
 
+const minLength = 4;
+
 class NewsSlider extends Component {
   constructor(props) {
     super(props);
@@ -42,8 +44,6 @@ class NewsSlider extends Component {
   setArticle() {
     const { articles } = this.props;
 
-    const minLength = 4;
-
     return (articles.length < minLength)
       ? Array.from({ length: articles.length }, (elem, idx) => idx+1)
       : Array.from({ length: minLength }, (elem, idx) => idx + 1);
@@ -57,7 +57,7 @@ class NewsSlider extends Component {
 
     if ( currentArticle === articles.length) {
       this.setState({ currentArticle: 1, articleArray: initialArticlesArray });
-    } else if ( articles.length > 4 && currentArticle === articleArray[3] ) {
+    } else if ( articles.length > minLength && currentArticle === articleArray[3] ) {
       this.setState(state =>{
         const articleArray = state.articleArray.map(element => element + 1);
 
@@ -77,11 +77,11 @@ class NewsSlider extends Component {
     const { articles } = this.props;
     const articleLength = articles.length;
 
-    const newArticleArray = articles.length < 4 ? articleArray : [ articleLength - 3, articleLength - 2, articleLength - 1, articleLength ];
+    const newArticleArray = articles.length < minLength ? articleArray : [ articleLength - 3, articleLength - 2, articleLength - 1, articleLength ];
 
     if ( currentArticle === 1) {
       this.setState({ currentArticle: articleLength, articleArray: newArticleArray });
-    } else if (articles.length > 4 && currentArticle === articleArray[0]) {
+    } else if (articles.length > minLength && currentArticle === articleArray[0]) {
       this.setState(state =>{
         const articleArray = state.articleArray.map(element => element - 1);
 
