@@ -6,9 +6,7 @@ import { connect } from 'react-redux';
 
 class VideoPage extends Component {
   componentDidMount() {
-    const { fetchVideoData } = this.props;
-
-    fetchVideoData();
+    this.props.fetchVideoData();
   }
 
   render() {
