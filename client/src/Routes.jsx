@@ -37,7 +37,7 @@ export default class Routes extends Component {
           <Route
             path='/news'
             component={NewsArticle}
-          /> 
+          />
           <Switch>
             <div className='most-wrapper'>
               <div className='most-news-container'>
@@ -52,10 +52,10 @@ export default class Routes extends Component {
               </div>
             </div>
           </Switch>
-          <Switch>
-            <Copyright />
-          </Switch>
         </Route>
+        <Switch>
+          <Copyright />
+        </Switch>
         <UserProfile />
         <Route path='/updateprofile' component={UpdateProfile} />
         <Route path='/register' component={Register} />

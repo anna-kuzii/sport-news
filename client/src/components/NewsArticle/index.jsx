@@ -5,7 +5,6 @@ import { Router, Switch } from 'react-router-dom';
 import { Header } from '../Header';
 import { Menu } from '../Menu';
 import menuData from '../../assets/data/menuItems.json';
-import { Copyright } from '../Copyright';
 import { history } from '../../helpers';
 
 export const NewsArticle = () => (
@@ -61,9 +60,6 @@ export const NewsArticle = () => (
         </div>
       </div>    
     </section>
-    <Switch>
-      <Copyright />
-    </Switch>
   </Router>
 );
 
