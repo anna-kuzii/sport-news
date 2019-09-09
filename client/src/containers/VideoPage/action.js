@@ -7,28 +7,28 @@ import {
 
 export const fetchVideoData =() =>(
   dispatch => {
-    dispatch(fetchDataBegin());
+    dispatch(fetchVideoDataBegin());
     instance.get('/video')
       .then(video => {
-        dispatch(fetchDataSuccess(video.data));
+        dispatch(fetchVideoDataSuccess(video.data));
       })
       .catch(error =>{
-        dispatch(fetchDataFailure(error));
+        dispatch(fetchVideoDataFailure(error));
       }
       );
   }
 );
 
-export const fetchDataBegin = () => ({
+export const fetchVideoDataBegin = () => ({
   type: videoConstants.FETCH_VIDEO_PENDING,
 });
 
-export const fetchDataSuccess = data => ({
+export const fetchVideoDataSuccess = data => ({
   type: videoConstants.FETCH_VIDEO_SUCCESS,
   payload: { data },
 });
 
-export const fetchDataFailure = error => ({
+export const fetchVideoDataFailure = error => ({
   type: videoConstants.FETCH_VIDEO_FAILURE,
   payload: { error },
 });

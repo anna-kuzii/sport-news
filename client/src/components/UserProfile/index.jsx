@@ -4,15 +4,11 @@ import {
   Route,
   NavLink,
   BrowserRouter as Router,
-  Switch,
 } from 'react-router-dom';
 import { ChangePassword } from '../ChangePassword';
 import { UpdateProfile } from '../UpdateProfile';
-import { Header } from '../Header';
-import { Menu } from '../Menu';
-import menuData from '../../assets/data/menuItems.json';
 
-const UserProfileComponent = () => (
+export const UserProfile = () => (
   <Router>
     <div className='userprofile-wrapper'>
       <div className='buttons'>
@@ -42,19 +38,4 @@ const UserProfileComponent = () => (
       />
     </div>
   </Router>
-);
-
-export const UserProfile =()=>(
-  <Route path='/userprofile'>
-    <Switch>
-      <Header />
-    </Switch>
-    <Switch>
-      <Menu menuList={menuData.menu} />
-    </Switch>
-    <Route
-      path='/userprofile'
-      component={UserProfileComponent}
-    />
-  </Route>
 );
