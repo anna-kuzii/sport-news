@@ -15,11 +15,11 @@ export class MenuItem extends Component {
     const { index, activeItem } = this.props,
       { item: { title, menu } } = this.props,
       isActive = index === activeItem,
-      activeClass = isActive ? 'activeItem': '';
+      activeClass = isActive ? 'active-item': '';
 
     //TODO when news will be done, button should be replaced by Link with to
     return (
-      <li className='listItem'>
+      <li className='list-item'>
         <button
           type='button'
           onClick={this.handleOpenMenu}

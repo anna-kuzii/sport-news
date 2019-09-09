@@ -289,7 +289,7 @@
   justify-content: center;
   width: 100%;
   max-width: 1440px;
-  background: $concrete;
+  background: $white;
 
   @media screen and (max-width: $tablet-width) {
     padding: 0 20px;
@@ -301,7 +301,7 @@
     justify-content: space-between;
     width: 100%;
     max-width: 835px;
-    background: $concrete;
+    background: $white;
 
     @media screen and (max-width: $mobile-width) {
       align-items: center;
