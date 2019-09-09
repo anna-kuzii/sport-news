@@ -2,12 +2,10 @@ import React, { Component } from 'react';
 import Loader from 'react-loader-spinner';
 import hoverArrow from '../../../assets/img/news-hover-arrow.svg';
 import { Swipe } from 'react-swipe-component';
-import { articleActions } from '../action';
+import { getArticles } from '../action';
 import { connect } from 'react-redux';
 
 import './style.scss';
-
-let tempArray = [];
 
 class NewsSlider extends Component {
   constructor(props) {
@@ -61,14 +59,7 @@ class NewsSlider extends Component {
     const { articles, startArray } = this.props;
     const articleLength = articles.length;
 
-
-    let newArticleArray = [];
-
-    if (articles.length < 4) {
-      newArticleArray = startArray;
-    } else {
-      newArticleArray = [ articleLength-3, articleLength-2, articleLength-1, articleLength ];
-    }
+    const newArticleArray = articles.length < 4 ? startArray : [articleLength - 3, articleLength - 2, articleLength - 1, articleLength];
 
     if ( currentArticle === 1) {
       this.setState({ currentArticle: articleLength, articleArray: newArticleArray });
@@ -96,7 +87,7 @@ class NewsSlider extends Component {
     const { articles, startArray } = this.props;
     const article = articles[currentArticle - 1];
 
-    !articleArray.length ? tempArray = startArray : tempArray = articleArray;
+    const tempArray = (!articleArray.length) ? startArray : articleArray;
 
     return (
       articles.length === 0
@@ -169,12 +160,12 @@ class NewsSlider extends Component {
 function mapState(state) {
   return {
     articles: state.getArticles.articles,
-    startArray: state.getArticles.startArray,
+    startArray: state.getArticles.initialArticlesArray,
   };
 }
 
 const actionCreators = {
-  getArticles: articleActions.getArticles,
+  getArticles: getArticles,
 };
 
 const connectedSliderPage = connect(mapState, actionCreators)(NewsSlider);

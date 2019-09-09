@@ -1,42 +1,38 @@
 import { articleConstants } from './constant';
 import { instance } from '../../axios.instanse';
 
-export const articleActions = {
-  getArticles,
+const minLength = 4;
+
+export const getArticles = () => dispatch =>{
+  instance.get('/article')
+    .then(res =>{
+      const updateArticleList = res.data.map(element =>{
+        element.text = element.text.slice(0, element.text.indexOf('.'));
+        return element;
+      });
+
+      const initialArticlesArray = (res.data.length < minLength)
+        ? Array.from({ length: res.data.length }, (elem, idx) => idx+1)
+        : Array.from({ length: minLength }, (elem, idx) => idx + 1);
+
+      dispatch(getArticleSuccess(updateArticleList, initialArticlesArray));
+    }).catch(error =>{
+      dispatch(getArticleFailure(error.response.data));
+    });
 };
 
-let startArray;
-
-function getArticles() {
-  return dispatch =>{
-    instance.get('/article')
-      .then(res =>{
-        res.data.forEach(element =>{
-          element.text = element.text.slice(0, element.text.indexOf('.'));
-        });
-        if (res.data.length < 4) {
-          startArray = Array.from({ length: res.data.length }, (elem, idx) => idx+1);
-        } else {
-          startArray = Array.from({ length: 4 }, (elem, idx) => idx + 1);
-        }
-        dispatch(getArticleSuccess(res.data, startArray));
-      }).catch(error =>{
-        dispatch(getArticleFailure(error.response.data));
-      });
+function getArticleSuccess(updateArticleList, initialArticlesArray) {
+  return {
+    type: articleConstants.GET_ARTICLE_SUCCESS,
+    articles: updateArticleList,
+      initialArticlesArray,
   };
-
-  function getArticleSuccess(articles, startArray) {
-    return {
-      type: articleConstants.GET_ARTICLE_SUCCESS,
-      articles,
-      startArray,
-    };
-  }
-
-  function getArticleFailure(error) {
-    return {
-      type: articleConstants.GET_ARTICLE_SUCCESS,
-      error,
-    };
-  }
 }
+
+function getArticleFailure(error) {
+  return {
+    type: articleConstants.GET_ARTICLE_FAILURE,
+    error,
+  };
+}
+
