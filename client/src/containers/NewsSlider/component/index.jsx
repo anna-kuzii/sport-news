@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
 import Loader from 'react-loader-spinner';
-import hoverArrow from '../../assets/img/news-hover-arrow.svg';
+import hoverArrow from '../../../assets/img/news-hover-arrow.svg';
 import { Swipe } from 'react-swipe-component';
-import { instance } from '../../axios.instanse';
+import { articleActions } from '../action';
+import { connect } from 'react-redux';
 
 import './style.scss';
 
-let startArray = [];
+let tempArray = [];
 
-export class NewsSlider extends Component {
+class NewsSlider extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      isLoading: true,
-      articles: [],
       currentArticle: 1,
       articleArray: [],
     };
@@ -25,21 +24,20 @@ export class NewsSlider extends Component {
   }
 
   componentDidMount() {
-    instance.get('/article').then(news=>{
-      news.data.forEach(data =>{
-        data.text = data.text.slice(0, data.text.indexOf('.'));
-      });
-      if (news.data.length < 4) {
-        startArray = Array.from({ length: news.data.length }, (elem, idx) => idx+1);
-      } else {
-        startArray = Array.from({ length: 4 }, (elem, idx) => idx+1);
-      }
-      this.setState({ articles: news.data, isLoading: false, articleArray: startArray });
-    });
+    const { getArticles } = this.props;
+
+    getArticles();
   }
 
+
   handleNextSlide() {
-    const { currentArticle, articleArray, articles } = this.state;
+    const { currentArticle, articleArray } = this.state;
+    const { articles, startArray } = this.props;
+
+
+    if (!articleArray.length) {
+      this.setState({ articleArray: startArray });
+    }
 
     if ( currentArticle === articles.length) {
       this.setState({ currentArticle: 1, articleArray: startArray });
@@ -59,8 +57,10 @@ export class NewsSlider extends Component {
   }
 
   handlePrevSlide() {
-    const { currentArticle, articleArray, articles } = this.state;
+    const { currentArticle, articleArray } = this.state;
+    const { articles, startArray } = this.props;
     const articleLength = articles.length;
+
 
     let newArticleArray = [];
 
@@ -92,11 +92,14 @@ export class NewsSlider extends Component {
   }
 
   render() {
-    const { currentArticle, articleArray, articles, isLoading } = this.state;
+    const { currentArticle, articleArray } = this.state;
+    const { articles, startArray } = this.props;
     const article = articles[currentArticle - 1];
 
+    !articleArray.length ? tempArray = startArray : tempArray = articleArray;
+    
     return (
-      isLoading
+      articles.length === 0
         ? (
           <div className='data-loading'>
             <Loader
@@ -127,15 +130,16 @@ export class NewsSlider extends Component {
                   type='reset' className='slider-back'
                   onClick={this.handlePrevSlide}
                 />
-                {articleArray.map(element =>(
-                  <button
-                    type='reset' className={currentArticle === element ? 'current-slide': ''}
-                    onClick={() =>this.handleClick(element)}
-                    key={element.id}
-                  >
-                    { element > 9 ? element : `0${element}`}
-                  </button>
-                ))}
+                {
+                  tempArray.map(element =>(
+                    <button
+                      type='reset' className={currentArticle === element ? 'current-slide': ''}
+                      onClick={() =>this.handleClick(element)}
+                      key={element.id}
+                    >
+                      { element > 9 ? element : `0${element}`}
+                    </button>
+                  ))}
                 <button
                   type='reset' className='slider-next'
                   onClick={this.handleNextSlide}
@@ -143,7 +147,7 @@ export class NewsSlider extends Component {
               </div>
             </div>
             <div className='sub-articles-container'>
-              {articleArray.map(element =>(
+              {tempArray.map(element =>(
                 <div className='sub-article' key={element.id} >
                   <img src={articles[element - 1].imageURL} alt='sub article' />
                   <p className='sub-article-title'> Lorem ipsum </p>
@@ -161,3 +165,18 @@ export class NewsSlider extends Component {
     );
   }
 }
+
+function mapState(state) {
+  return {
+    articles: state.getArticles.articles,
+    startArray: state.getArticles.startArray,
+  };
+}
+
+const actionCreators = {
+  getArticles: articleActions.getArticles,
+};
+
+const connectedSliderPage = connect(mapState, actionCreators)(NewsSlider);
+
+export { connectedSliderPage as NewsSlider };

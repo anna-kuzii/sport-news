@@ -13,6 +13,10 @@ import {
 } from '../containers/Login/reducer';
 
 import {
+  getArticles,
+} from '../containers/NewsSlider/reducer';
+
+import {
   forgotPassword,
 } from '../containers/ForgotPassword/reducer';
 
@@ -25,6 +29,7 @@ const rootReducer = combineReducers({
   registration,
   forgotPassword,
   login,
+  getArticles,
 });
 
 const loggerMiddleware = createLogger();
