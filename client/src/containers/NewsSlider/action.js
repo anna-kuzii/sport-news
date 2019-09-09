@@ -6,10 +6,10 @@ const minLength = 4;
 export const getArticles = () => dispatch =>{
   instance.get('/article')
     .then(res =>{
-      const updateArticleList = res.data.map(element =>{
-        element.text = element.text.slice(0, element.text.indexOf('.'));
-        return element;
-      });
+      const updateArticleList = res.data.map(element => ({
+        ...element,
+        text: element.text.slice(0, element.text.indexOf('.')),
+      }));
 
       const initialArticlesArray = (res.data.length < minLength)
         ? Array.from({ length: res.data.length }, (elem, idx) => idx+1)
@@ -25,7 +25,7 @@ function getArticleSuccess(updateArticleList, initialArticlesArray) {
   return {
     type: articleConstants.GET_ARTICLE_SUCCESS,
     articles: updateArticleList,
-      initialArticlesArray,
+    initialArticlesArray,
   };
 }
 
