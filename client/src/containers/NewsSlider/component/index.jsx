@@ -11,9 +11,11 @@ class NewsSlider extends Component {
   constructor(props) {
     super(props);
 
+    const { startArray } = this.props;
+
     this.state = {
       currentArticle: 1,
-      articleArray: [],
+      articleArray: startArray,
     };
 
     this.handleNextSlide = this.handleNextSlide.bind(this);
@@ -27,6 +29,14 @@ class NewsSlider extends Component {
     getArticles();
   }
 
+  componentDidUpdate(prevProps) {
+    const { startArray } = this.props;
+
+    if (prevProps.startArray.length !== startArray.length) {
+      // eslint-disable-next-line react/no-did-update-set-state
+      this.setState({ articleArray: startArray });
+    }
+  }
 
   handleNextSlide() {
     const { currentArticle, articleArray } = this.state;
@@ -59,7 +69,7 @@ class NewsSlider extends Component {
     const { articles, startArray } = this.props;
     const articleLength = articles.length;
 
-    const newArticleArray = articles.length < 4 ? startArray : [articleLength - 3, articleLength - 2, articleLength - 1, articleLength];
+    const newArticleArray = articles.length < 4 ? startArray : [ articleLength - 3, articleLength - 2, articleLength - 1, articleLength ];
 
     if ( currentArticle === 1) {
       this.setState({ currentArticle: articleLength, articleArray: newArticleArray });
@@ -84,10 +94,8 @@ class NewsSlider extends Component {
 
   render() {
     const { currentArticle, articleArray } = this.state;
-    const { articles, startArray } = this.props;
+    const { articles } = this.props;
     const article = articles[currentArticle - 1];
-
-    const tempArray = (!articleArray.length) ? startArray : articleArray;
 
     return (
       articles.length === 0
@@ -122,7 +130,7 @@ class NewsSlider extends Component {
                   onClick={this.handlePrevSlide}
                 />
                 {
-                  tempArray.map(element =>(
+                  articleArray.map(element =>(
                     <button
                       type='reset' className={currentArticle === element ? 'current-slide': ''}
                       onClick={() =>this.handleClick(element)}
@@ -138,7 +146,7 @@ class NewsSlider extends Component {
               </div>
             </div>
             <div className='sub-articles-container'>
-              {tempArray.map(element =>(
+              {articleArray.map(element =>(
                 <div className='sub-article' key={element.id} >
                   <img src={articles[element - 1].imageURL} alt='sub article' />
                   <p className='sub-article-title'> Lorem ipsum </p>
