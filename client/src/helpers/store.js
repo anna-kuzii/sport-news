@@ -18,7 +18,7 @@ import {
 
 import {
   productReducer,
-} from '../containers/NewsOfTheDays/reducer';
+} from '../containers/NewsLogic/reducer';
 
 import {
   videoReducer,

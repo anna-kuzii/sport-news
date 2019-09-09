@@ -1,6 +1,6 @@
 @import '../../../styles/variables.scss';
 
-.emptyDB {
+.empty-db {
   padding: 15vh 0;
   font-family: Roboto ;
   font-size: 50px;
@@ -16,16 +16,15 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 50vw;
+  width: 835px;
   max-width: 835px;
   padding: 15vh 0;
   margin: 0 auto;
 
-  @media screen and (max-width: $medium-width) {
-    width: 80vw;
-  }
   @media screen and (max-width: $tablet-width) {
     width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   .news-word-wrap {
@@ -39,7 +38,7 @@
     font-weight: bold;
     line-height: 192px;
     letter-spacing: 1.2px;
-    color: $grey-3;
+    color: $grey-30;
     transform: rotate(90deg);
 
   }
@@ -55,7 +54,7 @@
     font-weight: bold;
     line-height: 192px;
     letter-spacing: 1.2px;
-    color: $grey-3;
+    color: $grey-30;
     transform: rotate(90deg);
 
     @media screen and (max-width: $tablet-width) {
@@ -114,12 +113,13 @@
   .main-video-wrapper {
     background-color: $black;
 
-    @media screen and (max-width: $medium-width) {
+    @media screen and (max-width: $tablet-width) {
+      width: 100%;
       background-color: $white;
     }
 
     .main-title {
-      padding: 0 0 5px 10px;
+      padding: 15px 0 5px 10px;
       font-family: Open Sans;
       font-size: 16px;
       font-style: normal;
@@ -127,7 +127,7 @@
       line-height: 22px;
       color: $white;
 
-      @media screen and (max-width: $medium-width) {
+      @media screen and (max-width: $tablet-width) {
         font-family: Open Sans;
         font-size: 22px;
         font-style: normal;
@@ -139,15 +139,10 @@
   }
 
   .main-video {
-    width: 50vw;
+    width: 835px;
     height: 55vh;
     background-color: $black;
     border: 0;
-
-    @media screen and (max-width: $medium-width) {
-      width: 80vw;
-      min-height: 40vh;
-    }
 
     @media screen and (max-width: $tablet-width) {
       min-width: 100vw;
@@ -158,11 +153,8 @@
   .additional-video-wrapper {
     display: flex;
     justify-content: space-between;
-    width: 50vw;
+    width: 100%;
 
-    @media screen and (max-width: $medium-width) {
-      width: 80vw;
-    }
 
     @media screen and (max-width: $tablet-width) {
       flex-direction: column;
@@ -199,6 +191,7 @@
       width: 50%;
 
       @media screen and (max-width: $tablet-width) {
+        align-items: center;
         width: 100%;
       }
     }
