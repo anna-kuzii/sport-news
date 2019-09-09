@@ -97,7 +97,7 @@ class NewsSlider extends Component {
     const article = articles[currentArticle - 1];
 
     !articleArray.length ? tempArray = startArray : tempArray = articleArray;
-    
+
     return (
       articles.length === 0
         ? (
