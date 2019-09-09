@@ -52,7 +52,7 @@ class NewsSlider extends Component {
   handleNextSlide() {
     const { currentArticle, articleArray } = this.state;
     const { articles } = this.props;
-    
+
     const initialArticlesArray = this.setArticle();
 
     if ( currentArticle === articles.length) {

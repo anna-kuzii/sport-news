@@ -6,7 +6,8 @@ export const getArticles = () => dispatch =>{
     .then(res =>{
       const updateArticleList = res.data.map(element => ({
         ...element,
-        text: element.text.slice(0, element.text.indexOf('.')),
+        title: element.title.length > 100 ? `${element.title.slice(0, 100)}...`: element.title,
+        text: element.text.indexOf('.') > 100 ?`${element.text.slice(0, 100)}...`: element.text.slice(0, element.text.indexOf('.')),
       }));
 
       dispatch(getArticleSuccess(updateArticleList, false));
