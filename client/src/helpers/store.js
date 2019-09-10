@@ -22,7 +22,11 @@ import {
 
 import {
   productReducer,
-} from '../containers/NewsOfTheDays/reducer';
+} from '../containers/NewsLogic/reducer';
+
+import {
+  videoReducer,
+} from '../containers/VideoPage/reducer';
 
 import thunkMiddleware from 'redux-thunk';
 import {
@@ -35,6 +39,7 @@ const rootReducer = combineReducers({
   login,
   getArticles,
   productReducer,
+  videoReducer,
 });
 
 const loggerMiddleware = createLogger();

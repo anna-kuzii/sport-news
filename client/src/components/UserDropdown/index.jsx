@@ -49,7 +49,7 @@ class UserDropdown extends Component {
             <div className='user-name'>{`${firstName} ${ lastName}`} </div>
             <div className='email'>{email}</div>
             <Link
-              to='/userprofile/changepassword'
+              to='/userprofile/updateprofile'
               type='button'
               className='button-view'
             >view profile</Link>
