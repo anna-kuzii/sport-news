@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Loader from 'react-loader-spinner';
 import hoverArrow from '../../../assets/img/news-hover-arrow.svg';
 import { Swipe } from 'react-swipe-component';
-import { getArticles } from '../action';
+import { fetchNewsData } from '../../NewsLogic/action';
 import { connect } from 'react-redux';
 
 import './style.scss';
@@ -175,13 +175,13 @@ class NewsSlider extends Component {
 
 function mapState(state) {
   return {
-    articles: state.getArticles.articles,
-    loading: state.getArticles.loading,
+    articles: state.productReducer.updateNewsData,
+    loading: state.productReducer.loading,
   };
 }
 
 const actionCreators = {
-  getArticles: getArticles,
+  getArticles: fetchNewsData,
 };
 
 const connectedSliderPage = connect(mapState, actionCreators)(NewsSlider);
