@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Router, Route } from 'react-router-dom';
 
 import { history } from './helpers';
@@ -13,36 +13,34 @@ import { UpdateProfile } from './components/UpdateProfile';
 import { UserProfile } from './components/UserProfile';
 
 
-export default class Routes extends Component {
-  render() {
-    return (
-      <Router history={history}>
-        <Route
-          exact path='/'
-          component={Home}
-        />
-        <Route
-          exact path='/dealbook'
-          component={Dealbook}
-        />
-        <UserProfile />
-        <Route
-          exact path='/updateprofile'
-          component={UpdateProfile}
-        />
-        <Route
-          exact path='/register'
-          component={Register}
-        />
-        <Route
-          exact path='/login'
-          component={Login}
-        />
-        <Route
-          exact path='/forgotpassword'
-          component={ForgotPassword}
-        />
-      </Router>
-    );
-  }
+export default function Routes() {
+  return (
+    <Router history={history}>
+      <Route
+        exact path='/'
+        component={Home}
+      />
+      <Route
+        exact path='/dealbook'
+        component={Dealbook}
+      />
+      <UserProfile />
+      <Route
+        exact path='/updateprofile'
+        component={UpdateProfile}
+      />
+      <Route
+        exact path='/register'
+        component={Register}
+      />
+      <Route
+        exact path='/login'
+        component={Login}
+      />
+      <Route
+        exact path='/forgotpassword'
+        component={ForgotPassword}
+      />
+    </Router>
+  );
 }

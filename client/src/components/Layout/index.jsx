@@ -10,13 +10,13 @@ import { Copyright } from '../Copyright';
 
 
 export const Layout = (props) => {
-  const content = props;
+  const { children } = props;
 
   return (
     <div>
       <Header />
       <Menu menuList={menuData.menu} />
-      {content.children}
+      {children}
       <div className='most-wrapper'>
         <div className='most-news-container'>
           <MostPopularComments
@@ -30,7 +30,6 @@ export const Layout = (props) => {
         </div>
       </div>
       <Copyright />
-
     </div>
   );
 };
