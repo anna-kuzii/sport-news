@@ -24,6 +24,7 @@
       left: 0;
       display: inline-block;
       width: 100%;
+      height: auto;
       max-width: 100%;
     }
 
@@ -54,6 +55,42 @@
         height: auto;
         padding: 5%;
         transform: translateY(0);
+      }
+
+      .mobile-slider-back {
+        display: none;
+
+        @media screen and(max-width: $tablet-width) {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          display: inline;
+          width: 30px;
+          height: 30px;
+          padding: 0;
+          background: url('../../../assets/img/left-arrow-mobile.svg');
+          border: 0;
+          outline: 0;
+          transform: translateY(-50%);
+        }
+      }
+
+      .mobile-slider-next {
+        display: none;
+
+        @media screen and(max-width: $tablet-width) {
+          position: absolute;
+          top: 50%;
+          right: 0;
+          display: inline;
+          width: 30px;
+          height: 30px;
+          padding: 0;
+          background: url('../../../assets/img/right-arrow-mobile.svg');
+          border: 0;
+          outline: 0;
+          transform: translateY(-50%);
+        }
       }
 
       .publish-time {
@@ -98,7 +135,7 @@
 
         @media screen and(max-width: $tablet-width) {
           margin: 0 0 5% ;
-          font-size: 16px;
+          font-size: 18px;
         }
       }
 
@@ -128,7 +165,7 @@
 
       @media screen and(max-width: $tablet-width) {
         display: none;
-    }
+      }
 
       button {
         font-weight: bold;

@@ -127,10 +127,18 @@ class NewsSlider extends Component {
                 <img src={article.imageURL} alt='main article' />
               </Swipe>
               <div className='news-info'>
+                <button
+                  type='reset' className='mobile-slider-back'
+                  onClick={this.handlePrevSlide}
+                />
                 <p className='publish-time'>Published / 20.09.2019</p>
                 <p className='title'>{article.title}</p>
                 <p className='news-text'>{article.text}</p>
                 <button type='reset' className='more-button'>More</button>
+                <button
+                  type='reset' className='mobile-slider-next'
+                  onClick={this.handleNextSlide}
+                />
               </div>
               <div className='slider-controller'>
                 <button
