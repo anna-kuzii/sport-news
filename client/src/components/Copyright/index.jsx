@@ -1,12 +1,13 @@
 import React from 'react';
 import './style.scss';
+import { Logo } from '../Logo';
 
 export const Copyright = () => (
   <div className='copyright-container'>
-    <h2>Sport News</h2>
-    <div>
+    <Logo />
+    <div className='copyright-items'>
       <h4>Copyright ©2019 Sport News</h4>
-      <h4 className='privacy'>Privacy/Terms</h4>
+      <h4>Privacy/Terms</h4>
     </div>
   </div>
 );
