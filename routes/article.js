@@ -1,8 +1,10 @@
 const express = require('express');
 
-const articleController =require('../controllers/newsArticle');
 
 const router = express.Router();
+
+const articleController =require('../controllers/newsArticle');
+
 
 router.get('/', articleController.articleController);
 
