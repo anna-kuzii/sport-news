@@ -11,6 +11,7 @@ import { Home } from './components/Home';
 import { Dealbook } from './components/Dealbook';
 import { UpdateProfile } from './components/UpdateProfile';
 import { UserProfile } from './components/UserProfile';
+import VideoPage from './containers/VideoPage/component';
 
 
 export default class Routes extends Component {
@@ -41,6 +42,10 @@ export default class Routes extends Component {
         <Route
           exact path='/forgotpassword'
           component={ForgotPassword}
+        />
+        <Route
+          exact path='/videopage'
+          component={VideoPage}
         />
       </Router>
     );
