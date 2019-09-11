@@ -14,7 +14,7 @@ import { UserProfile } from './components/UserProfile';
 import VideoPage from './containers/VideoPage/component';
 
 
-export default function Routes() {
+export const Routes = () => {
   return (
     <Router history={history}>
       <Route
@@ -48,4 +48,4 @@ export default function Routes() {
       />
     </Router>
   );
-}
+};
