@@ -14,38 +14,36 @@ import { UserProfile } from './components/UserProfile';
 import VideoPage from './containers/VideoPage/component';
 
 
-export const Routes = () => {
-  return (
-    <Router history={history}>
-      <Route
-        exact path='/'
-        component={Home}
-      />
-      <Route
-        exact path='/dealbook'
-        component={Dealbook}
-      />
-      <UserProfile />
-      <Route
-        exact path='/updateprofile'
-        component={UpdateProfile}
-      />
-      <Route
-        exact path='/register'
-        component={Register}
-      />
-      <Route
-        exact path='/login'
-        component={Login}
-      />
-      <Route
-        exact path='/forgotpassword'
-        component={ForgotPassword}
-      />
-      <Route
-        exact path='/videopage'
-        component={VideoPage}
-      />
-    </Router>
-  );
-};
+export const Routes = () => (
+  <Router history={history}>
+    <Route
+      exact path='/'
+      component={Home}
+    />
+    <Route
+      exact path='/dealbook'
+      component={Dealbook}
+    />
+    <UserProfile />
+    <Route
+      exact path='/updateprofile'
+      component={UpdateProfile}
+    />
+    <Route
+      exact path='/register'
+      component={Register}
+    />
+    <Route
+      exact path='/login'
+      component={Login}
+    />
+    <Route
+      exact path='/forgotpassword'
+      component={ForgotPassword}
+    />
+    <Route
+      exact path='/videopage'
+      component={VideoPage}
+    />
+  </Router>
+);
