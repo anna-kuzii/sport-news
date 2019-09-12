@@ -177,12 +177,10 @@ class NewsSlider extends Component {
   }
 }
 
-function mapState(state) {
-  return {
-    articles: state.productReducer.updateNewsData,
-    loading: state.productReducer.loading,
-  };
-}
+const mapState = (state) =>({
+  articles: state.productReducer.updateNewsData,
+  loading: state.productReducer.loading,
+});
 
 const actionCreators = {
   getArticles: fetchNewsData,
