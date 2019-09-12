@@ -34,6 +34,7 @@ app.listen(PORT, () => {
 
 const cors = require('cors');
 
+
 app.use(cors());
 // Route Files
 
@@ -56,6 +57,7 @@ app.use('/subscription', subscription);
 
 
 const article = require('./routes/article');
+const video = require('./routes/video');
 
 
 app.use('/register', register);
@@ -65,6 +67,7 @@ app.use('/logout', logout);
 app.use('/updateprofile', updateProfile);
 app.use('/resetpassword', resetPassword);
 app.use('/article', article);
+app.use('/video', video);
 
 
 app.use(express.static(path.join(__dirname, 'client/build')));
