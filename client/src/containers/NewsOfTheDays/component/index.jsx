@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Loader from 'react-loader-spinner';
 import './style.scss';
-import { fetchNewsDayData } from '../action';
+import { fetchNewsData } from '../../NewsLogic/action';
 import { connect } from 'react-redux';
 
 
@@ -14,9 +14,9 @@ class NewsOfTheDays extends Component {
   );*/
 
   componentDidMount() {
-    const { fetchNewsDayData } = this.props;
+    const { fetchNewsData } = this.props;
 
-    fetchNewsDayData();
+    fetchNewsData();
   }
 
   showSeeMoreButton(text) {
@@ -25,10 +25,11 @@ class NewsOfTheDays extends Component {
   };
 
   render() {
-    const { dayNewsData } = this.props;
+    const { newsData } = this.props;
+    const indexArticle = Math.round(Math.random() * 10);
 
     return (
-      !dayNewsData.length
+      !newsData.length
         ? (
           <div className='data-loading'>
             <Loader
@@ -45,14 +46,14 @@ class NewsOfTheDays extends Component {
               <p>photo of the day</p>
             </div>
             <div className='newsday-block'>
-              <img src={dayNewsData[1].imageURL} alt='background' />
+              <img src={newsData[indexArticle].imageURL} alt='background' />
               <div className='photo-triangle'>
                 <p>photo<span><br />of the<br /></span>day</p>
               </div>
               <div className='news-article'>
-                <h1 className='title'>{dayNewsData[1].title}</h1>
-                <p className='news-text'>{this.showSeeMoreButton(dayNewsData[1].text)}</p>
-                <div className='photo-courtesy'>{dayNewsData[1].author}</div>
+                <h1 className='title'>{newsData[indexArticle].title}</h1>
+                <p className='news-text'>{this.showSeeMoreButton(newsData[indexArticle].text)}</p>
+                <div className='photo-courtesy'>{newsData[indexArticle].author}</div>
               </div>
             </div>
           </div>
@@ -63,7 +64,7 @@ class NewsOfTheDays extends Component {
 
 const mapStateToProps = state => (
   {
-    dayNewsData: state.productReducer.dayNewsData,
+    newsData: state.productReducer.newsData,
     loading: state.productReducer.loading,
     error: state.productReducer.error,
   }
@@ -71,8 +72,8 @@ const mapStateToProps = state => (
 
 const mapDispatchToProps = (dispatch) => (
   {
-    fetchNewsDayData: () => {
-      dispatch(fetchNewsDayData());
+    fetchNewsData: () => {
+      dispatch(fetchNewsData());
     },
   }
 );
