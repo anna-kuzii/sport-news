@@ -64,11 +64,9 @@ class NewsSlider extends Component {
         return { articleArray, currentArticle: articleArray[3] };
       });
     } else {
-      this.setState(function (state) {
-        return {
-          currentArticle: state.currentArticle + 1,
-        };
-      });
+      this.setState(state =>( {
+        currentArticle: state.currentArticle + 1,
+      }));
     }
   }
 
@@ -88,11 +86,9 @@ class NewsSlider extends Component {
         return { articleArray, currentArticle: articleArray[0] };
       });
     } else {
-      this.setState(function (state) {
-        return {
-          currentArticle: state.currentArticle - 1,
-        };
-      });
+      this.setState(state => ({
+        currentArticle: state.currentArticle - 1,
+      }));
     }
   }
 
