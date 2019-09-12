@@ -1,23 +1,6 @@
 @import '../../../styles/variables.scss';
 
-li {
-  font-size: 12px;
-  line-height: 2.5;
-  list-style-type: none;
-}
 
-a {
-  color: $boulder;
-
-  &:hover {
-    color: $alizarin-crimson;
-    text-decoration: none;
-  }
-}
-
-ul {
-  padding: 0;
-}
 
 .footer-container {
   display: flex;
@@ -26,6 +9,25 @@ ul {
   margin-top: 40px;
   font-family: Open Sans, serif;
   border-top: 1px solid $alto;
+
+  li {
+    font-size: 12px;
+    line-height: 2.5;
+    list-style-type: none;
+  }
+
+  a {
+    color: $boulder;
+
+    &:hover {
+      color: $alizarin-crimson;
+      text-decoration: none;
+    }
+  }
+
+  ul {
+    padding: 0;
+  }
 
   .footer-item {
     margin-right: 60px;
@@ -40,7 +42,7 @@ ul {
       line-height: 19px;
     }
 
-    & p {
+    p {
       font-size: 14px;
       line-height: 22px;
       color: $boulder;

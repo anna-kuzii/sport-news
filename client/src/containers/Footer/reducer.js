@@ -10,12 +10,6 @@ export const initialState = {
 
 export function subscription(state = initialState, action) {
   switch (action.type) {
-    case userConstants.SUBSCRIPTION_SUCCESS:
-      return {
-        ...state,
-        error: null,
-        isSubscribing: true,
-      };
     case userConstants.SUBSCRIPTION_FAILURE:
       return {
         ...state,
