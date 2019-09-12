@@ -5,7 +5,8 @@ import {
 
 const initialState = {
   newsData: [],
-  loading: false,
+  updateNewsData: [],
+  loading: true,
   error: null,
 };
 
@@ -26,6 +27,7 @@ export function productReducer(
         ...state,
         loading: false,
         newsData: action.payload.data,
+        updateNewsData: action.updatePayload,
       };
 
     case newsConstants.FETCH_NEWS_DATA_FAILURE:
