@@ -24,7 +24,10 @@ export const Routes = () => (
       exact path='/dealbook'
       component={Dealbook}
     />
-    <UserProfile />
+    <Route
+      path='/userprofile'
+      component={UserProfile}
+    />
     <Route
       exact path='/updateprofile'
       component={UpdateProfile}
