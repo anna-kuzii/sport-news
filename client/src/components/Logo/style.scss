@@ -2,8 +2,11 @@
 
 .logo {
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 250px;
-  height: 83px;
+  height: 82px;
   text-align: center;
   background: $alizarin-crimson;
 
@@ -13,13 +16,21 @@
     max-width: $mobile-width;
   }
 
+  &:focus {
+    outline: 0;
+  }
+
   h1 {
     margin: 0;
     font-family: Open Sans, serif;
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 600;
-    line-height: 83px;
+    line-height: 28px;
     color: $rose-white;
+
+    &:focus {
+      outline: 0;
+    }
   }
 }
