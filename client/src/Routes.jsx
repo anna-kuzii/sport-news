@@ -64,10 +64,22 @@ export default class Routes extends Component {
             path='/videopage'
             component={VideoPage}
           />
-          <Route
-            path='/news'
-            component={NewsArticle}
-          />
+         
+          <Route path='/news'>
+            <Switch>
+              <Header />
+            </Switch>
+            <Switch>
+              <Menu menuList={menuData.menu} />
+            </Switch>
+            <Route
+              path='/news'
+              component={NewsArticle}
+            /> 
+            <Switch>
+              <Copyright />
+            </Switch>
+          </Route>
           <Switch>
             <div className='most-wrapper'>
               <div className='most-news-container'>
