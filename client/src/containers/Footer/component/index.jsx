@@ -94,11 +94,10 @@ class Footer extends Component {
   }
 }
 
-const mapState = (state) => {
-  return {
-    forgot: state.subscription,
-  };
-};
+const mapState = (state) => ({
+  forgot: state.subscription,
+});
+
 
 const actionCreators = {
   subscription: userActions.subscription,

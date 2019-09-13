@@ -30,6 +30,10 @@
   .footer-item {
     margin-right: 60px;
 
+    @media screen and (max-width: $mobile-width) {
+      margin-bottom: 30px;
+    }
+
     &:last-child {
       margin-right: 0;
     }
@@ -45,10 +49,6 @@
       line-height: 22px;
       color: $boulder;
     }
-
-    @media screen and (max-width: $mobile-width) {
-      margin-bottom: 30px;
-    }
   }
 
   @media screen and (max-width: $mobile-width) {
@@ -59,6 +59,7 @@
 }
 
 .subscribe {
+  display: flex;
   height: 30px;
   margin-bottom: 20px;
 

@@ -13,6 +13,10 @@
   margin-top: 83px;
   background: $white;
 
+  .slider-container {
+    width: 100%;
+  }
+
   .breakdown-container {
     display: flex;
     flex-direction: row;

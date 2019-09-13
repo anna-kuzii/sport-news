@@ -7,35 +7,38 @@ import {
 } from 'react-router-dom';
 import { ChangePassword } from '../ChangePassword';
 import { UpdateProfile } from '../UpdateProfile';
+import { UserLayout } from '../UserLayout';
 
 export const UserProfile = () => (
-  <Router>
-    <div className='userprofile-wrapper'>
-      <div className='buttons'>
-        <NavLink
-          className='button'
-          exact activeClassName='active'
-          to='/userprofile/changepassword'
-        >
+  <UserLayout>
+    <Router>
+      <div className='userprofile-wrapper'>
+        <div className='buttons'>
+          <NavLink
+            className='button'
+            exact activeClassName='active'
+            to='/userprofile/changepassword'
+          >
             Change Password
-        </NavLink>
+          </NavLink>
 
-        <NavLink
-          className='button'
-          activeClassName='active'
-          to='/userprofile/updateprofile'
-        >
+          <NavLink
+            className='button'
+            activeClassName='active'
+            to='/userprofile/updateprofile'
+          >
             UpdateProfile
-        </NavLink>
+          </NavLink>
+        </div>
+        <Route
+          exact path='/userprofile/changepassword'
+          component={ChangePassword}
+        />
+        <Route
+          exact path='/userprofile/updateprofile'
+          component={UpdateProfile}
+        />
       </div>
-      <Route
-        exact path='/userprofile/changepassword'
-        component={ChangePassword}
-      />
-      <Route
-        exact path='/userprofile/updateprofile'
-        component={UpdateProfile}
-      />
-    </div>
-  </Router>
+    </Router>
+  </UserLayout>
 );

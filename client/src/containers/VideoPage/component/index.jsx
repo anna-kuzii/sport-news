@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Loader from 'react-loader-spinner';
 import './style.scss';
+import { Layout } from '../../../components/Layout';
 import { fetchVideoData } from '../action';
 import { connect } from 'react-redux';
 
@@ -28,65 +29,69 @@ class VideoPage extends Component {
     }
     //TODO: change to array
     return !videoData.length ? (
-      
-      <div className='empty-db'>
+
+      <Layout>
+        <div className='empty-db'>
           sorry we don`t have any video :-)
-      </div>
+        </div>
+      </Layout>
     )
       :(
-        <div className='video-page-wrapper'>
-          <div className='news-word-wrap'>
+        <Layout>
+          <div className='video-page-wrapper'>
+            <div className='news-word-wrap'>
                   NEWS
-          </div>
-          <div className='video-word-wrap'>
+            </div>
+            <div className='video-word-wrap'>
                    VIDEO
-          </div>
-          <div className='section-name'>
-            <p><span>video</span> &gt; the NBA videos</p>
-          </div>
-          <div className='main-video-wrapper'>
-            <iframe
-              className='main-video'
-              title={videoData[0].title}
-              src={videoData[0].videoURL}
-            />
-            <div className='main-title' >{videoData[0].title}</div>
-          </div>
-          <div className='additional-video-wrapper'>
-            <div className='left-column-video'>
-              <div className='single-video'>
-                <iframe
-                  title={videoData[1].title}
-                  src={videoData[1].videoURL}
-                />
-                <h1>{videoData[1].title}</h1>
+            </div>
+            <div className='section-name'>
+              <p><span>video</span> &gt; the NBA videos</p>
+            </div>
+            <div className='main-video-wrapper'>
+              <iframe
+                className='main-video'
+                title={videoData[0].title}
+                src={videoData[0].videoURL}
+              />
+              <div className='main-title' >{videoData[0].title}</div>
+            </div>
+            <div className='additional-video-wrapper'>
+              <div className='left-column-video'>
+                <div className='single-video'>
+                  <iframe
+                    title={videoData[1].title}
+                    src={videoData[1].videoURL}
+                  />
+                  <h1>{videoData[1].title}</h1>
+                </div>
+                <div className='single-video'>
+                  <iframe
+                    title={videoData[2].title}
+                    src={videoData[2].videoURL}
+                  />
+                  <h1>{videoData[2].title}</h1>
+                </div>
               </div>
-              <div className='single-video'>
-                <iframe
-                  title={videoData[2].title}
-                  src={videoData[2].videoURL}
-                />
-                <h1>{videoData[2].title}</h1>
+              <div className='right-column-video'>
+                <div className='single-video'>
+                  <iframe
+                    title={videoData[3].title}
+                    src={videoData[3].videoURL}
+                  />
+                  <h1>{videoData[3].title}</h1>
+                </div>
+                <div className='single-video'>
+                  <iframe
+                    title={videoData[4].title}
+                    src={videoData[4].videoURL}
+                  />
+                  <h1>{videoData[4].title}</h1>
+                </div>
               </div>
             </div>
-            <div className='right-column-video'>
-              <div className='single-video'>
-                <iframe
-                  title={videoData[3].title}
-                  src={videoData[3].videoURL}
-                />
-                <h1>{videoData[3].title}</h1>
-              </div>
-              <div className='single-video'>
-                <iframe
-                  title={videoData[4].title}
-                  src={videoData[4].videoURL}
-                />
-                <h1>{videoData[4].title}</h1>
-              </div>
-            </div>
           </div>
-        </div>
+        </Layout>
       );
   }
 };
