@@ -8,6 +8,12 @@
   font-family: Open Sans, serif;
   border-top: 1px solid $alto;
 
+  @media screen and (max-width: $mobile-width) {
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+  }
+
   li {
     font-size: 12px;
     line-height: 2.5;
@@ -49,12 +55,6 @@
       line-height: 22px;
       color: $boulder;
     }
-  }
-
-  @media screen and (max-width: $mobile-width) {
-    display: flex;
-    flex-direction: column;
-    padding-left: 40px;
   }
 }
 
