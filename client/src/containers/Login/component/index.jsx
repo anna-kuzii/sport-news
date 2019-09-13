@@ -20,6 +20,14 @@ class Login extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount() {
+    const { logining, history } = this.props;
+
+    if (logining.isAuthenticated) {
+      history.push('/');
+    }
+  }
+
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }

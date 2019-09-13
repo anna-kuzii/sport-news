@@ -145,8 +145,7 @@
     border: 0;
 
     @media screen and (max-width: $tablet-width) {
-      min-width: 100vw;
-      min-height: 40vh;
+      width: 100%;
     }
   }
 
