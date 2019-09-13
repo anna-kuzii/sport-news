@@ -44,8 +44,21 @@ const forgotPassword = require('./routes/forgotPassword');
 const logout = require('./routes/logout');
 const updateProfile = require('./routes/updateProfile');
 const resetPassword = require('./routes/resetPassword');
+
+const subscription = require('./routes/subscription');
+
+app.use('/register', register);
+app.use('/login', login);
+app.use('/forgotpassword', forgotPassword);
+app.use('/logout', logout);
+app.use('/updateprofile', updateProfile);
+app.use('/resetpassword', resetPassword);
+app.use('/subscription', subscription);
+
+
 const article = require('./routes/article');
 const video = require('./routes/video');
+
 
 app.use('/register', register);
 app.use('/login', login);

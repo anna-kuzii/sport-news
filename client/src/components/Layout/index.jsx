@@ -7,6 +7,7 @@ import { MostPopularComments } from '../MostPopularComments';
 import MostPopular from '../../assets/data/MostPopularNewsList';
 import MostComments from '../../assets/data/MostCommentsNewsList';
 import { Copyright } from '../Copyright';
+import { Footer } from '../../containers/Footer/component';
 
 
 export const Layout = (props) => {
@@ -29,6 +30,7 @@ export const Layout = (props) => {
           />
         </div>
       </div>
+      <Footer />
       <Copyright />
     </div>
   );

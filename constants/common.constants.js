@@ -1,5 +1,5 @@
-const expireTime = 2000
+const expireTime = 2000;
 
 module.exports ={
-    expireTime,
+  expireTime,
 };
