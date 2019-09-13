@@ -73,7 +73,7 @@
     border: 1px solid $ghost;
     border-right: 0;
 
-    & ::placeholder {
+    &::placeholder {
       color: $alto;
     }
   }
