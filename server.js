@@ -26,8 +26,8 @@ app.get('/hello', (req, res) => {
 });
 
 const PORT = process.env.PORT || 5000;
-
 // TODO: change console.log()
+
 app.listen(PORT, () => {
   console.log(`Server is running on PORT ${PORT}`);
 });
@@ -68,7 +68,6 @@ app.use('/updateprofile', updateProfile);
 app.use('/resetpassword', resetPassword);
 app.use('/article', article);
 app.use('/video', video);
-
 
 app.use(express.static(path.join(__dirname, 'client/build')));
 
