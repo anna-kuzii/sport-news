@@ -7,9 +7,8 @@ import { store } from '../helpers';
 export const checkAuthToken = ()=> {
   if (localStorage.accessToken) {
     const token = localStorage.accessToken;
-
+    
     setAuthToken(token);
-
     const decoded = jwt_decode(token);
 
     store.dispatch(setCurrentUser(decoded));
