@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Share } from '../../../components/Share';
 import { userActions } from '../action';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import './style.scss';
 
 
@@ -39,19 +40,19 @@ class Footer extends Component {
           <h4>COMPANY INFO</h4>
           <ul className='company-list'>
             <li>
-              <a href='about'>About Sport News</a>
+              <Link to='/'>About Sport News</Link>
             </li>
             <li>
-              <a href='news'>News / In the Press</a>
+              <Link to='/'>News / In the Press</Link>
             </li>
             <li>
-              <a href='advertising'>Advertising / Sports Blogger Ad Network</a>
+              <Link to='/'>Advertising / Sports Blogger Ad Network</Link>
             </li>
             <li>
-              <a href='events'>Events</a>
+              <Link to='/'>Events</Link>
             </li>
             <li>
-              <a href='contact'>Contact Us</a>
+              <Link to='/'>Contact Us</Link>
             </li>
           </ul>
         </div>
@@ -59,13 +60,13 @@ class Footer extends Component {
           <h4>CONTRIBUTORS</h4>
           <ul className='contributors-list'>
             <li>
-              <a href='writers'>Featured Writers Program</a>
+              <Link to='/'>Featured Writers Program</Link>
             </li>
             <li>
-              <a href='writersTeam'>Featured Team Writers Program</a>
+              <Link to='/'>Featured Team Writers Program</Link>
             </li>
             <li>
-              <a href='internship'>Internship Program</a>
+              <Link to='/'>Internship Program</Link>
             </li>
           </ul>
         </div>
