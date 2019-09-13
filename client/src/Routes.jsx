@@ -13,11 +13,7 @@ import { Dealbook } from './components/Dealbook';
 import { UserProfile } from './components/UserProfile';
 import VideoPage from './containers/VideoPage/component';
 import PrivateRoute from './containers/PrivateRoute';
-import { checkAuthToken } from './utils/checkAuthToken';
-import { authInterceptor } from './interceptor';
 
-checkAuthToken();
-authInterceptor();
 
 export const Routes = () => (
   <Provider store={store}>
