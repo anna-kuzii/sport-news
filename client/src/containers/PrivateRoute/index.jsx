@@ -3,9 +3,9 @@ import { Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { checkAuthToken } from '../../utils/checkAuthToken';
 
+checkAuthToken();
 
 const PrivateRoute = ({ component: Component, auth, ...rest }) => {
-  checkAuthToken();
   return (
     <Route
       {...rest}
