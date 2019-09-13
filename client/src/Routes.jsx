@@ -12,7 +12,7 @@ import { Dealbook } from './components/Dealbook';
 import { UpdateProfile } from './components/UpdateProfile';
 import { UserProfile } from './components/UserProfile';
 import VideoPage from './containers/VideoPage/component';
-
+import { AddNews } from './components/AddNews';
 
 export const Routes = () => (
   <Router history={history}>
@@ -47,6 +47,10 @@ export const Routes = () => (
     <Route
       exact path='/videopage'
       component={VideoPage}
+    />
+    <Route
+      exact path='/addnews'
+      component={AddNews}
     />
   </Router>
 );
