@@ -5,7 +5,7 @@ import { Logo } from '../../../components/Logo';
 
 import FormValidator from '../../../utils/FormValidator';
 import { rules } from '../../../utils/FormValidator/rules';
-import { userActions } from '../action';
+import { register } from '../action';
 import { connect } from 'react-redux';
 import './style.scss';
 
@@ -158,13 +158,12 @@ class Register extends Component {
   }
 }
 
-function mapState(state) {
-  return { registering: state.registration };
-}
+const mapState = state =>({
+  registering: state.registration,
+});
 
 const actionCreators = {
-
-  register: userActions.register,
+  register: register,
 };
 
 const connectedRegisterPage = connect(mapState, actionCreators)(Register);

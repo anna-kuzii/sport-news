@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import loginBg from '../../../assets/img/register-login-bg.jpg';
 import { Link } from 'react-router-dom';
-import { userActions } from '../action';
+import { forgotPassword } from '../action';
 import { connect } from 'react-redux';
 import { Logo } from '../../../components/Logo';
 import './style.scss';
@@ -92,7 +92,7 @@ function mapState(state) {
 
 const actionCreators = {
 
-  forgotPassword: userActions.forgotPassword,
+  forgotPassword: forgotPassword,
 };
 
 const conectedForgotPasswordPage = connect(mapState, actionCreators)(ForgotPassword);

@@ -5,7 +5,7 @@ const subscriptionEmail = require('../templates/subscriptionTemplate');
 require('dotenv').config();
 
 exports.sendSubscriptionEmail = (req, res) => {
-  return UserQuery.findUserByEmail(req.body.email)
+  UserQuery.findUserByEmail(req.body.email)
     .then(() => {
       sendEmail.sendEmail(subscriptionEmail.subscriptionTemplate(req.body.email));
       res.status(200).send('email send successful');

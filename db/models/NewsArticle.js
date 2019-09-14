@@ -18,6 +18,9 @@ const NewsArticleSchema = new Schema({
   assosiated_press: {
     type: String,
   },
+  alt: {
+    type: String,
+  },
   imageURL: {
     type: String,
   },

@@ -7,12 +7,8 @@ import {
 import jwtDecode from 'jwt-decode';
 import { history } from '../../helpers';
 
-export const userActions = {
-  login,
-};
-
-function login(user) {
-  return dispatch => {
+export const login = user => (
+  dispatch =>{
     instance.post('/login', user)
       .then(res => {
         const { accessToken } = res.data;
@@ -23,19 +19,15 @@ function login(user) {
       }).catch(error =>
         dispatch(loginFailure(error.response.data && error.response.data.message))
       );
-  };
-
-  function loginFailure(error) {
-    return {
-      type: userConstants.SET_CURRENT_GET_ERRORS,
-      error,
-    };
   }
-}
+);
 
-export const setCurrentUser = decoded => {
-  return {
-    type: userConstants.SET_CURRENT_USER_SUCCESS,
-    payload: decoded,
-  };
-};
+const loginFailure = error => ({
+  type: userConstants.SET_CURRENT_GET_ERRORS,
+  error,
+});
+
+const setCurrentUser = decoded => ({
+  type: userConstants.SET_CURRENT_USER_SUCCESS,
+  payload: decoded,
+});

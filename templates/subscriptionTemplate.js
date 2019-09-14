@@ -1,11 +1,12 @@
-require('dotenv').config()
+require('dotenv').config();
 
-Date.prototype.getMonthName = function() {
-  const monthNames = ["January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
+Date.prototype.getMonthName = function () {
+  const monthNames = [ 'January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December',
   ];
+
   return monthNames[this.getMonth()];
-}
+};
 
 const date= new Date();
 const year = date.getFullYear();
@@ -13,6 +14,7 @@ const month = date.getMonthName();
 const day = date.getDate();
 
 const currentDate = `${month} ${day}, ${year}`;
+
 exports.subscriptionTemplate = (user) => {
   const mailOptions = {
     from: '"Sport News" <process.env.USER_EMAIL>',
@@ -42,6 +44,7 @@ exports.subscriptionTemplate = (user) => {
       path: './assets/check.png',
       cid: 'unique@cid',
     } ],
-  }
-  return mailOptions
-}
+  };
+
+  return mailOptions;
+};
