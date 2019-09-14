@@ -10,6 +10,10 @@
     max-width: 400px;
     border: 1px solid $gallery;
 
+    @media screen and (max-width: $mobile-width) {
+      max-width: $mobile-width;
+    }
+
     &:hover {
       cursor: url('../../assets/img/cursor-hover.svg'), auto;
       background: $white;

@@ -9,6 +9,10 @@
     margin: 0 20px;
   }
 
+  .news-divider {
+    margin: 60px auto;
+  }
+
   .news-container {
     display: flex;
     flex-direction: column;
@@ -30,6 +34,14 @@
       .single-news {
         @media screen and (max-width: $mobile-width) {
           margin-bottom: 50px;
+        }
+      }
+
+      .news-box {
+        @media screen and (max-width: $mobile-width) {
+          width: 100%;
+          height: auto;
+          max-width: $mobile-width;
         }
       }
     }

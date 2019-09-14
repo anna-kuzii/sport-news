@@ -5,13 +5,19 @@
   align-items: flex-start;
   flex-direction: column;
   justify-content: center;
-  float: right;
+  float: left;
   width: 100%;
   height: auto;
-  max-width: 1188px;
-  padding: 0;
+  max-width: 1440px;
+  padding: 0 20px 0 250px;
   margin-top: 83px;
   background: $white;
+
+  @media screen and (max-width: $tablet-width) {
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+  }
 
   .slider-container {
     width: 100%;
@@ -22,6 +28,11 @@
     flex-direction: row;
     width: 100%;
     max-width: 835px;
+
+    @media screen and (max-width: $tablet-width) {
+      justify-content: center;
+      max-width: $tablet-width;
+    }
   }
 
   .newsOfTheDayContainer {
