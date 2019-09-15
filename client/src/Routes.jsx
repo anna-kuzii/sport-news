@@ -12,7 +12,7 @@ import { Dealbook } from './components/Dealbook';
 import { UpdateProfile } from './components/UpdateProfile';
 import { UserProfile } from './components/UserProfile';
 import VideoPage from './containers/VideoPage/component';
-import { AddNews } from './components/AddNews';
+import AddNews from './containers/AddNews/component';
 
 export const Routes = () => (
   <Router history={history}>

@@ -1,4 +1,4 @@
-@import '../../styles/variables';
+@import '../../../styles/variables';
 
 .add-news-wrapper {
   display: flex;
@@ -18,36 +18,50 @@
     padding: 20px;
     margin-top: 40px;
     text-align: right;
+  }
 
-    .cancel-button {
-      width: 100px;
-      height: 35px;
-      font-family: Open Sans;
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 16px;
+  .cancel-button {
+    width: 100px;
+    height: 35px;
+    font-family: Open Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+    color: $alizarin-crimson;
+    text-decoration: none;
+    background-color: $white;
+    border: 0;
+    outline: 0;
+
+    &:hover {
+      background-color: $rose-white;
+    }
+  }
+
+  .save-button {
+    width: 100px;
+    height: 35px;
+    font-family: Open Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+    color: $white;
+    text-decoration: none;
+    background-color: $alizarin-crimson;
+    border: 0;
+    outline: 0;
+
+    &:hover {
       color: $alizarin-crimson;
-      text-decoration: none;
       background-color: $white;
-      border: 0;
-      outline: 0;
+      border: 1px solid $alizarin-crimson;
     }
+  }
 
-    .save-button {
-      width: 100px;
-      height: 35px;
-      font-family: Open Sans;
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 16px;
-      color: $white;
-      text-decoration: none;
-      background-color: $alizarin-crimson;
-      border: 0;
-      outline: 0;
-    }
+  .img-prewiew {
+    width: 100%;
   }
 
   .upload-photo-bg {
@@ -87,6 +101,10 @@
       font-weight: 600;
       line-height: 19px;
       color: $alizarin-crimson;
+
+      &:hover {
+        cursor: url('../../../assets/img/cursor-hover.svg'), auto;
+      }
     }
   }
 
