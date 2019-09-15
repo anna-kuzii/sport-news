@@ -14,5 +14,5 @@ exports.sendEmail = (message) => {
 
   sendEmail(message)
     .then((info) => { console.log(info); })
-    .catch((err) => { console.log('got error'); console.log(err); });
+    .catch((err) => { console.log(err); });
 };
