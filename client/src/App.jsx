@@ -2,7 +2,7 @@ import React from 'react';
 
 import './App.scss';
 import { Routes } from './Routes';
-import { authInterceptor } from './interceptor';
+import { authInterceptor } from './axios.instanse';
 
 authInterceptor();
 
