@@ -1,43 +1,41 @@
 @import '../../styles/variables.scss';
 
 .copyright-container {
+  position: relative;
+  z-index: 10;
   display: flex;
   align-items: center;
+  flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  min-height: 80px;
-  padding: 25px 55px;
+  height: 80px;
+  max-width: 1440px;
   color: $rose-white;
   background-color: $alizarin-crimson;
 
-  @media screen and (max-width: $mobile-width) {
-    align-items: start;
-    flex-direction: column;
-    padding: 14px 15px;
+  &:focus {
+    outline: 0;
   }
 
-  div {
-    @media screen and (max-width: $mobile-width) {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
+  .logo {
+    position: static;
+    height: 80px;
+  }
+
+  .copyright-items {
+    margin: 21px 56px 11px 0;
+    text-align: right;
+
+    @media screen and (max-width: $tablet-width) {
+      margin: 0 56px 0 0;
     }
-  }
 
-  h2 {
-    font-size: 22px;
-    font-weight: 600;
-    line-height: 28px;
-  }
-
-  h4 {
-    margin-bottom: 0;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 28px;
-  }
-
-  .privacy {
-    text-align: end;
+    h4 {
+      margin-bottom: 0;
+      font-family: Open Sans, serif;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 24px;
+    }
   }
 }

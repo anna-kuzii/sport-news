@@ -68,7 +68,7 @@
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   max-width: 800px;
 
   input {
@@ -150,7 +150,7 @@
 .forgot-password-wrapper {
   width: 100%;
   max-width: 400px;
-  margin: 30% 20px 0;
+  margin: auto 20px;
 
   @media screen and (max-width: $mobile-width) {
     max-width: 80%;
@@ -286,13 +286,16 @@
 
 .most-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
+  height: auto;
   max-width: 1440px;
+  padding: 0 20px 0 250px;
   background: $white;
 
   @media screen and (max-width: $tablet-width) {
     padding: 0 20px;
+    justify-content: center;
   }
 
   .most-news-container {

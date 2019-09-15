@@ -105,7 +105,6 @@ function mapState(state) {
 };
 
 const actionCreators = {
-
   login: userActions.login,
 };
 

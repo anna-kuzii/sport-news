@@ -27,12 +27,7 @@ const NewsArticleSchema = new Schema({
   },
 });
 
-
-const NewsArticlesSchema = mongoose.model('newsArticles', NewsArticleSchema);
-
-module.exports = NewsArticlesSchema;
-
-const NewsArticle = mongoose.model('newsArticles', NewsArticleSchema, 'newsArticles');
+const NewsArticle = mongoose.model('newsArticles', NewsArticleSchema, 'newsarticles');
 
 module.exports = NewsArticle;
 

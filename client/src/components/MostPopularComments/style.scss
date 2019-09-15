@@ -7,6 +7,10 @@
   padding: 0;
   margin: 0 0 50px;
 
+  @media screen and (max-width: $mobile-width) {
+    max-width: $mobile-width;
+  }
+
   .block-title {
     display: flex;
     flex-direction: row;
@@ -32,6 +36,10 @@
       margin: .8rem 0 0 10px;
       border-top: 0;
       border-bottom: 1px solid $silver-chalice;
+
+      @media screen and (max-width: $mobile-width) {
+        max-width: $mobile-width;
+      }
     }
   }
 
@@ -40,5 +48,9 @@
     height: auto;
     max-width: 390px;
     border: 1px solid $gallery;
+
+    @media screen and (max-width: $mobile-width) {
+      max-width: $mobile-width;
+    }
   }
 }
