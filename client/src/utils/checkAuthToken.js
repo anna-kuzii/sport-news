@@ -7,8 +7,14 @@ import { store } from '../helpers';
 export const checkAuthToken = ()=> {
   if (localStorage.accessToken) {
     const token = localStorage.accessToken;
-    
+
     setAuthToken(token);
+    try {
+      jwt_decode(token);
+    } catch (error) {
+      store.dispatch(logoutUser());
+      window.location.href = '/login';
+    }
     const decoded = jwt_decode(token);
 
     store.dispatch(setCurrentUser(decoded));
