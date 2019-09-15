@@ -72,7 +72,7 @@ const mapStateToProps = state => (
 
 const mapDispatchToProps = () => (
   {
-    fetchNewsData: fetchNewsData,
+    fetchNewsData,
   }
 );
 

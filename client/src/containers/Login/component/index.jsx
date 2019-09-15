@@ -97,9 +97,9 @@ class Login extends Component {
   }
 }
 
-const mapState = state => ({
-  auth: state.auth,
-  logining: state.login,
+const mapState = ({ auth, login: logining }) => ({
+  auth,
+  logining,
 });
 
 const actionCreators = {

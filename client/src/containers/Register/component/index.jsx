@@ -163,7 +163,7 @@ const mapState = state =>({
 });
 
 const actionCreators = {
-  register: register,
+  register,
 };
 
 const connectedRegisterPage = connect(mapState, actionCreators)(Register);

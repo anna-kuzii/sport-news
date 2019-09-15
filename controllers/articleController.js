@@ -32,9 +32,9 @@ exports.createArticle = (req, res) => {
       imageURL: result.url,
     };
 
-    res.status(200).json({ message: 'Article created' });
     ArticleQuery.createArticle(article);
-  }).catch(errors=>{
-    res.status(422).json({ message: errors });
-  });
+  }).then(()=>(res.status(200).json({ message: 'Article created' })))
+    .catch(errors=>{
+      res.status(422).json({ message: errors });
+    });
 };

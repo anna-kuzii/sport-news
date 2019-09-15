@@ -1,11 +1,8 @@
 require('dotenv').config();
+const constants = require('../constants/common.constants');
 
 Date.prototype.getMonthName = function () {
-  const monthNames = [ 'January', 'February', 'March', 'April', 'May', 'June',
-    'July', 'August', 'September', 'October', 'November', 'December',
-  ];
-
-  return monthNames[this.getMonth()];
+  return constants.monthNames[this.getMonth()];
 };
 
 const date= new Date();
