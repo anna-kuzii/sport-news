@@ -20,3 +20,8 @@ instance.interceptors.response.use((response) => {
   }
   return Promise.reject(error);
 });
+
+instance.interceptors.request.use((config) => {
+  config.headers.Authorization = localStorage.getItem('accessToken');
+  return config;
+});
