@@ -99,7 +99,7 @@ const mapState = (state) => ({
 
 
 const actionCreators = {
-  subscription: subscription,
+  subscription,
 };
 
 const connectedSubscriptionPage = connect(

@@ -103,7 +103,7 @@ const mapState = ({ auth, login: logining }) => ({
 });
 
 const actionCreators = {
-  login: login,
+  login,
 };
 
 const connectedLoginPage = connect(mapState, actionCreators)(Login);

@@ -91,8 +91,7 @@ function mapState(state) {
 }
 
 const actionCreators = {
-
-  forgotPassword: forgotPassword,
+  forgotPassword,
 };
 
 const conectedForgotPasswordPage = connect(mapState, actionCreators)(ForgotPassword);
