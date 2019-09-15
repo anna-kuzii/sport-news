@@ -7,8 +7,6 @@
   max-width: 1440px;
   padding: 40px 0;
   margin: 0;
-  background: $concrete;
-
 
   .news-wrapper {
     width: 100%;
@@ -99,7 +97,7 @@
         position: static;
         max-width: 100%;
         padding: 0 15px;
-        background-color: $concrete;
+        background: none;
         box-shadow: none;
       }
 
@@ -128,7 +126,6 @@
       }
 
       h2 {
-        width: 80%;
         margin-bottom: 0;
         font-family: Open Sans;
         font-size: 22px;

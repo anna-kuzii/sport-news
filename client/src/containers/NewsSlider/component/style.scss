@@ -260,8 +260,8 @@
       }
 
       &:hover {
-        cursor: url('../../../assets/img/cursor-hover.svg'), auto;
         z-index: 10;
+        cursor: url('../../../assets/img/cursor-hover.svg'), auto;
         background: $white;
         box-shadow: 0 2px 24px $news-hover-11;
 
