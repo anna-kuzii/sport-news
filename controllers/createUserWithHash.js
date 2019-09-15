@@ -5,7 +5,7 @@ const encrypt = require('./encrypt');
 
 
 exports.createUserWithHash =(password, req, res) =>{
-  encrypt.hashPassword(password)
+  return encrypt.hashPassword(password)
     .then((result) => {
       UserQuery.createUser(req.body, result);
       notificationMail.sendEmail(regNotification.sendRegNotification(req.body.email));

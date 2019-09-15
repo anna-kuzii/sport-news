@@ -22,7 +22,7 @@ exports.createArticle = (req, res) => {
     return res.status(422).json({ message: 'Image must be less than 2 mb' });
   }
 
-  cloudinary.uploader.upload(image.path, (error, result)=>{
+  cloudinary.uploader.upload(image.path).then(result =>{
     const article = {
       author: req.body.author,
       title: req.body.title,
@@ -34,5 +34,7 @@ exports.createArticle = (req, res) => {
 
     res.status(200).json({ message: 'Article created' });
     ArticleQuery.createArticle(article);
+  }).catch(errors=>{
+    res.status(422).json({ message: errors });
   });
 };
