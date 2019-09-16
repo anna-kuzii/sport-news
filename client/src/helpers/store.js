@@ -25,6 +25,10 @@ import {
 } from '../containers/VideoPage/reducer';
 
 import {
+  addArticleReducer,
+} from '../containers/AddNews/reducer';
+
+import {
   subscription,
 } from '../containers/Footer/reducer';
 import thunkMiddleware from 'redux-thunk';
@@ -38,6 +42,7 @@ const rootReducer = combineReducers({
   login,
   productReducer,
   videoReducer,
+  addArticleReducer,
   subscription,
 });
 

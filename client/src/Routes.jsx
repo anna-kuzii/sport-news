@@ -12,6 +12,7 @@ import { Home } from './components/Home';
 import { Dealbook } from './components/Dealbook';
 import { UserProfile } from './components/UserProfile';
 import VideoPage from './containers/VideoPage/component';
+import AddNews from './containers/AddNews/component';
 import PrivateRoute from './containers/PrivateRoute';
 
 
@@ -45,6 +46,10 @@ export const Routes = () => (
       <Route
         exact path='/videopage'
         component={VideoPage}
+      />
+      <PrivateRoute
+        path='/addnews'
+        component={AddNews}
       />
     </Router>
   </Provider>
