@@ -47,7 +47,7 @@ export const Routes = () => (
         exact path='/videopage'
         component={VideoPage}
       />
-      <Route
+      <PrivateRoute
         path='/addnews'
         component={AddNews}
       />
