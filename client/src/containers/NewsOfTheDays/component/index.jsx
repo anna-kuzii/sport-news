@@ -26,7 +26,7 @@ class NewsOfTheDays extends Component {
 
   render() {
     const { newsData } = this.props;
-    const indexArticle = Math.round(Math.random() * 10);
+    const indexArticle = Math.floor(Math.random() * Math.floor(10));
 
     return (
       !newsData.length
@@ -70,11 +70,9 @@ const mapStateToProps = state => (
   }
 );
 
-const mapDispatchToProps = (dispatch) => (
+const mapDispatchToProps = () => (
   {
-    fetchNewsData: () => {
-      dispatch(fetchNewsData());
-    },
+    fetchNewsData,
   }
 );
 

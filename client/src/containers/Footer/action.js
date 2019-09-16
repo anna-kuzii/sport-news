@@ -5,14 +5,15 @@ import {
   instance,
 } from '../../axios.instanse';
 
-const subscription = (email) => (dispatch => {
-  instance.post('/subscription', email)
-    .then(() => {
-      dispatch(subscriptionSuccess(email));
-    }).catch(error => {
-      dispatch(subscriptionFailure(error.response.data && error.response.data.message));
-    });
-});
+export const subscription = (email) => (
+  dispatch => {
+    instance.post('/subscription', email)
+      .then(() => {
+        dispatch(subscriptionSuccess(email));
+      }).catch(error => {
+        dispatch(subscriptionFailure(error.response.data && error.response.data.message));
+      });
+  });
 
 const subscriptionSuccess = (email) => ({
   type: userConstants.SUBSCRIPTION_SUCCESS,
@@ -24,7 +25,3 @@ const subscriptionFailure = (error) => ({
   type: userConstants.SUBSCRIPTION_FAILURE,
   error,
 });
-
-export const userActions = {
-  subscription,
-};

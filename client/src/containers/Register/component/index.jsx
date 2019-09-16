@@ -5,7 +5,7 @@ import { Logo } from '../../../components/Logo';
 
 import FormValidator from '../../../utils/FormValidator';
 import { rules } from '../../../utils/FormValidator/rules';
-import { userActions } from '../action';
+import { register } from '../action';
 import { connect } from 'react-redux';
 import './style.scss';
 
@@ -27,6 +27,14 @@ class Register extends Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  componentDidMount() {
+    const { logining, history } = this.props;
+    
+    if (logining.isAuthenticated) {
+      history.push('/');
+    }
   }
 
   handleChange(e) {
@@ -158,13 +166,14 @@ class Register extends Component {
   }
 }
 
-function mapState(state) {
-  return { registering: state.registration };
-}
+
+const mapState = state =>({
+  registering: state.registration,
+  logining: state.login,
+});
 
 const actionCreators = {
-
-  register: userActions.register,
+  register,
 };
 
 const connectedRegisterPage = connect(mapState, actionCreators)(Register);

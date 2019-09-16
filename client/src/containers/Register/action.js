@@ -6,42 +6,32 @@ import {
 } from '../../axios.instanse';
 import { history } from '../../helpers';
 
-export const userActions = {
-  register,
-};
-
-function register(user) {
-  return dispatch => {
+export const register = user => (
+  dispatch => {
     dispatch(registrationRequest(user));
     instance.post('/register', user)
       .then(
         () => {
-          dispatch(registrationSuccess());
+          dispatch(registrationSuccess(user));
           history.push('/login');
         }
       ).catch(error => {
         dispatch(registrationFailure(error.response.data && error.response.data.message));
       });
-  };
-
-  function registrationRequest(user) {
-    return {
-      type: userConstants.REGISTER_REQUEST,
-      user,
-    };
   }
+);
 
-  function registrationSuccess(user) {
-    return {
-      type: userConstants.REGISTER_SUCCESS,
-      user,
-    };
-  }
+const registrationRequest = user => ({
+  type: userConstants.REGISTER_REQUEST,
+  user,
+});
 
-  function registrationFailure(error) {
-    return {
-      type: userConstants.REGISTER_FAILURE,
-      error,
-    };
-  }
-}
+const registrationSuccess = user => ({
+  type: userConstants.REGISTER_SUCCESS,
+  user,
+});
+
+const registrationFailure = error => ({
+  type: userConstants.REGISTER_FAILURE,
+  error,
+});
