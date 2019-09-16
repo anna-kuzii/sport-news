@@ -6,31 +6,23 @@ import {
 } from '../../axios.instanse';
 
 
-export const userActions = {
-  forgotPassword,
-};
-
-function forgotPassword(email) {
-  return dispatch => {
+export const forgotPassword = (email) => (
+  dispatch =>{
     instance.post('/forgotpassword', email)
       .then(() => {
         dispatch(forgotPasswordSuccess(email));
       }).catch(error => {
         dispatch(forgotPasswordFailure(error.response.data && error.response.data.message));
       });
-  };
-
-  function forgotPasswordSuccess(email) {
-    return {
-      type: userConstants.FORGOT_PASSWORD_SUCCESS,
-      email,
-    };
   }
+);
 
-  function forgotPasswordFailure(error) {
-    return {
-      type: userConstants.FORGOT_PASSWORD_FAILURE,
-      error,
-    };
-  }
-}
+const forgotPasswordSuccess = (email) =>({
+  type: userConstants.FORGOT_PASSWORD_SUCCESS,
+  email,
+});
+
+const forgotPasswordFailure = (error) =>({
+  type: userConstants.FORGOT_PASSWORD_SUCCESS,
+  error,
+});

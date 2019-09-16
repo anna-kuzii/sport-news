@@ -75,6 +75,7 @@
     line-height: 30px;
     border: 1px solid $ghost;
     border-right: 0;
+    outline: 0;
 
     &::placeholder {
       color: $alto;
@@ -90,6 +91,7 @@
     color: $white;
     background-color: $alizarin-crimson;
     border: 0;
+    outline: 0;
 
     &:hover {
       color: $alizarin-crimson;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Share } from '../../../components/Share';
-import { userActions } from '../action';
+import { subscription } from '../action';
 import { connect } from 'react-redux';
 import './style.scss';
 
@@ -99,12 +99,12 @@ const mapState = (state) => ({
 
 
 const actionCreators = {
-  subscription: userActions.subscription,
+  subscription,
 };
 
-const conectedSubscriptionPage = connect(
+const connectedSubscriptionPage = connect(
   mapState,
   actionCreators
 )(Footer);
 
-export { conectedSubscriptionPage as Footer };
+export { connectedSubscriptionPage as Footer };
