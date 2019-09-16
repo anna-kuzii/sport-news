@@ -4,7 +4,6 @@ import { NewsSlider } from '../../containers/NewsSlider/component';
 import { Breakdown } from '../Breakdown';
 import { Layout } from '../Layout';
 import BreakDown from '../../assets/data/BreakdownNewsList';
-import SingleNews from '../../assets/data/SingleNews';
 import NewsOfTheDays from '../../containers/NewsOfTheDays/component';
 
 
@@ -18,7 +17,6 @@ export const Home = () => (
       </div>
       <div className='breakdown-container'>
         <Breakdown
-          singleNews={SingleNews}
           newsBlock={BreakDown}
         />
       </div>

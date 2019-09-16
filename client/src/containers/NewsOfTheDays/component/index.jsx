@@ -13,12 +13,6 @@ class NewsOfTheDays extends Component {
       : <p>{text.slice(0, 60)}<Link to={fullNews} className='see-more'> ...</Link></p>
   );*/
 
-  componentDidMount() {
-    const { fetchNewsData } = this.props;
-
-    fetchNewsData();
-  }
-
   showSeeMoreButton(text) {
     return text.length < 100 ? text
       : <p>{text.slice(0, 60)}<Link to='/' className='see-more'> ...</Link></p>;
@@ -60,7 +54,7 @@ class NewsOfTheDays extends Component {
         )
     );
   }
-};
+}
 
 const mapStateToProps = state => (
   {

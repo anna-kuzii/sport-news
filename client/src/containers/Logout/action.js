@@ -1,5 +1,4 @@
 import setAuthToken from '../../utils/AuthToken';
-import jwt_decode from 'jwt-decode';
 import { setCurrentUser } from '../Login/action';
 
 export const logoutUser = () => dispatch => {

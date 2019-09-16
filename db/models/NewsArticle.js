@@ -28,6 +28,9 @@ const NewsArticleSchema = new Schema({
     type: Date,
     default: Date.now,
   },
+  league: {
+    type: String,
+  },
 });
 
 const NewsArticle = mongoose.model('newsArticles', NewsArticleSchema, 'newsarticles');

@@ -1,4 +1,5 @@
 import setAuthToken from './AuthToken';
+// eslint-disable-next-line camelcase
 import jwt_decode from 'jwt-decode';
 import { setCurrentUser } from '../containers/Login/action';
 import { logoutUser } from '../containers/Logout/action';
