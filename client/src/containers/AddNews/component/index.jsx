@@ -37,6 +37,8 @@ class AddNews extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    const {addArticle} = this.props;
+
     const fd = new FormData();
 
     const { image, alt, title, text } = this.state;
