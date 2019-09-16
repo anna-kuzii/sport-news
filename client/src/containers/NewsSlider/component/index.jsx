@@ -25,9 +25,9 @@ class NewsSlider extends Component {
   }
 
   componentDidMount() {
-    const { getArticles } = this.props;
+    const { fetchNewsData } = this.props;
 
-    getArticles();
+    fetchNewsData();
   }
 
   componentDidUpdate() {
@@ -183,7 +183,7 @@ const mapState = (state) =>({
 });
 
 const actionCreators = {
-  getArticles: fetchNewsData,
+  fetchNewsData,
 };
 
 const connectedSliderPage = connect(mapState, actionCreators)(NewsSlider);

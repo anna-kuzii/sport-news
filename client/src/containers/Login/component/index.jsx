@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import loginBg from '../../../assets/img/register-login-bg.jpg';
 import { Link } from 'react-router-dom';
-import { userActions } from '../action';
+import { login } from '../action';
 import { connect } from 'react-redux';
 import { Logo } from '../../../components/Logo';
 import './style.scss';
@@ -18,6 +18,14 @@ class Login extends Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  componentDidMount() {
+    const { logining, history } = this.props;
+
+    if (logining.isAuthenticated) {
+      history.push('/');
+    }
   }
 
   handleChange(e) {
@@ -97,15 +105,13 @@ class Login extends Component {
   }
 }
 
-function mapState(state) {
-  return {
-    auth: state.auth,
-    logining: state.login,
-  };
-};
+const mapState = ({ auth, login: logining }) => ({
+  auth,
+  logining,
+});
 
 const actionCreators = {
-  login: userActions.login,
+  login,
 };
 
 const connectedLoginPage = connect(mapState, actionCreators)(Login);

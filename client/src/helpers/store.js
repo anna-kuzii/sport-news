@@ -28,6 +28,10 @@ import {
   addArticle,
 } from '../containers/AddNews/reducer';
 
+import {
+  subscription,
+} from '../containers/Footer/reducer';
+
 import thunkMiddleware from 'redux-thunk';
 import {
   createLogger,
@@ -40,6 +44,7 @@ const rootReducer = combineReducers({
   productReducer,
   videoReducer,
   addArticle,
+  subscription,
 });
 
 const loggerMiddleware = createLogger();

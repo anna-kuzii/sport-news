@@ -2,16 +2,19 @@
 
 .footer-container {
   display: flex;
-  justify-content: center;
-  padding-top: 50px;
-  margin-top: 40px;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 50px 20px 0 250px;
   font-family: Open Sans, serif;
   border-top: 1px solid $alto;
+
+  @media screen and (max-width: $tablet-width) {
+    padding: 50px 20px 0 40px;
+  }
 
   @media screen and (max-width: $mobile-width) {
     display: flex;
     flex-direction: column;
-    padding-left: 40px;
   }
 
   li {
@@ -72,6 +75,7 @@
     line-height: 30px;
     border: 1px solid $ghost;
     border-right: 0;
+    outline: 0;
 
     &::placeholder {
       color: $alto;
@@ -87,6 +91,7 @@
     color: $white;
     background-color: $alizarin-crimson;
     border: 0;
+    outline: 0;
 
     &:hover {
       color: $alizarin-crimson;

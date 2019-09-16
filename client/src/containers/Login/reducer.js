@@ -16,7 +16,6 @@ export function login(state = initialState, action) {
     case userConstants.SET_CURRENT_USER_SUCCESS:
       return {
         ...state,
-        error: null,
         isAuthenticated: !isEmpty(action.payload),
         user: action.payload,
         loading: false,
@@ -25,7 +24,6 @@ export function login(state = initialState, action) {
       return {
         ...state,
         loading: true,
-        error: null,
       };
     case userConstants.SET_CURRENT_GET_ERRORS:
       return {

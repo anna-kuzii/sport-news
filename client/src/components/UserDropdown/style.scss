@@ -116,6 +116,28 @@
           background-color: $alizarin-crimson-11;
         }
       }
+
+      button {
+        width: 100%;
+        padding: 10px 25px;
+        font-size: 14px;
+        line-height: 19px;
+        text-align: left;
+        text-decoration: none;
+        background-color: $white;
+        border: 0;
+
+        &:hover {
+          width: 100%;
+          color: $alizarin-crimson;
+          cursor: url('../../assets/img/cursor-hover.svg'), auto;
+          background-color: $alizarin-crimson-11;
+        }
+
+        &:focus {
+          outline: 0;
+        }
+      }
      }
    }
 
