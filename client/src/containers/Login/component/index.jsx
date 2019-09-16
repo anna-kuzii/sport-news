@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import loginBg from '../../../assets/img/register-login-bg.jpg';
 import { Link } from 'react-router-dom';
-import { userActions } from '../action';
+import { login } from '../action';
 import { connect } from 'react-redux';
 import { Logo } from '../../../components/Logo';
 import './style.scss';
@@ -105,15 +105,13 @@ class Login extends Component {
   }
 }
 
-function mapState(state) {
-  return {
-    auth: state.auth,
-    logining: state.login,
-  };
-};
+const mapState = ({ auth, login: logining }) => ({
+  auth,
+  logining,
+});
 
 const actionCreators = {
-  login: userActions.login,
+  login,
 };
 
 const connectedLoginPage = connect(mapState, actionCreators)(Login);
