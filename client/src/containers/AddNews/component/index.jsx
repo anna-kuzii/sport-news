@@ -145,6 +145,7 @@ class AddNews extends Component {
   }
 }
 
+
 function mapStateToProps(state) {
   return { auth: state.login };
 }
