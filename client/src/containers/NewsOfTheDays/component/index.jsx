@@ -60,7 +60,7 @@ class NewsOfTheDays extends Component {
         )
     );
   }
-};
+}
 
 const mapStateToProps = state => (
   {

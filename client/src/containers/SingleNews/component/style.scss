@@ -1,4 +1,4 @@
-@import '../../styles/variables.scss';
+@import '../../../styles/variables';
 
 .single-news {
   position: relative;
@@ -13,13 +13,13 @@
   }
 
   &:hover {
-    cursor: url('../../assets/img/cursor-hover.svg'), auto;
+    cursor: url('../../../assets/img/cursor-hover.svg'), auto;
     background: $white;
     box-shadow: 0 2px 24px $news-hover-11;
 
     .hover-arrow {
       display: block;
-      cursor: url('../../assets/img/cursor-hover.svg'), auto;
+      cursor: url('../../../assets/img/cursor-hover.svg'), auto;
     }
   }
 
@@ -51,16 +51,18 @@
       font-weight: bold;
       line-height: 20px;
       color: $white;
+      text-transform: uppercase;
     }
   }
 
   img {
     width: 100%;
-    height: auto;
+    height: 195px;
+    object-fit: cover;
   }
 
   h4 {
-    margin: 12px 15px 25px;
+    margin: 12px 70px 25px 15px;
     font-family: Open Sans, serif;
     font-size: 22px;
     font-style: normal;

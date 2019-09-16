@@ -15,15 +15,15 @@ const NewsArticleSchema = new Schema({
     type: String,
     required: true,
   },
-  assosiated_press: {
-    type: String,
-  },
   imageURL: {
     type: String,
   },
   date: {
     type: Date,
     default: Date.now,
+  },
+  league: {
+    type: String,
   },
 });
 

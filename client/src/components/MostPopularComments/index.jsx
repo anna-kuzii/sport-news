@@ -1,8 +1,8 @@
 import React from 'react';
-import { NewsBlock } from '../NewsBlock';
+import NewsBlock from '../../containers/NewsBlock/component';
 import './style.scss';
 
-export const MostPopularComments = ({ blockTitle, newsBlock }) => (
+export const MostPopularComments = ({ blockTitle }) => (
 
   <div className='most-popular-comments-wrapper'>
     <div className='block-title'>
@@ -10,9 +10,7 @@ export const MostPopularComments = ({ blockTitle, newsBlock }) => (
       <hr />
     </div>
     <div className='popular-news-block'>
-      <NewsBlock
-        newsBlock={newsBlock}
-      />
+      <NewsBlock />
     </div>
   </div>
 );
