@@ -160,12 +160,12 @@
       font-style: normal;
       font-weight: 600;
       line-height: 16px;
-      color: $ghost;
+      color: $black;
       border: 1px solid $mischka;
       box-sizing: border-box;
 
-      &[placeholder] {
-        color: $black;
+      &::placeholder {
+        color: $ghost;
       }
     }
   }
