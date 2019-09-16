@@ -8,17 +8,6 @@ import { connect } from 'react-redux';
 import './style.scss';
 
 class NewsBlock extends Component {
-  componentDidMount() {
-    const { fetchNewsData } = this.props;
-
-    fetchNewsData();
-  }
-
-  showSeeMoreTitle(text) {
-    return text.length < 20 ? text
-      : <h4>{text.slice(0, 15)}<Link to='/' className='see-more'>...</Link></h4>;
-  };
-
   showSeeMore(text) {
     return text.length < 35 ? text
       : <p>{text.slice(0, 30)}<Link to='/' className='see-more'>...</Link></p>;
@@ -45,8 +34,8 @@ class NewsBlock extends Component {
               <div className='news-block' key={element.id}>
                 <img src={element.imageURL} alt='News block' />
                 <div key={element.id}>
-                  <h4>{this.showSeeMoreTitle(element.title)}</h4>
-                  <p>{this.showSeeMore(element.text)}</p>
+                  <h4>{element.title}</h4>
+                  <p>{element.text}</p>
                 </div>
                 <Link to='/'>
                   <img

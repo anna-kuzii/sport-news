@@ -8,17 +8,6 @@ import { connect } from 'react-redux';
 import './style.scss';
 
 class SingleNews extends Component {
-  componentDidMount() {
-    const { fetchNewsData } = this.props;
-
-    fetchNewsData();
-  }
-
-  showSeeMore(text) {
-    return text.length < 50 ? text
-      : <p>{text.slice(0, 40)}<Link to='/' className='see-more'>...</Link></p>;
-  };
-
   render() {
     const { newsData } = this.props;
     const indexArticle = Math.floor(Math.random() * Math.floor(10));
@@ -42,7 +31,7 @@ class SingleNews extends Component {
             </div>
             <img src={newsData[indexArticle].imageURL} alt='Single news' />
             <div>
-              <h4>{this.showSeeMore(newsData[indexArticle].title)}</h4>
+              <h4>{newsData[indexArticle].title}</h4>
             </div>
             <Link to='/'>
               <img
