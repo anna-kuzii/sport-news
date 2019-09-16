@@ -25,7 +25,7 @@ import {
 } from '../containers/VideoPage/reducer';
 
 import {
-  addArticle,
+  addArticleReducer,
 } from '../containers/AddNews/reducer';
 
 import {
@@ -43,7 +43,7 @@ const rootReducer = combineReducers({
   login,
   productReducer,
   videoReducer,
-  addArticle,
+  addArticleReducer,
   subscription,
 });
 

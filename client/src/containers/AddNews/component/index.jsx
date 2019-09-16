@@ -3,6 +3,7 @@ import { Header } from '../../../components/Header';
 import camera from '../../../assets/img/camera.svg';
 import './style.scss';
 import { connect } from 'react-redux';
+import { addArticle } from '../action';
 
 class AddNews extends Component {
   constructor(props) {
@@ -39,11 +40,15 @@ class AddNews extends Component {
     const fd = new FormData();
 
     const { image, alt, title, text } = this.state;
+    const { user } = this.props;
 
+    fd.append('author', user);
     fd.append('image', image);
     fd.append('alt', alt);
     fd.append('title', title);
     fd.append('text', text);
+
+    addArticle(fd);
   }
 
   handleCancelButton(e) {
@@ -61,6 +66,7 @@ class AddNews extends Component {
     const { imageURL, alt, title, text } = this.state;
 
     let imgPreview = null;
+
 
     imageURL ? imgPreview = (
       <img
@@ -147,7 +153,11 @@ class AddNews extends Component {
 
 
 function mapStateToProps(state) {
-  return { auth: state.login };
+  return { user: state.login.user.email };
 }
 
-export default connect(mapStateToProps)(AddNews);
+const actionCreators = {
+  addArticle,
+};
+
+export default connect(mapStateToProps, actionCreators)(AddNews);

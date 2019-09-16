@@ -7,7 +7,7 @@ export const initialState = {
   error: null,
 };
 
-export function addArticle(state = initialState, action) {
+export function addArticleReducer(state = initialState, action) {
   switch (action.type) {
     case articleConstants.SET_NEW_ARTICLE_REQUEST:
       return {

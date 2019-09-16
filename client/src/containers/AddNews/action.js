@@ -6,42 +6,33 @@ import {
 } from '../../axios.instanse';
 import { history } from '../../helpers';
 
-export const articleActions = {
-  addArticle,
-};
 
-function addArticle(article) {
-  return dispatch => {
-    dispatch(addArticleRequest(article));
-    instance.post('/register', article)
+export const addArticle = (article) => (
+  dispatch => {
+    instance.post('/article', article)
       .then(
         () => {
-          dispatch(addArticleSuccess());
+          dispatch(addArticleSuccess(article));
           history.push('/');
         }
       ).catch(error => {
-        dispatch(addArticleFailure(error.response.data && error.response.data.message));
+        dispatch(addArticleFailure(error));
       });
-  };
-
-  function addArticleRequest(article) {
-    return {
-      type: articleConstants.SET_NEW_ARTICLE_REQUEST,
-      article,
-    };
   }
+);
 
-  function addArticleSuccess(article) {
-    return {
-      type: articleConstants.SET_NEW_ARTICLE_SUCCESS,
-      article,
-    };
-  }
 
-  function addArticleFailure(article) {
-    return {
-      type: articleConstants.SET_NEW_ARTICLE_ERRORS,
-      article,
-    };
+const addArticleSuccess = article => (
+  {
+    type: articleConstants.SET_NEW_ARTICLE_SUCCESS,
+    article,
   }
-}
+);
+
+
+const addArticleFailure = error => (
+  {
+    type: articleConstants.SET_NEW_ARTICLE_ERRORS,
+    error,
+  }
+);
