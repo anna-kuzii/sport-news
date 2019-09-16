@@ -1,32 +1,56 @@
-import React, { Component } from 'react'
-import { Router, Route, Switch } from 'react-router-dom'
+import React from 'react';
+import { Router, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
-import { history } from './_helpers'
-import { Register } from './components/Register'
-import { Login } from './components/Login'
-import { ForgotPassword } from './components/ForgotPassword'
-import { Header } from './components/Header'
-import { Home } from './components/Home'
-import { UpdateProfile } from './components/UpdateProfile'
+import { history, store } from './helpers';
 
-export default class Routes extends Component {
-  render() {
-    return (
-      <Router history={history}>
-        <Route exact path='/'>
-          <Switch>
-            <Header />
-          </Switch>
-          <Route
-            exact path='/'
-            component={Home}
-          />
-        </Route>
-        <Route path='/updateprofile' component={UpdateProfile} />
-        <Route path='/register' component={Register} />
-        <Route path='/login' component={Login} />
-        <Route path='/forgotpassword' component={ForgotPassword} />
-      </Router>
-    )
-  }
-}
+import { Register } from './containers/Register/component';
+import { Login } from './containers/Login/component';
+import { ForgotPassword } from './containers/ForgotPassword/component';
+
+import { Home } from './components/Home';
+import { Dealbook } from './components/Dealbook';
+import { UserProfile } from './components/UserProfile';
+import VideoPage from './containers/VideoPage/component';
+import AddNews from './containers/AddNews/component';
+import PrivateRoute from './containers/PrivateRoute';
+
+
+export const Routes = () => (
+  <Provider store={store}>
+    <Router history={history}>
+      <Route
+        exact path='/'
+        component={Home}
+      />
+      <Route
+        exact path='/dealbook'
+        component={Dealbook}
+      />
+      <PrivateRoute
+        path='/userprofile'
+        component={UserProfile}
+      />
+      <Route
+        exact path='/register'
+        component={Register}
+      />
+      <Route
+        exact path='/login'
+        component={Login}
+      />
+      <Route
+        exact path='/forgotpassword'
+        component={ForgotPassword}
+      />
+      <Route
+        exact path='/videopage'
+        component={VideoPage}
+      />
+      <PrivateRoute
+        path='/addnews'
+        component={AddNews}
+      />
+    </Router>
+  </Provider>
+);

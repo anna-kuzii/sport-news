@@ -1,22 +1,41 @@
+@import '../../styles/variables.scss';
+
 .home-page-wrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  float: left;
   width: 100%;
   height: auto;
   max-width: 1440px;
-  padding: 0;
-  margin: auto;
-  background: $concrete;
+  padding: 0 20px 0 250px;
+  margin-top: 83px;
+  background: $white;
 
-  .most-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  @media screen and (max-width: $tablet-width) {
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .slider-container {
     width: 100%;
-    max-width: 835px;
   }
 
   .breakdown-container {
     display: flex;
     flex-direction: row;
+    width: 100%;
+    max-width: 835px;
+
+    @media screen and (max-width: $tablet-width) {
+      justify-content: center;
+      max-width: $tablet-width;
+    }
+  }
+
+  .newsOfTheDayContainer {
     width: 100%;
     max-width: 835px;
   }

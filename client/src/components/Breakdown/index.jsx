@@ -1,30 +1,26 @@
-import React from 'react'
-import { NewsBlock } from '../NewsBlock'
-import { SingleNews } from '../SingleNews'
+import React from 'react';
+import NewsBlock from '../../containers/NewsBlock/component';
+import SingleNews from '../../containers/SingleNews/component';
+import './style.scss';
 
-
-export const Breakdown = ({ singleNews, news_block }) => (
+export const Breakdown = () => (
   <div className='breakdown-wrapper'>
     <div className='news-divider'>
       <p>breakdown</p>
     </div>
     <div className='news-container'>
-      <div className='single-news-block'>
-        <SingleNews singleNews={singleNews} />
-        <SingleNews singleNews={singleNews} />
+      <div className='news-boxes'>
+        <SingleNews />
+        <div className='news-box'>
+          <NewsBlock />
+        </div>
       </div>
       <div className='news-boxes'>
+        <SingleNews />
         <div className='news-box'>
-          <NewsBlock
-            newsBlock={news_block}
-          />
-        </div>
-        <div className='news-box'>
-          <NewsBlock
-            newsBlock={news_block}
-          />
+          <NewsBlock />
         </div>
       </div>
     </div>
   </div>
-)
+);

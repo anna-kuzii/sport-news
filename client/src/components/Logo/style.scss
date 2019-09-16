@@ -1,14 +1,23 @@
+@import '../../styles/variables.scss';
+
 .logo {
   position: absolute;
-  width: 253px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
   height: 83px;
   text-align: center;
   background: $alizarin-crimson;
 
   @media screen and (max-width: $mobile-width) {
-    z-index: 2;
+    z-index: 10;
     width: 100%;
     max-width: $mobile-width;
+  }
+
+  &:focus {
+    outline: 0;
   }
 
   h1 {
@@ -17,7 +26,11 @@
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 600;
-    line-height: 83px;
+    line-height: 28px;
     color: $rose-white;
+
+    &:focus {
+      outline: 0;
+    }
   }
 }

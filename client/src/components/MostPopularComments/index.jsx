@@ -1,18 +1,16 @@
-import React from 'react'
-import { NewsBlock } from '../NewsBlock'
+import React from 'react';
+import NewsBlock from '../../containers/NewsBlock/component';
+import './style.scss';
 
-
-export const MostPopularComments = ({ block_title, news_block }) => (
+export const MostPopularComments = ({ blockTitle }) => (
 
   <div className='most-popular-comments-wrapper'>
     <div className='block-title'>
-      <h3> {block_title} </h3>
+      <h3> {blockTitle} </h3>
       <hr />
     </div>
     <div className='popular-news-block'>
-      <NewsBlock
-        newsBlock={news_block}
-      />
+      <NewsBlock />
     </div>
   </div>
-)
+);

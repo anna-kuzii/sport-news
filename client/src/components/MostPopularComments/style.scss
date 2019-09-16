@@ -1,9 +1,15 @@
+@import '../../styles/variables.scss';
+
 .most-popular-comments-wrapper {
   width: 100%;
-  height: 400px;
+  height: auto;
   max-width: 390px;
   padding: 0;
-  margin: 0;
+  margin: 0 0 50px;
+
+  @media screen and (max-width: $mobile-width) {
+    max-width: $mobile-width;
+  }
 
   .block-title {
     display: flex;
@@ -29,14 +35,22 @@
       max-width: 270px;
       margin: .8rem 0 0 10px;
       border-top: 0;
-      border-bottom: 1px solid $placeholder-grey;
+      border-bottom: 1px solid $silver-chalice;
+
+      @media screen and (max-width: $mobile-width) {
+        max-width: $mobile-width;
+      }
     }
   }
 
   .popular-news-block {
     width: 100%;
-    height: 300px;
+    height: auto;
     max-width: 390px;
     border: 1px solid $gallery;
+
+    @media screen and (max-width: $mobile-width) {
+      max-width: $mobile-width;
+    }
   }
 }

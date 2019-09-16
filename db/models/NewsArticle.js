@@ -18,11 +18,21 @@ const NewsArticleSchema = new Schema({
   assosiated_press: {
     type: String,
   },
+  alt: {
+    type: String,
+  },
   imageURL: {
-   type: String
- }
+    type: String,
+  },
+  date: {
+    type: Date,
+    default: Date.now,
+  },
+  league: {
+    type: String,
+  },
 });
 
-const NewsArticleSchema = mongoose.model('newsArticles', NewsArticleSchema);
+const NewsArticle = mongoose.model('newsArticles', NewsArticleSchema, 'newsarticles');
 
-module.exports = NewsArticleSchema;
+module.exports = NewsArticle;

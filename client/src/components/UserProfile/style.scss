@@ -1,0 +1,35 @@
+@import '../../styles/variables.scss';
+
+.userprofile-wrapper {
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    padding: 15vh 0 5vh;
+
+    @media screen and (max-width: $mobile-width) {
+      display: none;
+    }
+
+    .button {
+      width: 360px;
+      height: 40px;
+      font-family: Open Sans;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 40px;
+      color: $black;
+      text-align: center;
+      text-decoration: none;
+      border: 1px solid $gallery;
+    }
+
+    .active {
+      color: $alizarin-crimson;
+      border: 0;
+      outline: 1px;
+      box-shadow: -2px 2px 24px 1px $news-hover-11;
+    }
+  }
+}
