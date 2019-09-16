@@ -29,7 +29,7 @@ const loginFailure = error => ({
   error,
 });
 
-const setCurrentUser = decoded => ({
+export const setCurrentUser = decoded => ({
   type: userConstants.SET_CURRENT_USER_SUCCESS,
   payload: decoded,
 });
