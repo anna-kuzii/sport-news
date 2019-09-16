@@ -77,7 +77,7 @@ class AddNews extends Component {
     )
       : imgPreview = (
         <div className='upload-photo-bg'>
-          <div className='red-circle'>
+          <div className='circle'>
             <img src={camera} alt='camera' />
           </div>
           <label className='custom-input'>
@@ -112,7 +112,7 @@ class AddNews extends Component {
             </button>
           </div>
           {imgPreview}
-          <div className='alt-img-name'>
+          <div className='alt-name-form'>
             <label htmlFor='alt-name-input'>Alt</label>
             <input
               type='text'
@@ -123,7 +123,7 @@ class AddNews extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <div className='title'>
+          <div className='title-form'>
             <label htmlFor='title-input'>Article Headline</label>
             <input
               type='text'
@@ -134,7 +134,7 @@ class AddNews extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <div className='text'>
+          <div className='text-form'>
             <label htmlFor='text-input'>Content</label>
             <textarea
               type='text'

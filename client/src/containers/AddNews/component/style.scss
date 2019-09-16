@@ -74,7 +74,7 @@
     margin: 20px 0;
     background-color: $grey-08;
 
-    .red-circle {
+    .circle {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -109,9 +109,9 @@
   }
 
 
-  .alt-img-name,
-  .title,
-  .text {
+  .alt-name-form,
+  .title-form,
+  .text-form {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -127,12 +127,12 @@
       font-style: normal;
       font-weight: 600;
       line-height: 16px;
-      color: $ghost;
+      color: $black;
       border: 1px solid $mischka;
       box-sizing: border-box;
 
-      &[placeholder] {
-        color: $black;
+      &::placeholder {
+        color: $ghost;
       }
     }
 

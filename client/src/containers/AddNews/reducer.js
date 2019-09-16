@@ -18,7 +18,6 @@ export function addArticleReducer(state = initialState, action) {
       return {
         ...state,
         adding: false,
-        error: null,
       };
     case articleConstants.SET_NEW_ARTICLE_ERRORS:
       return {
