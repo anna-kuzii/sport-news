@@ -37,12 +37,10 @@ class AddNews extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const {addArticle} = this.props;
-
     const fd = new FormData();
 
     const { image, alt, title, text } = this.state;
-    const { user } = this.props;
+    const { user, addArticle } = this.props;
 
     fd.append('author', user);
     fd.append('image', image);
@@ -153,10 +151,9 @@ class AddNews extends Component {
   }
 }
 
-
-function mapStateToProps(state) {
-  return { user: state.login.user.email };
-}
+const mapStateToProps = state => ({
+  user: state.login.user.email,
+});
 
 const actionCreators = {
   addArticle,

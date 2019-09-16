@@ -31,7 +31,6 @@ import {
 import {
   subscription,
 } from '../containers/Footer/reducer';
-
 import thunkMiddleware from 'redux-thunk';
 import {
   createLogger,
