@@ -6,6 +6,7 @@ import {
 } from '../../axios.instanse';
 import jwtDecode from 'jwt-decode';
 import { history } from '../../helpers';
+import setAuthToken from '../../utils/AuthToken';
 
 export const userActions = {
   login,
@@ -17,6 +18,7 @@ function login(user) {
       .then(res => {
         const { accessToken } = res.data;
 
+        setAuthToken(accessToken);
         localStorage.setItem('accessToken', accessToken);
         dispatch(setCurrentUser(jwtDecode(accessToken)));
         history.push('/');
