@@ -30,8 +30,6 @@
       background: url('../../assets/img/user-avatar.svg') no-repeat;
 
       @media screen and (max-width: $tablet-width) {
-        width: 34px;
-        height: 34px;
         margin-right: 10px;
         background: url('../../assets/img/user-avatar-white.svg') no-repeat;
       }
@@ -113,7 +111,7 @@
 
     .email {
       padding: 0 25px 10px;
-      font-family: Open Sans;
+      font-family: Open Sans, serif;
       font-size: 12px;
       font-style: normal;
       font-weight: normal;
