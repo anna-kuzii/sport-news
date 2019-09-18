@@ -8,13 +8,9 @@ import { connect } from 'react-redux';
 import './style.scss';
 
 class NewsBlock extends Component {
-  showSeeMore(text) {
-    return text.length < 35 ? text
-      : <p>{text.slice(0, 30)}<Link to='/' className='see-more'>...</Link></p>;
-  };
-
   render() {
     const { newsData } = this.props;
+    const indexArticle = Math.floor(Math.random() * Math.floor(newsData.length - 2));
 
     return (
       !newsData.length
@@ -29,7 +25,7 @@ class NewsBlock extends Component {
           </div>
         )
         : (
-          newsData.slice(0, 3).map(element => (
+          newsData.slice(indexArticle, indexArticle + 3).map(element => (
             <section className='news-block-section' key={element.id} >
               <div className='news-block' key={element.id}>
                 <img src={element.imageURL} alt='News block' />
