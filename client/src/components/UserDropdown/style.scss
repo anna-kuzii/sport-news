@@ -13,7 +13,7 @@
     line-height: 24px;
     outline: none;
 
-    @media screen and (max-width: $mobile-width ) {
+    @media screen and (max-width: $tablet-width ) {
       font-size: 0;
     }
 
@@ -36,7 +36,7 @@
       border-style: solid;
       border-width: 7px 5px 0;
 
-      @media screen and (max-width: $mobile-width) {
+      @media screen and (max-width: $tablet-width) {
         display: none;
      }
    }
@@ -51,7 +51,7 @@
       border-style: solid;
       border-width: 0 5px 7px;
 
-      @media screen and (max-width: $mobile-width) {
+      @media screen and (max-width: $tablet-width) {
         display: none;
       }
     }
@@ -66,6 +66,10 @@
     background-color: $white;
     box-shadow: 0 8px 16px 0 $black-50;
 
+    @media screen and (max-width: $tablet-width) {
+      right: 20px;
+    }
+
     .dropdown-triangle {
       width: 0;
       height: 0;
@@ -74,10 +78,6 @@
       border-color: transparent transparent $white;
       border-style: solid;
       border-width: 0 5px 7px;
-
-      @media screen and (max-width: $mobile-width) {
-        display: none;
-      }
 
     }
 
@@ -141,10 +141,15 @@
      }
    }
 
+  hr {
+    padding: 0;
+    margin: 0;
+   }
+
   .button-view {
     width: 110px;
     height: 30px;
-    margin-bottom: 10px;
+    padding-bottom: 15px;
     margin-left: 25px;
     font-family: Open Sans, serif;
     font-size: 12px;
