@@ -1,8 +1,9 @@
 import React from 'react';
 import './style.scss';
+import { Link } from 'react-router-dom';
 
 export const Logo = () => (
   <div className='logo'>
-    <h1>Sport News</h1>
+    <Link to='/'>Sport News</Link>
   </div>
 );
