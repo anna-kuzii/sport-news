@@ -6,7 +6,7 @@
   .button-menu {
     display: inline-block;
     padding: 5px;
-    font-family: Open Sans;
+    font-family: $open-sans;
     font-size: 12px;
     font-style: normal;
     font-weight: 600;
@@ -78,12 +78,11 @@
       border-color: transparent transparent $white;
       border-style: solid;
       border-width: 0 5px 7px;
-
     }
 
     .user-name {
       padding: 10px 25px 0;
-      font-family: Open Sans;
+      font-family: $open-sans;
       font-size: 12px;
       font-style: normal;
       font-weight: 600;
@@ -92,7 +91,7 @@
 
     .email {
       padding: 0 25px 10px;
-      font-family: Open Sans;
+      font-family: $open-sans;
       font-size: 12px;
       font-style: normal;
       font-weight: normal;
@@ -152,7 +151,7 @@
     height: 30px;
     padding-bottom: 15px;
     margin: 10px 25px;
-    font-family: Open Sans, serif;
+    font-family: $open-sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 600;

@@ -56,7 +56,7 @@
       display: flex;
       width: 100%;
       padding: 8px 10px 8px 65px;
-      font-family: 'Open Sans', serif;
+      font-family: $open-sans-serif;
       font-size: 14px;
       font-weight: bold;
       line-height: 19px;
@@ -89,7 +89,7 @@
 
     .list-item {
       button {
-        font-family: Open Sans, serif;
+        font-family: $open-sans-serif;
         font-style: normal;
         font-weight: normal;
         color: $black;

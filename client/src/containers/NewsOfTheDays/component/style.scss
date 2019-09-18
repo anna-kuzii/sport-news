@@ -50,7 +50,7 @@
         top: -30px;
         right: 100px;
         margin-bottom: 0;
-        font-family: Open Sans;
+        font-family: $open-sans;
         font-size: 16px;
         font-style: normal;
         font-weight: bold;
@@ -82,7 +82,7 @@
       }
 
       .title {
-        font-family: Open Sans;
+        font-family: $open-sans;
         font-size: 22px;
         font-style: bold;
         font-weight: 500;
@@ -96,7 +96,7 @@
       }
 
       .news-text {
-        font-family: Open Sans;
+        font-family: $open-sans;
         font-size: 14px;
         font-style: normal;
         font-weight: normal;
@@ -108,7 +108,7 @@
       }
 
       .photo-courtesy {
-        font-family: Open Sans;
+        font-family: $open-sans;
         font-size: 14px;
         font-style: italic;
         font-weight: normal;
