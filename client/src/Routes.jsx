@@ -19,11 +19,11 @@ import PrivateRoute from './containers/PrivateRoute';
 export const Routes = () => (
   <Provider store={store}>
     <Router history={history}>
-      <Route
+      <PrivateRoute
         exact path='/'
         component={Home}
       />
-      <Route
+      <PrivateRoute
         exact path='/dealbook'
         component={Dealbook}
       />
@@ -43,7 +43,7 @@ export const Routes = () => (
         exact path='/forgotpassword'
         component={ForgotPassword}
       />
-      <Route
+      <PrivateRoute
         exact path='/videopage'
         component={VideoPage}
       />
