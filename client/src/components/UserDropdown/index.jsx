@@ -63,6 +63,7 @@ class UserDropdown extends Component {
             <div className='link-wrapper' >
               <Link to='/userprofile/changepassword'>Change Password</Link>
               <Link to='/addnews'>Add News</Link>
+              <hr />
               <button
                 type='button'
                 onClick={this.handleLogout}
