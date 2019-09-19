@@ -11,6 +11,7 @@ import { ForgotPassword } from './containers/ForgotPassword/component';
 import { Home } from './components/Home';
 import { Dealbook } from './components/Dealbook';
 import { UserProfile } from './components/UserProfile';
+import { NotFound } from './components/NotFound';
 import VideoPage from './containers/VideoPage/component';
 import AddNews from './containers/AddNews/component';
 import PrivateRoute from './containers/PrivateRoute';
@@ -50,6 +51,10 @@ export const Routes = () => (
       <PrivateRoute
         path='/addnews'
         component={AddNews}
+      />
+      <Route
+        path='*'
+        component={NotFound}
       />
     </Router>
   </Provider>
