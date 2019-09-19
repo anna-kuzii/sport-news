@@ -28,7 +28,6 @@ class NewsSlider extends Component {
     const { fetchNewsData } = this.props;
 
     fetchNewsData();
-    console.log(this.props.email);
   }
 
   componentDidUpdate() {
