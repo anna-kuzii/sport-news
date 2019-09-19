@@ -12,6 +12,7 @@ import { Dealbook } from './components/Dealbook';
 import { UpdateProfile } from './components/UpdateProfile';
 import { UserProfile } from './components/UserProfile';
 import VideoPage from './containers/VideoPage/component';
+
 import { NewsArticle } from './components/NewsArticle';
 
 export const Routes = () => (
@@ -24,10 +25,12 @@ export const Routes = () => (
       exact path='/dealbook'
       component={Dealbook}
     />
+
     <Route
       path='/userprofile'
       component={UserProfile}
     />
+
     <Route
       exact path='/updateprofile'
       component={UpdateProfile}
@@ -48,9 +51,11 @@ export const Routes = () => (
       exact path='/videopage'
       component={VideoPage}
     />
+
     <Route
       exact path='/news/:id'
       component={NewsArticle}
     />
+
   </Router>
 );
