@@ -28,6 +28,7 @@ class NewsSlider extends Component {
     const { fetchNewsData } = this.props;
 
     fetchNewsData();
+    console.log(this.props.email);
   }
 
   componentDidUpdate() {
@@ -180,6 +181,7 @@ class NewsSlider extends Component {
 const mapState = (state) =>({
   articles: state.productReducer.updateNewsData,
   loading: state.productReducer.loading,
+  email: state.forgotPassword.email,
 });
 
 const actionCreators = {

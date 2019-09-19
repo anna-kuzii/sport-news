@@ -5,6 +5,7 @@ import {
 export const initialState = {
   forgotPassword: false,
   error: null,
+  email: null,
 };
 
 
@@ -15,6 +16,7 @@ export function forgotPassword(state = initialState, action) {
         ...state,
         error: null,
         forgotPassword: true,
+        email: action.email,
       };
     case userConstants.FORGOT_PASSWORD_FAILURE:
       return {

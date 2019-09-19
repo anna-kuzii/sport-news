@@ -8,7 +8,8 @@
 
   .create-account-form,
   .log-in-form,
-  .forgot-password-form {
+  .forgot-password-form,
+  .check-email-msg-wrapper {
     margin: 0 20px;
 
     @media screen and (max-width: $mobile-width) {
@@ -62,7 +63,8 @@
 
 .create-account-form,
 .log-in-form,
-.forgot-password-form {
+.forgot-password-form,
+.check-email-msg-wrapper {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -147,7 +149,8 @@
 
 .create-account-wrapper,
 .log-in-wrapper,
-.forgot-password-wrapper {
+.forgot-password-wrapper,
+.check-email-msg {
   width: 100%;
   max-width: 400px;
   margin: auto 20px;
