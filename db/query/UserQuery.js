@@ -16,10 +16,7 @@ exports.createUser = (user, hashPassword) => {
   const {
     firstName: firstName, lastName: lastName, email,
   } = user;
-<<<<<<< HEAD
 
-=======
->>>>>>> e537f4b76b5bf726eae37fdf93f7263d5bcfe5e3
   const newUser = new User({
     _id: new mongoose.Types.ObjectId().toHexString(),
     firstName: firstName,

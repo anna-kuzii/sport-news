@@ -1,17 +1,9 @@
 require('dotenv').config();
-<<<<<<< HEAD
 
-Date.prototype.getMonthName = function () {
-  const monthNames = [ 'January', 'February', 'March', 'April', 'May', 'June',
-    'July', 'August', 'September', 'October', 'November', 'December' ];
-
-  return monthNames[this.getMonth()];
-=======
 const constants = require('../constants/common.constants');
 
 Date.prototype.getMonthName = function () {
   return constants.monthNames[this.getMonth()];
->>>>>>> e537f4b76b5bf726eae37fdf93f7263d5bcfe5e3
 };
 
 const date= new Date();
@@ -51,10 +43,6 @@ exports.sendRegNotification = (user) => {
       cid: 'unique@cid',
     } ],
   };
-<<<<<<< HEAD
-  
-=======
 
->>>>>>> e537f4b76b5bf726eae37fdf93f7263d5bcfe5e3
   return mailOptions;
 };
