@@ -48,7 +48,6 @@ export const Routes = () => (
         exact path='/checkemail'
         component={CheckEmail}
       />
-      <Route
       <PrivateRoute
         exact path='/videopage'
         component={VideoPage}

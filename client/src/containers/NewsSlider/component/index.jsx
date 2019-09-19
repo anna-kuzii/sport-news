@@ -180,7 +180,6 @@ class NewsSlider extends Component {
 const mapState = (state) =>({
   articles: state.productReducer.updateNewsData,
   loading: state.productReducer.loading,
-  email: state.forgotPassword.email,
 });
 
 const actionCreators = {
