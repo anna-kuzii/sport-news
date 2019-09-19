@@ -5,6 +5,7 @@ import { fetchNewsData } from '../../containers/NewsLogic/action';
 import { connect } from 'react-redux';
 import Loader from 'react-loader-spinner';
 
+
 class NewsArticle extends Component {
   componentDidMount() {
     const { fetchNewsData } = this.props;

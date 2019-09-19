@@ -15,13 +15,7 @@ exports.sendForgotPasswordEmail = (req, res) => {
       }
       const token = tokenCreator.usePasswordHashToMakeToken(user.password, user._id, user.date);
       const url = `${process.env.RESET_PASSWORD_URL}/${user._id}/${token}`;
-<<<<<<< HEAD
 
-      //TODO : add a beatifull email
-=======
-      //TODO : add a beatifull email
-
->>>>>>> e537f4b76b5bf726eae37fdf93f7263d5bcfe5e3
       sendEmail.sendEmail(forgotPasswordEmail.forgotPasswordTemplate(user, url));
       res.status(200).send('email send successful');
     });
