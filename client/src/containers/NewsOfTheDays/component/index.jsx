@@ -8,21 +8,17 @@ import { connect } from 'react-redux';
 
 class NewsOfTheDays extends Component {
   //TODO :Create pass/link to news page to use this function
-  /*const showSeeMoreButton = (text, fullNews) => (
-    text.length < 100 ? text
-      : <p>{text.slice(0, 60)}<Link to={fullNews} className='see-more'> ...</Link></p>
-  );*/
-
+ 
   componentDidMount() {
     const { fetchNewsData } = this.props;
 
     fetchNewsData();
   }
 
-  showSeeMoreButton(text) {
-    return text.length < 100 ? text
-      : <p>{text.slice(0, 60)}<Link to='/' className='see-more'> ...</Link></p>;
-  };
+  showSeeMoreButton = (text, NewsArticle) => (
+    text.length < 100 ? text
+      : <p>{text.slice(0, 60)}<Link to={NewsArticle} className='see-more'> ...</Link></p>
+  );
 
   render() {
     const { newsData } = this.props;
@@ -52,7 +48,7 @@ class NewsOfTheDays extends Component {
               </div>
               <div className='news-article'>
                 <h1 className='title'>{newsData[indexArticle].title}</h1>
-                <p className='news-text'>{this.showSeeMoreButton(newsData[indexArticle].text)}</p>
+                <p className='news-text'>{this.showSeeMoreButton(newsData[indexArticle].text, `/news/${newsData[indexArticle]._id}`)}</p>
                 <div className='photo-courtesy'>{newsData[indexArticle].author}</div>
               </div>
             </div>

@@ -49,7 +49,7 @@ export const Routes = () => (
       component={VideoPage}
     />
     <Route
-      exact path='/news'
+      exact path='/news/:id'
       component={NewsArticle}
     />
   </Router>
