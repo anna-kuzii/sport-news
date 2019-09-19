@@ -5,7 +5,7 @@ import eyeicon from '../../assets/img/eye-icon.svg';
 import FormValidator from '../../utils/FormValidator';
 import { rules } from './validationRules';
 
-class ChangePassword extends Component {
+export class ChangePassword extends Component {
   constructor(props) {
     super(props);
 
@@ -98,4 +98,3 @@ class ChangePassword extends Component {
     );
   }
 }
-export { ChangePassword };

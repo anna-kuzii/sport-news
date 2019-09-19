@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { logoutUser } from '../../containers/Logout/action';
+import { store } from '../../helpers';
 import './style.scss';
 
 class UserDropdown extends Component {
@@ -12,6 +14,11 @@ class UserDropdown extends Component {
     };
     this.handleShowDropdownMenu = this.handleShowDropdownMenu.bind(this);
     this.hideDropdownMenu = this.hideDropdownMenu.bind(this);
+  }
+
+  handleLogout(e) {
+    e.preventDefault();
+    store.dispatch(logoutUser());
   }
 
   handleShowDropdownMenu(event) {
@@ -55,7 +62,14 @@ class UserDropdown extends Component {
             >view profile</Link>
             <div className='link-wrapper' >
               <Link to='/userprofile/changepassword'>Change Password</Link>
-              <Link to='/setting'>Log Out</Link>
+              <Link to='/addnews'>Add News</Link>
+              <hr />
+              <button
+                type='button'
+                onClick={this.handleLogout}
+              >
+              Log Out
+              </button>
             </div>
           </div>
         )}

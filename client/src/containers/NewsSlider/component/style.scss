@@ -266,6 +266,7 @@
         box-shadow: 0 2px 24px $news-hover-11;
 
         @media screen and(max-width: $tablet-width) {
+          z-index: 1;
           background: none;
           box-shadow: 0 0 0;
         }

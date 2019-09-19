@@ -10,9 +10,18 @@ exports.sendEmail = (message) => {
       pass: process.env.USER_PASS,
     },
   });
+<<<<<<< HEAD
 
+=======
+>>>>>>> e537f4b76b5bf726eae37fdf93f7263d5bcfe5e3
   // TODO remove console.log
+
   sendEmail(message)
+<<<<<<< HEAD
     .then((info) => { console.log(info); } )
     .catch((err) => { console.log('got error'); console.log(err); } );
+=======
+    .then((info) => { console.log(info); })
+    .catch((err) => { console.log(err); });
+>>>>>>> e537f4b76b5bf726eae37fdf93f7263d5bcfe5e3
 };

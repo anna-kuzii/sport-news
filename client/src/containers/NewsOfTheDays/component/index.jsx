@@ -19,10 +19,11 @@ class NewsOfTheDays extends Component {
     text.length < 100 ? text
       : <p>{text.slice(0, 60)}<Link to={NewsArticle} className='see-more'> ...</Link></p>
   );
+ 
 
   render() {
     const { newsData } = this.props;
-    const indexArticle = Math.round(Math.random() * 10);
+    const indexArticle = Math.floor(Math.random() * Math.floor(10));
 
     return (
       !newsData.length
@@ -56,7 +57,7 @@ class NewsOfTheDays extends Component {
         )
     );
   }
-};
+}
 
 const mapStateToProps = state => (
   {
@@ -66,11 +67,9 @@ const mapStateToProps = state => (
   }
 );
 
-const mapDispatchToProps = (dispatch) => (
+const mapDispatchToProps = () => (
   {
-    fetchNewsData: () => {
-      dispatch(fetchNewsData());
-    },
+    fetchNewsData,
   }
 );
 
