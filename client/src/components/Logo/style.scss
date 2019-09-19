@@ -7,7 +7,15 @@
   justify-content: center;
   width: 250px;
   height: 83px;
+  margin: 0;
+  font-family: $open-sans;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  color: $rose-white;
   text-align: center;
+  text-decoration: none;
   background: $alizarin-crimson;
 
   @media screen and (max-width: $mobile-width) {
@@ -17,21 +25,12 @@
   }
 
   &:focus {
+    text-decoration: none;
     outline: 0;
   }
 
-  a {
-    margin: 0;
-    font-family: $open-sans-serif;
-    font-size: 1.5rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 28px;
-    color: $rose-white;
+  &:hover {
+    color: $white;
     text-decoration: none;
-
-    &:focus {
-      outline: 0;
-    }
   }
 }
