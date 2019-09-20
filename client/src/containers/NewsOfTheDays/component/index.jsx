@@ -7,8 +7,6 @@ import { connect } from 'react-redux';
 
 
 class NewsOfTheDays extends Component {
-  //TODO :Create pass/link to news page to use this function
- 
   componentDidMount() {
     const { fetchNewsData } = this.props;
 
@@ -23,7 +21,7 @@ class NewsOfTheDays extends Component {
 
   render() {
     const { newsData } = this.props;
-    const indexArticle = Math.floor(Math.random() * Math.floor(10));
+    const indexArticle = Math.floor(Math.random() * Math.floor(newsData.length));
 
     return (
       !newsData.length

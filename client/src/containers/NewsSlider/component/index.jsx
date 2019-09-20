@@ -4,6 +4,7 @@ import hoverArrow from '../../../assets/img/news-hover-arrow.svg';
 import { Swipe } from 'react-swipe-component';
 import { fetchNewsData } from '../../NewsLogic/action';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import './style.scss';
 
@@ -130,7 +131,7 @@ class NewsSlider extends Component {
                 <p className='publish-time'>Published / 20.09.2019</p>
                 <p className='title'>{article.title}</p>
                 <p className='news-text'>{article.text}</p>
-                <button type='reset' className='more-button'>More</button>
+                <Link to={`/news/${article._id}`} className='more-button'> More</Link>
                 <button
                   type='reset' className='mobile-slider-next'
                   onClick={this.handleNextSlide}

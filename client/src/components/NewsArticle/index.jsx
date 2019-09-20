@@ -3,7 +3,7 @@ import './style.scss';
 import { Layout } from '../Layout';
 import { fetchNewsData } from '../../containers/NewsLogic/action';
 import { connect } from 'react-redux';
-import Loader from 'react-loader-spinner';
+import { NotFound } from '../NotFound';
 
 
 class NewsArticle extends Component {
@@ -28,46 +28,42 @@ class NewsArticle extends Component {
 
     const { id } = match.params;
     const art = newsData.find(art => id === art._id);
-
+    
     return (
-      !newsData.length ? (
-        <div className='data-loading'>
-          <Loader
-            type='TailSpin' color='#C63638'
-            height='200' width='200'
-          />
-        </div>
-      ) : (
-        <Layout>
-          <section className='single-news-container'>
-            <div className='news-wrapper'>
-              <div className='top-info'>
-                <h4>
-                  <span className='team-name'>{art.league} &nbsp;</span>
-                  <p className='team-paragraph'>
-                  &gt; &nbsp; {this.shortTopText(art.text)}
-                  </p>
-                </h4>
-              </div>
-              <div className='article-brochure'>
-                <div className='image-container'>
-                  <img src={art.imageURL} alt='team information' />
-                </div>
-                <div className='card-container'>
-                  <h4>Published / {art.date}</h4>
-                  <h3>{art.title}</h3>
-                  <h2>
-                    {this.shortText(art.text)}
-                  </h2>
-                </div>
-              </div>
-              <div className='information-about-current-news'>
-                {art.text}
-              </div>
-            </div>
-          </section>
-        </Layout>
+      !newsData.length || !art ? (
+        <NotFound />   
       )
+        : (
+          <Layout>
+            <section className='single-news-container'>
+              <div className='news-wrapper'>
+                <div className='top-info'>
+                  <h4>
+                    <span className='team-name'>{art.league} &nbsp;</span>
+                    <p className='team-paragraph'>
+                    &gt; &nbsp; {this.shortTopText(art.text)}
+                    </p>
+                  </h4>
+                </div>
+                <div className='article-brochure'>
+                  <div className='image-container'>
+                    <img src={art.imageURL} alt='team information' />
+                  </div>
+                  <div className='card-container'>
+                    <h4>Published / {art.date}</h4>
+                    <h3>{art.title}</h3>
+                    <h2>
+                      {this.shortText(art.text)}
+                    </h2>
+                  </div>
+                </div>
+                <div className='information-about-current-news'>
+                  {art.text}
+                </div>
+              </div>
+            </section>
+          </Layout>
+        )
     );
   }
 }
