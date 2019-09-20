@@ -1,0 +1,39 @@
+@import '../../styles/variables.scss';
+
+.not-found-container {
+  .message-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 40vw;
+
+    @media screen and (max-width: $mobile-width) {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  h1 {
+    font-family: $open-sans;
+    font-size: 15vw;
+    font-weight: 700;
+    color: $alizarin-crimson;
+
+    @media screen and (max-width: $mobile-width) {
+      font-size: 40vw;
+    }
+   }
+
+  p {
+    font-family: $open-sans;
+    font-size: 2vw;
+    font-weight: 600;
+    color: $mine-shaft;
+
+    @media screen and (max-width: $mobile-width) {
+      font-size: 6vw;
+    }
+   }
+}
