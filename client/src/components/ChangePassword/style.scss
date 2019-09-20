@@ -5,7 +5,6 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  margin-top: 30px;
 
   .change-password-form {
     position: relative;
@@ -72,7 +71,7 @@
 
   .change-password-btn {
     margin: 20px 0;
-    font-family: Open Sans;
+    font-family: $open-sans;
     font-size: 14px;
     font-style: normal;
     font-weight: bold;

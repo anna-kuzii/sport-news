@@ -50,7 +50,7 @@
     }
 
     ::placeholder {
-      font-family: Open Sans, serif;
+      font-family: $open-sans;
       font-size: 16px;
       font-style: normal;
       font-weight: 600;
@@ -87,7 +87,7 @@
     height: 100%;
     max-width: 103px;
     padding-left: 20px;
-    font-family: Open Sans, serif;
+    font-family: $open-sans;
     font-size: 12px;
     font-style: normal;
     font-weight: 600;
