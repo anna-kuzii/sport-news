@@ -18,6 +18,11 @@ class NewsArticle extends Component {
       : <h2>{text.slice(0, 80)}...</h2>;
   };
 
+  shortTopText(text) {
+    return text.length < 70 ? text
+      : <h2>{text.slice(0, 60)}...</h2>;
+  };
+
   render() {
     const { newsData, match } = this.props;
 
@@ -38,11 +43,9 @@ class NewsArticle extends Component {
             <div className='news-wrapper'>
               <div className='top-info'>
                 <h4>
-                  <span className='team-name'>NBA </span>{' '}
+                  <span className='team-name'>{art.league} &nbsp;</span>
                   <p className='team-paragraph'>
-                    {' '}
-                  &gt; Tennessee / As M.L.B. &apos; s Season Opens in Japan, at
-                  Least the Dirt Is Familiar
+                  &gt; &nbsp; {this.shortTopText(art.text)}
                   </p>
                 </h4>
               </div>
