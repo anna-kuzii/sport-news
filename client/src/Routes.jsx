@@ -7,6 +7,7 @@ import { history, store } from './helpers';
 import { Register } from './containers/Register/component';
 import { Login } from './containers/Login/component';
 import { ForgotPassword } from './containers/ForgotPassword/component';
+import { CheckEmail } from './containers/CheckEmail/component';
 
 import { Home } from './components/Home';
 import { Dealbook } from './components/Dealbook';
