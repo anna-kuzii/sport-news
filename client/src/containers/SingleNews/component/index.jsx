@@ -10,7 +10,7 @@ import './style.scss';
 class SingleNews extends Component {
   render() {
     const { newsData } = this.props;
-    const indexArticle = Math.floor(Math.random() * Math.floor(10));
+    const indexArticle = Math.floor(Math.random() * Math.floor(newsData.length));
 
     return (
       !newsData.length
