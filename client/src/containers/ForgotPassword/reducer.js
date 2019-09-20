@@ -14,7 +14,6 @@ export function forgotPassword(state = initialState, action) {
     case userConstants.FORGOT_PASSWORD_SUCCESS:
       return {
         ...state,
-        error: null,
         forgotPassword: true,
         email: action.email,
       };
