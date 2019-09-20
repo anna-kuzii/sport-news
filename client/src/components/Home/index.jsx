@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { NewsSlider } from '../../containers/NewsSlider/component';
 import { Breakdown } from '../Breakdown';
