@@ -44,30 +44,19 @@ const forgotPassword = require('./routes/forgotPassword');
 const logout = require('./routes/logout');
 const updateProfile = require('./routes/updateProfile');
 const resetPassword = require('./routes/resetPassword');
-
-const subscription = require('./routes/subscription');
-
-app.use('/register', register);
-app.use('/login', login);
-app.use('/forgotpassword', forgotPassword);
-app.use('/logout', logout);
-app.use('/updateprofile', updateProfile);
-app.use('/resetpassword', resetPassword);
-app.use('/subscription', subscription);
-
-
 const article = require('./routes/article');
 const video = require('./routes/video');
+const subscription = require('./routes/subscription');
 
-
-app.use('/register', register);
-app.use('/login', login);
-app.use('/forgotpassword', forgotPassword);
-app.use('/logout', logout);
-app.use('/updateprofile', updateProfile);
-app.use('/resetpassword', resetPassword);
-app.use('/article', article);
-app.use('/video', video);
+app.use('/api/register', register);
+app.use('/api/login', login);
+app.use('/api/forgotpassword', forgotPassword);
+app.use('/api/logout', logout);
+app.use('/api/updateprofile', updateProfile);
+app.use('/api/resetpassword', resetPassword);
+app.use('/api/subscription', subscription);
+app.use('/api/article', article);
+app.use('/api/video', video);
 
 app.use(express.static(path.join(__dirname, 'client/build')));
 
