@@ -15,6 +15,7 @@ import { NotFound } from './components/NotFound';
 import VideoPage from './containers/VideoPage/component';
 import AddNews from './containers/AddNews/component';
 import PrivateRoute from './containers/PrivateRoute';
+import { CheckEmail } from './containers/CheckEmail/component';
 
 import { NewsArticle } from './components/NewsArticle';
 
