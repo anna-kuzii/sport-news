@@ -102,8 +102,8 @@ class ChangePassword extends Component {
   }
 }
 
-const mapState = ({ resetPassword } ) => ({
-  error: resetPassword.error,
+const mapState = ({ resetPassword: { error } }) => ({
+  error,
 });
 
 const actionCreators = {
