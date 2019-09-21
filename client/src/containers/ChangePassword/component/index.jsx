@@ -35,7 +35,7 @@ class ChangePassword extends Component {
       userId: id,
     };
 
-    if (newPassword!==confirmPassword) {
+    if (newPassword !== confirmPassword) {
       this.setState({ errors: 'Password do not match' });
     } else {
       resetPassword(data);
@@ -102,8 +102,8 @@ class ChangePassword extends Component {
   }
 }
 
-const mapState = (state) => ({
-  error: state.resetPassword.error,
+const mapState = ({ resetPassword } ) => ({
+  error: resetPassword.error,
 });
 
 const actionCreators = {
