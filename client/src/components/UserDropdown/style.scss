@@ -30,13 +30,9 @@
       background: url('../../assets/img/user-avatar.svg') no-repeat;
 
       @media screen and (max-width: $tablet-width) {
-        margin-right: 10px;
-        background: url('../../assets/img/user-avatar-white.svg') no-repeat;
-      }
-
-      @media screen and (max-width: $mobile-width) {
         width: 25px;
         height: 25px;
+        margin-right: 10px;
         background: url('../../assets/img/user-avatar-white-mobile.svg') no-repeat;
       }
     }
@@ -91,7 +87,11 @@
     box-shadow: 0 8px 16px 0 $black-50;
 
     @media screen and (max-width: $tablet-width) {
-      right: 20px;
+      right: 25px;
+    }
+
+    @media screen and (max-width: $mobile-width) {
+      right: 40px;
     }
 
     .dropdown-triangle {
