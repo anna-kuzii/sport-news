@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { MenuItem } from './MenuItem';
+import burgerIcon from '../../../assets/img/burger-icon.svg';
+import closeMenu from '../../../assets/img/close-menu.svg';
+import './style.scss';
 
 export class Menu extends Component {
   constructor(props) {
@@ -12,6 +15,8 @@ export class Menu extends Component {
       activeItemSubMenu: menuList,
       numberOfStep: 0,
       arrayOfStates: [],
+      activeMenu: 1,
+      toggleIcon: 0,
     };
   }
 
@@ -45,35 +50,58 @@ export class Menu extends Component {
     }));
   };
 
+  handleToggle = () => {
+    this.setState((prevState) => ({
+      ...prevState,
+      activeMenu: !prevState.activeMenu,
+    }));
+  };
+
   renderMenu = (title, submenu) => {
-    const { numberOfStep } = this.state,
-      firstList = numberOfStep ? '' : 'mainList';
+    const { numberOfStep, activeMenu } = this.state,
+      firstList = numberOfStep ? '' : 'main-list',
+      showMenu = activeMenu ? '' : 'active-menu',
+      toggleIcon = activeMenu ? burgerIcon : closeMenu;
+
+    (activeMenu)
+      ? document.body.style.overflow = 'visible'
+      : document.body.style.overflow = 'hidden';
 
     return (
-      <div className='mobileMenu'>
-        {numberOfStep ? (
-          <div
-            className='backButton'
-            role='button'
-            tabIndex='0'
-            onClick={() => {}}
-            onKeyPress={this.handleBackToPreviousMenu}
-          >
-            Back button
+      <div className='mobile-wrapper'>
+        <button
+          type='button'
+          onClick={this.handleToggle}
+          className='toggle-button'
+        >
+          <img src={toggleIcon} alt='toggle icon' />
+        </button>
+        <div className={`mobile-menu ${showMenu}`}>
+          {numberOfStep ? (
+            // eslint-disable-next-line jsx-a11y/click-events-have-key-events
+            <div
+              className='back-button'
+              role='button'
+              tabIndex='0'
+              onClick={this.handleBackToPreviousMenu}
+            >
+              <i className='arrow-left' />
+              Back to main menu
+            </div>
+          ) : ''}
+          <div className={`menu-wrapper ${firstList}`}>
+            <div className='title'>{title}</div>
+            <ul>
+              {submenu.map((item) => (
+                <MenuItem
+                  key={item.id}
+                  item={item}
+                  setActiveItem={this.setActiveItem}
+                />
+              ))
+              }
+            </ul>
           </div>
-        ) : ''}
-        <div className={`menuWrapper ${firstList}`}>
-          <div className='title'>{title}</div>
-          <ul>
-            {submenu.map((item) => (
-              <MenuItem
-                key={item.id}
-                item={item}
-                setActiveItem={this.setActiveItem}
-              />
-            ))
-            }
-          </ul>
         </div>
       </div>
     );

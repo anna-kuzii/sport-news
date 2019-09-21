@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../style.scss';
 
 export class MenuItem extends Component {
   constructor(props) {
@@ -18,7 +19,7 @@ export class MenuItem extends Component {
 
     //TODO when news will be done, button should be replaced by Link with to
     return (
-      <li className='listItem'>
+      <li className='list-item'>
         <button
           type='button'
           onClick={menu && this.handleOpenMenu}

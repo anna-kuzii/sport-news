@@ -1,10 +1,6 @@
 @import '../../../styles/variables';
 
 .menu-wrapper {
-  @media screen and (max-width: $tablet-width) {
-    display: none;
-  }
-
   .active-menu {
     position: absolute;
     top: 0;
