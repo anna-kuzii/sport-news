@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { logoutUser } from '../../containers/Logout/action';
 import { store } from '../../helpers';
 import './style.scss';
+import { connect } from 'react-redux';
 
 class UserDropdown extends Component {
   constructor(props) {
@@ -35,7 +36,8 @@ class UserDropdown extends Component {
   }
 
   render() {
-    const { displayMenu, firstName, lastName, email } = this.state;
+    const { displayMenu } = this.state;
+    const { user } = this.props;
 
     return (
       <div className='dropdown-wrapper'>
@@ -47,14 +49,13 @@ class UserDropdown extends Component {
           tabIndex={0}
         >
           <div className='avatar' />
-          {`${firstName} ${ lastName}`}
+          {user.firstName + ' ' + user.lastName}
           <div className={(displayMenu && 'down-triangle') || 'up-triangle'} />
         </div>
         {displayMenu && (
           <div className='dropdown-content'>
             <div className='dropdown-triangle' />
-            <div className='user-name'>{`${firstName} ${ lastName}`} </div>
-            <div className='email'>{email}</div>
+            <div className='user-name'>{user.firstName + ' ' + user.lastName} </div>
             <Link
               to='/userprofile/updateprofile'
               type='button'
@@ -78,4 +79,9 @@ class UserDropdown extends Component {
   }
 }
 
-export default UserDropdown;
+const mapStateToProps = state => ({
+  user: state.login.user,
+}
+);
+
+export default connect(mapStateToProps)(UserDropdown);

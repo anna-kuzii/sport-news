@@ -127,7 +127,7 @@ class NewsSlider extends Component {
                   type='reset' className='mobile-slider-back'
                   onClick={this.handlePrevSlide}
                 />
-                <p className='publish-time'>Published / 20.09.2019</p>
+                <p className='publish-time'>Published / {article.date.slice(0, 10)}</p>
                 <p className='title'>{article.title}</p>
                 <p className='news-text'>{article.text}</p>
                 <button type='reset' className='more-button'>More</button>

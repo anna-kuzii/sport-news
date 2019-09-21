@@ -26,7 +26,7 @@ export const Routes = () => (
           exact path='/'
           component={Home}
         />
-        <Route
+        <PrivateRoute
           exact path='/dealbook'
           component={Dealbook}
         />
