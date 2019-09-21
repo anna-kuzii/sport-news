@@ -53,7 +53,7 @@ class NewsArticle extends Component {
                     <img src={art.imageURL} alt='team information' />
                   </div>
                   <div className='card-container'>
-                    <h4>Published / {art.date}</h4>
+                    <h4>Published / {art.date.slice(0, 10)}</h4>
                     <h3>{art.title}</h3>
                     <h2>
                       {this.shortText(art.text)}
