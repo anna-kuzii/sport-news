@@ -4,6 +4,7 @@ import { Layout } from '../Layout';
 import { fetchNewsData } from '../../containers/NewsLogic/action';
 import { connect } from 'react-redux';
 import { NotFound } from '../NotFound';
+import ScrollToTop from '../ScrollToTop';
 
 
 class NewsArticle extends Component {
@@ -30,11 +31,13 @@ class NewsArticle extends Component {
     const art = newsData.find(art => id === art._id);
     
     return (
-      !newsData.length || !art ? (
+      !art ? (
         <NotFound />   
       )
         : (
+          
           <Layout>
+            <ScrollToTop />
             <section className='single-news-container'>
               <div className='news-wrapper'>
                 <div className='top-info'>
@@ -68,10 +71,10 @@ class NewsArticle extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  newsData: state.productReducer.newsData,
-  loading: state.productReducer.loading,
-  error: state.productReducer.error,
+const mapStateToProps = ({ productReducer: { newsData, loading, error } }) => ({
+  newsData,
+  loading,
+  error,
 });
 
 const mapDispatchToProps = dispatch => ({
