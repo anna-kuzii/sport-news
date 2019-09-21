@@ -24,7 +24,8 @@ export const Header = () => (
       <Share />
     </div>
     <div className='profile'>
-      <UserDropdown />
+      <UserDropdown firstName='Roman' lastName='Pidkostelnyi' 
+      email='roman.pidkostelnii@gmail.com' />
     </div>
     <div className='language'>
       EN
