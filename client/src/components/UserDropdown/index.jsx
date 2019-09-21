@@ -79,8 +79,8 @@ class UserDropdown extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  user: state.login.user,
+const mapStateToProps = ({ login: { user } }) => ({
+  user,
 }
 );
 
