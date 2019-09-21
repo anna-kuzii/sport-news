@@ -48,6 +48,7 @@
       font-weight: bold;
       line-height: 16px;
       color: $silver-chalice;
+      text-transform: uppercase;
 
       @media screen and (max-width: $mobile-width) {
         font-size: 18px;
