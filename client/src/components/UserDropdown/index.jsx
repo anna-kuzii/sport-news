@@ -49,13 +49,13 @@ class UserDropdown extends Component {
           tabIndex={0}
         >
           <div className='avatar' />
-          {user.firstName + ' ' + user.lastName}
+          {`${user.firstName} ${user.lastName}`}
           <div className={(displayMenu && 'down-triangle') || 'up-triangle'} />
         </div>
         {displayMenu && (
           <div className='dropdown-content'>
             <div className='dropdown-triangle' />
-            <div className='user-name'>{user.firstName + ' ' + user.lastName} </div>
+            <div className='user-name'>{`${user.firstName} ${user.lastName}`}</div>
             <Link
               to='/userprofile/updateprofile'
               type='button'

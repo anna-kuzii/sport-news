@@ -44,10 +44,15 @@
     }
   }
 
-  .update-profile {
+  .update-profile-btn {
     margin-top: 10px;
     font-weight: 600;
     text-transform: uppercase;
+
+    &:active {
+      color: $white;
+      background: $alizarin-crimson;
+    }
 
     @media screen and (max-width: $mobile-width) {
       width: 80vw;
