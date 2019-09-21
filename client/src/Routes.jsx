@@ -10,7 +10,7 @@ import { ForgotPassword } from './containers/ForgotPassword/component';
 import { CheckEmail } from './containers/CheckEmail/component';
 
 import { Home } from './components/Home';
-import { Dealbook } from './components/Dealbook';
+import { Dealbook } from './containers/Dealbook/component';
 import { UserProfile } from './components/UserProfile';
 import { NotFound } from './components/NotFound';
 import VideoPage from './containers/VideoPage/component';
@@ -26,7 +26,7 @@ export const Routes = () => (
           exact path='/'
           component={Home}
         />
-        <PrivateRoute
+        <Route
           exact path='/dealbook'
           component={Dealbook}
         />

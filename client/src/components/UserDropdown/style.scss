@@ -94,6 +94,10 @@
       right: 20px;
     }
 
+    @media screen and (max-width: $mobile-width) {
+      right: 40px;
+    }
+
     .dropdown-triangle {
       width: 0;
       height: 0;
