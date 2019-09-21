@@ -35,7 +35,11 @@ class ChangePassword extends Component {
       userId: id,
     };
 
-    newPassword!==confirmPassword ? this.setState({ errors: 'Password do not match' }) : resetPassword(data);
+    if (newPassword!==confirmPassword) {
+      this.setState({ errors: 'Password do not match' });
+    } else {
+      resetPassword(data);
+    }
   }
 
   render() {
