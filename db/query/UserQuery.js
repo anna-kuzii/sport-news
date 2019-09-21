@@ -33,13 +33,13 @@ exports.createUser = (user, hashPassword) => {
 };
 
 
-exports.updateUserProfile = (email, newEmail, fullName) => {
-  return User.findOneAndUpdate({ email: email }, { firstName: fullName[1], lastName: fullName[0], email: newEmail });
-};
+exports.updateUserProfile = (email, newEmail, fullName) =>
+  User.findOneAndUpdate({ email: email }, { firstName: fullName[1], lastName: fullName[0], email: newEmail });
 
 exports.findUserByEmail = (email) => User.findOne({ email });
 
 exports.findUserId = (id) => User.findOne({ _id: id });
 
-exports.UpdateUserPasswordById = (id, password) => User.findOneAndUpdate({ _id: id }, { password: password }, ()=>{console.log('Password updated');});
+exports.UpdateUserPasswordById = (id, password) =>
+  User.findOneAndUpdate({ _id: id }, { password: password });
 
