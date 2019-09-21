@@ -31,42 +31,38 @@ class NewsArticle extends Component {
     const art = newsData.find(art => id === art._id);
     
     return (
-      !art ? (
-        <NotFound />   
-      )
-        : (
-          
-          <Layout>
-            <ScrollToTop />
-            <section className='single-news-container'>
-              <div className='news-wrapper'>
-                <div className='top-info'>
-                  <h4>
-                    <span className='team-name'>{art.league} &nbsp;</span>
-                    <p className='team-paragraph'>
+      !art ? ( <NotFound /> ) : (    
+        <Layout>
+          <ScrollToTop />
+          <section className='single-news-container'>
+            <div className='news-wrapper'>
+              <div className='top-info'>
+                <h4>
+                  <span className='team-name'>{art.league} &nbsp;</span>
+                  <p className='team-paragraph'>
                     &gt; &nbsp; {this.shortTopText(art.text)}
-                    </p>
-                  </h4>
+                  </p>
+                </h4>
+              </div>
+              <div className='article-brochure'>
+                <div className='image-container'>
+                  <img src={art.imageURL} alt='team information' />
                 </div>
-                <div className='article-brochure'>
-                  <div className='image-container'>
-                    <img src={art.imageURL} alt='team information' />
-                  </div>
-                  <div className='card-container'>
-                    <h4>Published / {art.date.slice(0, 10)}</h4>
-                    <h3>{art.title}</h3>
-                    <h2>
-                      {this.shortText(art.text)}
-                    </h2>
-                  </div>
-                </div>
-                <div className='information-about-current-news'>
-                  {art.text}
+                <div className='card-container'>
+                  <h4>Published / {art.date.slice(0, 10)}</h4>
+                  <h3>{art.title}</h3>
+                  <h2>
+                    {this.shortText(art.text)}
+                  </h2>
                 </div>
               </div>
-            </section>
-          </Layout>
-        )
+              <div className='information-about-current-news'>
+                {art.text}
+              </div>
+            </div>
+          </section>
+        </Layout>
+      )
     );
   }
 }
