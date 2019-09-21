@@ -89,7 +89,7 @@
       font-weight: bold;
       line-height: 16px;
       color: $placeholder-grey;
-      text-transform: capitalize;
+      text-transform: uppercase;
 
       @media screen and(max-width: $tablet-width) {
         padding-left: 15px;

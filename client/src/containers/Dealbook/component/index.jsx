@@ -40,7 +40,7 @@ class Dealbook extends Component {
                 <div className='league-title'>{newsData[indexArticle].league}<span> &gt; {newsData[indexArticle].title}</span></div>
                 <img src={newsData[indexArticle].imageURL} alt='main article' />
                 <div className='news-info'>
-                  <p className='publish-time'>Published / 20.09.2019</p>
+                  <p className='publish-time'>Published / {newsData[indexArticle].date.slice(0, 10)}</p>
                   <p className='title'>{newsData[indexArticle].title}</p>
                   <p className='news-text'>{newsData[indexArticle].text}</p>
                   <Link to='/' className='see-more'>More</Link>
