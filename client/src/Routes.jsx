@@ -8,6 +8,7 @@ import { Register } from './containers/Register/component';
 import { Login } from './containers/Login/component';
 import { ForgotPassword } from './containers/ForgotPassword/component';
 import { CheckEmail } from './containers/CheckEmail/component';
+import { ChangePassword } from './containers/ChangePassword/component';
 
 import { Home } from './components/Home';
 import { Dealbook } from './components/Dealbook';
@@ -45,6 +46,10 @@ export const Routes = () => (
         <Route
           exact path='/forgotpassword'
           component={ForgotPassword}
+        />
+        <Route
+          exact path='/changepassword/:id/:token'
+          component={ChangePassword}
         />
         <PrivateRoute
           exact path='/videopage'
