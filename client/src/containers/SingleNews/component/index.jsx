@@ -33,7 +33,7 @@ class SingleNews extends Component {
             <div>
               <h4>{newsData[indexArticle].title}</h4>
             </div>
-            <Link to='/'>
+            <Link to={`/news/${newsData[indexArticle]._id}`}>
               <img
                 src={hoverArrow}
                 alt='hover arrow'
