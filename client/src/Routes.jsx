@@ -47,6 +47,10 @@ export const Routes = () => (
           exact path='/forgotpassword'
           component={ForgotPassword}
         />
+        <Route
+          exact path='/checkemail'
+          component={CheckEmail}
+        />
         <PrivateRoute
           exact path='/videopage'
           component={VideoPage}

@@ -1,9 +1,7 @@
-
 import React from 'react';
 import { NewsSlider } from '../../containers/NewsSlider/component';
 import { Breakdown } from '../Breakdown';
 import { Layout } from '../Layout';
-import BreakDown from '../../assets/data/BreakdownNewsList';
 import NewsOfTheDays from '../../containers/NewsOfTheDays/component';
 
 
@@ -16,9 +14,7 @@ export const Home = () => (
         <NewsSlider />
       </div>
       <div className='breakdown-container'>
-        <Breakdown
-          newsBlock={BreakDown}
-        />
+        <Breakdown />
       </div>
       <div className='newsOfTheDayContainer'>
         <NewsOfTheDays />
