@@ -41,5 +41,7 @@ exports.findUserByEmail = (email) => User.findOne({ email });
 exports.findUserId = (id) => User.findOne({ _id: id });
 
 exports.UpdateUserPasswordById = (id, password) =>
-  User.findOneAndUpdate({ _id: id }, { password: password });
+  User.findOneAndUpdate({ _id: id }, { password: password })
+    .then(user => user.password)
+    .catch(error => error);
 
