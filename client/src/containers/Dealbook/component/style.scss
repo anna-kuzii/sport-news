@@ -11,6 +11,7 @@
   }
 
   .news-block-section {
+    max-width: 866px;
     padding: 13px 0;
     border-bottom: 1px solid $alto;
 
@@ -42,6 +43,21 @@
       max-width: 284px;
       padding: 12px;
     }
+  }
+
+  .news-banner {
+    position:  absolute;
+    top: 70vh;
+    right: -10vw;
+    z-index: -1;
+    font-family: $roboto ;
+    font-size: 141px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 192px;
+    letter-spacing: 1.2px;
+    color: $grey-30;
+    transform: rotate(90deg);
   }
 
   .main-article-container {
