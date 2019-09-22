@@ -21,9 +21,9 @@ class Login extends Component {
   }
 
   componentDidMount() {
-    const { logining, history } = this.props;
+    const { isAuthenticated, history } = this.props;
 
-    if (logining.isAuthenticated) {
+    if (isAuthenticated) {
       history.push('/');
     }
   }
@@ -46,7 +46,7 @@ class Login extends Component {
 
   render() {
     const { email, password } = this.state;
-    const { logining } = this.props;
+    const { error } = this.props;
 
     return (
       <div className='login-container '>
@@ -62,8 +62,8 @@ class Login extends Component {
             </div>
             <div className='log-in-wrapper'>
               <h2>Log in to Sport News</h2>
-              { logining.error
-                            && <span className='login-error'>{logining.error}</span>
+              { error
+                            && <span className='login-error'>{error}</span>
               }
               <div className='email-wrapper'>
                 <label htmlFor='email-input'>Email address</label>
@@ -95,7 +95,7 @@ class Login extends Component {
               >log in
               </button>
               <div className='mobile-link'>
-                <Link to='/register' className='mobile-link'>Dont have an account?</Link>
+                <Link to='/register' className='mobile-link'>Don&#39;t have an account?</Link>
               </div>
             </div>
           </div>
@@ -105,9 +105,10 @@ class Login extends Component {
   }
 }
 
-const mapState = ({ auth, login: logining }) => ({
+const mapState = ({ auth, login: { error, isAuthenticated } }) => ({
   auth,
-  logining,
+  error,
+  isAuthenticated,
 });
 
 const actionCreators = {
