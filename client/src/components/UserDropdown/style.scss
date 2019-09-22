@@ -57,8 +57,8 @@
 
       @media screen and (max-width: $mobile-width) {
         display: none;
-     }
-   }
+      }
+    }
 
 
     .down-triangle {
@@ -167,8 +167,8 @@
           outline: 0;
         }
       }
-     }
-   }
+    }
+  }
 
   hr {
     padding: 0;
@@ -193,5 +193,4 @@
     text-transform: uppercase;
     background-color: $alizarin-crimson;
   }
-
 }
