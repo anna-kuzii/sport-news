@@ -5,8 +5,9 @@ import {
   NavLink,
   BrowserRouter as Router,
 } from 'react-router-dom';
-import { ChangePassword } from '../ChangePassword';
+
 import { UpdateProfile } from '../../containers/UpdateProfile/component';
+import { ChangePassword } from '../../containers/ChangePassword/component';
 import { UserLayout } from '../UserLayout';
 
 export const UserProfile = () => (
