@@ -14,11 +14,6 @@ class NewsArticle extends Component {
     fetchNewsData();
   }
 
-  shortTopText(text) {
-    return text.length < 70 ? text
-      : <h2>{text.slice(0, 60)}...</h2>;
-  };
-
   render() {
     const { newsData, match } = this.props;
 
