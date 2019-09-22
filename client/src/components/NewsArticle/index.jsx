@@ -33,9 +33,9 @@ class NewsArticle extends Component {
             <div className='news-wrapper'>
               <div className='top-info'>
                 <h4>
-                  <span className='team-name'>{art.league} &nbsp;</span>
+                  <span className='team-name'>{art.league}</span>
                   <p className='team-paragraph'>
-                    &gt; &nbsp; <p className='short-text'>{art.text} </p>
+                  &nbsp; &gt; &nbsp; <p className='short-text'>{art.text} </p>
                   </p>
                 </h4>
               </div>
