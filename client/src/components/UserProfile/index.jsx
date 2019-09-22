@@ -6,7 +6,7 @@ import {
   BrowserRouter as Router,
 } from 'react-router-dom';
 import { ChangePassword } from '../ChangePassword';
-import { UpdateProfile } from '../UpdateProfile';
+import { UpdateProfile } from '../../containers/UpdateProfile/component';
 import { UserLayout } from '../UserLayout';
 
 export const UserProfile = () => (

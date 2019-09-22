@@ -1,4 +1,4 @@
-@import '../../styles/variables.scss';
+@import '../../../styles/variables.scss';
 
 .updateProfile {
   display: flex;
@@ -17,7 +17,7 @@
     width: 120px;
     height: 120px;
     vertical-align: middle;
-    background: url('../../assets/img/user-avatar.svg') no-repeat;
+    background: url('../../../assets/img/user-avatar.svg') no-repeat;
     background-size: 120px 120px;
     border-radius: 50%;
   }
@@ -42,6 +42,28 @@
       margin-top: 20px;
       color: $black;
     }
+  }
+
+  .has-error {
+    input {
+      margin-bottom: 0;
+      border: 1px solid $alizarin-crimson;
+      outline: 0;
+      box-sizing: border-box;
+
+    }
+
+    .help-block {
+      display: block;
+      font-size: 12px;
+      font-weight: 400;
+      color: $alizarin-crimson;
+    }
+   }
+
+  label {
+    margin-top: 20px;
+    color: $black;
   }
 
   .update-profile-btn {
