@@ -7,23 +7,23 @@ import {
 import { history } from '../../helpers';
 
 
-export const resetPassword = (data) => (
+export const changePassword = (data) => (
   dispatch =>{
-    instance.post('/resetpassword', data)
+    instance.post('/changepassword', data)
       .then(() => {
-        dispatch(resetPasswordSuccess());
-        history.push('/login');
+        dispatch(changePasswordSuccess());
+        history.push('/');
       }).catch(error => {
-        dispatch(resetPasswordFailure(error.response.data && error.response.data.message));
+        dispatch(changePasswordFailure(error.response.data && error.response.data.message));
       });
   }
 );
 
-const resetPasswordSuccess = () =>({
-  type: userConstants.RESET_PASSWORD_SUCCESS,
+const changePasswordSuccess = () =>({
+  type: userConstants.CHANGE_PASSWORD_SUCCESS,
 });
 
-const resetPasswordFailure = (error) =>({
-  type: userConstants.RESET_PASSWORD_FAILURE,
+const changePasswordFailure = (error) =>({
+  type: userConstants.CHANGE_PASSWORD_FAILURE,
   error,
 });
