@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Loader from 'react-loader-spinner';
-import hoverArrow from '../../../assets/img/news-hover-arrow.svg';
+import hoverArrow from '../../assets/img/news-hover-arrow.svg';
 import { Swipe } from 'react-swipe-component';
-import { fetchNewsData } from '../../NewsLogic/action';
+import { fetchNewsData } from '../../containers/NewsLogic/action';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
@@ -164,11 +164,13 @@ class NewsSlider extends Component {
                   <img src={articles[element - 1].imageURL} alt='sub article' />
                   <p className='sub-article-title'> Lorem ipsum </p>
                   <p className='sub-article-text'>{articles[element - 1].title}  </p>
-                  <img
-                    src={hoverArrow}
-                    alt='hover arrow'
-                    className='hover-arrow'
-                  />
+                  <Link to={`/news/${articles[element - 1]._id}`}>
+                    <img
+                      src={hoverArrow}
+                      alt='hover arrow'
+                      className='hover-arrow'
+                    />
+                  </Link>
                 </div>
               ))}
             </div>
@@ -178,9 +180,9 @@ class NewsSlider extends Component {
   }
 }
 
-const mapState = (state) =>({
-  articles: state.productReducer.updateNewsData,
-  loading: state.productReducer.loading,
+const mapState = ({ productReducer: { loading, updateNewsData: articles } }) =>({
+  articles,
+  loading,
 });
 
 const actionCreators = {

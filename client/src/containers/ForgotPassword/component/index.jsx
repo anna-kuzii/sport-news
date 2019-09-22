@@ -6,7 +6,6 @@ import { connect } from 'react-redux';
 import { Logo } from '../../../components/Logo';
 import './style.scss';
 
-
 class ForgotPassword extends Component {
   constructor(props) {
     super(props);
@@ -33,7 +32,7 @@ class ForgotPassword extends Component {
 
   render() {
     const { email } = this.state;
-    const { forgot } = this.props;
+    const { error } = this.props;
 
     return (
       <div className='forgot-password-container'>
@@ -50,8 +49,8 @@ class ForgotPassword extends Component {
             <div className='forgot-password-wrapper'>
               <h2>Forgot your password?</h2>
               <p>Enter your email address below and we&#39;ll get you back on track.</p>
-              {forgot.error
-              && <span className='forgot-password-error'>{forgot.error}</span>
+              {error
+              && <span className='forgot-password-error'>{error}</span>
               }
               <div className='email-wrapper'>
                 <label htmlFor='email-input'>Email address</label>
@@ -84,16 +83,14 @@ class ForgotPassword extends Component {
   }
 }
 
-function mapState(state) {
-  return {
-    forgot: state.forgotPassword,
-  };
-}
+const mapState = ({ forgotPassword: { error } }) => ({
+  error,
+});
 
 const actionCreators = {
   forgotPassword,
 };
 
-const conectedForgotPasswordPage = connect(mapState, actionCreators)(ForgotPassword);
+const connectedForgotPasswordPage = connect(mapState, actionCreators)(ForgotPassword);
 
-export { conectedForgotPasswordPage as ForgotPassword };
+export { connectedForgotPasswordPage as ForgotPassword };
