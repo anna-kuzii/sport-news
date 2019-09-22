@@ -13,11 +13,6 @@ class NewsArticle extends Component {
 
     fetchNewsData();
   }
-  
-  shortText(text) {
-    return text.length < 100 ? text
-      : <h2>{text.slice(0, 80)}...</h2>;
-  };
 
   shortTopText(text) {
     return text.length < 70 ? text
@@ -40,7 +35,7 @@ class NewsArticle extends Component {
                 <h4>
                   <span className='team-name'>{art.league} &nbsp;</span>
                   <p className='team-paragraph'>
-                    &gt; &nbsp; {this.shortTopText(art.text)}
+                    &gt; &nbsp; <p className='short-text'>{art.text} </p>
                   </p>
                 </h4>
               </div>
@@ -52,7 +47,7 @@ class NewsArticle extends Component {
                   <h4>Published / {art.date.slice(0, 10)}</h4>
                   <h3>{art.title}</h3>
                   <h2>
-                    {this.shortText(art.text)}
+                    {art.text}
                   </h2>
                 </div>
               </div>

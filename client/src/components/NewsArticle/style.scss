@@ -18,6 +18,9 @@
     justify-content: start;
     width: 460px;
     margin: 0 0 15px;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    // white-space: nowrap;
 
     h4 {
       display: flex;
@@ -28,8 +31,9 @@
       font-weight: 600;
       line-height: 17px;
       color: $alizarin-crimson;
-
-      h2 {
+      
+      .short-text {
+        display: inline-block;
         margin: 0;
         font-family: $open-sans;
         font-size: 12px;
@@ -37,6 +41,11 @@
         font-weight: 600;
         line-height: 17px;
         color: $alizarin-crimson;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 460px;
+
       }
     }
 
@@ -150,13 +159,17 @@
       }
 
       h2 {
+        display: -webkit-box;
         margin-bottom: 0;
+        overflow: hidden;
         font-family: $open-sans;
         font-size: 22px;
         font-style: normal;
         font-weight: bold;
         line-height: 30px;
         color: $ebony-clay;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
 
         @media screen and (max-width: $mobile-width) {
           width: 100%;
