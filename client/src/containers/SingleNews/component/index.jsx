@@ -46,11 +46,11 @@ class SingleNews extends Component {
   }
 };
 
-const mapStateToProps = state => (
+const mapStateToProps = ({ productReducer: { newsData, loading, error } }) => (
   {
-    newsData: state.productReducer.newsData,
-    loading: state.productReducer.loading,
-    error: state.productReducer.error,
+    newsData,
+    loading,
+    error,
   }
 );
 

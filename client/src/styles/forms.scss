@@ -9,7 +9,8 @@
   .create-account-form,
   .log-in-form,
   .forgot-password-form,
-  .check-email-msg-wrapper {
+  .check-email-msg-wrapper,
+  .reset-password-form {
     margin: 0 20px;
 
     @media screen and (max-width: $mobile-width) {
@@ -65,7 +66,8 @@
 .create-account-form,
 .log-in-form,
 .forgot-password-form,
-.check-email-msg-wrapper {
+.check-email-msg-wrapper,
+.reset-password-form {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -92,7 +94,8 @@
 }
 
 .get-started,
-.log-in {
+.log-in,
+.reset-password {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -151,7 +154,8 @@
 .create-account-wrapper,
 .log-in-wrapper,
 .forgot-password-wrapper,
-.check-email-msg {
+.check-email-msg,
+.reset-password-wrapper {
   width: 100%;
   max-width: 400px;
   margin: auto 20px;
@@ -189,7 +193,7 @@
 }
 
 .btn-primary,
-.update-profile,
+.update-profile-btn,
 .change-password-btn {
   display: inline-block;
   width: 100%;
@@ -217,7 +221,8 @@
 
 .email-wrapper,
 .update-input-wrapper,
-.change-password-wrapper {
+.change-password-wrapper,
+.password-wrapper {
   label {
     width: 50%;
     font-family: Roboto, serif;
