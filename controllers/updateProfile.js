@@ -8,3 +8,4 @@ exports.updateProfile = (req, res) => {
     .then(() => res.status(200).send('Profile was changed'))
     .catch((error) => res.send(error));
 };
+

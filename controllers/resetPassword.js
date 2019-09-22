@@ -23,8 +23,8 @@ exports.receiveNewPassword = (req, res) => {
     })
     .then((result) => {
       UserQuery.UpdateUserPasswordById(userId, result);
-    }).then(() => res.status(200).send('Password changed accepted'))
-    .catch((error) => {
-      res.status(404).send(error);
+    }).then(() => res.status(200).json('Password changed accepted'))
+    .catch(() => {
+      res.status(404).json({ message: 'No user with this id' });
     });
 };

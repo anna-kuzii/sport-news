@@ -35,7 +35,7 @@
     "jsx-quotes": [2, "prefer-single"],
     "key-spacing": [2, {
       "afterColon": true,
-      "beforeColon": false,
+      "beforeColon": false
     }],
     "keyword-spacing": 2,
     "max-params": 2,

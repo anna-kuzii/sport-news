@@ -33,7 +33,7 @@ class NewsBlock extends Component {
                   <h4>{element.title}</h4>
                   <p>{element.text}</p>
                 </div>
-                <Link to='/'>
+                <Link to={`/news/${element._id}`}>
                   <img
                     src={hoverArrow}
                     alt='hover arrow'

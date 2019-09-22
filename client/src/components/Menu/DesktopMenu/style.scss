@@ -1,10 +1,6 @@
-@import '../../styles/variables.scss';
+@import '../../../styles/variables';
 
 .menu-wrapper {
-  @media screen and (max-width: $tablet-width) {
-    display: none;
-  }
-
   .active-menu {
     position: absolute;
     top: 0;
@@ -56,7 +52,7 @@
       display: flex;
       width: 100%;
       padding: 8px 10px 8px 65px;
-      font-family: 'Open Sans', serif;
+      font-family: $open-sans;
       font-size: 14px;
       font-weight: bold;
       line-height: 19px;
@@ -89,7 +85,7 @@
 
     .list-item {
       button {
-        font-family: Open Sans, serif;
+        font-family: $open-sans;
         font-style: normal;
         font-weight: normal;
         color: $black;

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Header } from '../Header';
-import { Menu } from '../Menu';
+import { Menu } from '../Menu/DesktopMenu';
 import menuData from '../../assets/data/menuItems';
 
 export const UserLayout = (props) => {

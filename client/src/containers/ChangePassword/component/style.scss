@@ -1,0 +1,47 @@
+@import '../../../styles/variables';
+
+.reset-password-container {
+  .sign-up {
+    display: none;
+  }
+
+  .sign-in,
+  .sign-up {
+    margin: 12px 0 0;
+    font-family: $open-sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+    color: $black;
+    text-align: center;
+
+
+    @media screen and (max-width: $mobile-width) {
+      display: block;
+      margin-top: 15px;
+      color: $white;
+      text-align: left;
+    }
+  }
+
+  .reset-password-error {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    color: $alizarin-crimson;
+  }
+
+  .reset-password {
+    padding: 0;
+    margin: 20px 0 0;
+    font-family: $roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 14px;
+    letter-spacing: 1px;
+    color: $white;
+    text-transform: uppercase;
+  }
+}
