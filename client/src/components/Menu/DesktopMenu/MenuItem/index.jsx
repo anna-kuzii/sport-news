@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Menu } from '../index';
 import '../style.scss';
+import { Link } from 'react-router-dom';
 
 export class MenuItem extends Component {
   handleOpenMenu = () => {
@@ -13,20 +14,19 @@ export class MenuItem extends Component {
 
   render() {
     const { index, activeItem } = this.props,
-      { item: { title, menu } } = this.props,
+      { item: { title, menu, path } } = this.props,
       isActive = index === activeItem,
       activeClass = isActive ? 'active-item': '';
 
-    //TODO when news will be done, button should be replaced by Link with to
     return (
       <li className='list-item'>
-        <button
-          type='button'
+        <Link
+          to={path}
           onClick={this.handleOpenMenu}
           className={activeClass}
         >
           {title}
-        </button>
+        </Link>
         { isActive && <Menu menuList={menu} /> }
       </li>
     );

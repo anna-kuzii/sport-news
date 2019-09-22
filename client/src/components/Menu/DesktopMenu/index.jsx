@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { MenuItem } from './MenuItem';
 import './style.scss';
+import { Link } from 'react-router-dom';
 
 export class Menu extends Component {
   constructor(props) {
@@ -26,6 +27,7 @@ export class Menu extends Component {
       <div className='menu-wrapper'>
         <div className='active-menu' />
         <div className='desktop-menu-container'>
+          <Link to='/' className='list-item home-link' >Home</Link>
           <ul className='list-container'>
             {menuList.map((item, index) => (
               <MenuItem
