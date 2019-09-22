@@ -8,7 +8,7 @@ import { Register } from './containers/Register/component';
 import { Login } from './containers/Login/component';
 import { ForgotPassword } from './containers/ForgotPassword/component';
 import { CheckEmail } from './containers/CheckEmail/component';
-import { ChangePassword } from './containers/ChangePassword/component';
+import { ResetPassword } from './containers/ResetPassword/component';
 
 import { Home } from './components/Home';
 import { Dealbook } from './containers/Dealbook/component';
@@ -48,8 +48,8 @@ export const Routes = () => (
           component={ForgotPassword}
         />
         <Route
-          exact path='/changepassword/:id/:token'
-          component={ChangePassword}
+          exact path='/resetpassword/:id/:token'
+          component={ResetPassword}
         />
         <Route
           exact path='/checkemail'

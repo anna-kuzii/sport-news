@@ -34,6 +34,10 @@ import {
 
 import {
   resetPassword,
+} from '../containers/ResetPassword/reducer';
+
+import {
+  changePassword,
 } from '../containers/ChangePassword/reducer';
 import thunkMiddleware from 'redux-thunk';
 import {
@@ -49,6 +53,7 @@ const rootReducer = combineReducers({
   addArticleReducer,
   subscription,
   resetPassword,
+  changePassword,
 });
 
 const loggerMiddleware = createLogger();
