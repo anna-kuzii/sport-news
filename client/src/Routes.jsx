@@ -6,6 +6,7 @@ import { Register } from './containers/Register/component';
 import { Login } from './containers/Login/component';
 import { ForgotPassword } from './containers/ForgotPassword/component';
 import { ChangePassword } from './containers/ChangePassword/component';
+
 import { Home } from './components/Home';
 import { Dealbook } from './containers/Dealbook/component';
 import { UserProfile } from './components/UserProfile';
