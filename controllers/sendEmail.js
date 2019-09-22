@@ -10,6 +10,7 @@ exports.sendEmail = (message) => {
       pass: process.env.USER_PASS,
     },
   });
+
   // TODO remove console.log
 
   sendEmail(message)

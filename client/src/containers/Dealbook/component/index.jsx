@@ -43,7 +43,7 @@ class Dealbook extends Component {
                   <p className='publish-time'>Published / {newsData[indexArticle].date.slice(0, 10)}</p>
                   <p className='title'>{newsData[indexArticle].title}</p>
                   <p className='news-text'>{newsData[indexArticle].text}</p>
-                  <Link to='/' className='see-more'>More</Link>
+                  <Link to={`/news/${newsData[indexArticle]._id}`} className='see-more'>More</Link>
                 </div>
               </div>
               <NewsBlock />
