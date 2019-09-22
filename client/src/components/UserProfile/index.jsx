@@ -5,7 +5,7 @@ import {
   NavLink,
   BrowserRouter as Router,
 } from 'react-router-dom';
-import { ChangePassword } from '../ChangePassword';
+import { ChangePassword } from '../../containers/ChangePassword/component';
 import { UpdateProfile } from '../UpdateProfile';
 import { UserLayout } from '../UserLayout';
 
