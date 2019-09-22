@@ -7,9 +7,11 @@ import { history, store } from './helpers';
 import { Register } from './containers/Register/component';
 import { Login } from './containers/Login/component';
 import { ForgotPassword } from './containers/ForgotPassword/component';
+import { CheckEmail } from './containers/CheckEmail/component';
+import { ChangePassword } from './containers/ChangePassword/component';
 
 import { Home } from './components/Home';
-import { Dealbook } from './components/Dealbook';
+import { Dealbook } from './containers/Dealbook/component';
 import { UserProfile } from './components/UserProfile';
 import { NotFound } from './components/NotFound';
 import VideoPage from './containers/VideoPage/component';
@@ -46,6 +48,14 @@ export const Routes = () => (
         <Route
           exact path='/forgotpassword'
           component={ForgotPassword}
+        />
+        <Route
+          exact path='/changepassword/:id/:token'
+          component={ChangePassword}
+        />
+        <Route
+          exact path='/checkemail'
+          component={CheckEmail}
         />
         <PrivateRoute
           exact path='/videopage'

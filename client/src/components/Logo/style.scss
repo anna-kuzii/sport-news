@@ -18,10 +18,14 @@
   text-decoration: none;
   background: $alizarin-crimson;
 
-  @media screen and (max-width: $mobile-width) {
+  @media screen and (max-width: $tablet-width) {
     z-index: 10;
+    align-items: flex-end;
     width: 100%;
     max-width: $mobile-width;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 60px;
   }
 
   &:focus {

@@ -21,7 +21,7 @@ export const UpdateProfile = () =>(
           name='email'
         />
       </div>
-      <button type='button' className='update-profile'>Update Profile</button>
+      <button type='button' className='update-profile-btn'>Update Profile</button>
     </div>
   </div>
 );
