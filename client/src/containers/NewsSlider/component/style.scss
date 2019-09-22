@@ -144,12 +144,19 @@
       .more-button {
         bottom: 0;
         left: 0;
+        display: block;
         width: 37.5%;
         height: 35px;
+        line-height: 35px;
         color: $white;
+        text-align: center;
         cursor: url('../../../assets/img/cursor-hover.svg'), auto;
         background: $monza;
         border: 0;
+
+        &:hover {
+          text-decoration: none;
+        }
 
         @media screen and(max-width: $tablet-width) {
           min-width: 175px;
