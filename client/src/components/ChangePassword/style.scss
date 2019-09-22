@@ -76,6 +76,12 @@
     font-style: normal;
     font-weight: bold;
     line-height: 19px;
+    outline: 0;
+
+    &:active {
+      color: $white;
+      background: $alizarin-crimson;
+    }
 
     @media screen and (max-width: $mobile-width) {
       width: 90vw;
