@@ -12,10 +12,10 @@ export const forgotPassword = (email) => (
     instance.post('/forgotpassword', email)
       .then(() => {
         dispatch(forgotPasswordSuccess(email));
+        history.push('/checkemail');
       }).catch(error => {
         dispatch(forgotPasswordFailure(error.response.data && error.response.data.message));
       });
-    history.push('/checkemail');
   }
 );
 
@@ -25,6 +25,6 @@ const forgotPasswordSuccess = (data) =>({
 });
 
 const forgotPasswordFailure = (error) =>({
-  type: userConstants.FORGOT_PASSWORD_SUCCESS,
+  type: userConstants.FORGOT_PASSWORD_FAILURE,
   error,
 });

@@ -1,4 +1,4 @@
-@import '../../../styles/variables';
+@import '../../styles/variables';
 
 .data-loading {
   display: flex;
@@ -70,7 +70,7 @@
           width: 30px;
           height: 30px;
           padding: 0;
-          background: url('../../../assets/img/left-arrow-mobile.svg');
+          background: url('../../assets/img/left-arrow-mobile.svg');
           border: 0;
           outline: 0;
           transform: translateY(-50%);
@@ -88,7 +88,7 @@
           width: 30px;
           height: 30px;
           padding: 0;
-          background: url('../../../assets/img/right-arrow-mobile.svg');
+          background: url('../../assets/img/right-arrow-mobile.svg');
           border: 0;
           outline: 0;
           transform: translateY(-50%);
@@ -150,7 +150,7 @@
         line-height: 35px;
         color: $white;
         text-align: center;
-        cursor: url('../../../assets/img/cursor-hover.svg'), auto;
+        cursor: url('../../assets/img/cursor-hover.svg'), auto;
         background: $monza;
         border: 0;
 
@@ -185,7 +185,7 @@
 
         &:hover {
           color: $flush-mahogany;
-          cursor: url('../../../assets/img/cursor-hover.svg'), auto;
+          cursor: url('../../assets/img/cursor-hover.svg'), auto;
         }
 
         @media screen and (max-width: $laptop-width) {
@@ -202,11 +202,11 @@
         width: 30px;
         height: 30px;
         margin-right: 10px;
-        background: url('../../../assets/img/left-arrow.svg');
+        background: url('../../assets/img/left-arrow.svg');
         border: 0;
 
         &:hover {
-          background: url('../../../assets/img/hover-left-arrow.svg');
+          background: url('../../assets/img/hover-left-arrow.svg');
         }
 
         @media screen and (max-width: $laptop-width) {
@@ -220,11 +220,11 @@
         width: 30px;
         height: 30px;
         margin-left: 10px;
-        background: url('../../../assets/img/right-arrow.svg');
+        background: url('../../assets/img/right-arrow.svg');
         border: 0;
 
         &:hover {
-          background: url('../../../assets/img/hover-right-arrow.svg');
+          background: url('../../assets/img/hover-right-arrow.svg');
         }
 
         @media screen and (max-width: $laptop-width) {
@@ -268,7 +268,7 @@
 
       &:hover {
         z-index: 10;
-        cursor: url('../../../assets/img/cursor-hover.svg'), auto;
+        cursor: url('../../assets/img/cursor-hover.svg'), auto;
         background: $white;
         box-shadow: 0 2px 24px $news-hover-11;
 
@@ -281,7 +281,7 @@
         // sass-lint:disable nesting-depth
         .hover-arrow {
           display: block;
-          cursor: url('../../../assets/img/cursor-hover.svg'), auto;
+          cursor: url('../../assets/img/cursor-hover.svg'), auto;
 
           @media screen and(max-width: $tablet-width) {
             display: none;

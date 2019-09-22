@@ -34,6 +34,10 @@ import {
 
 import {
   resetPassword,
+} from '../containers/ResetPassword/reducer';
+
+import {
+  changePassword,
 } from '../containers/ChangePassword/reducer';
 
 import {
@@ -55,6 +59,7 @@ const rootReducer = combineReducers({
   subscription,
   resetPassword,
   update,
+  changePassword,
 });
 
 const loggerMiddleware = createLogger();

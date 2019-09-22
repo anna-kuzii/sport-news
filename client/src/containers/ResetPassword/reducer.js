@@ -3,22 +3,22 @@ import {
 } from './constants';
 
 export const initialState = {
-  changePassword: false,
+  resetPassword: false,
   error: null,
 };
 
-export function changePassword(state = initialState, action) {
+export function resetPassword(state = initialState, action) {
   switch (action.type) {
-    case userConstants.CHANGE_PASSWORD_SUCCESS:
+    case userConstants.RESET_PASSWORD_SUCCESS:
       return {
         ...state,
-        changePassword: true,
+        resetPassword: true,
       };
-    case userConstants.CHANGE_PASSWORD_FAILURE:
+    case userConstants.RESET_PASSWORD_FAILURE:
       return {
         ...state,
         error: action.error,
-        changePassword: false,
+        resetPassword: false,
       };
     default :
       return state;
