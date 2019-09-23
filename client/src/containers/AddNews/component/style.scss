@@ -164,6 +164,7 @@
       color: $black;
       border: 1px solid $mischka;
       box-sizing: border-box;
+      resize: none;
 
       &::placeholder {
         color: $ghost;
