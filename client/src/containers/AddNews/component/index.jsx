@@ -41,7 +41,7 @@ class AddNews extends Component {
 
     const { image, alt, title, text } = this.state;
     const { firstName, lastName, addArticle } = this.props;
-    const author = firstName +' '+lastName;
+    const author = `${firstName}  ${lastName}`;
 
     fd.append('author', author);
     fd.append('image', image);
