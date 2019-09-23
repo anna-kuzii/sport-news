@@ -25,6 +25,11 @@ export function login(state = initialState, action) {
         ...state,
         loading: true,
       };
+    case userConstants.UPDATE_USER:
+      return {
+        ...state,
+        user: action.payload,
+      };
     case userConstants.SET_CURRENT_GET_ERRORS:
       return {
         ...state,

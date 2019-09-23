@@ -1,10 +1,8 @@
 import React from 'react';
-import { NewsSlider } from '../../containers/NewsSlider/component';
+import { NewsSlider } from '../NewsSlider';
 import { Breakdown } from '../Breakdown';
 import { Layout } from '../Layout';
 import NewsOfTheDays from '../../containers/NewsOfTheDays/component';
-
-
 import './style.scss';
 
 export const Home = () => (
