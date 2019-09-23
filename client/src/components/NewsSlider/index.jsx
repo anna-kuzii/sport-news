@@ -161,10 +161,10 @@ class NewsSlider extends Component {
             <div className='sub-articles-container'>
               {articleArray.map(element =>(
                 <div className='sub-article' key={element.id} >
-                  <img src={articles[element - 1].imageURL} alt='sub article' />
-                  <p className='sub-article-title'> Lorem ipsum </p>
-                  <p className='sub-article-text'>{articles[element - 1].title}  </p>
                   <Link to={`/news/${articles[element - 1]._id}`}>
+                    <img src={articles[element - 1].imageURL} alt='sub article' />
+                    <p className='sub-article-title'> Lorem ipsum </p>
+                    <p className='sub-article-text'>{articles[element - 1].title}  </p>
                     <img
                       src={hoverArrow}
                       alt='hover arrow'

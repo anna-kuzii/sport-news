@@ -8,26 +8,23 @@ import { Copyright } from '../Copyright';
 import { Footer } from '../../containers/Footer/component';
 
 
-export const Layout = (props) => {
-  const { children } = props;
-
-  return (
-    <div>
-      <Header />
-      <MenuWrapper menuList={menuData.menu} />
-      {children}
-      <div className='most-wrapper'>
-        <div className='most-news-container'>
-          <MostPopularComments
-            blockTitle='most popular'
-          />
-          <MostPopularComments
-            blockTitle='most comments'
-          />
-        </div>
+export const Layout = ({ children }) => (
+  <div>
+    <Header />
+    <MenuWrapper menuList={menuData.menu} />
+    {children}
+    <div className='most-wrapper'>
+      <div className='most-news-container'>
+        <MostPopularComments
+          blockTitle='most popular'
+        />
+        <MostPopularComments
+          blockTitle='most comments'
+        />
       </div>
-      <Footer />
-      <Copyright />
     </div>
-  );
-};
+    <Footer />
+    <Copyright />
+  </div>
+);
+

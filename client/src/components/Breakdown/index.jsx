@@ -1,6 +1,6 @@
 import React from 'react';
-import NewsBlock from '../../containers/NewsBlock/component';
-import SingleNews from '../../containers/SingleNews/component';
+import NewsBlock from '../NewsBlock';
+import SingleNews from '../SingleNews';
 import './style.scss';
 
 export const Breakdown = () => (
