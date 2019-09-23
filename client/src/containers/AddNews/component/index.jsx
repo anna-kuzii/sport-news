@@ -40,9 +40,10 @@ class AddNews extends Component {
     const fd = new FormData();
 
     const { image, alt, title, text } = this.state;
-    const { user, addArticle } = this.props;
+    const { firstName, lastName, addArticle } = this.props;
+    const author = `${firstName}  ${lastName}`;
 
-    fd.append('author', user);
+    fd.append('author', author);
     fd.append('image', image);
     fd.append('alt', alt);
     fd.append('title', title);
@@ -137,7 +138,6 @@ class AddNews extends Component {
           <div className='text-form'>
             <label htmlFor='text-input'>Content</label>
             <textarea
-              type='text'
               id='text-input'
               name='text'
               value={text}
@@ -151,8 +151,9 @@ class AddNews extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  user: state.login.user.email,
+const mapStateToProps = ({ login: { user: { firstName, lastName } } }) => ({
+  firstName,
+  lastName,
 });
 
 const actionCreators = {

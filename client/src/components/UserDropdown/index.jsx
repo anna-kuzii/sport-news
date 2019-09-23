@@ -81,7 +81,6 @@ class UserDropdown extends Component {
 
 const mapStateToProps = ({ login: { user } }) => ({
   user,
-}
-);
+});
 
 export default connect(mapStateToProps)(UserDropdown);
