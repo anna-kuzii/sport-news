@@ -27,8 +27,9 @@
 
     .avatar {
       display: inline-block;
-      width: 34px;
-      height: 34px;
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
       vertical-align: middle;
       cursor: pointer;
       background: url('../../assets/img/user-avatar.svg') no-repeat;
@@ -132,7 +133,7 @@
     .link-wrapper {
       a {
         display: block;
-        padding: 10px 25px;
+        padding: 10px 20px;
         font-size: 14px;
         line-height: 19px;
         color: $black;

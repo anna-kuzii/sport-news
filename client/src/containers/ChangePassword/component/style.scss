@@ -1,17 +1,10 @@
-@import '../../../styles/variables';
+@import '../../../styles/variables.scss';
 
 .change-password-wrapper {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-
-  .change-password-error {
-    display: block;
-    font-size: 12px;
-    font-weight: 400;
-    color: $alizarin-crimson;
-  }
 
   .change-password-form {
     position: relative;
@@ -22,7 +15,7 @@
 
     @media screen and (max-width: $mobile-width) {
       width: 90vw;
-      padding-top: 20vh;
+      min-width: 0;
       margin: 0;
     }
 
@@ -35,7 +28,8 @@
       @media screen and (max-width: $mobile-width) {
         width: 90vw;
         min-width: 0;
-        margin: 0 auto 20px;
+        margin: 0 auto;
+        margin-bottom: 20px;
       }
     }
 
@@ -92,5 +86,5 @@
     @media screen and (max-width: $mobile-width) {
       width: 90vw;
     }
+   }
   }
-}

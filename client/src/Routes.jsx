@@ -8,13 +8,12 @@ import { ForgotPassword } from './containers/ForgotPassword/component';
 import { CheckEmail } from './components/CheckEmail';
 import { ResetPassword } from './containers/ResetPassword/component';
 import { Home } from './components/Home';
-import { Dealbook } from './components/Dealbook/component';
+import { Dealbook } from './components/Dealbook';
 import { UserProfile } from './components/UserProfile';
 import { NotFound } from './components/NotFound';
 import VideoPage from './containers/VideoPage/component';
 import AddNews from './containers/AddNews/component';
 import PrivateRoute from './components/PrivateRoute';
-
 import { NewsArticle } from './components/NewsArticle';
 
 export const Routes = () => (
@@ -62,7 +61,7 @@ export const Routes = () => (
           path='/addnews'
           component={AddNews}
         />
-        <Route
+        <PrivateRoute
           exact path='/news/:id'
           component={NewsArticle}
         />

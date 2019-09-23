@@ -5,11 +5,9 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  margin-top: 50px;
 
   @media screen and (max-width: $mobile-width) {
     width: 100%;
-    padding-top: 20vh;
     margin: 0;
   }
 
@@ -27,6 +25,10 @@
     flex-direction: column;
     min-width: 400px;
     margin: 10px 0 0;
+
+    @media screen and (max-width: $mobile-width) {
+      min-width: 0;
+    }
 
     input {
       width: 100%;
