@@ -4,9 +4,11 @@ import { Breakdown } from '../Breakdown';
 import { Layout } from '../Layout';
 import NewsOfTheDays from '../../containers/NewsOfTheDays/component';
 import './style.scss';
+import ScrollToTop from '../ScrollToTop';
 
 export const Home = () => (
   <Layout>
+    <ScrollToTop />
     <div className='home-page-wrapper'>
       <div className='slider-container'>
         <NewsSlider />

@@ -6,6 +6,7 @@ import { fetchNewsData } from '../../containers/NewsLogic/action';
 import { connect } from 'react-redux';
 import './style.scss';
 import Loader from 'react-loader-spinner';
+import ScrollToTop from '../ScrollToTop';
 
 
 const Dealbook = ({ newsData, loading }) => {
@@ -26,6 +27,7 @@ const Dealbook = ({ newsData, loading }) => {
       )
       : (
         <Layout>
+          <ScrollToTop />
           <div className='dealbook-wrapper'>
             <div className='news-banner'>DEALBOOK</div>
             <div className='main-article-container'>

@@ -4,6 +4,7 @@ import camera from '../../../assets/img/camera.svg';
 import './style.scss';
 import { connect } from 'react-redux';
 import { addArticle } from '../action';
+import ScrollToTop from '../../../components/ScrollToTop';
 
 class AddNews extends Component {
   constructor(props) {
@@ -94,6 +95,7 @@ class AddNews extends Component {
 
     return (
       <Fragment>
+        <ScrollToTop />
         <Header />
         <div className='add-news-wrapper'>
           <div className='button-wrapper'>
