@@ -45,16 +45,16 @@
   .video-word-wrap {
     position: absolute;
     top: 35vh;
-    left: 17px;
+    left: 60px;
     z-index: 2;
     font-family: $roboto ;
-    font-size: 120px;
+    font-size: 100px;
     font-style: normal;
     font-weight: bold;
-    line-height: 192px;
+    line-height: 120px;
     letter-spacing: 1.2px;
     color: $grey-30;
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
 
     @media screen and (max-width: $tablet-width) {
       display: none;
