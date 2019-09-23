@@ -35,8 +35,7 @@
       @media screen and (max-width: $mobile-width) {
         width: 90vw;
         min-width: 0;
-        margin: 0 auto;
-        margin-bottom: 20px;
+        margin: 0 auto 20px;
       }
     }
 
@@ -93,5 +92,5 @@
     @media screen and (max-width: $mobile-width) {
       width: 90vw;
     }
-   }
   }
+}

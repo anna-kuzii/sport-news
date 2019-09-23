@@ -6,7 +6,6 @@ import {
 } from '../../axios.instanse';
 import { history } from '../../helpers';
 
-
 export const changePassword = (data) => (
   dispatch =>{
     instance.post('/changepassword', data)

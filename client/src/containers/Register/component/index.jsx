@@ -31,7 +31,7 @@ class Register extends Component {
 
   componentDidMount() {
     const { isAuthenticated, history } = this.props;
-    
+
     if (isAuthenticated) {
       history.push('/');
     }
@@ -54,14 +54,13 @@ class Register extends Component {
     const { register } = this.props;
     const validation = this.validator.validate(state);
 
-    register(newUser);
     this.setState((prevState) => ({
       ...prevState,
       validation: this.validator.validate(prevState),
       submitted: true,
     }));
     if (validation.isValid) {
-    // handle actual form submission here
+      register(newUser);
     }
   }
 
