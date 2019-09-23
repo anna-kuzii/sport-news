@@ -1,6 +1,10 @@
 @import '../../../styles/variables';
 
 .menu-wrapper {
+  @media screen and (max-width: $tablet-width) {
+    display: none;
+  }
+
   .active-menu {
     position: absolute;
     top: 0;
@@ -34,7 +38,7 @@
 
   .list-container {
     width: 250px;
-    padding: 84px 0 0;
+    padding: 0;
     margin: 0;
     list-style-type: none;
 
@@ -43,48 +47,53 @@
     }
   }
 
+  .home-link {
+    margin: 84px 0 0;
+    text-transform: uppercase;
+  }
+
+  a {
+    display: flex;
+    width: 100%;
+    padding: 8px 10px 8px 65px;
+    font-family: $open-sans;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 19px;
+    color: $silver-chalice;
+    background: none;
+    border: 0;
+
+    &:focus {
+      outline: 0;
+    }
+
+    &.active-item,
+    &:hover {
+      position: relative;
+      color: $flush-mahogany;
+      border-right: 6px solid $flush-mahogany;
+
+      // sass-lint:disable nesting-depth
+      &::before {
+        position: absolute;
+        left: 55px;
+        content: '•';
+      }
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
   .list-item {
     &:focus {
       outline: 0;
     }
 
-    button {
-      display: flex;
-      width: 100%;
-      padding: 8px 10px 8px 65px;
-      font-family: $open-sans;
-      font-size: 14px;
-      font-weight: bold;
-      line-height: 19px;
-      color: $silver-chalice;
-      background: none;
-      border: 0;
-
-      &:focus {
-        outline: 0;
-      }
-
-      &.active-item,
-      &:hover {
-        position: relative;
-        color: $flush-mahogany;
-        border-right: 6px solid $flush-mahogany;
-
-        // sass-lint:disable nesting-depth
-        &::before {
-          position: absolute;
-          left: 55px;
-          content: '•';
-        }
-      }
-
-      &:hover {
-        text-decoration: none;
-      }
-    }
-
     .list-item {
-      button {
+      a {
         font-family: $open-sans;
         font-style: normal;
         font-weight: normal;
@@ -109,8 +118,13 @@
       left: 100%;
       margin-top: 0;
 
+      .home-link,
       .active-menu {
         display: none;
+      }
+
+      .list-container {
+        margin: 84px 0 0;
       }
 
       .desktop-menu-container {
@@ -119,7 +133,7 @@
         .list-container {
           max-width: 170px;
 
-          button {
+          a {
             padding: 8px 80px 8px 25px;
           }
         }

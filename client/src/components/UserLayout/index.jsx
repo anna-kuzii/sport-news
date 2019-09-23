@@ -4,14 +4,11 @@ import { Header } from '../Header';
 import { Menu } from '../Menu/DesktopMenu';
 import menuData from '../../assets/data/menuItems';
 
-export const UserLayout = (props) => {
-  const { children } = props;
+export const UserLayout = ({ children }) => (
+  <div>
+    <Header />
+    <Menu menuList={menuData.menu} />
+    {children}
+  </div>
+);
 
-  return (
-    <div>
-      <Header />
-      <Menu menuList={menuData.menu} />
-      {children}
-    </div>
-  );
-};

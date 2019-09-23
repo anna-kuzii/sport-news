@@ -13,9 +13,10 @@ export class MenuWrapper extends Component {
     };
   }
 
-  componentDidMount() {
+  componentDidMount = () => {
+    this.handleWindowResize();
     window.addEventListener('resize', this.handleWindowResize);
-  }
+  };
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.handleWindowResize);

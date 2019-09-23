@@ -26,8 +26,8 @@
 
   .top-info {
     display: flex;
-    justify-content: start;
-    max-width: 460px;
+    justify-content: flex-start;
+    width: 460px;
     margin: 0 0 15px;
 
     h4 {
@@ -100,16 +100,15 @@
       width: 100%;
       height: auto;
 
+      @media screen and (max-width: $tablet-width) {
+        margin-bottom: 15px;
+      }
+
       @media screen and (max-width: $mobile-width) {
         display: flex;
         justify-content: center;
         width: 100%;
         min-width: 375px;
-        margin-bottom: 15px;
-      }
-
-      @media screen and (max-width: $tablet-width) {
-        margin-bottom: 15px;
       }
 
       img {
@@ -118,11 +117,6 @@
         object-fit: cover;
 
         @media screen and (max-width: $tablet-width) {
-          width: 100%;
-          height: auto;
-        }
-
-        @media screen and (max-width: $mobile-width) {
           width: 100%;
           height: auto;
         }

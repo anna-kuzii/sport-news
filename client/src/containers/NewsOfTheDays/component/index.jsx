@@ -7,12 +7,6 @@ import { connect } from 'react-redux';
 
 
 class NewsOfTheDays extends Component {
-  componentDidMount() {
-    const { fetchNewsData } = this.props;
-
-    fetchNewsData();
-  }
-
   showSeeMoreButton = (text, NewsArticle) => (
     text.length < 100 ? text
       : <p>{text.slice(0, 60)}<Link to={NewsArticle} className='see-more'> ...</Link></p>

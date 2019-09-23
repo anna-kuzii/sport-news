@@ -1,14 +1,15 @@
 @import '../../styles/variables.scss';
 
 .userprofile-wrapper {
+  padding-top: 83px;
 
   .buttons {
     display: flex;
     justify-content: center;
-    padding: 15vh 0 5vh;
+    padding: 80px 25vw;
 
-    @media screen and (max-width: $mobile-width) {
-      display: none;
+    @media screen and (max-width: $tablet-width) {
+      padding: 15vh 10vw 5vh;
     }
 
     .button {
