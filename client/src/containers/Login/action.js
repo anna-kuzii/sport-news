@@ -33,3 +33,8 @@ export const setCurrentUser = decoded => ({
   type: userConstants.SET_CURRENT_USER_SUCCESS,
   payload: decoded,
 });
+
+export const updateUserData = data => ({
+  type: userConstants.UPDATE_USER,
+  payload: data,
+});
