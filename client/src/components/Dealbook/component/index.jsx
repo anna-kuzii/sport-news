@@ -35,7 +35,8 @@ class Dealbook extends Component {
         : (
           <Layout>
             <div className='dealbook-wrapper'>
-              <div className='news-banner'>DEALBOOK</div>
+              <div className='dealbook-banner'>DEALBOOK</div>
+              <div className='news-banner'>NEWS</div>
               <div className='main-article-container'>
                 <div className='league-title'>{newsData[indexArticle].league}<span> &gt; {newsData[indexArticle].title}</span></div>
                 <img src={newsData[indexArticle].imageURL} alt='main article' />

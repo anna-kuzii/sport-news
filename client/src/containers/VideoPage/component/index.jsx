@@ -27,7 +27,6 @@ class VideoPage extends Component {
         </div>
       );
     }
-    //TODO: change to array
     return !videoData.length ? (
       <Layout>
         <div className='empty-db'>
