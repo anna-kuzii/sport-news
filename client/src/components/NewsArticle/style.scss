@@ -15,7 +15,8 @@
 
   @media screen and (max-width: $tablet-width) {
     height: auto;
-    margin: 0;
+    padding: 100px 15px;
+    margin: 0 auto;
   }
 
   .news-wrapper {
@@ -149,7 +150,7 @@
       @media screen and (max-width: $mobile-width) {
         position: static;
         width: 100%;
-        padding: 0 15px;
+        padding: 0;
         background: none;
         box-shadow: none;
       }
@@ -203,7 +204,7 @@
     width: 100%;
 
     @media screen and (max-width: $mobile-width) {
-      padding: 0 15px;
+      padding: 0;
     }
 
     p {
