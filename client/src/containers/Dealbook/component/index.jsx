@@ -9,12 +9,6 @@ import Loader from 'react-loader-spinner';
 
 
 class Dealbook extends Component {
-  componentDidMount() {
-    const { fetchNewsData } = this.props;
-
-    fetchNewsData();
-  }
-
   render() {
     const { newsData, loading } = this.props;
     const indexArticle = Math.floor(Math.random() * Math.floor(newsData.length));
