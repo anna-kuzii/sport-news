@@ -58,6 +58,10 @@
     letter-spacing: 1.2px;
     color: $grey-30;
     transform: rotate(-90deg);
+
+    @media screen and(max-width: $tablet-width) {
+      display: none;
+    }
   }
 
   .news-banner {
@@ -73,6 +77,10 @@
     letter-spacing: 1.2px;
     color: $grey-30;
     transform: rotate(90deg);
+
+    @media screen and(max-width: $tablet-width) {
+      display: none;
+    }
   }
 
   .main-article-container {
@@ -91,9 +99,8 @@
       flex-direction: column;
       width: 100%;
       height: auto;
-      max-width: 100%;
-      padding: 15vh 0 10vh;
-      margin-bottom: 20px;
+      padding: 15vh 0 0;
+      margin-bottom: 0;
     }
 
     .league-title {

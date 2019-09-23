@@ -16,7 +16,7 @@ const CheckEmail = ({ email }) => (
       </div>
       <div className='check-email-msg-wrapper'>
         <div className='get-started'>
-          <h3>Dont have an account?</h3>
+          <h3>Don`t have an account?</h3>
           <Link to='/register' className='btn btn-primary'>Get Started</Link>
         </div>
         <div className='check-email-msg'>
