@@ -41,6 +41,7 @@ class UpdateProfile extends Component {
 
     const { email, _id } = this.props.user;
     const { newEmail, newName } = this.state;
+    const validation = this.validator.validate(this.state);
 
     const user = {
       _id,
@@ -49,7 +50,9 @@ class UpdateProfile extends Component {
       newName,
     };
 
-    update(user);
+    if (validation.isValid) {
+      update(user);
+    }
   }
 
   render() {

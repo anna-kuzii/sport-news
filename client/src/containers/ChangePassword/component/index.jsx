@@ -48,8 +48,6 @@ class ChangePassword extends Component {
       oldPassword,
       password: newPassword,
     };
-
-    changePassword(data);
     const validation = this.validator.validate(this.state);
 
     this.setState((prevState) => ({
@@ -57,8 +55,9 @@ class ChangePassword extends Component {
       validation: this.validator.validate(prevState),
       submitted: true,
     }));
+
     if (validation.isValid) {
-    // handle actual form submission here
+      changePassword(data);
     }
   }
 

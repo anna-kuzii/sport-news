@@ -116,14 +116,13 @@
       margin-right: 20px;
       background-color: $wild-sand;
       transform: translateY(-30%);
-      //sass-lint:disable-block no-vendor-prefixes
-      -webkit-box-shadow: -21px 21px 54px -11px $black-70;
+      box-shadow: -21px 21px 54px -11px $black-70;
 
       @media screen and (max-width: $tablet-width) {
         position: static;
         width: 100%;
         padding: 10px;
-        -webkit-box-shadow: none;
+        box-shadow: none;
       }
 
      }

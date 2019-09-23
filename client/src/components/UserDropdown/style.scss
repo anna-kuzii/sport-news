@@ -100,10 +100,11 @@
     }
 
     .dropdown-triangle {
+      position: absolute;
+      top: -5px;
+      right: 5px;
       width: 0;
       height: 0;
-      margin-top: -5px;
-      margin-left: 92%;
       border-color: transparent transparent $white;
       border-style: solid;
       border-width: 0 5px 7px;

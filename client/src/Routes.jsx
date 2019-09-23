@@ -8,12 +8,12 @@ import { ForgotPassword } from './containers/ForgotPassword/component';
 import { CheckEmail } from './components/CheckEmail';
 import { ResetPassword } from './containers/ResetPassword/component';
 import { Home } from './components/Home';
-import { Dealbook } from './containers/Dealbook/component';
+import { Dealbook } from './components/Dealbook/component';
 import { UserProfile } from './components/UserProfile';
 import { NotFound } from './components/NotFound';
 import VideoPage from './containers/VideoPage/component';
 import AddNews from './containers/AddNews/component';
-import PrivateRoute from './containers/PrivateRoute';
+import PrivateRoute from './components/PrivateRoute';
 
 import { NewsArticle } from './components/NewsArticle';
 
