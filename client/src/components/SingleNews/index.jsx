@@ -24,19 +24,21 @@ const SingleNews = ({ newsData }) => {
       )
       : (
         <div className='single-news'>
-          <div className='single-news-logo'>
-            <h2>{newsData[indexArticle].league}</h2>
-          </div>
-          <img src={newsData[indexArticle].imageURL} alt='Single news' />
-          <div>
-            <h4>{newsData[indexArticle].title}</h4>
-          </div>
           <Link to={`/news/${newsData[indexArticle]._id}`}>
-            <img
-              src={hoverArrow}
-              alt='hover arrow'
-              className='hover-arrow'
-            />
+            <div className='single-news-logo'>
+              <h2>{newsData[indexArticle].league}</h2>
+            </div>
+            <img src={newsData[indexArticle].imageURL} alt='Single news' />
+            <div>
+              <h4>{newsData[indexArticle].title}</h4>
+            </div>
+            <Link to={`/news/${newsData[indexArticle]._id}`}>
+              <img
+                src={hoverArrow}
+                alt='hover arrow'
+                className='hover-arrow'
+              />
+            </Link>
           </Link>
         </div>
       )

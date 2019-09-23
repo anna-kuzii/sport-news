@@ -26,6 +26,12 @@
       }
     }
 
+    a {
+      display: flex;
+      flex-direction: row;
+      text-decoration: none;
+    }
+
     .hover-arrow {
       position: absolute;
       right: 0;

@@ -26,17 +26,19 @@ const NewsBlock = ({ newsData }) => {
         newsData.slice(indexArticle, indexArticle + 3).map(element => (
           <section className='news-block-section' key={element.id} >
             <div className='news-block' key={element.id}>
-              <img src={element.imageURL} alt='News block' />
-              <div key={element.id}>
-                <h4>{element.title}</h4>
-                <p>{element.text}</p>
-              </div>
               <Link to={`/news/${element._id}`}>
-                <img
-                  src={hoverArrow}
-                  alt='hover arrow'
-                  className='hover-arrow'
-                />
+                <img src={element.imageURL} alt='News block' />
+                <div key={element.id}>
+                  <h4>{element.title}</h4>
+                  <p>{element.text}</p>
+                </div>
+                <Link to={`/news/${element._id}`}>
+                  <img
+                    src={hoverArrow}
+                    alt='hover arrow'
+                    className='hover-arrow'
+                  />
+                </Link>
               </Link>
             </div>
           </section>
