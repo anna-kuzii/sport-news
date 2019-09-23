@@ -54,7 +54,7 @@
     line-height: 120px;
     letter-spacing: 1.2px;
     color: $grey-30;
-    transform: rotate(-90deg);
+    transform: rotate(90deg);
 
     @media screen and (max-width: $tablet-width) {
       display: none;

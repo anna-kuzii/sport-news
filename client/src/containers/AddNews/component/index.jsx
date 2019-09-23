@@ -65,6 +65,7 @@ class AddNews extends Component {
 
   render() {
     const { imageURL, alt, title, text } = this.state;
+    const { error } = this.props;
 
     let imgPreview = null;
 
@@ -112,6 +113,10 @@ class AddNews extends Component {
        Save
             </button>
           </div>
+          { error
+                        && <span className='add-news-error'>{error}</span>
+
+          }
           {imgPreview}
           <div className='alt-name-form'>
             <label htmlFor='alt-name-input'>Alt</label>
@@ -151,9 +156,10 @@ class AddNews extends Component {
   }
 }
 
-const mapStateToProps = ({ login: { user: { firstName, lastName } } }) => ({
+const mapStateToProps = ({ login: { user: { firstName, lastName } }, addArticleReducer: { error } }) => ({
   firstName,
   lastName,
+  error,
 });
 
 const actionCreators = {
