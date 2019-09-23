@@ -63,11 +63,9 @@ export class Menu extends Component {
       showMenu = activeMenu ? '' : 'active-menu',
       toggleIcon = activeMenu ? burgerIcon : closeMenu;
 
-    if (activeMenu) {
-      document.body.style.overflow = 'visible';
-    } else {
-      document.body.style.overflow = 'hidden';
-    }
+    (activeMenu)
+      ? document.body.style.overflow = 'visible'
+      : document.body.style.overflow = 'hidden';
 
     return (
       <div className='mobile-wrapper'>

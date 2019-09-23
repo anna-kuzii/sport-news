@@ -11,12 +11,12 @@ class UpdateProfile extends Component {
 
     this.validator = new FormValidator(rules);
 
-    const { user } = this.props;
+    const { user: { email, firstName, lastName } } = this.props;
 
     this.state = {
-      email: user.email,
-      newEmail: user.email,
-      newName: `${user.firstName}  ${user.lastName}`,
+      email: email,
+      newEmail: email,
+      newName: `${firstName}  ${lastName}`,
       validation: this.validator.createValidObj(),
       submitted: false,
       error: '',
