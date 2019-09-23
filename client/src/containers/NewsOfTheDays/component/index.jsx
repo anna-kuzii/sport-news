@@ -17,7 +17,7 @@ class NewsOfTheDays extends Component {
     text.length < 100 ? text
       : <p>{text.slice(0, 60)}<Link to={NewsArticle} className='see-more'> ...</Link></p>
   );
- 
+
 
   render() {
     const { newsData } = this.props;
@@ -57,11 +57,11 @@ class NewsOfTheDays extends Component {
   }
 }
 
-const mapStateToProps = state => (
+const mapStateToProps = ({ productReducer: { newsData, loading, error } }) => (
   {
-    newsData: state.productReducer.newsData,
-    loading: state.productReducer.loading,
-    error: state.productReducer.error,
+    newsData,
+    loading,
+    error,
   }
 );
 

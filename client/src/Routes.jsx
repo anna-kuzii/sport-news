@@ -5,16 +5,15 @@ import { history, store } from './helpers';
 import { Register } from './containers/Register/component';
 import { Login } from './containers/Login/component';
 import { ForgotPassword } from './containers/ForgotPassword/component';
-import { ChangePassword } from './containers/ChangePassword/component';
-
+import { CheckEmail } from './components/CheckEmail';
+import { ResetPassword } from './containers/ResetPassword/component';
 import { Home } from './components/Home';
-import { Dealbook } from './containers/Dealbook/component';
+import { Dealbook } from './components/Dealbook/component';
 import { UserProfile } from './components/UserProfile';
 import { NotFound } from './components/NotFound';
 import VideoPage from './containers/VideoPage/component';
 import AddNews from './containers/AddNews/component';
-import PrivateRoute from './containers/PrivateRoute';
-import { CheckEmail } from './containers/CheckEmail/component';
+import PrivateRoute from './components/PrivateRoute';
 
 import { NewsArticle } from './components/NewsArticle';
 
@@ -48,8 +47,8 @@ export const Routes = () => (
           component={ForgotPassword}
         />
         <Route
-          exact path='/changepassword/:id/:token'
-          component={ChangePassword}
+          exact path='/resetpassword/:id/:token'
+          component={ResetPassword}
         />
         <Route
           exact path='/checkemail'

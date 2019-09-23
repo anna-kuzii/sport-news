@@ -4,9 +4,19 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  max-width: 1440px;
+  height: auto;
+  max-width: 815px;
   padding: 100px 0;
-  margin: 0;
+  margin-left: 250px;
+
+  @media screen and (max-width: $mobile-width) {
+    margin: 0;
+  }
+
+  @media screen and (max-width: $tablet-width) {
+    height: auto;
+    margin: 0;
+  }
 
   .news-wrapper {
     width: 100%;
@@ -87,19 +97,34 @@
 
     .image-container {
       width: 100%;
-      height: 545px;
+      height: auto;
 
       @media screen and (max-width: $mobile-width) {
         display: flex;
         justify-content: center;
         width: 100%;
-        height: 215px;
         min-width: 375px;
         margin-bottom: 15px;
       }
 
+      @media screen and (max-width: $tablet-width) {
+        margin-bottom: 15px;
+      }
+
       img {
+        width: 100%;
         height: 100%;
+        object-fit: cover;
+
+        @media screen and (max-width: $tablet-width) {
+          width: 100%;
+          height: auto;
+        }
+
+        @media screen and (max-width: $mobile-width) {
+          width: 100%;
+          height: auto;
+        }
       }
     }
 
@@ -107,25 +132,24 @@
       position: absolute;
       bottom: 30%;
       left: 80%;
-      width: 100%;
-      max-width: 420px;
+      width: 50%;
       max-height: 270px;
       padding: 40px 55px 70px 30px;
       background-color: $wild-sand;
       box-shadow: -2px 50px 65px -8px $dove-gray-20;
 
-      @media screen and (max-width: $mobile-width) {
+      @media screen and (max-width: $tablet-width) {
         position: static;
-        max-width: 100%;
-        padding: 0 15px;
+        width: 100%;
+        padding: 0;
         background: none;
         box-shadow: none;
       }
 
-      @media screen and (max-width: $tablet-width) {
+      @media screen and (max-width: $mobile-width) {
         position: static;
-        max-width: $tablet-width;
-        padding: 15px 15px 0;
+        width: 100%;
+        padding: 0 15px;
         background: none;
         box-shadow: none;
       }

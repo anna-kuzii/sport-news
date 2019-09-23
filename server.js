@@ -47,6 +47,7 @@ const resetPassword = require('./routes/resetPassword');
 const article = require('./routes/article');
 const video = require('./routes/video');
 const subscription = require('./routes/subscription');
+const changePassword = require('./routes/changePassword');
 
 app.use('/api/register', register);
 app.use('/api/login', login);
@@ -57,6 +58,7 @@ app.use('/api/resetpassword', resetPassword);
 app.use('/api/subscription', subscription);
 app.use('/api/article', article);
 app.use('/api/video', video);
+app.use('/api/changepassword', changePassword);
 
 app.use(express.static(path.join(__dirname, 'client/build')));
 

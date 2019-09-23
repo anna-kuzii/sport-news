@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import NewsBlock from '../../NewsBlock/component';
-import { Layout } from '../../../components/Layout';
+import NewsBlock from '../../../containers/NewsBlock/component';
+import { Layout } from '../../Layout';
 import { Link } from 'react-router-dom';
-import { fetchNewsData } from '../../NewsLogic/action';
+import { fetchNewsData } from '../../../containers/NewsLogic/action';
 import { connect } from 'react-redux';
 import './style.scss';
 import Loader from 'react-loader-spinner';

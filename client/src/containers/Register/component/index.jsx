@@ -30,9 +30,9 @@ class Register extends Component {
   }
 
   componentDidMount() {
-    const { logining, history } = this.props;
-    
-    if (logining.isAuthenticated) {
+    const { isAuthenticated, history } = this.props;
+
+    if (isAuthenticated) {
       history.push('/');
     }
   }
@@ -54,23 +54,22 @@ class Register extends Component {
     const { register } = this.props;
     const validation = this.validator.validate(state);
 
-    register(newUser);
     this.setState((prevState) => ({
       ...prevState,
       validation: this.validator.validate(prevState),
       submitted: true,
     }));
     if (validation.isValid) {
-    // handle actual form submission here
+      register(newUser);
     }
   }
 
   render() {
-    const states = this.state;
-    const validation = this.submitted
-      ? this.validator.validate(states)
-      : states.validation;
-    const { registering } = this.props;
+    const { validation, firstName, lastName, email, password } = this.state;
+    const validationChecker = this.submitted
+      ? this.validator.validate(this.state)
+      : validation;
+    const { error } = this.props;
 
     return (
       <div className='register-container '>
@@ -96,59 +95,59 @@ class Register extends Component {
                 className='btn gplus-icon'
               >google</a>
               <p>Or use your email for registration</p>
-              { registering.error
-              && <span className='register-error'>{registering.error}</span>
+              { error
+              && <span className='register-error'>{error}</span>
               }
               <div className='user-info'>
-                <div className={validation.firstName.isInvalid ? 'has-error first-name': 'first-name'}>
+                <div className={validationChecker.firstName.isInvalid ? 'has-error first-name': 'first-name'}>
                   <label htmlFor='first-name-input'>First name</label>
                   <input
                     type='text'
                     id='first-name-input'
                     placeholder='John'
                     name='firstName'
-                    value={states.firstName}
+                    value={firstName}
                     onChange={this.handleChange}
                   />
-                  <span className='help-block'>{validation.firstName.message}</span>
+                  <span className='help-block'>{validationChecker.firstName.message}</span>
                 </div>
-                <div className={validation.lastName.isInvalid ? 'has-error last-name' : 'last-name'}>
+                <div className={validationChecker.lastName.isInvalid ? 'has-error last-name' : 'last-name'}>
                   <label htmlFor='last-name-input'>Last name</label>
                   <input
                     type='text'
                     id='last-name'
                     placeholder='Doe'
                     name='lastName'
-                    value={states.lastName}
+                    value={lastName}
                     onChange={this.handleChange}
                   />
-                  <span className='help-block'>{validation.lastName.message}</span>
+                  <span className='help-block'>{validationChecker.lastName.message}</span>
                 </div>
               </div>
               <div className='email-wrapper'>
-                <div className={validation.email.isInvalid ? 'has-error' : 'undefined'}>
+                <div className={validationChecker.email.isInvalid ? 'has-error' : 'undefined'}>
                   <label htmlFor='email-input'>Email</label>
                   <input
                     type='email'
                     id='email-input'
                     placeholder='johndoe@gmail.com'
                     name='email'
-                    value={states.email}
+                    value={email}
                     onChange={this.handleChange}
                   />
-                  <span className='help-block'>{validation.email.message}</span>
+                  <span className='help-block'>{validationChecker.email.message}</span>
                 </div>
-                <div className={validation.password.isInvalid ? 'has-error' : 'undefined'}>
+                <div className={validationChecker.password.isInvalid ? 'has-error' : 'undefined'}>
                   <label htmlFor='password-input'>Password</label>
                   <input
                     type='password'
                     id='password-input'
                     placeholder='4+ characters'
                     name='password'
-                    value={states.password}
+                    value={password}
                     onChange={this.handleChange}
                   />
-                  <span className='help-block'>{validation.password.message}</span>
+                  <span className='help-block'>{validationChecker.password.message}</span>
                 </div>
               </div>
               <button
@@ -167,9 +166,9 @@ class Register extends Component {
 }
 
 
-const mapState = state =>({
-  registering: state.registration,
-  logining: state.login,
+const mapState = ({ registration: { error }, login: { isAuthenticated } }) =>({
+  error,
+  isAuthenticated,
 });
 
 const actionCreators = {

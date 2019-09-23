@@ -1,14 +1,9 @@
 const express = require('express');
 
-const registerController = require('../controllers/register_controller');
+const registerController = require('../controllers/registerController');
 const registerValidation = require('../templates/registrationValidationTemplate');
 
 const router = express.Router();
-
-router.get('/', (req, res) => {
-  res.send('it is a register block');
-});
-
 
 router.post('/', registerValidation.registrationValidation, registerController.registerController);
 

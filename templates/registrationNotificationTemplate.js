@@ -14,7 +14,7 @@ const day = date.getDate();
 const currentDate = `${month} ${day}, ${year}`;
 
 exports.sendRegNotification = (user) => {
-  const mailOptions = {
+  return {
     from: '"Sport News" <process.env.USER_EMAIL>',
     to: user,
     subject: 'Subscription in Sport News',
@@ -22,7 +22,7 @@ exports.sendRegNotification = (user) => {
                 <tbody style="font-size: 24px">
                     <tr>
                         <td style="color:#000000;font-style:normal;font-family: Open Sans,sans-serif;text-align:center;font-weight:600;">
-                            <p style="margin:50px 0 50px">Hello! You have successfully registered to Sport News <br><span>  ${ currentDate }</span></p>
+                            <p style="margin:50px 0 50px">Hello! You have successfully registered to Sport News <br><span>  ${currentDate}</span></p>
                         </td>
                     </tr>
                     <table style="background:#f9f9fb;width: 100%;padding: 0 45px 50px;">
@@ -39,10 +39,8 @@ exports.sendRegNotification = (user) => {
                 </table>`,
     attachments: [ {
       filename: 'check.png',
-      path: './assets/check.png',
+      path: './client/src/assets/img/check.png',
       cid: 'unique@cid',
     } ],
   };
-
-  return mailOptions;
 };

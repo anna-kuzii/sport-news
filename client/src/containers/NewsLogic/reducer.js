@@ -19,7 +19,6 @@ export function productReducer(
       return {
         ...state,
         loading: true,
-        error: null,
       };
 
     case newsConstants.FETCH_NEWS_DATA_SUCCESS:
