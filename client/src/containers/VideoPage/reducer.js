@@ -18,7 +18,6 @@ export function videoReducer(
       return {
         ...state,
         loading: true,
-        error: null,
       };
 
     case videoConstants.FETCH_VIDEO_SUCCESS:
@@ -28,7 +27,7 @@ export function videoReducer(
         videoData: action.payload.data,
       };
 
-    case videoConstants.FETCH_DATA_FAILURE:
+    case videoConstants.FETCH_VIDEO_FAILURE:
       return {
         ...state,
         loading: false,

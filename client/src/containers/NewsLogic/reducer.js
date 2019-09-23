@@ -26,7 +26,7 @@ export function productReducer(
         ...state,
         loading: false,
         newsData: action.payload.data,
-        updateNewsData: action.updatePayload,
+        updateNewsData: action.updatePayload.slice([ -7 ]).reverse(),
       };
 
     case newsConstants.FETCH_NEWS_DATA_FAILURE:
