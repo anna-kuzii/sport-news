@@ -7,6 +7,10 @@
     position: static;
   }
 
+  &:hover {
+    cursor: url('../../assets/img/cursor-hover.svg'), auto;
+  }
+
   .button-menu {
     display: inline-block;
     padding: 5px;

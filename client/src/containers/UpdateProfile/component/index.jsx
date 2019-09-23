@@ -16,7 +16,7 @@ class UpdateProfile extends Component {
     this.state = {
       email: email,
       newEmail: email,
-      newName: `${firstName}  ${lastName}`,
+      newName: `${firstName} ${lastName}`,
       validation: this.validator.createValidObj(),
       submitted: false,
       error: '',

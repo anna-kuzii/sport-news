@@ -40,7 +40,7 @@ class NewsOfTheDays extends Component {
                 <p>photo<span><br />of the<br /></span>day</p>
               </div>
               <div className='news-article'>
-                <h1 className='title'>{newsData[indexArticle].title}</h1>
+                <h1 className='title'>{newsData[indexArticle].alt}</h1>
                 <p className='news-text'>{this.showSeeMoreButton(newsData[indexArticle].text, `/news/${newsData[indexArticle]._id}`)}</p>
                 <div className='photo-courtesy'>{newsData[indexArticle].author}</div>
               </div>

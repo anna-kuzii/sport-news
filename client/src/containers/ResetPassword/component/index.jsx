@@ -55,7 +55,7 @@ class ResetPassword extends Component {
           </div>
           <div className='reset-password-form'>
             <div className='get-started'>
-              <h3>Dont have an account?</h3>
+              <h3>Don&#39;t have an account?</h3>
               <Link to='/register' className='btn btn-primary'>Get Started</Link>
             </div>
             <div className='reset-password-wrapper'>
@@ -89,7 +89,7 @@ class ResetPassword extends Component {
               >set new password
               </button>
               <div className='sign-up'>
-                <Link to='/register' className='sign-up'>Dont have an account?</Link>
+                <Link to='/register' className='sign-up'>Don&#39;t have an account?</Link>
               </div>
               <div className='sign-in'>
                 <Link to='/login' className='sign-in'>Back to Sign in</Link>
