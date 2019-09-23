@@ -1,4 +1,4 @@
-@import '../../../styles/variables.scss';
+@import '../../styles/variables';
 
 .dealbook-wrapper {
   width: 100%;
@@ -18,13 +18,22 @@
     &:last-of-type {
       border: 0;
     }
+
+    @media screen and (max-width: $tablet-width) {
+      max-width: 100%;
+      margin: 0 20px;
+    }
   }
 
   .news-block {
     width: 100%;
-    height: 182px;
+    height: auto;
     max-width: 866px;
     border: 0;
+
+    @media screen and (max-width: $tablet-width) {
+      max-width: 100%;
+    }
 
     .hover-arrow {
       width: 16px;
@@ -42,6 +51,13 @@
       height: auto;
       max-width: 284px;
       padding: 12px;
+      object-fit: cover;
+
+      @media screen and (max-width: $mobile-width) {
+        height: auto;
+        max-width: 180px;
+        padding: 0;
+      }
     }
   }
 
@@ -73,6 +89,10 @@
     letter-spacing: 1.2px;
     color: $grey-30;
     transform: rotate(90deg);
+
+    @media screen and (max-width: $tablet-width) {
+      display: none;
+    }
   }
 
   .main-article-container {
@@ -212,7 +232,7 @@
       color: $white;
       text-align: center;
       text-decoration: none;
-      cursor: url('../../../assets/img/cursor-hover.svg'), auto;
+      cursor: url('../../assets/img/cursor-hover.svg'), auto;
       background: $monza;
       border: 0;
 
