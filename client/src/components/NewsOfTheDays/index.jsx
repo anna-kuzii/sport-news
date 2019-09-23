@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Loader from 'react-loader-spinner';
 import './style.scss';
-import { fetchNewsData } from '../../NewsLogic/action';
+import { fetchNewsData } from '../../containers/NewsLogic/action';
 import { connect } from 'react-redux';
 
 
