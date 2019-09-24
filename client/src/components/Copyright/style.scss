@@ -1,21 +1,26 @@
 @import '../../styles/variables.scss';
 
 .copyright-container {
-  position: relative;
-  z-index: 10;
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
   height: auto;
-  max-width: 1440px;
   color: $rose-white;
   background-color: $alizarin-crimson;
 
   @media screen and (max-width: $mobile-width) {
     flex-direction: column;
     padding: 0 20px 15px;
+  }
+
+  .main-container {
+    display: flex;
+    width: 100%;
+    max-width: 1440px;
+    padding: 0;
+    margin: 0 auto;
   }
 
   &:focus {
@@ -61,4 +66,10 @@
       line-height: 24px;
     }
   }
+}
+
+.copyright-wrapper {
+  position: relative;
+  z-index: 10;
+  background-color: $alizarin-crimson;
 }
