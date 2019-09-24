@@ -8,6 +8,7 @@ import './style.scss';
 export const Header = () => (
   <div className='header'>
     <div className='main-container'>
+      <div className='before-logo' />
       <div className='header-logo'>
         <Logo />
       </div>
