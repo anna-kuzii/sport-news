@@ -194,5 +194,7 @@
     text-decoration: none;
     text-transform: uppercase;
     background-color: $alizarin-crimson;
+    // sass-lint:disable-block no-vendor-prefixes
+    -webkit-appearance: none;
   }
 }
