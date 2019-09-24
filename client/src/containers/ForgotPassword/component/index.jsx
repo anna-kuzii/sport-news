@@ -70,7 +70,7 @@ class ForgotPassword extends Component {
               >request reset link
               </button>
               <div className='sign-up'>
-                <Link to='/register' className='sign-up'>Dont have an account?</Link>
+                <Link to='/register' className='sign-up'>Don&#39;t have an account?</Link>
               </div>
               <div className='sign-in'>
                 <Link to='/login' className='sign-in'>Back to Sign in</Link>
