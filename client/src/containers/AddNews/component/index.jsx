@@ -41,7 +41,7 @@ class AddNews extends Component {
 
     const { image, alt, title, text } = this.state;
     const { firstName, lastName, addArticle } = this.props;
-    const author = `${firstName}  ${lastName}`;
+    const author = `${firstName} ${lastName}`;
 
     fd.append('author', author);
     fd.append('image', image);
@@ -65,6 +65,7 @@ class AddNews extends Component {
 
   render() {
     const { imageURL, alt, title, text } = this.state;
+    const { error } = this.props;
 
     let imgPreview = null;
 
@@ -77,19 +78,19 @@ class AddNews extends Component {
       />
     )
       : imgPreview = (
-        <div className='upload-photo-bg'>
-          <div className='circle'>
-            <img src={camera} alt='camera' />
-          </div>
-          <label className='custom-input'>
-          Add picture
+        <label className='custom-input'>
+          <div className='upload-photo-bg'>
+            <div className='circle'>
+              <img src={camera} alt='camera' />
+            </div>
+            Add image
             <input
               type='file'
               name='image'
               onChange={this.handleChangeImg}
             />
-          </label>
-        </div>
+          </div>
+        </label>
       );
 
     return (
@@ -112,6 +113,10 @@ class AddNews extends Component {
        Save
             </button>
           </div>
+          { error
+                        && <span className='add-news-error'>{error}</span>
+
+          }
           {imgPreview}
           <div className='alt-name-form'>
             <label htmlFor='alt-name-input'>Alt</label>
@@ -151,9 +156,10 @@ class AddNews extends Component {
   }
 }
 
-const mapStateToProps = ({ login: { user: { firstName, lastName } } }) => ({
+const mapStateToProps = ({ login: { user: { firstName, lastName } }, addArticleReducer: { error } }) => ({
   firstName,
   lastName,
+  error,
 });
 
 const actionCreators = {

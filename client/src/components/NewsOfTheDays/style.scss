@@ -1,5 +1,6 @@
 @import '../../styles/variables';
 
+
 .newsoftheday-wrapper {
   width: 100%;
   height: auto;
@@ -100,10 +101,6 @@
         font-style: normal;
         font-weight: normal;
         line-height: 16px;
-
-        @media screen and (max-width: $mobile-width) {
-          line-height: 14px;
-        }
       }
 
       .photo-courtesy {
