@@ -2,7 +2,7 @@
 
 .dropdown-wrapper {
   position: relative;
-  z-index: 5;
+  z-index: 20;
   @media screen and (max-width: $tablet-width) {
     position: static;
   }
@@ -90,7 +90,7 @@
     right: 0;
     z-index: 20;
     max-width: 180px;
-    margin-top: 10px;
+    margin-top: 15px;
     font-size: 14px;
     text-align: left;
     background-color: $white;
