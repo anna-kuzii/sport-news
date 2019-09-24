@@ -24,11 +24,11 @@ const NewsBlock = ({ newsData }) => {
       )
       : (
         newsData.slice(indexArticle, indexArticle + 3).map(element => (
-          <section className='news-block-section' key={element.id} >
-            <div className='news-block' key={element.id}>
+          <section className='news-block-section' key={element._id} >
+            <div className='news-block' key={element._id}>
               <Link to={`/news/${element._id}`}>
                 <img src={element.imageURL} alt='News block' />
-                <div key={element.id}>
+                <div key={element._id}>
                   <h4>{element.title}</h4>
                   <p>{element.text}</p>
                 </div>
