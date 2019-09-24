@@ -15,7 +15,7 @@ const NewsArticleSchema = new Schema({
     type: String,
     required: true,
   },
-  assosiated_press: {
+  assoсiatedPress: {
     type: String,
   },
   alt: {
@@ -36,4 +36,3 @@ const NewsArticleSchema = new Schema({
 const NewsArticle = mongoose.model('newsArticles', NewsArticleSchema, 'newsarticles');
 
 module.exports = NewsArticle;
-

@@ -4,6 +4,7 @@ import './style.scss';
 import { Layout } from '../../../components/Layout';
 import { fetchVideoData } from '../action';
 import { connect } from 'react-redux';
+import ScrollToTop from '../../../components/ScrollToTop';
 
 class VideoPage extends Component {
   componentDidMount() {
@@ -27,7 +28,6 @@ class VideoPage extends Component {
         </div>
       );
     }
-    //TODO: change to array
     return !videoData.length ? (
       <Layout>
         <div className='empty-db'>
@@ -37,6 +37,7 @@ class VideoPage extends Component {
     )
       :(
         <Layout>
+          <ScrollToTop />
           <div className='video-page-wrapper'>
             <div className='news-word-wrap'>
                   NEWS

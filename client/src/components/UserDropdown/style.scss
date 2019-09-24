@@ -2,9 +2,13 @@
 
 .dropdown-wrapper {
   position: relative;
-  z-index: 5;
+  z-index: 20;
   @media screen and (max-width: $tablet-width) {
     position: static;
+  }
+
+  &:hover {
+    cursor: url('../../assets/img/cursor-hover.svg'), auto;
   }
 
   .button-menu {
@@ -27,8 +31,9 @@
 
     .avatar {
       display: inline-block;
-      width: 34px;
-      height: 34px;
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
       vertical-align: middle;
       cursor: pointer;
       background: url('../../assets/img/user-avatar.svg') no-repeat;
@@ -85,7 +90,7 @@
     right: 0;
     z-index: 20;
     max-width: 180px;
-    margin-top: 10px;
+    margin-top: 15px;
     font-size: 14px;
     text-align: left;
     background-color: $white;
@@ -100,10 +105,11 @@
     }
 
     .dropdown-triangle {
+      position: absolute;
+      top: -5px;
+      right: 5px;
       width: 0;
       height: 0;
-      margin-top: -5px;
-      margin-left: 92%;
       border-color: transparent transparent $white;
       border-style: solid;
       border-width: 0 5px 7px;
@@ -131,7 +137,7 @@
     .link-wrapper {
       a {
         display: block;
-        padding: 10px 25px;
+        padding: 10px 20px;
         font-size: 14px;
         line-height: 19px;
         color: $black;

@@ -57,7 +57,7 @@ class Login extends Component {
           </div>
           <div className='log-in-form'>
             <div className='get-started'>
-              <h3>Dont have an account?</h3>
+              <h3>Don&#39;t have an account?</h3>
               <Link to='/register' className='btn btn-primary'>Get Started</Link>
             </div>
             <div className='log-in-wrapper'>

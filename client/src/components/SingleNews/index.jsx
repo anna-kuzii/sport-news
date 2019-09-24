@@ -1,31 +1,30 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Loader from 'react-loader-spinner';
-import hoverArrow from '../../../assets/img/news-hover-arrow.svg';
+import hoverArrow from '../../assets/img/news-hover-arrow.svg';
 import { Link } from 'react-router-dom';
-import { fetchNewsData } from '../../NewsLogic/action';
+import { fetchNewsData } from '../../containers/NewsLogic/action';
 import { connect } from 'react-redux';
 
 import './style.scss';
 
-class SingleNews extends Component {
-  render() {
-    const { newsData } = this.props;
-    const indexArticle = Math.floor(Math.random() * Math.floor(newsData.length));
+const SingleNews = ({ newsData }) => {
+  const indexArticle = Math.floor(Math.random() * Math.floor(newsData.length));
 
-    return (
-      !newsData.length
-        ? (
-          <div className='data-loading'>
-            <Loader
-              type='TailSpin'
-              color='#C63638'
-              height='150'
-              width='150'
-            />
-          </div>
-        )
-        : (
-          <div className='single-news'>
+  return (
+    !newsData.length
+      ? (
+        <div className='data-loading'>
+          <Loader
+            type='TailSpin'
+            color='#C63638'
+            height='150'
+            width='150'
+          />
+        </div>
+      )
+      : (
+        <div className='single-news'>
+          <Link to={`/news/${newsData[indexArticle]._id}`}>
             <div className='single-news-logo'>
               <h2>{newsData[indexArticle].league}</h2>
             </div>
@@ -40,10 +39,10 @@ class SingleNews extends Component {
                 className='hover-arrow'
               />
             </Link>
-          </div>
-        )
-    );
-  }
+          </Link>
+        </div>
+      )
+  );
 };
 
 const mapStateToProps = ({ productReducer: { newsData, loading, error } }) => (

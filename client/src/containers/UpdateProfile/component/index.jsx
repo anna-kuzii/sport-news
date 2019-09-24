@@ -11,12 +11,12 @@ class UpdateProfile extends Component {
 
     this.validator = new FormValidator(rules);
 
-    const users = this.props.user;
+    const { user: { email, firstName, lastName } } = this.props;
 
     this.state = {
-      email: users.email,
-      newEmail: users.email,
-      newName: `${users.firstName}  ${users.lastName}`,
+      email: email,
+      newEmail: email,
+      newName: `${firstName} ${lastName}`,
       validation: this.validator.createValidObj(),
       submitted: false,
       error: '',
@@ -39,8 +39,9 @@ class UpdateProfile extends Component {
       submitted: true,
     }));
 
-    const { email, _id } = this.props.user;
+    const { user: { email, _id } } = this.props;
     const { newEmail, newName } = this.state;
+    const validation = this.validator.validate(this.state);
 
     const user = {
       _id,
@@ -49,7 +50,9 @@ class UpdateProfile extends Component {
       newName,
     };
 
-    update(user);
+    if (validation.isValid) {
+      update(user);
+    }
   }
 
   render() {

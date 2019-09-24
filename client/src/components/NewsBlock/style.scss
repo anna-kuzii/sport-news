@@ -1,4 +1,4 @@
-@import '../../../styles/variables';
+@import '../../styles/variables';
 
 .news-block-section {
   .news-block {
@@ -15,15 +15,21 @@
     }
 
     &:hover {
-      cursor: url('../../../assets/img/cursor-hover.svg'), auto;
+      cursor: url('../../assets/img/cursor-hover.svg'), auto;
       background: $white;
       box-shadow: 0 2px 24px $news-hover-11;
 
       // sass-lint:disable nesting-depth
       .hover-arrow {
         display: block;
-        cursor: url('../../../assets/img/cursor-hover.svg'), auto;
+        cursor: url('../../assets/img/cursor-hover.svg'), auto;
       }
+    }
+
+    a {
+      display: flex;
+      flex-direction: row;
+      text-decoration: none;
     }
 
     .hover-arrow {

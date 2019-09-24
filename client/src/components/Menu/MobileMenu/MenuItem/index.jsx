@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../style.scss';
+import { Link } from 'react-router-dom';
 
 export class MenuItem extends Component {
   constructor(props) {
@@ -15,17 +16,16 @@ export class MenuItem extends Component {
   };
 
   render() {
-    const { item: { title, menu } } = this.props;
+    const { item: { title, menu, path } } = this.props;
 
-    //TODO when news will be done, button should be replaced by Link with to
     return (
       <li className='list-item'>
-        <button
-          type='button'
+        <Link
+          to={path}
           onClick={menu && this.handleOpenMenu}
         >
           { title }
-        </button>
+        </Link>
       </li>
     );
   }

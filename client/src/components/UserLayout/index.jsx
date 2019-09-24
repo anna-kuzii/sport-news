@@ -1,17 +1,14 @@
 import React from 'react';
 
 import { Header } from '../Header';
-import { Menu } from '../Menu/DesktopMenu';
 import menuData from '../../assets/data/menuItems';
+import { MenuWrapper } from '../Menu';
 
-export const UserLayout = (props) => {
-  const { children } = props;
+export const UserLayout = ({ children }) => (
+  <div>
+    <Header />
+    <MenuWrapper menuList={menuData.menu} />
+    {children}
+  </div>
+);
 
-  return (
-    <div>
-      <Header />
-      <Menu menuList={menuData.menu} />
-      {children}
-    </div>
-  );
-};

@@ -1,10 +1,11 @@
 import React from 'react';
 
-import './App.scss';
 import { Routes } from './Routes';
 
 const App = () => (
-  <Routes />
+  <div className='main-container'>
+    <Routes />
+  </div>
 );
 
 export default App;

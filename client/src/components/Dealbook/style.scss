@@ -1,4 +1,4 @@
-@import '../../../styles/variables.scss';
+@import '../../styles/variables';
 
 .dealbook-wrapper {
   width: 100%;
@@ -18,13 +18,22 @@
     &:last-of-type {
       border: 0;
     }
+
+    @media screen and (max-width: $tablet-width) {
+      max-width: 100%;
+      margin: 0 20px;
+    }
   }
 
   .news-block {
     width: 100%;
-    height: 182px;
+    height: auto;
     max-width: 866px;
     border: 0;
+
+    @media screen and (max-width: $tablet-width) {
+      max-width: 100%;
+    }
 
     .hover-arrow {
       width: 16px;
@@ -42,32 +51,61 @@
       height: auto;
       max-width: 284px;
       padding: 12px;
+      object-fit: cover;
+
+      @media screen and (max-width: $mobile-width) {
+        height: auto;
+        max-width: 180px;
+        padding: 0;
+      }
+    }
+  }
+
+  .dealbook-banner {
+    position:  absolute;
+    top: 400px;
+    left: -50px;
+    z-index: 2;
+    font-family: $roboto ;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 100px;
+    letter-spacing: 1.2px;
+    color: $grey-30;
+    transform: rotate(-90deg);
+
+    @media screen and (max-width: $tablet-width) {
+      display: none;
     }
   }
 
   .news-banner {
     position:  absolute;
-    top: 70vh;
-    right: -10vw;
+    top: 500px;
+    right: 70px;
     z-index: -1;
     font-family: $roboto ;
-    font-size: 141px;
+    font-size: 120px;
     font-style: normal;
     font-weight: bold;
     line-height: 192px;
     letter-spacing: 1.2px;
     color: $grey-30;
     transform: rotate(90deg);
+
+    @media screen and (max-width: $tablet-width) {
+      display: none;
+    }
   }
 
   .main-article-container {
     position: relative;
     top: 100px;
     width: 100%;
-    height: 460px;
+    height: auto;
     max-width: 950px;
-    padding: 5vh 0 10vh;
-    margin-bottom: 30vh;
+    padding: 5vh 0 15vh;
 
     @media screen and(max-width: $tablet-width) {
       position: static;
@@ -77,8 +115,8 @@
       width: 100%;
       height: auto;
       max-width: 100%;
-      padding: 15vh 0 10vh;
-      margin-bottom: 20px;
+      padding: 100px 0 0;
+      margin-bottom: 0;
     }
 
     .league-title {
@@ -110,20 +148,19 @@
 
     .news-info {
       position: absolute;
-      top: 50%;
+      top: 35%;
       right: -3vw;
       width: 20vw;
       margin-right: 20px;
       background-color: $wild-sand;
       transform: translateY(-30%);
-      //sass-lint:disable-block no-vendor-prefixes
-      -webkit-box-shadow: -21px 21px 54px -11px $black-70;
+      box-shadow: -21px 21px 54px -11px $black-70;
 
       @media screen and (max-width: $tablet-width) {
         position: static;
         width: 100%;
         padding: 10px;
-        -webkit-box-shadow: none;
+        box-shadow: none;
       }
 
      }
@@ -198,7 +235,7 @@
       color: $white;
       text-align: center;
       text-decoration: none;
-      cursor: url('../../../assets/img/cursor-hover.svg'), auto;
+      cursor: url('../../assets/img/cursor-hover.svg'), auto;
       background: $monza;
       border: 0;
 

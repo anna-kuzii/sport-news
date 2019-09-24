@@ -1,5 +1,5 @@
 import React from 'react';
-import NewsBlock from '../../containers/NewsBlock/component';
+import NewsBlock from '../NewsBlock';
 import './style.scss';
 
 export const MostPopularComments = ({ blockTitle }) => (
