@@ -93,8 +93,8 @@ class Footer extends Component {
   }
 }
 
-const mapState = (state) => ({
-  forgot: state.subscription,
+const mapState = ({ subscription }) => ({
+  forgot: subscription,
 });
 
 
