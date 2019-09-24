@@ -16,7 +16,7 @@ export const addArticle = (article) => (
           history.push('/');
         }
       ).catch(error => {
-        dispatch(addArticleFailure(error));
+        dispatch(addArticleFailure(error.response.data && error.response.data.message));
       });
   }
 );
