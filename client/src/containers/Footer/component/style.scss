@@ -2,7 +2,6 @@
 
 .footer-container {
   display: flex;
-  justify-content: space-between;
   width: 100%;
   padding: 50px 20px 0 250px;
   font-family: $open-sans;
@@ -13,7 +12,6 @@
   }
 
   @media screen and (max-width: $mobile-width) {
-    display: flex;
     flex-direction: column;
   }
 
