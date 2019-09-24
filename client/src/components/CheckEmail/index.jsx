@@ -30,6 +30,9 @@ const CheckEmail = ({ email }) => (
           />
           <h2>{`Check your email ${email}`}</h2>
           <p>If there&#39;s Sport News account linked to this email address, we&#39;ll send over instructions to reset your password.</p>
+          <div className='mobile-link'>
+            <Link to='/register' className='mobile-link'>Don&#39;t have an account?</Link>
+          </div>
         </div>
       </div>
     </div>
