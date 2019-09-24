@@ -11,19 +11,21 @@ import { Footer } from '../../containers/Footer/component';
 export const Layout = ({ children }) => (
   <div>
     <Header />
-    <MenuWrapper menuList={menuData.menu} />
-    {children}
-    <div className='most-wrapper'>
-      <div className='most-news-container'>
-        <MostPopularComments
-          blockTitle='most popular'
-        />
-        <MostPopularComments
-          blockTitle='most comments'
-        />
+    <div className='main-container'>
+      <MenuWrapper menuList={menuData.menu} />
+      {children}
+      <div className='most-wrapper'>
+        <div className='most-news-container'>
+          <MostPopularComments
+            blockTitle='most popular'
+          />
+          <MostPopularComments
+            blockTitle='most comments'
+          />
+        </div>
       </div>
+      <Footer />
     </div>
-    <Footer />
     <Copyright />
   </div>
 );

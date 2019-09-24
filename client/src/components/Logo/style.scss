@@ -19,6 +19,7 @@
   background: $alizarin-crimson;
 
   @media screen and (max-width: $tablet-width) {
+    position: static;
     z-index: 10;
     align-items: flex-end;
     width: 100%;
